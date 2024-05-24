@@ -1,0 +1,2 @@
+install -d $PKG/usr/bin
+cp spm $PKG/usr/bin

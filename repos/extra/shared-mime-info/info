@@ -1,0 +1,4 @@
+name=shared-mime-info
+version=2.4
+release=1
+source="https://gitlab.freedesktop.org/xdg/$name/-/archive/$version/$name-$version.tar.gz"

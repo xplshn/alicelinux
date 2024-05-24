@@ -1,0 +1,5 @@
+cp $SRC/iwd_passphrase $PKG/usr/bin
+chmod 755 $PKG/usr/bin/iwd_passphrase
+
+mkdir -p $PKG/etc/iwd
+cp $SRC/main.conf $PKG/etc/iwd

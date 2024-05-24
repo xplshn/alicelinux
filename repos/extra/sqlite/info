@@ -1,0 +1,4 @@
+name=sqlite
+version=3420000
+release=1
+source="https://sqlite.org/2023/$name-autoconf-$version.tar.gz"

@@ -1,0 +1,4 @@
+name=pcre2
+version=10.43
+release=1
+source="https://github.com/PCRE2Project/$name/releases/download/$name-$version/$name-$version.tar.bz2"

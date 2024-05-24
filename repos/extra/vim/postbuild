@@ -1,0 +1,2 @@
+rm $PKG/usr/bin/xxd
+rm -rf $PKG/usr/share/applications/

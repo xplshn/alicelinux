@@ -1,0 +1,5 @@
+make FIRMWAREDIR=/lib/firmware install-xz
+# make separate port for them
+for i in amd* radeon brcm cypress nvidia qcom netronome mellanox mrvl; do
+        rm -rf $PKG/lib/firmware/$i
+done

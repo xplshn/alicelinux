@@ -1,0 +1,4 @@
+dbus
+glib
+gobject-introspection
+libxml2

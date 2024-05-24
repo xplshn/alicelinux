@@ -1,0 +1,4 @@
+name=grim
+version=1.4.1
+release=1
+source="https://git.sr.ht/~emersion/${name}/refs/download/v${version}/${name}-${version}.tar.gz"

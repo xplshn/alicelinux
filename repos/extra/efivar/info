@@ -1,0 +1,4 @@
+name=efivar
+version=39
+release=1
+source="https://github.com/rhboot/efivar/archive/$version/$name-$version.tar.gz"

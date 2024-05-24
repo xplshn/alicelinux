@@ -1,0 +1,4 @@
+name=dejavu-fonts-ttf
+version=2.37
+release=1
+source="https://downloads.sourceforge.net/dejavu/dejavu/$version/$name-$version.tar.bz2"

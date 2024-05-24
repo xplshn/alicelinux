@@ -1,0 +1,4 @@
+name=nspr
+version=4.35
+release=1
+source="https://archive.mozilla.org/pub/$name/releases/v$version/src/$name-$version.tar.gz"

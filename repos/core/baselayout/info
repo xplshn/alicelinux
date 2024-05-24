@@ -1,0 +1,13 @@
+name=baselayout
+version=1
+release=1
+source="fstab
+	group
+	hostname
+	hosts
+	issue
+	os-release
+	passwd
+	resolv.conf
+	shells
+	profile"

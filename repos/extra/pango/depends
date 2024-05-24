@@ -1,0 +1,6 @@
+fontconfig
+fribidi
+glib
+cairo
+gobject-introspection
+harfbuzz

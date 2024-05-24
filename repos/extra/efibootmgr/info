@@ -1,0 +1,5 @@
+name=efibootmgr
+version=18
+release=1
+source="https://github.com/rhboot/efibootmgr/archive/$version/$name-$version.tar.gz"
+export CFLAGS="${CFLAGS} -Wno-error=pointer-sign"

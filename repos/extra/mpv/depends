@@ -1,0 +1,5 @@
+ffmpeg
+libplacebo
+wayland
+wayland-protocols
+libxkbcommon

@@ -1,0 +1,7 @@
+name=wpa_supplicant
+version=2.10
+release=1
+source="https://w1.fi/releases/$name-$version.tar.gz
+	run"
+sv="run"
+export CFLAGS="$CFLAGS $(pkg-config --cflags libnl-tiny)"

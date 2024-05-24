@@ -1,0 +1,4 @@
+name=ranger
+version=1.9.3
+release=1
+source="https://github.com/${name}/${name}/archive/v${version}/${name}-${version}.tar.gz"

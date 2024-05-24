@@ -1,0 +1,3 @@
+./configure --prefix=/usr --with-curses
+make SHLIB_LIBS="-lncursesw"
+make SHLIB_LIBS="-lncursesw" DESTDIR=$PKG install

@@ -1,0 +1,9 @@
+hwdata
+seatd
+wayland
+libdrm
+libxkbcommon
+pixman
+libinput
+mesa
+libdisplay-info

@@ -1,0 +1,4 @@
+name=vulkan-headers
+version=1.3.281
+release=1
+source="https://github.com/KhronosGroup/Vulkan-Headers/archive/v$version/$name-$version.tar.gz"

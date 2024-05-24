@@ -1,0 +1,4 @@
+name=expat
+version=2.6.2
+release=1
+source="https://github.com/lib${name}/lib${name}/releases/download/R_$(echo ${version} | sed 's/\./_/g')/${name}-${version}.tar.xz"

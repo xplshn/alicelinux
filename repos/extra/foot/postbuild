@@ -1,0 +1,2 @@
+rm $PKG/usr/share/terminfo/f/foot
+rm $PKG/usr/share/terminfo/f/foot-direct

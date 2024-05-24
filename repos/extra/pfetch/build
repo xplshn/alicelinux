@@ -1,0 +1,2 @@
+mkdir -p $PKG/usr/bin
+install -m755 pfetch $PKG/usr/bin/pfetch

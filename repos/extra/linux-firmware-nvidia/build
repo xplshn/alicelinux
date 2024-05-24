@@ -1,0 +1,4 @@
+make FIRMWAREDIR=/lib/firmware_tmp install-xz
+mkdir -p $PKG/lib/firmware
+mv $PKG/lib/firmware_tmp/nvidia $PKG/lib/firmware
+rm -rf $PKG/lib/firmware_tmp

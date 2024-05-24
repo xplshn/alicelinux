@@ -1,0 +1,5 @@
+name=imv
+version=4.5.0
+release=1
+source="imv-${version}.tar.gz::https://git.sr.ht/~exec64/${name}/archive/v${version}.tar.gz"
+build_opt="-Dwindows=wayland"

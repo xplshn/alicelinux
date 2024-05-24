@@ -1,0 +1,5 @@
+name=ports
+version=1.6
+release=1
+source="https://crux.nu/files/tools/${name}/${name}-${version}.tar.gz
+	git"

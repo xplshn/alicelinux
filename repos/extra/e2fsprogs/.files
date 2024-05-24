@@ -1,0 +1,159 @@
+drwxr-xr-x root/root    etc/
+-rw-r--r-- root/root    etc/e2scrub.conf.new
+-rw-r--r-- root/root    etc/mke2fs.conf.new
+drwxr-xr-x root/root    sbin/
+-rwxr-xr-x root/root    sbin/badblocks
+-rwxr-xr-x root/root    sbin/blkid
+-rwxr-xr-x root/root    sbin/debugfs
+-rwxr-xr-x root/root    sbin/dumpe2fs -> sbin/e2mmpstatus
+-rwxr-xr-x root/root    sbin/e2fsck -> sbin/fsck.ext4
+-rwxr-xr-x root/root    sbin/e2image
+-rwxr-xr-x root/root    sbin/e2label -> sbin/tune2fs
+-rwxr-xr-x root/root    sbin/e2mmpstatus
+-rwxr-xr-x root/root    sbin/e2scrub
+-rwxr-xr-x root/root    sbin/e2scrub_all
+-rwxr-xr-x root/root    sbin/e2undo
+-rwxr-xr-x root/root    sbin/findfs -> sbin/tune2fs
+-rwxr-xr-x root/root    sbin/fsck.ext2 -> sbin/fsck.ext4
+-rwxr-xr-x root/root    sbin/fsck.ext3 -> sbin/fsck.ext4
+-rwxr-xr-x root/root    sbin/fsck.ext4
+-rwxr-xr-x root/root    sbin/logsave
+-rwxr-xr-x root/root    sbin/mke2fs -> sbin/mkfs.ext3
+-rwxr-xr-x root/root    sbin/mkfs.ext2 -> sbin/mkfs.ext3
+-rwxr-xr-x root/root    sbin/mkfs.ext3
+-rwxr-xr-x root/root    sbin/mkfs.ext4 -> sbin/mkfs.ext3
+-rwxr-xr-x root/root    sbin/resize2fs
+-rwxr-xr-x root/root    sbin/tune2fs
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/chattr
+-rwxr-xr-x root/root    usr/bin/compile_et
+-rwxr-xr-x root/root    usr/bin/lsattr
+-rwxr-xr-x root/root    usr/bin/mk_cmds
+-rwxr-xr-x root/root    usr/bin/uuidgen
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/blkid/
+-rw-r--r-- root/root    usr/include/blkid/blkid.h
+-rw-r--r-- root/root    usr/include/blkid/blkid_types.h
+-rw-r--r-- root/root    usr/include/com_err.h
+drwxr-xr-x root/root    usr/include/e2p/
+-rw-r--r-- root/root    usr/include/e2p/e2p.h
+drwxr-xr-x root/root    usr/include/et/
+-rw-r--r-- root/root    usr/include/et/com_err.h -> usr/include/com_err.h
+drwxr-xr-x root/root    usr/include/ext2fs/
+-rw-r--r-- root/root    usr/include/ext2fs/bitops.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2_err.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2_ext_attr.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2_fs.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2_io.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2_types.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext2fs.h
+-rw-r--r-- root/root    usr/include/ext2fs/ext3_extents.h
+-rw-r--r-- root/root    usr/include/ext2fs/hashmap.h
+-rw-r--r-- root/root    usr/include/ext2fs/qcow2.h
+-rw-r--r-- root/root    usr/include/ext2fs/tdb.h
+drwxr-xr-x root/root    usr/include/ss/
+-rw-r--r-- root/root    usr/include/ss/ss.h
+-rw-r--r-- root/root    usr/include/ss/ss_err.h
+drwxr-xr-x root/root    usr/include/uuid/
+-rw-r--r-- root/root    usr/include/uuid/uuid.h
+drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/e2initrd_helper
+lrwxrwxrwx root/root    usr/lib/libblkid.so -> libblkid.so.1
+lrwxrwxrwx root/root    usr/lib/libblkid.so.1 -> libblkid.so.1.0
+-rwxr-xr-x root/root    usr/lib/libblkid.so.1.0
+lrwxrwxrwx root/root    usr/lib/libcom_err.so -> libcom_err.so.2
+lrwxrwxrwx root/root    usr/lib/libcom_err.so.2 -> libcom_err.so.2.1
+-rwxr-xr-x root/root    usr/lib/libcom_err.so.2.1
+lrwxrwxrwx root/root    usr/lib/libe2p.so -> libe2p.so.2
+lrwxrwxrwx root/root    usr/lib/libe2p.so.2 -> libe2p.so.2.3
+-rwxr-xr-x root/root    usr/lib/libe2p.so.2.3
+lrwxrwxrwx root/root    usr/lib/libext2fs.so -> libext2fs.so.2
+lrwxrwxrwx root/root    usr/lib/libext2fs.so.2 -> libext2fs.so.2.4
+-rwxr-xr-x root/root    usr/lib/libext2fs.so.2.4
+lrwxrwxrwx root/root    usr/lib/libss.so -> libss.so.2
+lrwxrwxrwx root/root    usr/lib/libss.so.2 -> libss.so.2.0
+-rwxr-xr-x root/root    usr/lib/libss.so.2.0
+lrwxrwxrwx root/root    usr/lib/libuuid.so -> libuuid.so.1
+lrwxrwxrwx root/root    usr/lib/libuuid.so.1 -> libuuid.so.1.2
+-rwxr-xr-x root/root    usr/lib/libuuid.so.1.2
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/blkid.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/com_err.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/e2p.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/ext2fs.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/ss.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/uuid.pc
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/96-e2scrub.rules
+drwxr-xr-x root/root    usr/sbin/
+-rwxr-xr-x root/root    usr/sbin/e2freefrag
+-rwxr-xr-x root/root    usr/sbin/e4crypt
+-rwxr-xr-x root/root    usr/sbin/e4defrag
+-rwxr-xr-x root/root    usr/sbin/filefrag
+-rwxr-xr-x root/root    usr/sbin/mklost+found
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/et/
+-rw-r--r-- root/root    usr/share/et/et_c.awk
+-rw-r--r-- root/root    usr/share/et/et_h.awk
+drwxr-xr-x root/root    usr/share/info/
+-rw-r--r-- root/root    usr/share/info/libext2fs.info.gz.gz
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/chattr.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/compile_et.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/lsattr.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/mk_cmds.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/uuidgen.1.gz
+drwxr-xr-x root/root    usr/share/man/man3/
+-rw-r--r-- root/root    usr/share/man/man3/com_err.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/libblkid.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_clear.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_compare.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_copy.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_generate.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_generate_random.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_generate_time.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_is_null.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_parse.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_time.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/uuid_unparse.3.gz
+drwxr-xr-x root/root    usr/share/man/man5/
+-rw-r--r-- root/root    usr/share/man/man5/e2fsck.conf.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/ext2.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/ext3.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/ext4.5.gz
+-rw-r--r-- root/root    usr/share/man/man5/mke2fs.conf.5.gz
+drwxr-xr-x root/root    usr/share/man/man8/
+-rw-r--r-- root/root    usr/share/man/man8/badblocks.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/blkid.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/debugfs.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/dumpe2fs.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2freefrag.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2fsck.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2image.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2label.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2mmpstatus.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2scrub.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2scrub_all.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e2undo.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e4crypt.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/e4defrag.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/filefrag.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/findfs.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/fsck.ext2.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/fsck.ext3.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/fsck.ext4.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/logsave.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/mke2fs.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/mkfs.ext2.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/mkfs.ext3.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/mkfs.ext4.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/mklost+found.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/resize2fs.8.gz
+-rw-r--r-- root/root    usr/share/man/man8/tune2fs.8.gz
+drwxr-xr-x root/root    usr/share/ss/
+-rw-r--r-- root/root    usr/share/ss/ct_c.awk
+-rw-r--r-- root/root    usr/share/ss/ct_c.sed

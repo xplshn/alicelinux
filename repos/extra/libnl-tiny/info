@@ -1,0 +1,4 @@
+name=libnl-tiny
+version=39ec78bb012edc2739c3d3d0058e4076411068b1
+release=1
+source="$name-$version.tar.xz::https://github.com/sabotage-linux/${name}/archive/${version}.tar.gz"

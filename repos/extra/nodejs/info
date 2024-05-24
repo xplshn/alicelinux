@@ -1,0 +1,4 @@
+name=nodejs
+version=22.2.0
+release=1
+source="https://$name.org/dist/v$version/node-v$version.tar.xz"

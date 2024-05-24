@@ -1,0 +1,5 @@
+name=wireless-tools
+n=$(echo $name | sed 's/-/_/')
+version=30.pre9
+release=1
+source="https://hewlettpackard.github.io/$name/${n}.$version.tar.gz"

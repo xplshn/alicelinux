@@ -1,0 +1,3 @@
+#!/bin/sh
+
+for i in /lib/modules/*; do depmod ${i##*/}; done

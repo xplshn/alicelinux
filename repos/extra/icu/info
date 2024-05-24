@@ -1,0 +1,9 @@
+name=icu
+version=74.2
+ver=${version%.*}
+sion=${version#*.}
+release=1
+source="https://github.com/unicode-org/icu/releases/download/release-${ver}-${sion}/icu4c-${ver}_${sion}-src.tgz"
+build_dir="icu/source"
+export CC=${CC:-gcc}
+export CXX=${CXX:-g++}

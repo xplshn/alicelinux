@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo "shutting down"
+
+if [ -x /etc/rc.shutdown.local ]; then
+	/etc/rc.shutdown.local
+fi
+
+if [ "$(command -v udevadm)" ]; then
+	udevadm control --exit
+fi
+
+sv down /var/service/*
+dd if=/dev/urandom of=/var/lib/random-seed count=1 bs=512 2>/dev/null
+hwclock -w
+kill -s TERM -1
+sleep 2
+kill -s KILL -1
+swapoff -a
+ip link set lo down
+umount -a -r -t noproc
+mount -o remount,ro /
+sync
+sleep 1
+wait
+
+echo bye

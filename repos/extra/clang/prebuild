@@ -1,0 +1,2 @@
+mv ../cmake-${version}.src .
+sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt

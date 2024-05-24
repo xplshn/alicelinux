@@ -1,0 +1,2 @@
+# Remove tests
+rm -rvf Lib/test Lib/*/test Lib/*/tests Lib/*/idle_test

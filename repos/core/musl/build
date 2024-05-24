@@ -1,0 +1,25 @@
+./configure \
+        --prefix=/usr #\
+        #--syslibdir=/usr/lib
+make
+make DESTDIR=$PKG install
+
+mkdir -p $PKG/usr/bin
+ln -sf ../lib/libc.so $PKG/usr/bin/ldd
+mkdir -p $PKG/sbin
+echo "#!/bin/sh
+/bin/true" > $PKG/sbin/ldconfig
+chmod +x $PKG/sbin/ldconfig
+
+for i in getent getconf iconv; do
+        ${CC:-gcc} $CFLAGS $LDFLAGS -fpie $SRC/$i.c -o $PKG/usr/bin/$i
+done
+
+mkdir -p $PKG/usr/share/man/man1
+install -m644 $SRC/getconf.1 $PKG/usr/share/man/man1
+#install -m644 $SRC/getent.1 $PKG/usr/share/man/man1
+
+# bsdcompat headers
+for h in tree.h queue.h cdefs.h; do
+        install -D $SRC/$h $PKG/usr/include/sys/
+done

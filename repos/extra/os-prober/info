@@ -1,0 +1,4 @@
+name=os-prober
+version=1.81
+release=1
+source="http://ftp.de.debian.org/debian/pool/main/o/$name/${name}_$version.tar.xz"

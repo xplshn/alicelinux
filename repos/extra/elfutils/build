@@ -1,0 +1,22 @@
+# get from KISS
+# Build sometimes forces -Werror.
+export CFLAGS="$CFLAGS -Wno-error"
+
+sh ./configure \
+    --prefix=/usr \
+    --disable-symbol-versioning \
+    --disable-debuginfod \
+    --disable-libdebuginfod \
+    --without-zstd \
+    ac_cv_c99=yes # Override check for Clang.
+
+# Utility functions that need argp and fts, not strictly necessary
+# for the library to function
+:>libdwfl/argp-std.c
+:>libdwfl/linux-kernel-modules.c
+
+# Useless stuff
+printf '%s\n' "all:" "install:" > src/Makefile
+
+make
+make install

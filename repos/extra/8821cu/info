@@ -1,0 +1,5 @@
+name=8821cu
+version=20240330
+release=1
+_commit=4f6004a
+source="$name-$version.tar.gz::https://github.com/morrownr/8821cu-20210916/archive/$_commit.tar.gz"

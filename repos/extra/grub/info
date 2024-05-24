@@ -1,0 +1,11 @@
+name=grub
+version=2.12
+release=1
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
+	https://unifoundry.com/pub/unifont/unifont-15.0.01/font-builds/unifont-15.0.01.pcf.gz::noextract
+	no-asorti.patch
+	grub.default"
+skip_patch=1
+build_dir=$SRC
+unset CFLAGS
+unset CXXFLAGS

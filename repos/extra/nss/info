@@ -1,0 +1,7 @@
+name=nss
+version=3.100
+ver=${version%.*}
+sion=${version#*.}
+release=1
+source="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_${sion}_RTM/src/nss-$version.tar.gz
+	nss-3.92-standalone-1.patch"

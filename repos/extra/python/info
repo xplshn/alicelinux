@@ -1,0 +1,9 @@
+name=python
+version=3.11.9
+release=1
+source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz"
+build_opt="--without-ensurepip
+	--enable-shared
+	--with-system-expat
+	--with-system-ffi
+	--enable-optimizations"

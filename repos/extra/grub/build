@@ -1,0 +1,28 @@
+mv grub-* grub-pc
+cp -r grub-pc grub-efi
+
+_build_grub() {
+	cd grub-${1##*=}
+	patch -p1 < $SRC/no-asorti.patch
+	touch grub-core/extra_deps.lst
+	autoreconf -fiv
+	./configure \
+	--prefix=/usr \
+	--sysconfdir=/etc \
+	--enable-grub-mount \
+	--enable-grub-mkfont \
+	--disable-werror \
+	$@
+	make
+	make install
+	cd -
+}
+
+_build_grub --with-platform=pc --target=i386
+_build_grub --with-platform=efi --target=x86_64 --disable-efiemu
+
+mkdir -pv $PKG/usr/share/fonts/unifont
+gunzip -c $SRC/unifont-15.0.01.pcf.gz > $PKG/usr/share/fonts/unifont/unifont.pcf
+
+mkdir -p $PKG/etc/default
+cp $SRC/grub.default $PKG/etc/default/grub

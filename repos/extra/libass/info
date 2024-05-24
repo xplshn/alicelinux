@@ -1,0 +1,5 @@
+name=libass
+version=0.17.2
+release=1
+source="https://github.com/$name/$name/releases/download/$version/$name-$version.tar.xz"
+build_type="configure_build"

@@ -1,0 +1,9 @@
+name=eiwd
+version=2.16
+release=1
+source="https://github.com/illiliti/${name}/releases/download/${version}-1/iwd-${version}.tar.xz
+	$name.run
+	iwd_passphrase
+	main.conf"
+sv="$name.run"
+build_opt="--libexecdir=/usr/bin --disable-dbus"

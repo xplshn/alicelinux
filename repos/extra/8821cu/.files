@@ -1,0 +1,8 @@
+drwxr-xr-x root/root    lib/
+drwxr-xr-x root/root    lib/modules/
+drwxr-xr-x root/root    lib/modules/6.6.23-Alice/
+drwxr-xr-x root/root    lib/modules/6.6.23-Alice/kernel/
+drwxr-xr-x root/root    lib/modules/6.6.23-Alice/kernel/drivers/
+drwxr-xr-x root/root    lib/modules/6.6.23-Alice/kernel/drivers/net/
+drwxr-xr-x root/root    lib/modules/6.6.23-Alice/kernel/drivers/net/wireless/
+-rw-r--r-- root/root    lib/modules/6.6.23-Alice/kernel/drivers/net/wireless/8821cu.ko

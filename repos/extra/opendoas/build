@@ -1,0 +1,13 @@
+BINOWN="$(id -u)" \
+BINGRP="$(id -g)" \
+./configure \
+    --prefix=/usr \
+    --with-shadow \
+    --with-timestamp \
+    --without-pam
+make
+make install
+
+mkdir -p $PKG/etc
+cp $SRC/doas.conf $PKG/etc
+chmod 600 $PKG/etc/doas.conf

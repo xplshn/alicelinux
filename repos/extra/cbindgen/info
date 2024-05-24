@@ -1,0 +1,4 @@
+name=cbindgen
+version=0.26.0
+release=1
+source="https://github.com/eqrion/$name/archive/v$version/$name-$version.tar.gz"
