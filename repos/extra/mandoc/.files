@@ -1,0 +1,31 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/local/
+drwxr-xr-x root/root    usr/local/bin/
+-r-xr-xr-x root/root    usr/local/bin/apropos -> usr/local/sbin/makewhatis
+-r-xr-xr-x root/root    usr/local/bin/demandoc
+-r-xr-xr-x root/root    usr/local/bin/man -> usr/local/sbin/makewhatis
+-r-xr-xr-x root/root    usr/local/bin/mandoc -> usr/local/sbin/makewhatis
+-r-xr-xr-x root/root    usr/local/bin/soelim
+-r-xr-xr-x root/root    usr/local/bin/whatis -> usr/local/sbin/makewhatis
+drwxr-xr-x root/root    usr/local/man/
+drwxr-xr-x root/root    usr/local/man/man1/
+-r--r--r-- root/root    usr/local/man/man1/apropos.1 -> usr/local/man/man1/whatis.1
+-r--r--r-- root/root    usr/local/man/man1/demandoc.1
+-r--r--r-- root/root    usr/local/man/man1/man.1
+-r--r--r-- root/root    usr/local/man/man1/mandoc.1
+-r--r--r-- root/root    usr/local/man/man1/soelim.1
+-r--r--r-- root/root    usr/local/man/man1/whatis.1
+drwxr-xr-x root/root    usr/local/man/man5/
+-r--r--r-- root/root    usr/local/man/man5/man.conf.5
+-r--r--r-- root/root    usr/local/man/man5/mandoc.db.5
+drwxr-xr-x root/root    usr/local/man/man7/
+-r--r--r-- root/root    usr/local/man/man7/eqn.7
+-r--r--r-- root/root    usr/local/man/man7/man.7
+-r--r--r-- root/root    usr/local/man/man7/mandoc_char.7
+-r--r--r-- root/root    usr/local/man/man7/mdoc.7
+-r--r--r-- root/root    usr/local/man/man7/roff.7
+-r--r--r-- root/root    usr/local/man/man7/tbl.7
+drwxr-xr-x root/root    usr/local/man/man8/
+-r--r--r-- root/root    usr/local/man/man8/makewhatis.8
+drwxr-xr-x root/root    usr/local/sbin/
+-r-xr-xr-x root/root    usr/local/sbin/makewhatis
