@@ -1,0 +1,5 @@
+install -Dm755 birch $PKG/usr/bin/birch
+
+# change some defaults
+sed 's|irc.freenode.net|irc.libera.chat|' -i $PKG/usr/bin/birch
+sed 's|kisslinux|libera|' -i $PKG/usr/bin/birch
