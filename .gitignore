@@ -1,0 +1,5 @@
+*.spm
+*.iso
+*.tar.xz
+*.sha256sum
+*.pkglist
