@@ -1,0 +1,96 @@
+#!/bin/busybox sh
+
+NEWROOT=/.newroot
+INITRAMFS=/run/initramfs
+MEDIA=$INITRAMFS/media
+LOWER=$INITRAMFS/lower
+UPPER=$INITRAMFS/upper
+WORK=$INITRAMFS/work
+SFSIMAGE=$MEDIA/boot/rootfs.sfs
+
+/bin/busybox --install -s /bin
+
+clear
+
+mkdir -p /proc /sys /run /dev
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t tmpfs run /run
+mount -t devtmpfs dev /dev
+
+mkdir -p $LOWER $MEDIA $UPPER $WORK $NEWROOT
+
+exec >/dev/console </dev/console 2>&1
+
+PRINTK="`cat /proc/sys/kernel/printk`"
+echo "0" > /proc/sys/kernel/printk
+
+# mdev
+mkdir -p /etc
+echo '$MODALIAS=.* 0:0 660 @modprobe "$MODALIAS"' > /etc/mdev.conf
+mdev -df & pid_mdev=$!
+
+# load kernel modules, twice
+find /sys -name 'modalias' -type f -exec cat '{}' + | sort -u | xargs modprobe -b -a >/dev/null 2>&1
+find /sys -name 'modalias' -type f -exec cat '{}' + | sort -u | xargs modprobe -b -a >/dev/null 2>&1
+
+# load kernel modules required for live iso
+for m in loop cdrom isofs overlay squashfs usb-storage loop fuse exfat; do
+	modprobe $m >/dev/null 2>&1
+done
+
+echo "Please wait..."
+
+# figure out media
+if [ -f /proc/sys/dev/cdrom/info ]; then
+	CDROM=$(grep name /proc/sys/dev/cdrom/info | awk -F : '{print $2}' | awk '{print $1}')
+fi
+
+while [ "$wait" != 10 ]; do
+	BLOCK=$(grep -E '[vsh]d' /proc/partitions | awk '{print $4}')
+	for i in $CDROM $BLOCK; do
+		mount -v -r /dev/$i $MEDIA >/dev/null 2>&1 || continue
+		[ -f $MEDIA/boot/livemedia ] || { umount $MEDIA; continue; }
+		MEDIAFOUND=1
+		break 2
+	done
+	wait=$(( wait + 1 ))
+	sleep 1
+done
+
+if [ ! "$MEDIAFOUND" ]; then
+	echo "Media not found even after 10 seconds"
+	sh
+	echo "Cannot go further"
+	sleep 99999
+	exit 1
+fi
+
+# mount stuffs
+loopdevice=$(losetup -f)
+losetup -f $SFSIMAGE
+mount -r $loopdevice $LOWER
+mount -t overlay overlay -o lowerdir=$LOWER,upperdir=$UPPER,workdir=$WORK $NEWROOT
+if [ -f $MEDIA/boot/rootfs.gz ]; then
+	tar -xzaf $MEDIA/boot/rootfs.gz -C $NEWROOT
+fi
+
+kill $pid_mdev
+
+mount --move /sys $NEWROOT/sys
+mount --move /proc $NEWROOT/proc
+mount --move /dev $NEWROOT/dev
+mount --move /run $NEWROOT/run
+
+# execute live script if exist
+if [ -f $NEWROOT/$MEDIA/boot/live_script.sh ]; then
+	chroot $NEWROOT sh $MEDIA/boot/live_script.sh
+fi
+
+# switch to newroot
+clear
+exec /bin/switch_root $NEWROOT /sbin/init
+
+echo "This is the end of initramfs"
+echo "Nothing further, here's the shell"
+/bin/busybox sh
