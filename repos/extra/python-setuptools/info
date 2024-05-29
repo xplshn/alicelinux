@@ -1,5 +1,6 @@
 name=python-setuptools
-version=69.5.1
+version=70.0.0
 release=1
 source="https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-$version.tar.gz"
 export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
+export PYTHONDONTWRITEBYTECODE=1
