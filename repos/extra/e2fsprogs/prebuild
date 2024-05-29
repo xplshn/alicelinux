@@ -1,0 +1,1 @@
+sed 's|my_llseek|llseek|g' -i lib/blkid/llseek.c
