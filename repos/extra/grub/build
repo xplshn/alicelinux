@@ -1,11 +1,10 @@
 mv grub-* grub-pc
-cp -r grub-pc grub-efi
+cp -rp grub-pc grub-efi
 
 _build_grub() {
 	cd grub-${1##*=}
 	patch -p1 < $SRC/no-asorti.patch
-	touch grub-core/extra_deps.lst
-	autoreconf -fiv
+	echo depends bli part_gpt > grub-core/extra_deps.lst
 	./configure \
 	--prefix=/usr \
 	--sysconfdir=/etc \
