@@ -1,5 +1,5 @@
 name=gcc
-version=13.2.0
+version=14.1.0
 release=1
 source="https://ftp.gnu.org/gnu/gcc/gcc-$version/gcc-$version.tar.xz
 	c89
