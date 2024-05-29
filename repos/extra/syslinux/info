@@ -2,7 +2,9 @@ name=syslinux
 version=6.03
 release=2
 source="http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz
-        $name-Makefile.patch $name-sysmacros.patch"
+        $name-Makefile.patch
+	$name-sysmacros.patch
+	$name-fix-missing-stdio.patch"
 skip_patch=1
 unset CFLAGS
 unset CXXFLAGS
