@@ -12,4 +12,5 @@ build_opt="
 	-Dglx=disabled
 	-Dglvnd=true
 	-Dllvm=disabled
+	-Db_lto=false
 "
