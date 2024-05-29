@@ -4,6 +4,10 @@ drwxr-xr-x root/root    etc/sv/alsa/
 -rwxr-xr-x root/root    etc/sv/alsa/finish.new
 -rwxr-xr-x root/root    etc/sv/alsa/run.new
 lrwxrwxrwx root/root    etc/sv/alsa/supervise -> ../../../run/runit/supervise.alsa
+drwxr-xr-x root/root    lib/
+drwxr-xr-x root/root    lib/udev/
+drwxr-xr-x root/root    lib/udev/rules.d/
+-rw-r--r-- root/root    lib/udev/rules.d/90-alsa-restore.rules
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/aconnect
@@ -26,9 +30,6 @@ lrwxrwxrwx root/root    usr/bin/arecord -> aplay
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/alsa-topology/
 -rwxr-xr-x root/root    usr/lib/alsa-topology/libalsatplg_module_nhlt.so
-drwxr-xr-x root/root    usr/lib/udev/
-drwxr-xr-x root/root    usr/lib/udev/rules.d/
--rw-r--r-- root/root    usr/lib/udev/rules.d/90-alsa-restore.rules
 drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/alsa-info.sh
 -rwxr-xr-x root/root    usr/sbin/alsaconf
