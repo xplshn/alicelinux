@@ -1,4 +1,0 @@
-name=zip
-version=3.0
-release=1
-source="https://downloads.sourceforge.net/sourceforge/infozip/${name}30.tar.gz"
