@@ -9,10 +9,10 @@ prepare_rootfs() {
 		bzip2 ca-certificates curl file flex gcc
 		git gmp initscripts linux-headers m4 make
 		mpc mpfr musl openssl patch spm xz zlib"
-	requiredpkg="linux grub syslinux"
+	requiredpkg="linux grub syslinux efibootmgr"
 	extrapkg="pfetch sway swaybg swayidle swaylock wmenu mpv
 		foot firefox fff ranger dejavu-fonts-ttf wpa_supplicant dhcpcd 
-		linux-firmware imv lm-sensors opendoas zstd rsync squashfs-tools"
+		imv lm-sensors opendoas zstd rsync squashfs-tools"
 	mkdir -p $ROOTFS/var/lib/spm/db
 	APKG_NOPROMPT=1 APKG_ROOT=$ROOTFS apkg -I $basepkg $requiredpkg $extrapkg
 }
@@ -106,10 +106,10 @@ make_iso() {
 	[ -f $MKISOD/live_script.sh ] && cp $MKISOD/live_script.sh $ISODIR/boot
 	touch $ISODIR/boot/livemedia
 	
-	if [ -d $MKISOD/isoinclude ]; then
+	if [ -d $MKISOD/include ]; then
 		echo "include rootfs files..."
 		(
-			cd MKISOD/isoinclude
+			cd $MKISOD/include
 			chown -R 0:0 *
 			tar -czf $ISODIR/boot/rootfs.gz *
 		)
@@ -155,7 +155,7 @@ EOF
 	sha256sum $OUTPUT > $ISOSUM
 }
 
-WORKDIR=$PWD/iso
+WORKDIR=/tmp/alice-iso
 ROOTFS=$WORKDIR/rootfs
 ISODIR=$WORKDIR/liveiso
 INITRAMFSDIR=$WORKDIR/initramfs
