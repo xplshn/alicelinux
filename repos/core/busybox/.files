@@ -30,6 +30,8 @@ lrwxrwxrwx root/root    bin/fgrep -> busybox
 lrwxrwxrwx root/root    bin/fsync -> busybox
 lrwxrwxrwx root/root    bin/getopt -> busybox
 lrwxrwxrwx root/root    bin/grep -> busybox
+lrwxrwxrwx root/root    bin/gunzip -> busybox
+lrwxrwxrwx root/root    bin/gzip -> busybox
 lrwxrwxrwx root/root    bin/hostname -> busybox
 lrwxrwxrwx root/root    bin/ionice -> busybox
 lrwxrwxrwx root/root    bin/iostat -> busybox
@@ -85,6 +87,7 @@ lrwxrwxrwx root/root    bin/uname -> busybox
 lrwxrwxrwx root/root    bin/usleep -> busybox
 lrwxrwxrwx root/root    bin/vi -> busybox
 lrwxrwxrwx root/root    bin/watch -> busybox
+lrwxrwxrwx root/root    bin/zcat -> busybox
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/mdev.conf.new
 drwxr-xr-x root/root    etc/sv/
@@ -157,6 +160,7 @@ lrwxrwxrwx root/root    sbin/mkswap -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/modinfo -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/modprobe -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/nameif -> ../bin/busybox
+lrwxrwxrwx root/root    sbin/nologin -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/pivot_root -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/poweroff -> ../bin/busybox
 lrwxrwxrwx root/root    sbin/raidautorun -> ../bin/busybox
@@ -215,6 +219,7 @@ lrwxrwxrwx root/root    usr/bin/expr -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/factor -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/fallocate -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/fgconsole -> ../../bin/busybox
+lrwxrwxrwx root/root    usr/bin/find -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/flock -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/fold -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/free -> ../../bin/busybox
@@ -240,7 +245,6 @@ lrwxrwxrwx root/root    usr/bin/lsof -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/lspci -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/lsscsi -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/lsusb -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/man -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/md5sum -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/mesg -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/microcom -> ../../bin/busybox
@@ -333,6 +337,7 @@ lrwxrwxrwx root/root    usr/bin/which -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/who -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/whoami -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/whois -> ../../bin/busybox
+lrwxrwxrwx root/root    usr/bin/xargs -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/xxd -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/yes -> ../../bin/busybox
 drwxr-xr-x root/root    usr/sbin/
@@ -368,7 +373,6 @@ lrwxrwxrwx root/root    usr/sbin/mim -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/nanddump -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/nandwrite -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/nbd-client -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/sbin/nologin -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/ntpd -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/partprobe -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/sbin/popmaildir -> ../../bin/busybox

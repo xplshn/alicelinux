@@ -75,7 +75,6 @@ lrwxrwxrwx root/root    usr/libexec/git-core/git-help -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-hook -> git
 -rwxr-xr-x root/root    usr/libexec/git-core/git-http-backend
 -rwxr-xr-x root/root    usr/libexec/git-core/git-http-fetch
--rwxr-xr-x root/root    usr/libexec/git-core/git-http-push
 -rwxr-xr-x root/root    usr/libexec/git-core/git-imap-send
 lrwxrwxrwx root/root    usr/libexec/git-core/git-index-pack -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-init -> git
@@ -226,37 +225,3 @@ drwxr-xr-x root/root    usr/share/git-core/templates/hooks/
 -rwxr-xr-x root/root    usr/share/git-core/templates/hooks/update.sample
 drwxr-xr-x root/root    usr/share/git-core/templates/info/
 -rw-r--r-- root/root    usr/share/git-core/templates/info/exclude
-drwxr-xr-x root/root    usr/share/gitweb/
--rwxr-xr-x root/root    usr/share/gitweb/gitweb.cgi
-drwxr-xr-x root/root    usr/share/gitweb/static/
--rw-r--r-- root/root    usr/share/gitweb/static/git-favicon.png
--rw-r--r-- root/root    usr/share/gitweb/static/git-logo.png
--rw-r--r-- root/root    usr/share/gitweb/static/gitweb.css
--rw-r--r-- root/root    usr/share/gitweb/static/gitweb.js
-drwxr-xr-x root/root    usr/share/perl5/
-drwxr-xr-x root/root    usr/share/perl5/FromCPAN/
--rw-r--r-- root/root    usr/share/perl5/FromCPAN/Error.pm
-drwxr-xr-x root/root    usr/share/perl5/FromCPAN/Mail/
--rw-r--r-- root/root    usr/share/perl5/FromCPAN/Mail/Address.pm
--rw-r--r-- root/root    usr/share/perl5/Git.pm
-drwxr-xr-x root/root    usr/share/perl5/Git/
--rw-r--r-- root/root    usr/share/perl5/Git/I18N.pm
--rw-r--r-- root/root    usr/share/perl5/Git/IndexInfo.pm
--rw-r--r-- root/root    usr/share/perl5/Git/LoadCPAN.pm
-drwxr-xr-x root/root    usr/share/perl5/Git/LoadCPAN/
--rw-r--r-- root/root    usr/share/perl5/Git/LoadCPAN/Error.pm
-drwxr-xr-x root/root    usr/share/perl5/Git/LoadCPAN/Mail/
--rw-r--r-- root/root    usr/share/perl5/Git/LoadCPAN/Mail/Address.pm
--rw-r--r-- root/root    usr/share/perl5/Git/Packet.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN.pm
-drwxr-xr-x root/root    usr/share/perl5/Git/SVN/
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Editor.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Fetcher.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/GlobSpec.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Log.pm
-drwxr-xr-x root/root    usr/share/perl5/Git/SVN/Memoize/
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Memoize/YAML.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Migration.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Prompt.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Ra.pm
--rw-r--r-- root/root    usr/share/perl5/Git/SVN/Utils.pm

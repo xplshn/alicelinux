@@ -1,0 +1,4 @@
+name=sfwbar
+version=1.0_beta14
+release=1
+source="https://github.com/LBCrion/${name}/archive/v${version}/${name}-v${version}.tar.gz"

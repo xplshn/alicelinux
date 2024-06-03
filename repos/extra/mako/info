@@ -1,0 +1,4 @@
+name=mako
+version=1.9.0
+release=1
+source="https://github.com/emersion/${name}/releases/download/v${version}/${name}-${version}.tar.gz"

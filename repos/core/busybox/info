@@ -12,6 +12,7 @@ source="https://${name}.net/downloads/${name}-${version}.tar.bz2
 	lsusb-vendor-product.patch
 	print-unicode.patch
 	modprobe-kernel-version.patch
+	0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch
 	acpid.run
 	crond.run
 	ntpd.run
