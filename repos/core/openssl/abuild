@@ -1,0 +1,12 @@
+name=openssl
+version=3.3.0
+release=1
+source="https://www.$name.org/source/$name-$version.tar.gz
+	https://github.com/kiss-community/openssl/releases/download/generated/openssl-3.3.0-generated.tar.gz::noextract"
+
+build() {
+	tar xf ../*generated*
+	make depend
+	make
+	make DESTDIR=$PKG install_sw install_ssldirs install_man_docs
+}

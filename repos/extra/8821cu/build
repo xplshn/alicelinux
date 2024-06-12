@@ -1,3 +1,0 @@
-make modules KSRC=/lib/modules/$(uname -r)/build
-mkdir -p $PKG/lib/modules/$(uname -r)/kernel/drivers/net/wireless/
-install -p -m 644 8821cu.ko  $PKG/lib/modules/$(uname -r)/kernel/drivers/net/wireless/

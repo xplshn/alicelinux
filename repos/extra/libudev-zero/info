@@ -1,4 +1,0 @@
-name=libudev-zero
-version=1.0.3
-release=1
-source="https://github.com/illiliti/${name}/archive/${version}/${name}-${version}.tar.gz"

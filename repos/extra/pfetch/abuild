@@ -1,0 +1,9 @@
+name=pfetch
+version=0.6.0
+release=1
+source="https://github.com/dylanaraps/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+	mkdir -p $PKG/usr/bin
+	install -m755 pfetch $PKG/usr/bin/pfetch
+}

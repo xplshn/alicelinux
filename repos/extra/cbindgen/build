@@ -1,3 +1,0 @@
-cargo build --release
-install -d $PKG/usr/bin/
-install -Dm755 target/release/cbindgen $PKG/usr/bin/

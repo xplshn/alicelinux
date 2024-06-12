@@ -1,2 +1,0 @@
-sed 's|/usr/bin/sed|/bin/sed|g' -i $PKG/usr/bin/libtoolize
-sed 's|/usr/bin/grep|/bin/grep|g' -i $PKG/usr/bin/libtoolize

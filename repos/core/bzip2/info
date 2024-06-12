@@ -1,4 +1,0 @@
-name=bzip2
-version=1.0.8
-release=1
-source="https://www.sourceware.org/pub/$name/$name-$version.tar.gz"

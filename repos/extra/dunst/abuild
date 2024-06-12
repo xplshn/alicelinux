@@ -1,0 +1,10 @@
+name=dunst
+version=1.11.0
+release=1
+source="https://github.com/$name-project/$name/archive/v$version/$name-$version.tar.gz"
+export WAYLAND=1
+if [ "$(apkg -a ^libx11$)" ]; then
+	export X11=1
+else
+	export X11=0
+fi

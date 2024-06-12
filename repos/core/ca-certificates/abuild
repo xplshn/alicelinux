@@ -1,0 +1,13 @@
+name=ca-certificates
+version=20240311
+_noyear=${version#????}
+export _version=${version%????}-${_noyear%??}-${version#??????}
+release=1
+source="https://curl.se/ca/cacert-$_version.pem"
+
+build() {
+	install -Dm644 $SRC/cacert-$_version.pem $PKG/etc/ssl/cert.pem
+	install -d $PKG/etc/ssl/certs
+	ln -s ../cert.pem $PKG/etc/ssl/certs/ca-certificates.crt
+	ln -s cert.pem $PKG/etc/ssl/ca-bundle.crt
+}

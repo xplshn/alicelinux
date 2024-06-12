@@ -1,0 +1,5 @@
+name=c-ares
+version=1.29.0
+release=1
+source="https://$name.haxx.se/download/$name-$version.tar.gz"
+build_type=cmake_build

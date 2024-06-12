@@ -1,4 +1,0 @@
-name=initscripts
-version=1
-release=1
-source="rc.boot rc.shutdown rc.boot.local rc.shutdown.local rc.modules inittab"

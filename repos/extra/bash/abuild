@@ -1,0 +1,14 @@
+name=bash
+version=5.2.21
+release=1
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
+	bashrc"
+build_opt="--without-bash-malloc --with-installed-readline"
+
+postbuild() {
+	mkdir -p $PKG/bin
+	mv $PKG/usr/bin/bash $PKG/bin
+	
+	install -d $PKG/etc
+	install -m644 $SRC/bashrc $PKG/etc
+}

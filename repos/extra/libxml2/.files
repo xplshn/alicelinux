@@ -56,21 +56,21 @@ drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
 drwxr-xr-x root/root    usr/lib/cmake/libxml2/
 -rw-r--r-- root/root    usr/lib/cmake/libxml2/libxml2-config.cmake
-lrwxrwxrwx root/root    usr/lib/libxml2.so -> libxml2.so.2.12.6
-lrwxrwxrwx root/root    usr/lib/libxml2.so.2 -> libxml2.so.2.12.6
--rwxr-xr-x root/root    usr/lib/libxml2.so.2.12.6
+lrwxrwxrwx root/root    usr/lib/libxml2.so -> libxml2.so.2.12.7
+lrwxrwxrwx root/root    usr/lib/libxml2.so.2 -> libxml2.so.2.12.7
+-rwxr-xr-x root/root    usr/lib/libxml2.so.2.12.7
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libxml-2.0.pc
-drwxr-xr-x root/root    usr/lib/python3.11/
-drwxr-xr-x root/root    usr/lib/python3.11/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.11/site-packages/__pycache__/
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/__pycache__/drv_libxml2.cpython-311.opt-1.pyc
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/__pycache__/drv_libxml2.cpython-311.pyc
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/__pycache__/libxml2.cpython-311.opt-1.pyc
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/__pycache__/libxml2.cpython-311.pyc
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/drv_libxml2.py
--rw-r--r-- root/root    usr/lib/python3.11/site-packages/libxml2.py
--rwxr-xr-x root/root    usr/lib/python3.11/site-packages/libxml2mod.so
+drwxr-xr-x root/root    usr/lib/python3.12/
+drwxr-xr-x root/root    usr/lib/python3.12/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.12/site-packages/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/__pycache__/drv_libxml2.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/__pycache__/drv_libxml2.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/__pycache__/libxml2.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/__pycache__/libxml2.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/drv_libxml2.py
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/libxml2.py
+-rwxr-xr-x root/root    usr/lib/python3.12/site-packages/libxml2mod.so
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/libxml.m4

@@ -1,4 +1,0 @@
-tar xf ../*generated*
-make depend
-make
-make DESTDIR=$PKG install_sw install_ssldirs install_man_docs

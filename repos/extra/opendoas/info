@@ -1,5 +1,0 @@
-name=opendoas
-version=6.8.2
-release=1
-source="https://github.com/Duncaen/OpenDoas/releases/download/v${version}/${name}-${version}.tar.xz
-	doas.conf"

@@ -1,0 +1,18 @@
+name=python
+version=3.12.3
+release=1
+source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz"
+build_opt="--without-ensurepip
+	--enable-shared
+	--with-system-expat
+	--with-system-ffi
+	--enable-optimizations"
+
+prebuild() {
+	# Remove tests
+	rm -rvf Lib/test Lib/*/test Lib/*/tests Lib/*/idle_test
+}
+
+postbuild() {
+	ln -s python3 $PKG/usr/bin/python
+}

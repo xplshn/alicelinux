@@ -1,0 +1,21 @@
+name=syslinux
+version=6.03
+release=2
+source="http://www.kernel.org/pub/linux/utils/boot/$name/$name-$version.tar.xz
+        $name-Makefile.patch
+	$name-sysmacros.patch
+	$name-fix-missing-stdio.patch"
+skip_patch=1
+unset CFLAGS
+unset CXXFLAGS
+
+build() {
+	patch -p0 -i $SRC/$name-Makefile.patch
+	patch -p1 -i $SRC/$name-sysmacros.patch
+	patch -p1 -i $SRC/$name-fix-missing-stdio.patch
+	
+	export LDFLAGS="$LDFLAGS --no-dynamic-linker"
+	
+	make OPTFLAGS="$CFLAGS -fcommon" installer
+	make -j1 OPTFLAGS="$CFLAGS -fcommon" INSTALLROOT=$PKG MANDIR=/usr/share/man install
+}

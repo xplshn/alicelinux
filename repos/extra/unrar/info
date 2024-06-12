@@ -1,4 +1,0 @@
-name=unrar
-version=7.0.9
-release=1
-source="https://www.rarlab.com/rar/${name}src-$version.tar.gz"

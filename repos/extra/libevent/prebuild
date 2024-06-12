@@ -1,1 +1,0 @@
-sed -i 's/python/&3/' event_rpcgen.py

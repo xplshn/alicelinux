@@ -1,8 +1,0 @@
-patch -p0 -i $SRC/$name-Makefile.patch
-patch -p1 -i $SRC/$name-sysmacros.patch
-patch -p1 -i $SRC/$name-fix-missing-stdio.patch
-
-export LDFLAGS="$LDFLAGS --no-dynamic-linker"
-
-make OPTFLAGS="$CFLAGS -fcommon" installer
-make -j1 OPTFLAGS="$CFLAGS -fcommon" INSTALLROOT=$PKG MANDIR=/usr/share/man install

@@ -1,3 +1,0 @@
-sed 's/docs//' -i Makefile
-make -j1
-make libdir=/usr/lib install

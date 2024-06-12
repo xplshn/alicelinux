@@ -1,1 +1,0 @@
-sed -i 's/#include <sys\/cdefs.h>//g' "src/compiler.h"

@@ -1,6 +1,0 @@
-name=gptfdisk
-version=1.0.10
-release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz
-	gptfdisk-1.0.9-convenience-1.patch
-	fix-musl.patch"

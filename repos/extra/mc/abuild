@@ -1,0 +1,4 @@
+name=mc
+version=4.8.31
+release=1
+source="http://ftp.midnight-commander.org/${name}-${version}.tar.xz"

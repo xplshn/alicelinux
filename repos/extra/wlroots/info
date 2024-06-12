@@ -1,6 +1,0 @@
-name=wlroots
-version=0.17.3
-release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/releases/${version}/downloads/${name}-${version}.tar.gz"
-[ "$(command -v Xwayland)" ] && xwayland="-Dxwayland=enabled"
-build_opt="-Dexamples=false -Ddefault_library=both -Dbackends=drm,libinput $xwayland"

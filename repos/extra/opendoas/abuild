@@ -1,0 +1,21 @@
+name=opendoas
+version=6.8.2
+release=1
+source="https://github.com/Duncaen/OpenDoas/releases/download/v${version}/${name}-${version}.tar.xz
+	doas.conf"
+
+build() {
+	BINOWN="$(id -u)" \
+	BINGRP="$(id -g)" \
+	./configure \
+	    --prefix=/usr \
+	    --with-shadow \
+	    --with-timestamp \
+	    --without-pam
+	make
+	make install
+	
+	mkdir -p $PKG/etc
+	cp $SRC/doas.conf $PKG/etc
+	chmod 600 $PKG/etc/doas.conf
+}

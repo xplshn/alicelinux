@@ -1,8 +1,0 @@
-mkdir -p $PKG/usr/bin $PKG/etc
-for i in *; do
-	case $i in
-		README*|LICENSE);;
-		*.conf) install -Dm644 $i $PKG/etc/$i;;
-		     *) install -Dm755 $i $PKG/usr/bin/$i;;
-	esac
-done

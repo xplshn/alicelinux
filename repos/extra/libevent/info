@@ -1,4 +1,0 @@
-name=libevent
-version=2.1.12
-release=1
-source="https://github.com/$name/$name/releases/download/release-$version-stable/$name-$version-stable.tar.gz"

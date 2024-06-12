@@ -1,1 +1,0 @@
-ln -sf pkgconf $PKG/usr/bin/pkg-config

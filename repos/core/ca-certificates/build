@@ -1,4 +1,0 @@
-install -Dm644 $SRC/cacert-$_version.pem $PKG/etc/ssl/cert.pem
-install -d $PKG/etc/ssl/certs
-ln -s ../cert.pem $PKG/etc/ssl/certs/ca-certificates.crt
-ln -s cert.pem $PKG/etc/ssl/ca-bundle.crt

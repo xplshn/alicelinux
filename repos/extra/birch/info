@@ -1,4 +1,0 @@
-name=birch
-version=27691aa4fb2746f73c373e6653c1fb17795729f9
-release=1
-source="$name-$version.tar.gz::https://github.com/dylanaraps/${name}/archive/${version}.tar.gz"

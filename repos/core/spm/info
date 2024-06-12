@@ -1,5 +1,0 @@
-name=spm
-version=20240527
-_commit=74817cd2c7c394720e4a418b8ecf26fb1c1a7346
-release=1
-source="$name-$_commit.tar.xz::https://codeberg.org/emmett1/spm/archive/$_commit.tar.gz"

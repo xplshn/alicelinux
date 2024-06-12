@@ -75,6 +75,7 @@ lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/cross_reverse -> crossha
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/crosshair
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/default
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/diamond_cross -> crosshair
+lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/dnd-move -> default
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/e-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/ew-resize
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/fd_double_arrow -> nesw-resize

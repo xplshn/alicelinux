@@ -1,5 +1,0 @@
-install -d $PKG/usr/lib/ccache
-for c in gcc g++ cc c++; do
-	ln -s /usr/bin/ccache $PKG/usr/lib/ccache/$c
-done
-#install -dm777 $PKG/var/cache/ccache

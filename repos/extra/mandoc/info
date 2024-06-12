@@ -1,4 +1,0 @@
-name=mandoc
-version=1.14.6
-release=1
-source="https://${name}.bsd.lv/snapshots/${name}-${version}.tar.gz"

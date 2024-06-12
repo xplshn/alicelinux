@@ -1,4 +1,0 @@
-name=brightnessctl
-version=0.5.1
-release=1
-source="https://github.com/Hummer12007/${name}/archive/${version}/${name}-${version}.tar.gz"

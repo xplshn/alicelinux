@@ -1,4 +1,0 @@
-sed -e '/CXXFLAGS=/d' -e '/LDFLAGS=/d' -i makefile
-export LDFLAGS="$LDFLAGS -pthread"
-make -j1 STRIP=:
-make install DESTDIR=$PKG/usr

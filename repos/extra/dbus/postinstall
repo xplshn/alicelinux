@@ -1,7 +1,7 @@
 #!/bin/sh
 
-getent group messagebus >/dev/null || addgroup -g 18 messagebus
-getent passwd messagebus >/dev/null || adduser -g messagebus -s /bin/false messagebus
+getent group messagebus >/dev/null || addgroup -S messagebus 2>/dev/null
+getent passwd messagebus >/dev/null || adduser -S -D -H -h /dev/null -s /sbin/nologin -G messagebus -g messagebus messagebus 2>/dev/null
 
 chown root:messagebus /usr/libexec/dbus-daemon-launch-helper
 chmod 4750 /usr/libexec/dbus-daemon-launch-helper

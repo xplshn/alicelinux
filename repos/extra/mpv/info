@@ -1,5 +1,0 @@
-name=mpv
-version=0.38.0
-release=1
-source="https://github.com/${name}-player/${name}/archive/v${version}/${name}-${version}.tar.gz"
-build_opt="-Dx11=disabled -Dwayland=enabled"
