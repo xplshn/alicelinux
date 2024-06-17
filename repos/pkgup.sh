@@ -1,24 +1,19 @@
 #!/bin/sh
 
-[ -f $1/info ] || {
+[ -f $1/abuild ] || {
 	echo "port $1 not exist"
 	exit 1
 }
 
 cd $1
 
-cp info info.bak
-#[ -f .md5sum ] && mv .md5sum .md5sum.bak
-#[ -f .footprint ] && mv .footprint .footprint.bak
+cp abuild abuild.bak
 
-sed "s/^version=.*/version=$2/" -i info
-sed "s/^release=.*/release=1/" -i info
+sed "s/^version=.*/version=$2/" -i abuild
+sed "s/^release=.*/release=1/" -i abuild
 
-#fakeroot pkgmk -uf
-#fakeroot pkgmk -um
-#[ -f .footprint.bak ] && diff -Naur --color=always .footprint.bak .footprint
 doas apkg -u || {
-	mv -f info.bak info
+	mv -f abuild.bak abuild
 	exit 1
 }
 doas rm -v *.bak

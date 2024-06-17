@@ -31,7 +31,7 @@ if [ "$2" ]; then
 fi
 
 [ -d $name ] && {
-	grep ^version= $name/info
+	grep ^version= $name/abuild
 	echo "port for $name exist"
 	exit 1
 }
@@ -47,6 +47,6 @@ mkdir -p $name
 echo "name=$name
 version=$version
 release=1
-source=\"$url\"" > $name/info
+source=\"$url\"" > $name/abuild
 
-cat $name/info
+cat $name/abuild

@@ -1,5 +1,5 @@
 name=firefox
-version=126.0.1
+version=127.0
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
 	fix-target-detection.patch"
@@ -9,45 +9,45 @@ build() {
 	export MOZBUILD_STATE_PATH=${PWD}/mozbuild
 	
 	cat > .mozconfig << EOF
-	ac_add_options --prefix=/usr
-	ac_add_options --libdir=/usr/lib
-	ac_add_options --enable-strip
-	ac_add_options --enable-release
-	#ac_add_options --enable-rust-simd
-	ac_add_options --enable-audio-backends=alsa
-	ac_add_options --enable-install-strip
-	ac_add_options --enable-official-branding
-	ac_add_options --enable-application=browser
-	ac_add_options --enable-optimize
-	ac_add_options --with-system-ffi
-	ac_add_options --with-system-jpeg
-	ac_add_options --with-system-libvpx
-	ac_add_options --with-system-nspr
-	ac_add_options --with-system-nss
-	ac_add_options --with-system-pixman
-	ac_add_options --with-system-png
-	ac_add_options --with-system-webp
-	ac_add_options --with-system-zlib
-	ac_add_options --without-wasm-sandboxed-libraries
-	ac_add_options --disable-eme
-	#ac_add_options --disable-dbus
-	ac_add_options --disable-tests
-	ac_add_options --disable-vtune
-	ac_add_options --disable-updater
-	ac_add_options --disable-jemalloc
-	ac_add_options --disable-elf-hack
-	ac_add_options --disable-callgrind
-	ac_add_options --disable-profiling
-	ac_add_options --disable-necko-wifi
-	ac_add_options --disable-crashreporter
-	ac_add_options --disable-accessibility
-	ac_add_options --disable-debug
-	ac_add_options --disable-debug-symbols
-	ac_add_options --disable-parental-controls
-	ac_add_options --disable-system-extension-dirs
-	EOF
+ac_add_options --prefix=/usr
+ac_add_options --libdir=/usr/lib
+ac_add_options --enable-strip
+ac_add_options --enable-release
+#ac_add_options --enable-rust-simd
+ac_add_options --enable-audio-backends=alsa
+ac_add_options --enable-install-strip
+ac_add_options --enable-official-branding
+ac_add_options --enable-application=browser
+ac_add_options --enable-optimize
+ac_add_options --with-system-ffi
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-pixman
+ac_add_options --with-system-png
+ac_add_options --with-system-webp
+ac_add_options --with-system-zlib
+ac_add_options --without-wasm-sandboxed-libraries
+ac_add_options --disable-eme
+#ac_add_options --disable-dbus
+ac_add_options --disable-tests
+ac_add_options --disable-vtune
+ac_add_options --disable-updater
+ac_add_options --disable-jemalloc
+ac_add_options --disable-elf-hack
+ac_add_options --disable-callgrind
+ac_add_options --disable-profiling
+ac_add_options --disable-necko-wifi
+ac_add_options --disable-crashreporter
+ac_add_options --disable-accessibility
+ac_add_options --disable-debug
+ac_add_options --disable-debug-symbols
+ac_add_options --disable-parental-controls
+ac_add_options --disable-system-extension-dirs
+EOF
 	
-	[ -f $SPM_PKGDB/libx11 ] || echo "--enable-default-toolkit=cairo-gtk3-wayland-only" >> .mozconfig
+	[ -f $SPM_PKGDB/libx11 ] || echo "ac_add_options --enable-default-toolkit=cairo-gtk3-wayland-only" >> .mozconfig
 	
 	if [ -e '/usr/bin/ccache' ]; then
 	        echo 'ac_add_options --enable-ccache' >> .mozconfig
@@ -65,19 +65,19 @@ build() {
 	mkdir -pv $PKG/usr/share/pixmaps
 	
 	cat > $PKG/usr/share/applications/firefox.desktop << EOF
-	[Desktop Entry]
-	Encoding=UTF-8
-	Name=Firefox Web Browser
-	Comment=Browse the World Wide Web
-	GenericName=Web Browser
-	Exec=firefox %u
-	Terminal=false
-	Type=Application
-	Icon=firefox
-	Categories=GNOME;GTK;Network;WebBrowser;
-	MimeType=text/xml;text/mml;text/html;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https
-	StartupNotify=true
-	EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Web Browser
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+Exec=firefox %u
+Terminal=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/xml;text/mml;text/html;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https
+StartupNotify=true
+EOF
 	
 	mkdir -p $PKG/usr/share/pixmaps
 	ln -sfv /usr/lib/firefox/browser/chrome/icons/default/default128.png \

@@ -7,9 +7,9 @@ lrwxrwxrwx root/root    usr/bin/cc -> gcc
 -rwxr-xr-x root/root    usr/bin/cpp
 -rwxr-xr-x root/root    usr/bin/g++ -> usr/bin/x86_64-pc-linux-musl-g++
 -rwxr-xr-x root/root    usr/bin/gcc
--rwxr-xr-x root/root    usr/bin/gcc-ar -> usr/bin/x86_64-pc-linux-musl-gcc-ar
--rwxr-xr-x root/root    usr/bin/gcc-nm
--rwxr-xr-x root/root    usr/bin/gcc-ranlib
+-rwxr-xr-x root/root    usr/bin/gcc-ar
+-rwxr-xr-x root/root    usr/bin/gcc-nm -> usr/bin/x86_64-pc-linux-musl-gcc-nm
+-rwxr-xr-x root/root    usr/bin/gcc-ranlib -> usr/bin/x86_64-pc-linux-musl-gcc-ranlib
 -rwxr-xr-x root/root    usr/bin/gcov
 -rwxr-xr-x root/root    usr/bin/gcov-dump
 -rwxr-xr-x root/root    usr/bin/gcov-tool
@@ -18,9 +18,9 @@ lrwxrwxrwx root/root    usr/bin/cc -> gcc
 -rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-g++
 -rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc -> usr/bin/gcc
 -rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-14.1.0 -> usr/bin/gcc
--rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-ar
--rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-nm -> usr/bin/gcc-nm
--rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-ranlib -> usr/bin/gcc-ranlib
+-rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-ar -> usr/bin/gcc-ar
+-rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-nm
+-rwxr-xr-x root/root    usr/bin/x86_64-pc-linux-musl-gcc-ranlib
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/c++/
 drwxr-xr-x root/root    usr/include/c++/14.1.0/
@@ -895,8 +895,6 @@ drwxr-xr-x root/root    usr/lib/gcc/
 drwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/
 drwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/
 -rwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/cc1
--rwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/cc1obj
--rwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/cc1objplus
 -rwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/cc1plus
 -rwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/collect2
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/crtbegin.o
@@ -991,17 +989,6 @@ drwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/mwaitintrin.h
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/mwaitxintrin.h
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/nmmintrin.h
-drwxr-xr-x root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/NXConstStr.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/Object.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/Protocol.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/message.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/objc-decls.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/objc-exception.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/objc-sync.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/objc.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/runtime.h
--rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/objc/thr.h
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/omp.h
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/openacc.h
 -rw-r--r-- root/root    usr/lib/gcc/x86_64-pc-linux-musl/14.1.0/include/pconfigintrin.h
@@ -1641,10 +1628,6 @@ lrwxrwxrwx root/root    usr/lib/libitm.so -> libitm.so.1.0.0
 lrwxrwxrwx root/root    usr/lib/libitm.so.1 -> libitm.so.1.0.0
 -rwxr-xr-x root/root    usr/lib/libitm.so.1.0.0
 -rw-r--r-- root/root    usr/lib/libitm.spec
--rw-r--r-- root/root    usr/lib/libobjc.a
-lrwxrwxrwx root/root    usr/lib/libobjc.so -> libobjc.so.4.0.0
-lrwxrwxrwx root/root    usr/lib/libobjc.so.4 -> libobjc.so.4.0.0
--rwxr-xr-x root/root    usr/lib/libobjc.so.4.0.0
 -rw-r--r-- root/root    usr/lib/libquadmath.a
 lrwxrwxrwx root/root    usr/lib/libquadmath.so -> libquadmath.so.0.0.0
 lrwxrwxrwx root/root    usr/lib/libquadmath.so.0 -> libquadmath.so.0.0.0

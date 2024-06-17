@@ -19,10 +19,12 @@ basepkg="baselayout autils binutils bison busybox
 rm -rf $ROOTFS
 mkdir -p $ROOTFS/var/lib/spm/db
 APKG_ROOT=$ROOTFS apkg -i $basepkg
+apkg-chroot $ROOTFS revdep -v
 
 rm -f $TARBALL
 
-(cd $ROOTFS; tar -cvJpf $TARBALL *)
+echo "compressing rootfs..."
+(cd $ROOTFS; tar -cJpf $TARBALL *)
 
 for i in $ROOTFS/var/lib/spm/db/*; do
 	n=${i##*/}
@@ -30,7 +32,7 @@ for i in $ROOTFS/var/lib/spm/db/*; do
 	echo "$n $v" >> $PKGLIST
 done
 
-sha256sum $TARBALL > $SHASUM
+sha256sum ${TARBALL##*/} > $SHASUM
 
 rm -rf $ROOTFS
 

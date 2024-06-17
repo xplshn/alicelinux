@@ -29,51 +29,51 @@ build() {
 	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys/.cargo-checksum.json
 		
 	cat > config.toml <<EOF
-	[llvm]
-	link-shared = true
-	
-	[build]
-	build     = "$_tuplet"
-	host      = [ "$_tuplet" ]
-	target    = [ "$_tuplet" ]
-	
-	docs           = false
-	compiler-docs  = false
-	extended       = true
-	submodules     = false
-	python         = "python3"
-	locked-deps    = true
-	vendor         = true
-	tools          = [ "cargo", "rustfmt" ]
-	sanitizers     = false
-	profiler       = false
-	full-bootstrap = false
-	
-	[install]
-	prefix = "/usr"
-	
-	[target.$_tuplet]
-	llvm-config = "/usr/bin/llvm-config"
-	crt-static  = false
-	sanitizers  = false
-	
-	[dist]
-	src-tarball = false
-	
-	[rust]
-	backtrace         = false
-	channel           = "stable"
-	codegen-tests     = false
-	codegen-units-std = 1
-	codegen-units     = 0
-	debug             = false
-	debug-assertions  = false
-	debuginfo-level   = 0
-	incremental       = false
-	jemalloc          = false
-	rpath             = false
-	dist-src          = false
-	EOF
+[llvm]
+link-shared = true
+
+[build]
+build     = "$_tuplet"
+host      = [ "$_tuplet" ]
+target    = [ "$_tuplet" ]
+
+docs           = false
+compiler-docs  = false
+extended       = true
+submodules     = false
+python         = "python3"
+locked-deps    = true
+vendor         = true
+tools          = [ "cargo", "rustfmt" ]
+sanitizers     = false
+profiler       = false
+full-bootstrap = false
+
+[install]
+prefix = "/usr"
+
+[target.$_tuplet]
+llvm-config = "/usr/bin/llvm-config"
+crt-static  = false
+sanitizers  = false
+
+[dist]
+src-tarball = false
+
+[rust]
+backtrace         = false
+channel           = "stable"
+codegen-tests     = false
+codegen-units-std = 1
+codegen-units     = 0
+debug             = false
+debug-assertions  = false
+debuginfo-level   = 0
+incremental       = false
+jemalloc          = false
+rpath             = false
+dist-src          = false
+EOF
 	
 	mkdir "$SRC/rust"
 	export RUST_BACKTRACE=1

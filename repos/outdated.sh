@@ -3,10 +3,10 @@
 while [ "$1" ]; do
 	#set -- ${1%/}
 	unset curver port
-	[ -f $1/info ] && port=${1%/}
+	[ -f $1/abuild ] && port=${1%/}
 	[ "$port" ] || { shift; continue; }
 	pname=${1##*/}
-	curver=$(grep ^version= $port/info | awk -F = '{print $2}')
+	curver=$(grep ^version= $port/abuild | awk -F = '{print $2}')
 	[ "$curver" ] || { shift; continue; }
 	case $pname in
 		python-*) pname=python:${pname#python-};;

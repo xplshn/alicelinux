@@ -1,6 +1,6 @@
 name=gcc
 version=14.1.0
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/gcc/gcc-$version/gcc-$version.tar.xz
 	c89
 	c99"
@@ -18,25 +18,27 @@ build() {
 	../configure \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
-		--enable-languages=c,c++,objc,obj-c++,lto \
-		--enable-lto \
-		--disable-bootstrap \
-		--disable-libmpx \
 		--with-system-zlib \
 		--with-pkgversion="Alice Linux" \
-		--disable-fixincludes \
+		--with-zstd=no \
+		--enable-languages=c,c++ \
+		--enable-lto \
 		--enable-threads=posix \
 		--enable-__cxa_atexit \
 		--enable-default-pie \
 		--enable-default-ssp \
+		--disable-symvers \
+		--disable-libmudflap \
+		--disable-fixed-point \
+		--disable-libstdcxx-pch \
+		--disable-fixincludes \
+		--disable-bootstrap \
+		--disable-libmpx \
 		--disable-multilib \
-		--disable-libsanitizer \
-	        --with-zstd=no
+		--disable-libsanitizer
 	make
 	make DESTDIR=$PKG -j1 install
 	
-	#mkdir $PKG/lib
-	#ln -sv ../usr/bin/cpp $PKG/lib/cpp
 	ln -sv gcc $PKG/usr/bin/cc
 	
 	install -v -dm755 $PKG/usr/lib/bfd-plugins

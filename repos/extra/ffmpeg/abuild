@@ -1,10 +1,8 @@
 name=ffmpeg
-version=6.1.1
+version=7.0.1
 release=1
 source="https://$name.org/releases/$name-$version.tar.xz
-	ffmpeg-6.0-chromium_method-1.patch
-	fef22c87ada4517441701e6e61e062c9f4399c8e.patch"
-#	ffmpeg-7.0-chromium_method-1.patch"
+	gcc-14.patch"
 
 build() {
 	./configure \
