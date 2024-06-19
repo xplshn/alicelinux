@@ -203,7 +203,7 @@ You might want to set up networking before rebooting. Use `wpa_supplicant` and `
 ```
 Configure your SSID:
 ```
-# wpa_passphrase <YOUR SSID> <ITS PASSWORD> >> /etc/wpa_supplicant
+# wpa_passphrase <YOUR SSID> <ITS PASSWORD> >> /etc/wpa_supplicant.conf
 ```
 Enable the service:
 ```
