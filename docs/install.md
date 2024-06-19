@@ -1,13 +1,13 @@
 ## Install Alice
-Here is guide to install Alice Linux into your computer by using chroot method from your existing installed Linux distribution or either from live environment of ALice live or other Linux distributions. Your choice should have all partitioning, filesystem of your choice and extracting tools.
+Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.
 
 ### Get Alice rootfs tarball
-Download Alice rootfs tarball from [release](https://codeberg.org/emmett1/alicelinux/releases) page along with its `sha256sum` file.
+Download the Alice rootfs tarball from the [release](https://codeberg.org/emmett1/alicelinux/releases) page, along with its `sha256sum` file.
 ```
 $ curl -O <url>
 $ curl -O <url>.sha256sum
 ```
-Verify checksum of Alice rootfs tarball:
+Verify the checksum of the Alice rootfs tarball:
 ```
 $ sha256sum -c alicelinux-rootfs-20240525.tar.xz.sha256sum
 ```
@@ -16,46 +16,46 @@ Make sure it prints:
 alicelinux-rootfs-20240525.tar.xz: OK
 ```
 
-### Prepare partition and filesystem
-Prepare partition and filesystem of your choice. I'm using `ext4` as and example in this guide.
+### Prepare the partition and filesystem
+Prepare the partition and filesystem of your choice. In this guide, I will use ext4 as an example.
 ```
 # cfdisk /dev/sdX
 # mkfs.ext4 /dev/sdXY
 ```
-Mount your created partition somewhere. I'm using `/mnt/alice` for mountpoint.
+Mount your created partition somewhere. In this guide, I will use /mnt/alice as the mount point.
 ```
 # mkdir /mnt/alice
 # mount /dev/sdXY /mnt/alice
 ```
 
-### Extract Alice rootfs tarball
-Extract Alice rootfs into mounted partition.
+### Extract the Alice rootfs tarball
+Extract the Alice rootfs into the mounted partition.
 ```
 $ tar xvf alicelinux-rootfs-*.tar.xz -C /mnt/alice
 ```
 
 ### Enter chroot
-Alright first, chroot into Alice. (change `/mnt/alice` to mountpoint of your choice)
+First, chroot into Alice. (Replace /mnt/alice with your chosen mount point.)
 ```
 # /mnt/alice/usr/bin/apkg-chroot /mnt/alice
 ```
-Further command after this will reflect inside Alice. 
+Any further commands after this will be executed inside the Alice environment. 
 
 ### Clone Alice repos
-Fetch Alice packages repositories somewhere. I'm gonna fetch it inside `/var/lib` directory, I like to keep system clean.
+Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var/lib directory to keep the system clean.
 ```
 # cd /var/lib
 # git clone --depth=1 https://codeberg.org/emmett1/alicelinux
 ```
-Once we have repos cloned, we gotta configure `apkg`. `apkg` is the Alice's package build system (or the package manager). By default Alice does not provide `apkg` config file (yes `apkg` can works without config file), but we gotta create one. `apkg`'s config file should located at `/etc/apkg.conf` by default. Lets create one. 
+Once we have the repositories cloned, we need to configure `apkg`. `apkg` is Alice's package build system (or package manager). By default, Alice does not provide an `apkg` config file (yes, `apkg` can work without a config file), but we need to create one. The `apkg` config file should be located at `/etc/apkg.conf` by default. Let's create one. 
 
 ### Configure apkg.conf
 
-First we set `CFLAGS` and `CXXFLAGS`. Alice base packages is built using `-O3 -march=x86-64 -pipe`, you can use this or change into what your prefer.
+First, we set `CFLAGS` and `CXXFLAGS`. Alice base packages are built using `-O3 -march=x86-64 -pipe`. You can use these settings or change them to your preference.
 ```
 # echo 'export CFLAGS="-O3 -march=x86-64 -pipe"' >> /etc/apkg.conf
 ```
-And use whats on `CFLAGS` for `CXXFLAGS`.
+And use whats in `CFLAGS` for `CXXFLAGS`.
 ```
 # echo 'export CXXFLAGS="$CFLAGS"' >> /etc/apkg.conf
 ```
@@ -63,15 +63,15 @@ Next set `MAKEFLAGS`. I will use `6` for my `8 threads` machine.
 ```
 # echo 'export MAKEFLAGS="-j6"' >> /etc/apkg.conf
 ```
-Also I'm gonna set `NINJAJOBS` here, without it, `ninja` gonna use all threads of your machines when compiling.
+I'm also going to set `NINJAJOBS` here. Without it, `ninja` will use all threads of your machine when compiling.
 ```
 # echo 'export NINJAJOBS="6"' >> /etc/apkg.conf
 ```
-Next we gonna set package's buildscripts path (I will call it `package repos`) so `apkg` can find it. `APKG_REPO` variable can accept multiple value for multiple `package repos`.
+Next, we need to set the package's build scripts path (I'll call it `package repos`) so `apkg` can find them. The `APKG_REPO` variable can accept multiple values for multiple `package repos`.
 
-Alice provide two (2) `package repos` (at the time of this writing), `core` and `extra`. `core` is all base packages and `extra` is other than base.
+Alice provides two (2) `package repos` (at the time of this writing), `core` and `extra`. `core` contains all base packages, and `extra` includes other packages beyond the base.
 
-First get absolute path of `package repos` where we cloned it. Btw we still inside `/var/lib` directory where we clone the repo.
+First, get the absolute path of the `package repos` where we cloned them. By the way, we are still inside the `/var/lib` directory where we cloned the repo.
 >NOTE: USE TAB COMPLETION!
 ```
 # realpath alicelinux/repos/core
@@ -79,11 +79,11 @@ First get absolute path of `package repos` where we cloned it. Btw we still insi
 # realpath alicelinux/repos/extra
 /var/lib/alicelinux/repos/extra
 ```
-After we got the path of our `package repos`, add it to `APKG_REPO` variable in `/etc/apkg.conf`
+After we have the path of our `package repos`, add it to the `APKG_REPO` variable in `/etc/apkg.conf`.
 ```
 # echo 'APKG_REPO="/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"' >> /etc/apkg.conf
 ```
-After we setup our `package repos`, make sure `apkg` can find the packages. We can use `apkg -s <pattern>` for search packages.
+After setting up our `package repos`, make sure `apkg` can find the packages. We can use `apkg -s <pattern>` to search for packages.
 ```
 # apkg -s sway
 swayidle
@@ -91,9 +91,9 @@ swaybg
 swaylock
 sway
 ```
-If the output appeared, then we good to go.
+If the output appears, then we are good to go.
 
-Next we gonna setup directory for `packages`, `sources` and `work`. By default these directories is inside package template, but we gonna change to `/var/cache/pkg`, `/var/cache/src` and `/var/cache/work` respectively. But you can change to anywhere you wanna store these files.
+Next, we will set up directories for `packages`, `sources`, and `work`. By default, these directories are inside the package template, but we will change them to `/var/cache/pkg`, `/var/cache/src`, and `/var/cache/work` respectively. You can change these to any location where you want to store these files.
 
 First, create the directories:
 ```
@@ -102,46 +102,46 @@ First, create the directories:
 # mkdir -p /var/cache/work
 ```
 
-Then add these path to `/etc/apkg.conf`
+Then add these paths to `/etc/apkg.conf`.
 ```
 # echo 'APKG_PACKAGE_DIR=/var/cache/pkg' >> /etc/apkg.conf
 # echo 'APKG_SOURCE_DIR=/var/cache/src' >> /etc/apkg.conf
 # echo 'APKG_WORK_DIR=/var/cache/work' >> /etc/apkg.conf
 ```
 ### Full system upgrade/rebuild
-On first install, we should upgrade the system first. 
-> Uppercase `U` for system upgrade, lowercase `u` for upgrade package of your choice.
+On the first install, we should upgrade the system first.
+> Use uppercase `U` for a system upgrade, and lowercase `u` to upgrade a specific package of your choice.
 ```
 # apkg -U
 ```
-If you changed `CFLAGS` and `CXXFLAGS` to other than default, its a good time to make full rebuild first, in this case, you can skip upgrading system because making full rebuild already use latest version in `package repos`. 
+If you changed `CFLAGS` and `CXXFLAGS` to something other than the default, it's a good time to perform a full rebuild first. In this case, you can skip upgrading the system because performing a full rebuild will already use the latest version in `package repos`.
 
-> add `-f` flag to force rebuild of existing prebuilt package.
-> `apkg -a` is for print all installed packages in system.
+> Add the `-f` flag to force rebuild of existing prebuilt package.
+> `apkg -a` prints all installed packages on the system.
 ```
 # apkg -u $(apkg -a)
 ```
 ### Install development packages
-Before installing any further packages, we need to install development packages.
+Before installing any additional packages, we need to install development packages.
 ```
 # apkg -I meson cmake pkgconf libtool automake perl
 ```
 ### Install kernel
 You can configure your own kernel from [kernel.org](https://kernel.org/) or use the one provided by Alice.
-> Provided kernel gonna takes a lot of time to compile because its enabled many options
+> The provided kernel will take a lot of time to compile because many options are enabled.
 
-If you wanna use Alice's kernel, just run:
+If you want to use Alice's kernel, just run:
 ```
 # apkg -I linux
 ```
 ### Install firmware
-if your hardware required firmware install it using:
+If your hardware requires firmware, install it using:
 ```
 # apkg -I linux-firmware linux-firmware-nvidia
 ```
 
 ### Install bootloader
-In this guide i'm gonna use `grub` as the bootloader. Install `grub`
+In this guide, I'm going to use `grub` as the bootloader. Install `grub`:
 ```
 # apkg -I grub
 ```
@@ -152,38 +152,38 @@ Then generate grub config:
 ```
 
 ### Hostname
-change `alice` to hostname of your choice.
+Change `alice` to the hostname of your choice.
 ```
 # echo alice > /etc/hostname
 ```
 
 ### Fstab
-Change partition and filesystem of your choice below.
+Change the partition and filesystem of your choice below:
 ```
 # echo '/dev/sda1 swap swap defaults 0 1' >> /etc/fstab
 # echo '/dev/sda2 / ext4 defaults 0 0' >> /etc/fstab
 ```
 ### Enable runit services
-Alice use busybox's `runit` as its main service manager. Enable required services:
+Alice uses busybox's `runit` as its main service manager. Enable the required services:
 ```
 # ln -s /etc/sv/tty1 /var/service
 # ln -s /etc/sv/tty2 /var/service
 # ln -s /etc/sv/tty3 /var/service
 ```
-I'm enabling 3 `tty` services. `tty` is required, without it you won't be able to login (or run any commands).
-> Runit service directory is `/etc/sv`.
-> Make symlink `/etc/sv/<service>` to `/var/service` to enable it, remove symlink to disable it.
+I'm enabling 3 `tty` services. `tty` is required; without it, you won't be able to log in (or run any commands).
+> The runit service directory is `/etc/sv`.
+> Create a symlink from `/etc/sv/<service>` to `/var/service` to enable it; remove the symlink to disable it.
 
 ### Setup user and password
 Add your user:
 ```
 # adduser <user>
 ```
-Add your user to `wheel` group:
+Add your user to the `wheel` group:
 ```
 # adduser <user> wheel
 ```
-You might need to add your user to `input` and `video` group to start wayland compositor later, `audio` group to have working audio.
+You might need to add your user to the `input` and `video` groups to start the Wayland compositor later, and the `audio` group to have working audio:
 ```
 # adduser <user> input
 # adduser <user> video
@@ -191,13 +191,13 @@ You might need to add your user to `input` and `video` group to start wayland co
 ```
 
 ### Root password
-Set password for `root` user:
+Set the password for the `root` user:
 ```
 # passwd
 ```
 
 ### Networking
-You might wanna setup networking first before reboot later. Use `wpa_supplicant` and `dhcpcd`.
+You might want to set up networking before rebooting. Use `wpa_supplicant` and `dhcpcd`.
 ```
 # apkg -I wpa_supplicant dhcpcd
 ```
@@ -216,18 +216,18 @@ Install `tzdata`:
 ```
 # apkg -I tzdata
 ```
-Then make symlink your timezone to `/etc/localtime`:
+Then create a symlink for your timezone to `/etc/localtime`:
 ```
 # ln -s /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 ```
-Or you can copy instead then uninstall `tzdata` to keep your installed packages minimal.
+Alternatively, you can copy it and then uninstall `tzdata` to keep your installed packages minimal:
 ```
 # cp /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 # apkg -r tzdata
 ```
 
-### Reboot then enjoy!
-Exit chroot environment and unmount Alice partition then reboot.
+### Reboot and enjoy!
+Exit the chroot environment and unmount the Alice partition, then reboot:
 ```
 # exit
 # umount /mnt/alice
@@ -235,7 +235,7 @@ Exit chroot environment and unmount Alice partition then reboot.
 ```
 
 ## Some important notes
-- `Alice` use `spm` and `apkg` as its package manager and package build system, run with `-h` flag to see available option.
-- Also extra scripts is provided by name `apkg-<script>` which will be added (or remove) from time to time.
-- Use `revdep` to scan broken libraries and binaries after system upgrades and package removal. You can use `revdep -v` to print out missing required libraries, use `apkg -f -u $(revdep)` to scan and rebuild broken packages.
+- `Alice` uses `spm` and `apkg` as its package manager and package build system. Run with the `-h` flag to see available options.
+- Additional scripts are provided with the name `apkg-<script>` which will be added (or removed) from time to time.
+- Use `revdep` to scan for broken libraries and binaries after system upgrades and package removals. You can use `revdep -v` to print out missing required libraries, and use `apkg -f -u $(revdep)` to scan and rebuild broken packages.
 - Run `updateconf` to update config files in `/etc` after package upgrades.
