@@ -1,5 +1,5 @@
 name=llvm
-version=18.1.6
+version=18.1.8
 release=1
 source="https://github.com/${name}/${name}-project/releases/download/${name}org-${version}/${name}-${version}.src.tar.xz
 	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz
