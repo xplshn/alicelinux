@@ -1,5 +1,5 @@
 name=python
-version=3.12.3
+version=3.12.4
 release=1
 source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz"
 build_opt="--without-ensurepip
