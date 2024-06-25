@@ -1,5 +1,5 @@
 name=initscripts
-version=1
+version=20240626
 release=1
 source="rc.boot rc.shutdown rc.boot.local rc.shutdown.local rc.modules inittab"
 

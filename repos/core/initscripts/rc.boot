@@ -69,7 +69,7 @@ if [ -f "/etc/sysctl.conf" ]; then
 	sysctl -q -p
 fi
 
-hwclock -s
+hwclock -s -u
 
 if [ -f "/var/lib/random-seed" ]; then
 	cat /var/lib/random-seed >/dev/urandom
