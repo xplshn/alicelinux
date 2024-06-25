@@ -261,7 +261,7 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/fecs_bl.bin.xz -> ../../gp1
 -rw-r--r-- root/root    lib/firmware/nvidia/gp104/gr/fecs_sig.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/gpccs_bl.bin.xz -> ../../gp102/gr/gpccs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp104/gr/gpccs_data.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/gpccs_inst.bin.xz -> ../../gp102/gr/gpccs_inst.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/gpccs_inst.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp104/gr/gpccs_sig.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/sw_bundle_init.bin.xz -> ../../gp102/gr/sw_bundle_init.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp104/gr/sw_ctx.bin.xz -> ../../gp102/gr/sw_ctx.bin.xz
@@ -339,18 +339,18 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/acr/ucode_load.bin.xz -> ../..
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/acr/ucode_unload.bin.xz -> ../../gp102/acr/ucode_unload.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/acr/unload_bl.bin.xz -> ../../gp102/acr/unload_bl.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gp108/gr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/fecs_bl.bin.xz -> ../../gp107/gr/fecs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/fecs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/fecs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/fecs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/fecs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/fecs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/gpccs_bl.bin.xz -> ../../gp107/gr/gpccs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/gpccs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/gpccs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp108/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_bundle_init.bin.xz -> ../../gp102/gr/sw_bundle_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_ctx.bin.xz -> ../../gp107/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_method_init.bin.xz -> ../../gp102/gr/sw_method_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_nonctx.bin.xz -> ../../gp107/gr/sw_nonctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_ctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/sw_ctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/gr/sw_nonctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/sw_nonctx.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gp108/nvdec/
 lrwxrwxrwx root/root    lib/firmware/nvidia/gp108/nvdec/scrubber.bin.xz -> ../../gp102/nvdec/scrubber.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gp108/sec2/
@@ -370,9 +370,9 @@ drwxr-xr-x root/root    lib/firmware/nvidia/gp10b/gr/
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp10b/gr/sw_bundle_init.bin.xz -> ../../gp100/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp10b/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp100/gr/sw_bundle_init.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gp10b/gr/sw_method_init.bin.xz -> ../../gp100/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gp10b/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp100/gr/sw_method_init.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/gr/sw_nonctx.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gp10b/pmu/
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/pmu/desc.bin.xz
@@ -380,16 +380,16 @@ drwxr-xr-x root/root    lib/firmware/nvidia/gp10b/pmu/
 -rw-r--r-- root/root    lib/firmware/nvidia/gp10b/pmu/sig.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gv100/
 drwxr-xr-x root/root    lib/firmware/nvidia/gv100/acr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/acr/bl.bin.xz -> ../../gp102/acr/bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/acr/bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/acr/ucode_load.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/acr/ucode_unload.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/acr/unload_bl.bin.xz -> ../../gp102/acr/unload_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/acr/unload_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/unload_bl.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/gv100/gr/
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/fecs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/fecs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/fecs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/fecs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/gr/gpccs_bl.bin.xz -> ../../gp107/gr/gpccs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/gv100/gr/gpccs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/gpccs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/gv100/gr/gpccs_sig.bin.xz
@@ -420,17 +420,17 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/tegra210/vic.bin.xz -> vic04_ucode.b
 -rw-r--r-- root/root    lib/firmware/nvidia/tegra210/xusb.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/tu102/
 drwxr-xr-x root/root    lib/firmware/nvidia/tu102/acr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/acr/bl.bin.xz -> ../../gp102/acr/bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/acr/bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/acr/ucode_ahesasc.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/acr/ucode_asb.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/acr/ucode_unload.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/acr/unload_bl.bin.xz -> ../../gp102/acr/unload_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/acr/unload_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/unload_bl.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/tu102/gr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/gr/fecs_bl.bin.xz -> ../../gv100/gr/fecs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/gr/fecs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gv100/gr/fecs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/fecs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/fecs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/fecs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/gr/gpccs_bl.bin.xz -> ../../gp107/gr/gpccs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu102/gr/gpccs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/gpccs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu102/gr/gpccs_sig.bin.xz
@@ -466,11 +466,11 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/gpccs_bl.bin.xz -> ../../tu
 -rw-r--r-- root/root    lib/firmware/nvidia/tu104/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu104/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu104/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_bundle_init.bin.xz -> ../../tu102/gr/sw_bundle_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_ctx.bin.xz -> ../../tu102/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_method_init.bin.xz -> ../../tu102/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_ctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_ctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_method_init.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu104/gr/sw_nonctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_veid_bundle_init.bin.xz -> ../../tu102/gr/sw_veid_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gr/sw_veid_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_veid_bundle_init.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/gsp -> ../tu102/gsp
 drwxr-xr-x root/root    lib/firmware/nvidia/tu104/nvdec/
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu104/nvdec/scrubber.bin.xz -> ../../tu102/nvdec/scrubber.bin.xz
@@ -494,11 +494,11 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/gpccs_bl.bin.xz -> ../../tu
 -rw-r--r-- root/root    lib/firmware/nvidia/tu106/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu106/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu106/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_bundle_init.bin.xz -> ../../tu102/gr/sw_bundle_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_ctx.bin.xz -> ../../tu102/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_method_init.bin.xz -> ../../tu102/gr/sw_method_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_nonctx.bin.xz -> ../../tu102/gr/sw_nonctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_veid_bundle_init.bin.xz -> ../../tu102/gr/sw_veid_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_ctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_ctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_nonctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_nonctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gr/sw_veid_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_veid_bundle_init.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/gsp -> ../tu102/gsp
 drwxr-xr-x root/root    lib/firmware/nvidia/tu106/nvdec/
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu106/nvdec/scrubber.bin.xz -> ../../tu102/nvdec/scrubber.bin.xz
@@ -513,25 +513,25 @@ drwxr-xr-x root/root    lib/firmware/nvidia/tu10x/typec/
 -rw-r--r-- root/root    lib/firmware/nvidia/tu10x/typec/ccg_secondary.cyacd.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/tu116/
 drwxr-xr-x root/root    lib/firmware/nvidia/tu116/acr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/acr/bl.bin.xz -> ../../gp102/acr/bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/acr/bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/acr/ucode_ahesasc.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/acr/ucode_asb.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/acr/ucode_unload.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/acr/unload_bl.bin.xz -> ../../gp102/acr/unload_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/acr/unload_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp102/acr/unload_bl.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/tu116/gr/
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/fecs_bl.bin.xz -> ../../gv100/gr/fecs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/fecs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gv100/gr/fecs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/fecs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/fecs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/fecs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/gpccs_bl.bin.xz -> ../../gp107/gr/gpccs_bl.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/gpccs_bl.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/gp107/gr/gpccs_bl.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_bundle_init.bin.xz -> ../../tu102/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_bundle_init.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_method_init.bin.xz -> ../../tu102/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_method_init.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gr/sw_nonctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_veid_bundle_init.bin.xz -> ../../tu102/gr/sw_veid_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu116/gr/sw_veid_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_veid_bundle_init.bin.xz
 drwxr-xr-x root/root    lib/firmware/nvidia/tu116/gsp/
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gsp/booter_load-535.113.01.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu116/gsp/booter_unload-535.113.01.bin.xz
@@ -559,11 +559,11 @@ lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/gpccs_bl.bin.xz -> ../../tu
 -rw-r--r-- root/root    lib/firmware/nvidia/tu117/gr/gpccs_data.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu117/gr/gpccs_inst.bin.xz
 -rw-r--r-- root/root    lib/firmware/nvidia/tu117/gr/gpccs_sig.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_bundle_init.bin.xz -> ../../tu102/gr/sw_bundle_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_ctx.bin.xz -> ../../tu116/gr/sw_ctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_method_init.bin.xz -> ../../tu102/gr/sw_method_init.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_nonctx.bin.xz -> ../../tu116/gr/sw_nonctx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_veid_bundle_init.bin.xz -> ../../tu102/gr/sw_veid_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_bundle_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_ctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu116/gr/sw_ctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_method_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_method_init.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_nonctx.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu116/gr/sw_nonctx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gr/sw_veid_bundle_init.bin.xz -> /tmp/apkg-pkg-linux-firmware-nvidia/lib/firmware_tmp/nvidia/tu102/gr/sw_veid_bundle_init.bin.xz
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/gsp -> ../tu116/gsp
 drwxr-xr-x root/root    lib/firmware/nvidia/tu117/nvdec/
 lrwxrwxrwx root/root    lib/firmware/nvidia/tu117/nvdec/scrubber.bin.xz -> ../../tu116/nvdec/scrubber.bin.xz
