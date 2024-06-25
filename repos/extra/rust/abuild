@@ -1,9 +1,9 @@
 name=rust
-version=1.78.0
+version=1.79.0
 
 ##cat src/stage0.txt
-export _date=2024-03-21
-export _rustc=1.77.0
+export _date=2024-05-02
+export _rustc=1.78.0
 export _cargo=$_rustc
 ##
 
@@ -11,8 +11,8 @@ release=1
 source="https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-musl.tar.xz::noextract
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-musl.tar.xz::noextract
-	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-musl.tar.xz::noextract
-	fix-curl.patch"
+	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-musl.tar.xz::noextract"
+#	fix-curl.patch"
 build_dir=${name}c-$version-src
 keep_static=1
 no_strip=1
@@ -26,7 +26,7 @@ build() {
 	cp $SRC/cargo-$_cargo-x86_64-unknown-linux-musl.tar.xz build/cache/$_date/
 	
 	sed -i 's/\(crt_static_default = \)true/\1false/' compiler/rustc_target/src/spec/base/linux_musl.rs
-	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys/.cargo-checksum.json
+	#sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys/.cargo-checksum.json
 		
 	cat > config.toml <<EOF
 [llvm]
@@ -48,6 +48,9 @@ tools          = [ "cargo", "rustfmt" ]
 sanitizers     = false
 profiler       = false
 full-bootstrap = false
+@CARGO@
+@RUST@
+@RUSTFMT@
 
 [install]
 prefix = "/usr"
@@ -74,6 +77,15 @@ jemalloc          = false
 rpath             = false
 dist-src          = false
 EOF
+
+	if [ -e /usr/bin/rustc ]; then
+		sed	-e 's|@CARGO@|cargo = "/usr/bin/cargo"|' \
+			-e 's|@RUST@|rustc = "/usr/bin/rustc"|' \
+			-e 's|@RUSTFMT@|rustfmt = "/usr/bin/rustfmt"|' \
+			-i config.toml
+	else
+		sed -e 's|@CARGO@||' -e 's|@RUST@||' -e 's|@RUSTFMT@||' -i config.toml
+	fi
 	
 	mkdir "$SRC/rust"
 	export RUST_BACKTRACE=1
