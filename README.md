@@ -37,6 +37,11 @@
 </p>
 
 <p align="center">
+    Come join and say Hi! in here:</br>
+    <a href="https://t.me/alicelinux">Telegram</a>
+</p>
+
+<p align="center">
 	Your cups of coffee very helpful for this project :D</br>
     <a href="https://paypal.me/syazwanemmett">paypal</a> | <a href="https://ko-fi.com/emmett1">ko-fi</a> | <a href="https://buymeacoffee.com/emmett1">buymeacoffee</a>
 </p>
