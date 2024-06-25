@@ -1,7 +1,8 @@
 name=sqlite
-version=3420000
+version=3.46.0
+_version=$(echo $version | sed 's|\.||g')000
 release=1
-source="https://sqlite.org/2023/$name-autoconf-$version.tar.gz"
+source="https://sqlite.org/2024/$name-autoconf-$_version.tar.gz"
 
 build() {
 	./configure \
