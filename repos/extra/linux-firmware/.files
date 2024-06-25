@@ -1065,6 +1065,22 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7-spkid
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7-spkid1-l0.bin.xz -> cs35l41-dsp1-spk-prot-17aa38b4-spkid1-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7-spkid1-r0.bin.xz -> cs35l41-dsp1-spk-prot-17aa38b4-spkid1-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l0.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l0.bin.xz
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot.wmfw.xz
 drwxr-xr-x root/root    lib/firmware/cirrus/cs35l41/
@@ -2236,6 +2252,7 @@ drwxr-xr-x root/root    lib/firmware/rtw88/
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8703b_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8703b_wow_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8723d_fw.bin.xz
+-rw-r--r-- root/root    lib/firmware/rtw88/rtw8821a_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8821c_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8822b_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtw88/rtw8822c_fw.bin.xz
