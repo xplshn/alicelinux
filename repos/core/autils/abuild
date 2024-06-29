@@ -1,6 +1,6 @@
 name=autils
-version=20240612
-_commit=dfd4934a783d991b31063171f9e454a218e431b1
+version=20240628
+_commit=1a6cfc51c56a5f3447067573d764fe498af409ae
 release=1
 source="$name-$_commit.tar.gz::https://codeberg.org/emmett1/autils/archive/$_commit.tar.gz"
 
