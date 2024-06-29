@@ -2,3 +2,7 @@ libpng
 glib
 pixman
 fontconfig
+libx11
+libxcb
+libxext
+libxrender

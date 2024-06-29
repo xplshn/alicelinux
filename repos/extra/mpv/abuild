@@ -4,3 +4,4 @@ release=1
 source="https://github.com/${name}-player/${name}/archive/v${version}/${name}-${version}.tar.gz"
 build_opt="-Dwayland=enabled"
 [ -f $SPM_PKGDB/libx11 ] && build_opt="$build_opt -Dx11=enabled"
+[ -f $SPM_PKGDB/wayland ] || build_opt="$build_opt -Dwayland=disabled"

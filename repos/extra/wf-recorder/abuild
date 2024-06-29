@@ -1,4 +1,0 @@
-name=wf-recorder
-version=0.4.1
-release=1
-source="https://github.com/ammen99/${name}/releases/download/v${version}/${name}-${version}.tar.xz"

@@ -1,3 +1,5 @@
 gdk-pixbuf
 libnotify
 libdeflate
+libxscrnsaver
+libxinerama

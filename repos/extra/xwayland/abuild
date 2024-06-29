@@ -1,0 +1,9 @@
+name=xwayland
+version=23.2.6
+release=1
+source="https://xorg.freedesktop.org/releases/individual/xserver/${name}-${version}.tar.xz"
+
+postbuild() {
+	rm $PKG/usr/lib/xorg/protocol.txt
+	rm $PKG/usr/share/man/man1/Xserver.1
+}

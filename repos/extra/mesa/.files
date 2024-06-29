@@ -12,21 +12,21 @@ drwxr-xr-x root/root    usr/include/GL/internal/
 -rw-r--r-- root/root    usr/include/xa_tracker.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/dri/
--rwxr-xr-x root/root    usr/lib/dri/crocus_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/i915_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/iris_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/kms_swrast_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/nouveau_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/nouveau_drv_video.so
--rwxr-xr-x root/root    usr/lib/dri/r300_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/r600_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/r600_drv_video.so -> usr/lib/dri/nouveau_drv_video.so
--rwxr-xr-x root/root    usr/lib/dri/radeonsi_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/radeonsi_drv_video.so -> usr/lib/dri/nouveau_drv_video.so
--rwxr-xr-x root/root    usr/lib/dri/swrast_dri.so -> usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/virtio_gpu_dri.so
--rwxr-xr-x root/root    usr/lib/dri/virtio_gpu_drv_video.so -> usr/lib/dri/nouveau_drv_video.so
--rwxr-xr-x root/root    usr/lib/dri/vmwgfx_dri.so -> usr/lib/dri/virtio_gpu_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/crocus_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/i915_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/iris_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/kms_swrast_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/nouveau_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/nouveau_drv_video.so -> usr/lib/dri/radeonsi_drv_video.so
+-rwxr-xr-x root/root    usr/lib/dri/r300_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/r600_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/r600_drv_video.so -> usr/lib/dri/radeonsi_drv_video.so
+-rwxr-xr-x root/root    usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/radeonsi_drv_video.so
+-rwxr-xr-x root/root    usr/lib/dri/swrast_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/virtio_gpu_dri.so -> usr/lib/dri/radeonsi_dri.so
+-rwxr-xr-x root/root    usr/lib/dri/virtio_gpu_drv_video.so -> usr/lib/dri/radeonsi_drv_video.so
+-rwxr-xr-x root/root    usr/lib/dri/vmwgfx_dri.so -> usr/lib/dri/radeonsi_dri.so
 lrwxrwxrwx root/root    usr/lib/libEGL_mesa.so -> libEGL_mesa.so.0
 lrwxrwxrwx root/root    usr/lib/libEGL_mesa.so.0 -> libEGL_mesa.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libEGL_mesa.so.0.0.0

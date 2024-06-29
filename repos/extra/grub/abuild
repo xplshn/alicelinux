@@ -11,6 +11,7 @@ unset CFLAGS
 unset CXXFLAGS
 
 build() {
+	cd ..
 	mv grub-* grub-pc
 	cp -rp grub-pc grub-efi
 	

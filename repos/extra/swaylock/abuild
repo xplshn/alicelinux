@@ -1,8 +1,0 @@
-name=swaylock
-version=1.7.2
-release=1
-source="https://github.com/swaywm/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
-
-postbuild() {
-	chmod a+s $PKG/usr/bin/swaylock
-}

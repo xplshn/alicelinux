@@ -2,5 +2,6 @@ name=gtk3
 version=3.24.41
 release=1
 source="http://ftp.gnome.org/pub/gnome/sources/gtk+/${version%.*}/gtk+-$version.tar.xz"
-build_opt="-Dwayland_backend=true -Ddemos=false -Dexamples=false -Dtests=false"
+build_opt="-Ddemos=false -Dexamples=false -Dtests=false"
 [ -f $SPM_PKGDB/libx11 ] || build_opt="$build_opt -Dx11_backend=false"
+[ -f $SPM_PKGDB/wayland ] || build_opt="$build_opt -Dwayland_backend=false"

@@ -3,8 +3,10 @@ version=24.0.8
 release=1
 source="https://archive.mesa3d.org/$name-$version.tar.xz"
 keep_static=1
+[ -f $SPM_PKGDB/wayland ] && build_opt="-Dplatforms=wayland"
+[ -f $SPM_PKGDB/libx11 ] && build_opt="-Dplatforms=x11"
 build_opt="
-	-Dplatforms=wayland
+	$build_opt
 	-Dgallium-drivers=auto
 	-Dvulkan-drivers=""
 	-Dvalgrind=disabled

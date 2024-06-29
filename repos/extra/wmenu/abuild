@@ -1,4 +1,0 @@
-name=wmenu
-version=0.1.8
-release=1
-source="https://git.sr.ht/~adnano/${name}/archive/${version}.tar.gz"
