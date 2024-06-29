@@ -1,0 +1,14 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/fonts/
+drwxr-xr-x root/root    usr/share/fonts/misc/
+-rw-r--r-- root/root    usr/share/fonts/misc/tewi-bold-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewi-medium-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewi2a-bold-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewi2a-medium-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewifw-bold-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewifw-medium-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewihm-bold-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewihm-medium-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewii-bold-11.pcf.gz
+-rw-r--r-- root/root    usr/share/fonts/misc/tewii-medium-11.pcf.gz

@@ -1,0 +1,5 @@
+libx11
+libxext
+libxt
+util-macros
+gettext-tiny

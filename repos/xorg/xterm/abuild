@@ -1,0 +1,17 @@
+name=xterm
+version=390
+release=1
+source="https://invisible-mirror.net/archives/$name/$name-$version.tgz
+	posix-ptys.patch"
+export TERMINFO=/usr/share/terminfo
+build_opt="--with-app-defaults=/usr/share/X11/app-defaults --enable-freetype --enable-wide-chars --with-x"
+
+prebuild() {
+	sed -i '/v0/{n;s/new:/new:kb=^?:/}' termcap
+	printf '\tkbs=\\177,\n' >> terminfo
+}
+
+postbuild() {
+	# exist in busybox
+	rm $PKG/usr/bin/resize
+}

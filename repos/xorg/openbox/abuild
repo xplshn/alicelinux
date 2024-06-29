@@ -1,0 +1,18 @@
+name=openbox
+version=3.6.1
+release=1
+source="http://$name.org/dist/$name/$name-$version.tar.gz"
+
+prebuild() {
+	2to3 -w data/autostart/openbox-xdg-autostart
+	sed 's/python/python3/' -i data/autostart/openbox-xdg-autostart
+}
+
+build() {
+	2to3 -w data/autostart/openbox-xdg-autostart
+	sed 's/python/python3/' -i data/autostart/openbox-xdg-autostart
+	
+	./configure --prefix=/usr
+		make
+		make -j1 DESTDIR=$PKG install
+}

@@ -1,0 +1,4 @@
+name=libxcb
+version=1.16.1
+release=1
+source="https://xorg.freedesktop.org/archive/individual/lib/$name-$version.tar.xz"

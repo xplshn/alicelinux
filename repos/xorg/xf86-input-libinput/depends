@@ -1,0 +1,4 @@
+libinput
+xorg-server
+xorgproto
+util-macros

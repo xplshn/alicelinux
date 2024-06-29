@@ -1,0 +1,12 @@
+name=libconfig
+version=1.7.3
+release=1
+source="https://github.com/hyperrealm/$name/archive/v$version/$name-$version.tar.gz"
+export PATH=$SRC/bin:$PATH
+
+prebuild() {
+	autoreconf -fiv
+	mkdir $SRC/bin
+	echo -e "#/bin/sh\n/bin/true" > $SRC/bin/makeinfo
+	chmod +x $SRC/bin/makeinfo
+}

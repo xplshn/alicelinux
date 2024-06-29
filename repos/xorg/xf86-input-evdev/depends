@@ -1,0 +1,5 @@
+libevdev
+mtdev
+xorg-server
+xorgproto
+libudev-zero
