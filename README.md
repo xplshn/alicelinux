@@ -14,7 +14,6 @@
 - no systemd</br>
 - no PAM</br>
 - no polkit</br>
-- no Xorg</br>
 - musl instead of glibc</br>
 - busybox instead of coreutils/util-linux/etc</br>
 - busybox's runit instead of systemd/openrc/etc</br>
