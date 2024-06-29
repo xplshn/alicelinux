@@ -1,0 +1,4 @@
+name=swaybg
+version=1.2.1
+release=1
+source="https://github.com/swaywm/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
