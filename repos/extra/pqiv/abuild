@@ -1,0 +1,4 @@
+name=pqiv
+version=2.13.1
+release=1
+source="https://github.com/phillipberndt/${name}/archive/${version}/${name}-${version}.tar.gz"
