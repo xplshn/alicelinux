@@ -12,3 +12,8 @@ libvpx
 nasm
 nss
 libevent
+libxcomposite
+libxcursor
+libxdamage
+libice
+libsm
