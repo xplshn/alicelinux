@@ -4,3 +4,5 @@ glib
 cairo
 gobject-introspection
 harfbuzz
+libx11
+libxft
