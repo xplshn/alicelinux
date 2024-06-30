@@ -2,11 +2,15 @@ name=libconfig
 version=1.7.3
 release=1
 source="https://github.com/hyperrealm/$name/archive/v$version/$name-$version.tar.gz"
-export PATH=$SRC/bin:$PATH
+export PATH=$APKG_WORK_DIR/tmpbin:$PATH
 
 prebuild() {
 	autoreconf -fiv
-	mkdir $SRC/bin
-	echo -e "#/bin/sh\n/bin/true" > $SRC/bin/makeinfo
-	chmod +x $SRC/bin/makeinfo
+	mkdir $APKG_WORK_DIR/tmpbin
+	echo -e "#/bin/sh\n/bin/true" > $APKG_WORK_DIR/tmpbin/makeinfo
+	chmod +x $APKG_WORK_DIR/tmpbin/makeinfo
+}
+
+postbuild() {
+	rm -rf $APKG_WORK_DIR/tmpbin
 }
