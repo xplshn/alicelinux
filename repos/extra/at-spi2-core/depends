@@ -2,3 +2,6 @@ dbus
 glib
 gobject-introspection
 libxml2
+libxtst
+libx11
+libxcb
