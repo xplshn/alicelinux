@@ -1,11 +1,9 @@
 libdrm
 python-mako
-python-markupsafe
 libglvnd
 glslang
 wayland
 wayland-protocols
 elfutils
-libx11
 libxshmfence
 libxrandr

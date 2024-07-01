@@ -1,12 +1,8 @@
-xorgproto
-xtrans
 pixman
 libxkbfile
 libxfont2
 wayland-protocols
 libxcvt
-libdrm
 libepoxy
 libtirpc
-libxshmfence
 libxdmcp

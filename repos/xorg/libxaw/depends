@@ -1,6 +1,2 @@
-libx11
-libxext
 libxmu
 libxpm
-libxt
-util-macros

@@ -1,8 +1,5 @@
-pango
-libxml2
 libxinerama
 libxrandr
 imlib2
 libxcursor
 startup-notification
-xcb-util

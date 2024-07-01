@@ -1,5 +1,2 @@
-libx11
 libxrender
-freetype
 fontconfig
-util-macros
