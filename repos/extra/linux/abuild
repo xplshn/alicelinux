@@ -1,6 +1,6 @@
 name=linux
-version=6.6.31
-release=2
+version=6.6.37
+release=1
 source="https://cdn.kernel.org/pub/$name/kernel/v6.x/$name-$version.tar.xz
 	dotconfig"
 
