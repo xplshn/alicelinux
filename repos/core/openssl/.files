@@ -806,6 +806,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_incoming_stream_policy.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_retry_verify.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_session.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_set_session_secret_cb.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_shutdown.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_verify_result.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_shutdown.3ossl.gz
@@ -975,6 +976,7 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-default.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-legacy.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-null.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/OSSL_STORE-winstore.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/RAND.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/RSA-PSS.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/X25519.7ossl.gz
