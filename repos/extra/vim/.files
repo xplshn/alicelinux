@@ -465,6 +465,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/csc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/csh.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/css.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/csv.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/cucumber.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/cvsrc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/dart.vim
@@ -517,6 +518,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gitrebase.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gitsendemail.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/go.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gomod.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gpg.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gprof.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/graphql.vim
@@ -558,6 +560,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/jsp.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/julia.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/kconfig.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/kdl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/kotlin.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/kwt.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/lc.vim
@@ -687,6 +690,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/slpconf.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/slpreg.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/slpspi.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/snakemake.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/solidity.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/solution.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/spec.vim
@@ -696,6 +700,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/sshdconfig.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/stylus.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/sudoers.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/svelte.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/svg.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/swayconfig.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/swift.vim
@@ -708,6 +713,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tcl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tcsh.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/terminfo.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/terraform.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tex.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/text.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tidy.vim
@@ -834,6 +840,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/indent/
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/jsonc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/jsp.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/julia.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/indent/kdl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/kotlin.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/krl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/ld.vim
@@ -1017,6 +1024,9 @@ drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/matchit/doc/
 -rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/matchit/doc/tags
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/matchit/plugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/matchit/plugin/matchit.vim
+drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/nohlsearch/
+drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/nohlsearch/plugin/
+-rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/nohlsearch/plugin/nohlsearch.vim
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/shellmenu/
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/shellmenu/plugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/shellmenu/plugin/shellmenu.vim
@@ -1199,6 +1209,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/csh.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/csp.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/css.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/csv.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cterm.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ctrlh.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cucumber.vim
@@ -1385,6 +1396,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/jsp.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/julia.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/kconfig.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/kdl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/kivy.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/kix.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/kotlin.vim
