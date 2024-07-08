@@ -1,7 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/koi8rxterm
--rwxr-xr-x root/root    usr/bin/resize
 -rwxr-xr-x root/root    usr/bin/uxterm
 -rwxr-xr-x root/root    usr/bin/xterm
 drwxr-xr-x root/root    usr/share/

@@ -1,8 +1,7 @@
 name=xterm
 version=390
 release=1
-source="https://invisible-mirror.net/archives/$name/$name-$version.tgz
-	posix-ptys.patch"
+source="https://invisible-mirror.net/archives/$name/$name-$version.tgz"
 export TERMINFO=/usr/share/terminfo
 build_opt="--with-app-defaults=/usr/share/X11/app-defaults --enable-freetype --enable-wide-chars --with-x"
 
