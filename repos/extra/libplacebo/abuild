@@ -1,5 +1,5 @@
 name=libplacebo
-version=6.338.2
+version=7.349.0
 release=1
 source="https://github.com/haasn/${name}/archive/v${version}/${name}-${version}.tar.gz"
 build_opt="-Ddemos=false"
