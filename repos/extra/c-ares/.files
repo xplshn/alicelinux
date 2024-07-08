@@ -5,12 +5,11 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/ares_dns.h
 -rw-r--r-- root/root    usr/include/ares_dns_record.h
 -rw-r--r-- root/root    usr/include/ares_nameser.h
--rw-r--r-- root/root    usr/include/ares_rules.h
 -rw-r--r-- root/root    usr/include/ares_version.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libcares.so -> libcares.so.2.16.0
-lrwxrwxrwx root/root    usr/lib/libcares.so.2 -> libcares.so.2.16.0
--rwxr-xr-x root/root    usr/lib/libcares.so.2.16.0
+lrwxrwxrwx root/root    usr/lib/libcares.so -> libcares.so.2.17.0
+lrwxrwxrwx root/root    usr/lib/libcares.so.2 -> libcares.so.2.17.0
+-rwxr-xr-x root/root    usr/lib/libcares.so.2.17.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcares.pc
 drwxr-xr-x root/root    usr/share/
@@ -56,6 +55,10 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_record_rr_get.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_record_rr_get_const.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_add_abin.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_del_abin.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_get_abin.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_get_abin_cnt.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_get_addr.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_get_addr6.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/ares_dns_rr_get_bin.3.gz
