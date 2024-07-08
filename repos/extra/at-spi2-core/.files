@@ -1,7 +1,5 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
-drwxr-xr-x root/root    etc/xdg/Xwayland-session.d/
--rwxr-xr-x root/root    etc/xdg/Xwayland-session.d/00-at-spi.new
 drwxr-xr-x root/root    etc/xdg/autostart/
 -rw-r--r-- root/root    etc/xdg/autostart/at-spi-dbus-bus.desktop.new
 drwxr-xr-x root/root    usr/
@@ -16,7 +14,6 @@ drwxr-xr-x root/root    usr/include/at-spi-2.0/atspi/
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-constants.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-legacy.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-listener.h
--rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-x11.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-document.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-editabletext.h
@@ -38,6 +35,7 @@ drwxr-xr-x root/root    usr/include/at-spi-2.0/atspi/
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-text.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-types.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-value.h
+-rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-version.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi.h
 drwxr-xr-x root/root    usr/include/at-spi2-atk/
 drwxr-xr-x root/root    usr/include/at-spi2-atk/2.0/
@@ -80,8 +78,6 @@ drwxr-xr-x root/root    usr/include/atk-1.0/atk/
 -rw-r--r-- root/root    usr/include/atk-1.0/atk/atkversion.h
 -rw-r--r-- root/root    usr/include/atk-1.0/atk/atkwindow.h
 drwxr-xr-x root/root    usr/lib/
--rwxr-xr-x root/root    usr/lib/at-spi-bus-launcher
--rwxr-xr-x root/root    usr/lib/at-spi2-registryd
 drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Atk-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Atspi-2.0.typelib
@@ -92,8 +88,8 @@ drwxr-xr-x root/root    usr/lib/gtk-2.0/
 drwxr-xr-x root/root    usr/lib/gtk-2.0/modules/
 -rwxr-xr-x root/root    usr/lib/gtk-2.0/modules/libatk-bridge.so
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so -> libatk-1.0.so.0
-lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.24609.1
--rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.24609.1
+lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25209.1
+-rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25209.1
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so -> libatk-bridge-2.0.so.0
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so.0 -> libatk-bridge-2.0.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libatk-bridge-2.0.so.0.0.0
@@ -107,6 +103,9 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 drwxr-xr-x root/root    usr/lib/systemd/
 drwxr-xr-x root/root    usr/lib/systemd/user/
 -rw-r--r-- root/root    usr/lib/systemd/user/at-spi-dbus-bus.service
+drwxr-xr-x root/root    usr/libexec/
+-rwxr-xr-x root/root    usr/libexec/at-spi-bus-launcher
+-rwxr-xr-x root/root    usr/libexec/at-spi2-registryd
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/dbus-1/
 drwxr-xr-x root/root    usr/share/dbus-1/accessibility-services/
