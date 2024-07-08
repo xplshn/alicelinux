@@ -8,6 +8,8 @@ drwxr-xr-x root/root    usr/share/X11/xkb/compat/
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/basic
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/caps
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/complete
+-rw-r--r-- root/root    usr/share/X11/xkb/compat/grab
+-rw-r--r-- root/root    usr/share/X11/xkb/compat/grp_led
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/iso9995
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/japan
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/ledcaps
@@ -16,6 +18,7 @@ drwxr-xr-x root/root    usr/share/X11/xkb/compat/
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/ledscroll
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/level5
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/misc
+-rw-r--r-- root/root    usr/share/X11/xkb/compat/mod_led
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/mousekeys
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/olpc
 -rw-r--r-- root/root    usr/share/X11/xkb/compat/pc
@@ -41,7 +44,6 @@ drwxr-xr-x root/root    usr/share/X11/xkb/geometry/digital_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/macintosh
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/microsoft
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/nec
--rw-r--r-- root/root    usr/share/X11/xkb/geometry/nokia
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/northgate
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/pc
 -rw-r--r-- root/root    usr/share/X11/xkb/geometry/sanwa
@@ -149,6 +151,7 @@ drwxr-xr-x root/root    usr/share/X11/xkb/symbols/fujitsu_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/gh
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/gn
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/gr
+-rw-r--r-- root/root    usr/share/X11/xkb/symbols/grab
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/group
 drwxr-xr-x root/root    usr/share/X11/xkb/symbols/hp_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/hp_vndr/us
@@ -215,10 +218,6 @@ drwxr-xr-x root/root    usr/share/X11/xkb/symbols/nec_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/ng
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/nl
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/no
-drwxr-xr-x root/root    usr/share/X11/xkb/symbols/nokia_vndr/
--rw-r--r-- root/root    usr/share/X11/xkb/symbols/nokia_vndr/rx-44
--rw-r--r-- root/root    usr/share/X11/xkb/symbols/nokia_vndr/rx-51
--rw-r--r-- root/root    usr/share/X11/xkb/symbols/nokia_vndr/su-8w
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/np
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/nz
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/olpc
@@ -232,6 +231,7 @@ drwxr-xr-x root/root    usr/share/X11/xkb/symbols/nokia_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/rs
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/ru
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/rupeesign
+-rw-r--r-- root/root    usr/share/X11/xkb/symbols/scrolllock
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/se
 drwxr-xr-x root/root    usr/share/X11/xkb/symbols/sgi_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/sgi_vndr/jp
@@ -248,6 +248,7 @@ drwxr-xr-x root/root    usr/share/X11/xkb/symbols/sharp_vndr/
 drwxr-xr-x root/root    usr/share/X11/xkb/symbols/sony_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/sony_vndr/us
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/srvr_ctrl
+-rw-r--r-- root/root    usr/share/X11/xkb/symbols/srvrkeys
 drwxr-xr-x root/root    usr/share/X11/xkb/symbols/sun_vndr/
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/sun_vndr/ara
 -rw-r--r-- root/root    usr/share/X11/xkb/symbols/sun_vndr/be
@@ -311,11 +312,7 @@ drwxr-xr-x root/root    usr/share/X11/xkb/types/
 -rw-r--r-- root/root    usr/share/X11/xkb/types/iso9995
 -rw-r--r-- root/root    usr/share/X11/xkb/types/level5
 -rw-r--r-- root/root    usr/share/X11/xkb/types/mousekeys
--rw-r--r-- root/root    usr/share/X11/xkb/types/nokia
 -rw-r--r-- root/root    usr/share/X11/xkb/types/numpad
 -rw-r--r-- root/root    usr/share/X11/xkb/types/pc
-drwxr-xr-x root/root    usr/share/man/
-drwxr-xr-x root/root    usr/share/man/man7/
--rw-r--r-- root/root    usr/share/man/man7/xkeyboard-config.7.gz
 drwxr-xr-x root/root    usr/share/pkgconfig/
 -rw-r--r-- root/root    usr/share/pkgconfig/xkeyboard-config.pc

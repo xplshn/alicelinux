@@ -1,4 +1,4 @@
 name=xkeyboard-config
-version=2.41
+version=2.42
 release=1
 source="https://www.x.org/pub/individual/data/$name/$name-$version.tar.xz"
