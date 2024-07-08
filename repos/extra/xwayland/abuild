@@ -1,5 +1,5 @@
 name=xwayland
-version=23.2.6
+version=24.1.0
 release=1
 source="https://xorg.freedesktop.org/releases/individual/xserver/${name}-${version}.tar.xz"
 

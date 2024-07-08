@@ -1,8 +1,7 @@
-pixman
-libxkbfile
-libxfont2
-wayland-protocols
-libxcvt
+harfbuzz
 libepoxy
 libtirpc
+libxcvt
 libxdmcp
+libxfont2
+nettle
