@@ -2,7 +2,6 @@ libdrm
 python-mako
 libglvnd
 glslang
-wayland
 wayland-protocols
 elfutils
 libxshmfence

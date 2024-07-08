@@ -5,6 +5,7 @@ source="https://archive.mesa3d.org/$name-$version.tar.xz"
 keep_static=1
 [ -f $SPM_PKGDB/wayland ] && build_opt="-Dplatforms=wayland"
 [ -f $SPM_PKGDB/libx11 ] && build_opt="-Dplatforms=x11"
+[ -f $SPM_PKGDB/libx11 ] && [ -f $SPM_PKGDB/wayland ] && build_opt="-Dplatforms=wayland,x11"
 build_opt="
 	$build_opt
 	-Dgallium-drivers=auto
