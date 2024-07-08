@@ -1,7 +1,5 @@
 ffmpeg
 libplacebo
-wayland
-wayland-protocols
 libxkbcommon
 libxscrnsaver
 libxpresent
