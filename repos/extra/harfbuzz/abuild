@@ -1,5 +1,5 @@
 name=harfbuzz
-version=8.5.0
+version=9.0.0
 release=1
 source="https://github.com/$name/$name/releases/download/$version/$name-$version.tar.xz"
 build_opt=-Dgraphite2=enabled
