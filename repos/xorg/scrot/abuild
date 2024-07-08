@@ -1,4 +1,4 @@
 name=scrot
-version=0.10.0
+version=1.11.1
 release=1
-source="https://github.com/dreamer/$name/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/resurrecting-open-source-projects/scrot/releases/download/$version/$name-$version.tar.gz"
