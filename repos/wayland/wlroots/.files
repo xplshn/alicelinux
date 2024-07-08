@@ -10,6 +10,7 @@ drwxr-xr-x root/root    usr/include/wlr/backend/
 -rw-r--r-- root/root    usr/include/wlr/backend/multi.h
 -rw-r--r-- root/root    usr/include/wlr/backend/session.h
 -rw-r--r-- root/root    usr/include/wlr/backend/wayland.h
+-rw-r--r-- root/root    usr/include/wlr/backend/x11.h
 -rw-r--r-- root/root    usr/include/wlr/config.h
 drwxr-xr-x root/root    usr/include/wlr/interfaces/
 -rw-r--r-- root/root    usr/include/wlr/interfaces/wlr_buffer.h
@@ -107,6 +108,7 @@ drwxr-xr-x root/root    usr/include/wlr/util/
 -rw-r--r-- root/root    usr/include/wlr/util/region.h
 -rw-r--r-- root/root    usr/include/wlr/version.h
 -rw-r--r-- root/root    usr/include/wlr/xcursor.h
+-rw-r--r-- root/root    usr/include/wlr/xwayland.h
 drwxr-xr-x root/root    usr/include/wlr/xwayland/
 -rw-r--r-- root/root    usr/include/wlr/xwayland/server.h
 -rw-r--r-- root/root    usr/include/wlr/xwayland/shell.h

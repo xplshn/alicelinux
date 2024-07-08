@@ -1,7 +1,4 @@
-hwdata
 seatd
-wayland
-libdrm
 libxkbcommon
 pixman
 libinput
