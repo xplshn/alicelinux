@@ -40,6 +40,7 @@ drwxr-xr-x root/root    usr/lib/firefox/gmp-clearkey/0.1/
 -rwxr-xr-x root/root    usr/lib/firefox/libmozgtk.so
 -rwxr-xr-x root/root    usr/lib/firefox/libmozsandbox.so
 -rwxr-xr-x root/root    usr/lib/firefox/libmozsqlite3.so
+-rwxr-xr-x root/root    usr/lib/firefox/libmozwayland.so
 -rwxr-xr-x root/root    usr/lib/firefox/libxul.so
 -rw-r--r-- root/root    usr/lib/firefox/omni.ja
 -rwxr-xr-x root/root    usr/lib/firefox/pingsender
