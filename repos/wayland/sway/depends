@@ -1,7 +1,3 @@
 wlroots
 json-c
-cairo
 pango
-libglvnd
-libevdev
-libinput
