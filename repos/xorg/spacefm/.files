@@ -5,6 +5,7 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/spacefm
 -rwxr-xr-x root/root    usr/bin/spacefm-auth
+-rwxr-xr-x root/root    usr/bin/spacefm-bin
 -rwxr-xr-x root/root    usr/bin/spacefm-installer
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/share/

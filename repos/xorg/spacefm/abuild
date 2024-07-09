@@ -1,20 +1,23 @@
 name=spacefm
 version=1.0.6
-release=1
+release=2
 source="https://github.com/IgnorantGuru/${name}/archive/${version}/${name}-${version}.tar.gz
 	spacefm-9999-include-sysmacros.patch
 	spacefm-dash.patch
 	spacefm-fno-common.patch
 	spacefm-gcc14-build-fix.patch
-	x11-only.patch"
+	x11-only.patch
+	$name"
 
 build() {
 	./configure \
 		--prefix=/usr \
-		--disable-hal \
 		--disable-pixmaps \
 		--with-gtk3 \
 		--disable-video-thumbnails
 	make
 	make -j1 $DESTDIR=$PKG install
+
+	mv $PKG/usr/bin/spacefm $PKG/usr/bin/spacefm-bin
+	install -m755 $SRC/$name $PKG/usr/bin/spacefm
 }
