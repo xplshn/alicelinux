@@ -169,8 +169,6 @@ drwxr-xr-x root/root    usr/include/xorg/
 -rw-r--r-- root/root    usr/include/xorg/xvdix.h
 -rw-r--r-- root/root    usr/include/xorg/xvmcext.h
 drwxr-xr-x root/root    usr/lib/
--rwxr-xr-x root/root    usr/lib/Xorg
--r-sr-xr-x root/root    usr/lib/Xorg.wrap
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/xorg-server.pc
 drwxr-xr-x root/root    usr/lib/xorg/
@@ -190,6 +188,9 @@ drwxr-xr-x root/root    usr/lib/xorg/modules/input/
 -rwxr-xr-x root/root    usr/lib/xorg/modules/libvgahw.so
 -rwxr-xr-x root/root    usr/lib/xorg/modules/libwfb.so
 -rw-r--r-- root/root    usr/lib/xorg/protocol.txt
+drwxr-xr-x root/root    usr/libexec/
+-rwxr-xr-x root/root    usr/libexec/Xorg
+-r-sr-xr-x root/root    usr/libexec/Xorg.wrap
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/X11/
 drwxr-xr-x root/root    usr/share/X11/xorg.conf.d/
