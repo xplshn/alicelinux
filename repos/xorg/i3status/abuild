@@ -1,0 +1,6 @@
+name=i3status
+version=2.14
+release=1
+source="https://i3wm.org/${name}/${name}-${version}.tar.xz"
+build_opt="-Dpulseaudio=false"
+export CFLAGS="$CFLAGS $(pkg-config --cflags libnl-tiny)"
