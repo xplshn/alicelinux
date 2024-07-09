@@ -1,0 +1,10 @@
+startup-notification
+xcb-util-cursor
+xcb-util-keysyms
+xcb-util-wm
+xcb-util-xrm
+libxkbcommon
+yajl
+pango
+libev
+bash

@@ -1,0 +1,4 @@
+name=i3
+version=4.23
+release=1
+source="https://${name}wm.org/downloads/${name}-${version}.tar.xz"
