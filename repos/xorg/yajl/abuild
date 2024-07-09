@@ -1,0 +1,5 @@
+name=yajl
+version=2.1.0
+release=1
+source="https://github.com/lloyd/$name/archive/refs/tags/$version/$name-$version.tar.gz"
+build_type=cmake_build
