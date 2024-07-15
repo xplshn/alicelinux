@@ -1,0 +1,5 @@
+name=playerctl
+version=2.4.1
+release=1
+source="https://github.com/altdesktop/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+build_opt="-Dgtk-doc=false"
