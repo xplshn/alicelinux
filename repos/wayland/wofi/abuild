@@ -1,0 +1,4 @@
+name=wofi
+version=1.4.1
+release=1
+source="${name}-${version}.tar.gz::https://hg.sr.ht/~scoopta/${name}/archive/v${version}.tar.gz"
