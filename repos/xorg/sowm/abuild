@@ -1,0 +1,11 @@
+name=sowm
+version=1.6
+release=1
+source="https://github.com/dylanaraps/${name}/archive/${version}/${name}-${version}.tar.gz
+	multihead-support.patch
+	config.h"
+
+prebuild() {
+	cp $SRC/config.h .
+}
+
