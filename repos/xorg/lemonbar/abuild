@@ -1,4 +1,5 @@
 name=lemonbar
 version=1.4
-release=1
-source="https://github.com/LemonBoy/bar/archive/v${version}/${name}-${version}.tar.gz"
+release=2
+source="https://github.com/LemonBoy/bar/archive/v${version}/${name}-${version}.tar.gz
+	alwaysbelow.patch"
