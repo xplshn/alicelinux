@@ -1,5 +1,5 @@
 name=nodejs
-version=22.4.0
+version=22.5.1
 release=1
 source="https://$name.org/dist/v$version/node-v$version.tar.xz"
 
