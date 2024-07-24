@@ -1,5 +1,5 @@
 name=linux
-version=6.6.37
+version=6.6.41
 release=1
 source="https://cdn.kernel.org/pub/$name/kernel/v6.x/$name-$version.tar.xz
 	dotconfig"
@@ -28,7 +28,7 @@ build() {
 	
 	kernver=${version}$(grep CONFIG_LOCALVERSION= .config | cut -d '"' -f2)
 	
-	#make menuconfig
+	[ "$MENUCONFIG" ] && make menuconfig
 	
 	make bzImage modules
 	make INSTALL_MOD_PATH=$PKG INSTALL_MOD_STRIP=1 modules_install
