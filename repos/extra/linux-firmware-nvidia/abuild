@@ -1,5 +1,5 @@
 name=linux-firmware-nvidia
-version=20240610
+version=20240709
 release=1
 source="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-$version.tar.gz"
 
