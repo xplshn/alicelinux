@@ -40,7 +40,7 @@ drwxr-xr-x root/root    lib/firmware/acenic/
 -rw-r--r-- root/root    lib/firmware/acenic/tg2.bin.xz
 drwxr-xr-x root/root    lib/firmware/adaptec/
 -rw-r--r-- root/root    lib/firmware/adaptec/starfire_rx.bin.xz
-lrwxrwxrwx root/root    lib/firmware/adaptec/starfire_tx.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/adaptec/starfire_rx.bin.xz
+lrwxrwxrwx root/root    lib/firmware/adaptec/starfire_tx.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/adaptec/starfire_rx.bin.xz
 drwxr-xr-x root/root    lib/firmware/advansys/
 -rw-r--r-- root/root    lib/firmware/advansys/3550.bin.xz
 -rw-r--r-- root/root    lib/firmware/advansys/38C0800.bin.xz
@@ -52,9 +52,9 @@ drwxr-xr-x root/root    lib/firmware/airoha/
 -rw-r--r-- root/root    lib/firmware/airoha/EthMD32.DSP.bin.xz
 -rw-r--r-- root/root    lib/firmware/airoha/EthMD32.dm.bin.xz
 drwxr-xr-x root/root    lib/firmware/amlogic/
-drwxr-xr-x root/root    lib/firmware/amlogic/bluetooth/
--rw-r--r-- root/root    lib/firmware/amlogic/bluetooth/w1u_bt_fw_uart.bin.xz
--rw-r--r-- root/root    lib/firmware/amlogic/bluetooth/w2_bt_fw_uart.bin.xz
+-rw-r--r-- root/root    lib/firmware/amlogic/aml_w155s2_bt_uart.bin.xz
+-rw-r--r-- root/root    lib/firmware/amlogic/aml_w265s1_bt_uart.bin.xz
+-rw-r--r-- root/root    lib/firmware/amlogic/aml_w265s2_bt_uart.bin.xz
 drwxr-xr-x root/root    lib/firmware/amphion/
 drwxr-xr-x root/root    lib/firmware/amphion/vpu/
 -rw-r--r-- root/root    lib/firmware/amphion/vpu/vpu_fw_imx8_dec.bin.xz
@@ -72,11 +72,11 @@ drwxr-xr-x root/root    lib/firmware/ar3k/1020201coex/
 drwxr-xr-x root/root    lib/firmware/ar3k/30000/
 -rw-r--r-- root/root    lib/firmware/ar3k/30000/PS_ASIC.pst.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/30000/RamPatch.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ar3k/30000/ar3kbdaddr.pst.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/1020200/ar3kbdaddr.pst.xz
+lrwxrwxrwx root/root    lib/firmware/ar3k/30000/ar3kbdaddr.pst.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/1020200/ar3kbdaddr.pst.xz
 drwxr-xr-x root/root    lib/firmware/ar3k/30101/
 -rw-r--r-- root/root    lib/firmware/ar3k/30101/PS_ASIC.pst.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/30101/RamPatch.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ar3k/30101/ar3kbdaddr.pst.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/1020200/ar3kbdaddr.pst.xz
+lrwxrwxrwx root/root    lib/firmware/ar3k/30101/ar3kbdaddr.pst.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/1020200/ar3kbdaddr.pst.xz
 drwxr-xr-x root/root    lib/firmware/ar3k/30101coex/
 -rw-r--r-- root/root    lib/firmware/ar3k/30101coex/PS_ASIC.pst.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/30101coex/PS_ASIC_aclHighPri.pst.xz
@@ -95,7 +95,7 @@ drwxr-xr-x root/root    lib/firmware/ar3k/30101coex/
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x01020200_26.dfu.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x01020200_40.dfu.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x01020201_26.dfu.xz
-lrwxrwxrwx root/root    lib/firmware/ar3k/ramps_0x01020201_40.dfu.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/ramps_0x01020201_26.dfu.xz
+lrwxrwxrwx root/root    lib/firmware/ar3k/ramps_0x01020201_40.dfu.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ar3k/ramps_0x01020201_26.dfu.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x11020000_40.dfu.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x11020100_40.dfu.xz
 -rw-r--r-- root/root    lib/firmware/ar3k/ramps_0x31010000_40.dfu.xz
@@ -133,7 +133,7 @@ drwxr-xr-x root/root    lib/firmware/ath10k/QCA6174/hw3.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA6174/hw3.0/firmware-sdio-6.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-4.txt.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-sdio-6.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-sdio-6.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt.xz
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9377/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9377/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9377/hw1.0/board-2.bin.xz
@@ -142,8 +142,8 @@ drwxr-xr-x root/root    lib/firmware/ath10k/QCA9377/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9377/hw1.0/firmware-6.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9377/hw1.0/firmware-sdio-5.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-5.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-6.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-sdio-5.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-5.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-6.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA6174/hw3.0/notice_ath10k_firmware-6.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-sdio-5.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA9377/hw1.0/notice_ath10k_firmware-5.txt.xz
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9887/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9887/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9887/hw1.0/board.bin.xz
@@ -153,19 +153,19 @@ drwxr-xr-x root/root    lib/firmware/ath10k/QCA9888/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9888/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9888/hw2.0/board-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9888/hw2.0/firmware-5.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9888/hw2.0/notice_ath10k_firmware-5.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA4019/hw1.0/notice_ath10k_firmware-5.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9888/hw2.0/notice_ath10k_firmware-5.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA4019/hw1.0/notice_ath10k_firmware-5.txt.xz
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA988X/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA988X/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA988X/hw2.0/board.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA988X/hw2.0/firmware-4.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA988X/hw2.0/firmware-5.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA988X/hw2.0/notice_ath10k_firmware-4.txt.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA988X/hw2.0/notice_ath10k_firmware-5.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA9887/hw1.0/notice_ath10k_firmware-5.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA988X/hw2.0/notice_ath10k_firmware-5.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA9887/hw1.0/notice_ath10k_firmware-5.txt.xz
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9984/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA9984/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9984/hw1.0/board-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA9984/hw1.0/firmware-5.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9984/hw1.0/notice_ath10k_firmware-5.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA4019/hw1.0/notice_ath10k_firmware-5.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath10k/QCA9984/hw1.0/notice_ath10k_firmware-5.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath10k/QCA4019/hw1.0/notice_ath10k_firmware-5.txt.xz
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA99X0/
 drwxr-xr-x root/root    lib/firmware/ath10k/QCA99X0/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath10k/QCA99X0/hw2.0/board-2.bin.xz
@@ -210,7 +210,7 @@ drwxr-xr-x root/root    lib/firmware/ath11k/IPQ5018/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ5018/hw1.0/q6_fw.mdt.xz
 drwxr-xr-x root/root    lib/firmware/ath11k/IPQ6018/
 drwxr-xr-x root/root    lib/firmware/ath11k/IPQ6018/hw1.0/
-lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ6018/hw1.0/Notice.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ6018/hw1.0/Notice.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ6018/hw1.0/board-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ6018/hw1.0/m3_fw.b00.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ6018/hw1.0/m3_fw.b01.xz
@@ -229,7 +229,7 @@ lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ6018/hw1.0/Notice.txt.xz -> /tmp/
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ6018/hw1.0/q6_fw.mdt.xz
 drwxr-xr-x root/root    lib/firmware/ath11k/IPQ8074/
 drwxr-xr-x root/root    lib/firmware/ath11k/IPQ8074/hw2.0/
-lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ8074/hw2.0/Notice.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ8074/hw2.0/Notice.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/board-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/m3_fw.b00.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/m3_fw.b01.xz
@@ -254,7 +254,7 @@ drwxr-xr-x root/root    lib/firmware/ath11k/QCA6390/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath11k/QCA6390/hw2.0/m3.bin.xz
 drwxr-xr-x root/root    lib/firmware/ath11k/QCN9074/
 drwxr-xr-x root/root    lib/firmware/ath11k/QCN9074/hw1.0/
-lrwxrwxrwx root/root    lib/firmware/ath11k/QCN9074/hw1.0/Notice.txt.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
+lrwxrwxrwx root/root    lib/firmware/ath11k/QCN9074/hw1.0/Notice.txt.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath11k/IPQ5018/hw1.0/Notice.txt.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/QCN9074/hw1.0/amss.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/QCN9074/hw1.0/board-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath11k/QCN9074/hw1.0/m3.bin.xz
@@ -303,7 +303,7 @@ drwxr-xr-x root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/athwlan.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD32.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.WB31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.WB31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/data.patch.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/endpointping.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003.1/hw2.1.1/otp.bin.xz
@@ -312,22 +312,22 @@ drwxr-xr-x root/root    lib/firmware/ath6k/AR6003/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw1.0/athwlan.bin.z77.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw1.0/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw1.0/bdata.SD32.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw1.0/bdata.WB31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003/hw1.0/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw1.0/bdata.WB31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003/hw1.0/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw1.0/data.patch.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw1.0/otp.bin.z77.xz
 drwxr-xr-x root/root    lib/firmware/ath6k/AR6003/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.0/athwlan.bin.z77.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.0/bdata.SD31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.0/bdata.SD31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.0/bdata.SD32.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.0/bdata.WB31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.0/bdata.WB31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.0/data.patch.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.0/otp.bin.z77.xz
 drwxr-xr-x root/root    lib/firmware/ath6k/AR6003/hw2.1.1/
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.SD31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.SD32.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003/hw2.0/bdata.SD32.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.WB31.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/data.patch.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/data.patch.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.SD31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.SD32.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003/hw2.0/bdata.SD32.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/bdata.WB31.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ath6k/AR6003/hw2.1.1/data.patch.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ath6k/AR6003.1/hw2.1.1/data.patch.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.1.1/endpointping.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.1.1/fw-2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ath6k/AR6003/hw2.1.1/fw-3.bin.xz
@@ -394,15 +394,15 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280b28.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280beb.wmfw.xz -> cs35l41/v6.80.0/halo_cspl_RAM_revB2_29.82.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-r1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid0-l1.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-r1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d-spkid1-l1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280c4d.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd-spkid0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd-spkid1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd-spkid0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd-spkid1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd-spkid0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbd.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbe-spkid0.bin.xz -> cs35l41-dsp1-spk-prot-10280cbd-spkid0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10280cbe-spkid1.bin.xz -> cs35l41-dsp1-spk-prot-10280cbd-spkid1.bin.xz
@@ -654,7 +654,7 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c46.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c47.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c48.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c48.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c49.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c48.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c49.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c48.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c49.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c4d-spkid0-l0.bin.xz -> cs35l41-dsp1-spk-prot-103c8bb3-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8c4d-spkid0-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
@@ -727,21 +727,21 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cdd.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cde.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-r1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5-l1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-103c8cf5.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104312af.wmfw.xz -> cs35l41/v6.63.0/halo_cspl_RAM_revB2_29.65.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-r0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433-spkid1-r0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431433.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431463-spkid0-l0.bin.xz
@@ -786,8 +786,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431503.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431533.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431573.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431663-l0.bin.xz -> cs35l41-dsp1-spk-prot-10431483-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431663-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-14_5dB.bincfg.xz
@@ -811,8 +811,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316a3.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316f3.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104317f3-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104317f3-spkid0-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-16_5dB.bincfg.xz
@@ -823,13 +823,13 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104317f3-spkid
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104317f3.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431863.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104318d3.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a20.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a30.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
@@ -852,8 +852,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a83-spkid
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a83.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431a8f.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-r0.bin.xz
@@ -864,25 +864,25 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-19_5dB.bincfg.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-r0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-19_5dB.bincfg.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-19_5dB.bincfg.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03-spkid1-r0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-19_5dB.bincfg.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c03.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-104316d3-spkid1-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c33.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c43.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431b93-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431c9f.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-r0.bin.xz
@@ -911,8 +911,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431d1f-spkid
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431d1f.wmfw.xz -> cs35l41/v6.78.0/halo_cspl_RAM_revB2_29.80.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431da2.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431e02-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431e02-spkid0-r0.bin.xz
@@ -926,8 +926,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431e02.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431e12.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ed3.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ee2-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ee2-r0.bin.xz
@@ -942,29 +942,29 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f12.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f1f.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431f62.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a20-spkid0-l0.bin.xz -> cs35l41-dsp1-spk-prot-10431b93-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a20-spkid0-r0.bin.xz -> cs35l41-dsp1-spk-prot-10431b93-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a20-spkid1-l0.bin.xz -> cs35l41-dsp1-spk-prot-10431b93-spkid1-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a20-spkid1-r0.bin.xz -> cs35l41-dsp1-spk-prot-10431b93-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a30-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431ccf-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a40-spkid0-l0.bin.xz -> cs35l41-dsp1-spk-prot-10433a30-spkid0-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a40-spkid0-r0.bin.xz -> cs35l41-dsp1-spk-prot-10433a30-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a40-spkid1-l0.bin.xz -> cs35l41-dsp1-spk-prot-10433a30-spkid1-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a40-spkid1-r0.bin.xz -> cs35l41-dsp1-spk-prot-10433a30-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid1-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a50-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431cef-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10433a60-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-10431caf-spkid0-r0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa22f1-l0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa22f1-l0.bincfg.xz -> cs35l41/bincfgs/cs35l41-dsp1-16_5dB.bincfg.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa22f1-r0.bin.xz
@@ -1012,8 +1012,8 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa231a.wmfw.
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3847.wmfw.xz -> cs35l41/v6.39.0/halo_cspl_RAM_revB2_29.41.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-r0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3855.wmfw.xz -> cs35l41/v6.47.0/halo_cspl_RAM_revB2_29.49.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3865-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3865-r0.bin.xz
@@ -1029,11 +1029,11 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e.wmfw.
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386f-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386f-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386f.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3877-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3877-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3877-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3877-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3877.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3878-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3878-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid1-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3878-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3878-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa386e-spkid1-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa3878.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-r0.bin.xz
@@ -1067,19 +1067,19 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7-spkid
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38b7.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-r1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7-spkid0-l1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c7.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l0.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-r1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8-spkid1-l1.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38c8.wmfw.xz -> cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9-spkid1-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38ab-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38f9.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-l0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-l0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-r0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-r0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-l0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-l0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa-spkid0-r0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38a9-spkid0-r0.bin.xz
 lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot-17aa38fa.wmfw.xz -> cs35l41/v6.61.1/halo_cspl_RAM_revB2_29.63.1.wmfw.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot.bin.xz
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41-dsp1-spk-prot.wmfw.xz
@@ -1357,7 +1357,7 @@ lrwxrwxrwx root/root    lib/firmware/i915/bxt_dmc_ver1.bin.xz -> bxt_dmc_ver1_07
 -rw-r--r-- root/root    lib/firmware/i915/dg1_guc_70.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/dg1_huc.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/dg1_huc_7.7.1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/i915/dg1_huc_7.9.3.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/i915/dg1_huc.bin.xz
+lrwxrwxrwx root/root    lib/firmware/i915/dg1_huc_7.9.3.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/i915/dg1_huc.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/dg2_dmc_ver2_06.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/dg2_dmc_ver2_07.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/dg2_dmc_ver2_08.bin.xz
@@ -1441,7 +1441,7 @@ lrwxrwxrwx root/root    lib/firmware/i915/skl_guc_ver6.bin.xz -> skl_guc_ver6_1.
 -rw-r--r-- root/root    lib/firmware/i915/tgl_huc_7.0.12.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/tgl_huc_7.0.3.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/tgl_huc_7.5.0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/i915/tgl_huc_7.9.3.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/i915/tgl_huc.bin.xz
+lrwxrwxrwx root/root    lib/firmware/i915/tgl_huc_7.9.3.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/i915/tgl_huc.bin.xz
 -rw-r--r-- root/root    lib/firmware/i915/xe2lpd_dmc.bin.xz
 drwxr-xr-x root/root    lib/firmware/imx/
 drwxr-xr-x root/root    lib/firmware/imx/sdma/
@@ -1474,7 +1474,7 @@ lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_glk.bin.xz -> avs/apl/dsp_base
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_glk_v1814.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_glk_v2768.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_glk_v2880.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_glk_v3366.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/dsp_fw_bxtn_v3366.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_glk_v3366.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/dsp_fw_bxtn_v3366.bin.xz
 lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_kbl.bin.xz -> avs/skl/dsp_basefw.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_kbl_v1037.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_kbl_v2042.bin.xz
@@ -1484,7 +1484,7 @@ lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_kbl.bin.xz -> avs/skl/dsp_base
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_kbl_v3420.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_kbl_v701.bin.xz
 lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_release.bin.xz -> avs/skl/dsp_basefw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_release_v3402.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/dsp_fw_kbl_v3402.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_release_v3402.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/dsp_fw_kbl_v3402.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/dsp_fw_release_v969.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/fw_sst_0f28.bin-48kHz_i2s_master.xz
 -rw-r--r-- root/root    lib/firmware/intel/fw_sst_0f28.bin.xz
@@ -1492,79 +1492,79 @@ lrwxrwxrwx root/root    lib/firmware/intel/dsp_fw_release_v3402.bin.xz -> /tmp/a
 -rw-r--r-- root/root    lib/firmware/intel/fw_sst_22a8.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0040-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-1020.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-1020.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0040-1020.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-1050.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-1050.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-2120.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-2120.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-4150.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-4150.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0041-0041.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-1050.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+-rw-r--r-- root/root    lib/firmware/intel/ibt-0040-1050.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-2120.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-2120.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-4150.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0040-4150.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0041-0041.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0041-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-0041.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-0041.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0180-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-1050.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-1050.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0180-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-4150.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-4150.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0180-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-0291-0291.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-1050.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-1050.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0180-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-4150.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0180-4150.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0180-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-0291-0291.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-0291-0291.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-0041.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-0041.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1020.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1020.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1050.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1050.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-2120.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-2120.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-4150.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-4150.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-0041.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-0041.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1020.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1020.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1050.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-1050.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-2120.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-2120.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-1020.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-4150.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-1040-4150.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-11-5.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-11-5.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-12-16.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-12-16.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-17-0-1.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-17-0-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-16-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-16-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-17-16-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-2.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-2.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-0-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-0-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-16-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-16-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-2.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-2.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-0.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-2.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-17-2.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-0-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-0-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-0-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-16-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-16-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-2.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-18-2.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-17-16-1.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-0.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-3.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-3.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-19-0-3.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-4.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-4.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-16-4.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-16-4.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-4.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-4.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-0.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-0.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-1.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-1.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-4.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-4.sfi.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-0-3.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-4.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-0-4.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-16-4.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-16-4.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-4.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-240-4.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-0.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-0.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-1.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-1.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-4.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-19-32-4.sfi.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-19-0-0.sfi.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-0-3.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-20-0-3.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-1-3.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-1-3.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-20-1-3.sfi.xz
-lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-1-4.ddc.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
+lrwxrwxrwx root/root    lib/firmware/intel/ibt-20-1-4.ddc.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/ibt-0040-0041.ddc.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-20-1-4.sfi.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-hw-37.7.10-fw-1.0.1.2d.d.bseq.xz
 -rw-r--r-- root/root    lib/firmware/intel/ibt-hw-37.7.10-fw-1.0.2.3.d.bseq.xz
@@ -1596,16 +1596,18 @@ drwxr-xr-x root/root    lib/firmware/intel/ipu/
 -rw-r--r-- root/root    lib/firmware/intel/ipu/shisp_2401a0_v21.bin.xz
 lrwxrwxrwx root/root    lib/firmware/intel/ipu3-fw.bin.xz -> ipu/irci_irci_ecr-master_20161208_0213_20170112_1500.bin.xz
 lrwxrwxrwx root/root    lib/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin.xz -> ipu/irci_irci_ecr-master_20161208_0213_20170112_1500.bin.xz
+drwxr-xr-x root/root    lib/firmware/intel/ish/
+-rw-r--r-- root/root    lib/firmware/intel/ish/ish_lnlm.bin.xz
 drwxr-xr-x root/root    lib/firmware/intel/vsc/
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_hi556_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_himx11b1_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_himx2170_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_himx2172_0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_int3537_0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_hi556_0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_int3537_0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_hi556_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01a0_0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01af_0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_ovti01a0_0.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01as_0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_ovti01a0_0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01af_0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_ovti01a0_0.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01as_0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_pkg_ovti01a0_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti02c1_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti02e1_0.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti2740_0.bin.xz
@@ -1616,16 +1618,16 @@ lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_pkg_ovti01as_0.bin.xz -> /tm
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_himx11b1_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_himx2170_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_himx2172_0_1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_int3537_0_1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_hi556_0_1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_int3537_0_1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_hi556_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti01a0_0_1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti01af_0_1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti01a0_0_1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti01as_0_1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti01a0_0_1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti01af_0_1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti01a0_0_1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti01as_0_1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti01a0_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti02c1_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti02e1_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti2740_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti5678_0_1.bin.xz
 -rw-r--r-- root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti9734_0_1.bin.xz
-lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti9738_0_1.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti2740_0_1.bin.xz
+lrwxrwxrwx root/root    lib/firmware/intel/vsc/ivsc_skucfg_ovti9738_0_1.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/intel/vsc/ivsc_skucfg_ovti2740_0_1.bin.xz
 drwxr-xr-x root/root    lib/firmware/isci/
 -rw-r--r-- root/root    lib/firmware/isci/isci_firmware.bin.xz
 -rw-r--r-- root/root    lib/firmware/isdbt_nova_12mhz.inp.xz
@@ -1723,6 +1725,7 @@ drwxr-xr-x root/root    lib/firmware/isci/
 -rw-r--r-- root/root    lib/firmware/iwlwifi-ma-b0-gf4-a0.pnvm.xz
 -rw-r--r-- root/root    lib/firmware/iwlwifi-ma-b0-hr-b0-83.ucode.xz
 -rw-r--r-- root/root    lib/firmware/iwlwifi-ma-b0-hr-b0-86.ucode.xz
+-rw-r--r-- root/root    lib/firmware/iwlwifi-ma-b0-hr-b0-89.ucode.xz
 -rw-r--r-- root/root    lib/firmware/iwlwifi-so-a0-gf-a0-72.ucode.xz
 -rw-r--r-- root/root    lib/firmware/iwlwifi-so-a0-gf-a0-73.ucode.xz
 -rw-r--r-- root/root    lib/firmware/iwlwifi-so-a0-gf-a0-74.ucode.xz
@@ -1813,9 +1816,9 @@ drwxr-xr-x root/root    lib/firmware/libertas/
 -rw-r--r-- root/root    lib/firmware/libertas/gspi8682.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/gspi8682_helper.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/gspi8686_v9.bin.xz
-lrwxrwxrwx root/root    lib/firmware/libertas/gspi8686_v9_helper.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/libertas/gspi8682_helper.bin.xz
+lrwxrwxrwx root/root    lib/firmware/libertas/gspi8686_v9_helper.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/libertas/gspi8682_helper.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/gspi8688.bin.xz
-lrwxrwxrwx root/root    lib/firmware/libertas/gspi8688_helper.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/libertas/gspi8682_helper.bin.xz
+lrwxrwxrwx root/root    lib/firmware/libertas/gspi8688_helper.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/libertas/gspi8682_helper.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/lbtf_sdio.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/sd8385.bin.xz
 -rw-r--r-- root/root    lib/firmware/libertas/sd8385_helper.bin.xz
@@ -1938,7 +1941,7 @@ drwxr-xr-x root/root    lib/firmware/meson/vdec/
 -rw-r--r-- root/root    lib/firmware/meson/vdec/gxl_mpeg4_5.bin.xz
 -rw-r--r-- root/root    lib/firmware/meson/vdec/gxl_vp9.bin.xz
 -rw-r--r-- root/root    lib/firmware/meson/vdec/gxm_h264.bin.xz
-lrwxrwxrwx root/root    lib/firmware/meson/vdec/sm1_hevc_mmu.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/meson/vdec/g12a_hevc_mmu.bin.xz
+lrwxrwxrwx root/root    lib/firmware/meson/vdec/sm1_hevc_mmu.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/meson/vdec/g12a_hevc_mmu.bin.xz
 -rw-r--r-- root/root    lib/firmware/meson/vdec/sm1_vp9_mmu.bin.xz
 drwxr-xr-x root/root    lib/firmware/microchip/
 -rw-r--r-- root/root    lib/firmware/microchip/mscc_vsc8574_revb_int8051_29e8.bin.xz
@@ -1964,7 +1967,7 @@ lrwxrwxrwx root/root    lib/firmware/mt7662.bin.xz -> mediatek/mt7662.bin.xz
 lrwxrwxrwx root/root    lib/firmware/mt7662_rom_patch.bin.xz -> mediatek/mt7662_rom_patch.bin.xz
 -rw-r--r-- root/root    lib/firmware/mts_cdma.fw.xz
 -rw-r--r-- root/root    lib/firmware/mts_edge.fw.xz
-lrwxrwxrwx root/root    lib/firmware/mts_gsm.fw.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/mts_cdma.fw.xz
+lrwxrwxrwx root/root    lib/firmware/mts_gsm.fw.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/mts_cdma.fw.xz
 -rw-r--r-- root/root    lib/firmware/mts_mt9234mu.fw.xz
 -rw-r--r-- root/root    lib/firmware/mts_mt9234zba.fw.xz
 drwxr-xr-x root/root    lib/firmware/mwl8k/
@@ -2023,11 +2026,11 @@ drwxr-xr-x root/root    lib/firmware/qca/
 -rw-r--r-- root/root    lib/firmware/qca/crnv32u.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpbtfw21.tlv.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21.301.xz
-lrwxrwxrwx root/root    lib/firmware/qca/hpnv21.302.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/hpnv21.301.xz
+lrwxrwxrwx root/root    lib/firmware/qca/hpnv21.302.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/hpnv21.301.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21.309.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21g.301.xz
-lrwxrwxrwx root/root    lib/firmware/qca/hpnv21g.302.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/hpnv21g.301.xz
+lrwxrwxrwx root/root    lib/firmware/qca/hpnv21g.302.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/hpnv21g.301.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21g.309.xz
 -rw-r--r-- root/root    lib/firmware/qca/hpnv21g.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/htbtfw20.tlv.xz
@@ -2044,24 +2047,24 @@ lrwxrwxrwx root/root    lib/firmware/qca/hpnv21g.302.xz -> /tmp/apkg-pkg-linux-f
 -rw-r--r-- root/root    lib/firmware/qca/nvm_00440302_eu.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_00440302_i2s_eu.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00000200.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00000201.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00000200.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00000201.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00000200.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00000300.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00000302.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00000302_eu.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130200.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130200_0104.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0105.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200_0104.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0106.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0105.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200_0104.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0106.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130200_0107.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0109.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0110.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200_0104.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0109.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130200_0110.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130200_0104.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130201.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_010a.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_010b.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_010a.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_010b.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130201_0303.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130201_gf.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_gf_010a.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201_gf.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_gf_010b.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201_gf.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_gf_010a.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201_gf.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_gf_010b.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/nvm_usb_00130201_gf.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00130201_gf_0303.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/nvm_usb_00190200.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_00130300.bin.xz
@@ -2069,7 +2072,7 @@ lrwxrwxrwx root/root    lib/firmware/qca/nvm_usb_00130201_gf_010b.bin.xz -> /tmp
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_00230302.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_00440302.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_usb_00000200.bin.xz
-lrwxrwxrwx root/root    lib/firmware/qca/rampatch_usb_00000201.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/qca/rampatch_usb_00000200.bin.xz
+lrwxrwxrwx root/root    lib/firmware/qca/rampatch_usb_00000201.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/qca/rampatch_usb_00000200.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_usb_00000300.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_usb_00000302.bin.xz
 -rw-r--r-- root/root    lib/firmware/qca/rampatch_usb_00130200.bin.xz
@@ -2151,25 +2154,25 @@ lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA0623.bin.xz -> 
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8812ae_fw.bin.xz
 lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821a_config.bin.xz -> rtl8821c_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821a_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821c_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8723d_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821c_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8723d_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821c_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821cs_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761b_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821cs_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761b_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821cs_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822b_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822b_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cs_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cs_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8822cu_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8822cu_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cu_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8851bu_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8851bu_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8851bu_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852au_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852au_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852au_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852btu_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852btu_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852btu_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852bu_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852bu_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852bu_fw.bin.xz
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852cu_config.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852cu_config.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/rtl_bt/rtl8761bu_config.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852cu_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852cu_fw_v2.bin.xz
 drwxr-xr-x root/root    lib/firmware/rtl_nic/
@@ -2287,7 +2290,7 @@ drwxr-xr-x root/root    lib/firmware/slicoss/
 -rw-r--r-- root/root    lib/firmware/slicoss/oasisrcvucode.sys.xz
 -rw-r--r-- root/root    lib/firmware/sms1xxx-hcw-55xxx-dvbt-02.fw.xz
 -rw-r--r-- root/root    lib/firmware/sms1xxx-hcw-55xxx-isdbt-02.fw.xz
-lrwxrwxrwx root/root    lib/firmware/sms1xxx-nova-a-dvbt-01.fw.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/sms1xxx-hcw-55xxx-dvbt-02.fw.xz
+lrwxrwxrwx root/root    lib/firmware/sms1xxx-nova-a-dvbt-01.fw.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/sms1xxx-hcw-55xxx-dvbt-02.fw.xz
 -rw-r--r-- root/root    lib/firmware/sms1xxx-nova-b-dvbt-01.fw.xz
 -rw-r--r-- root/root    lib/firmware/sms1xxx-stellar-dvbt-01.fw.xz
 drwxr-xr-x root/root    lib/firmware/sun/
@@ -2302,6 +2305,9 @@ drwxr-xr-x root/root    lib/firmware/ti-connectivity/
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/TIInit_6.2.31.bts.xz
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/TIInit_6.6.15.bts.xz
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/TIInit_7.2.31.bts.xz
+-rw-r--r-- root/root    lib/firmware/ti-connectivity/cc33xx-conf.bin.xz
+-rw-r--r-- root/root    lib/firmware/ti-connectivity/cc33xx_2nd_loader.bin.xz
+-rw-r--r-- root/root    lib/firmware/ti-connectivity/cc33xx_fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/wl1251-fw.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/wl1251-nvs.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti-connectivity/wl1271-fw-2.bin.xz
@@ -2346,7 +2352,7 @@ drwxr-xr-x root/root    lib/firmware/ti/tas2781/
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX387F.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX3880.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX3881.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX3882.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX3881.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX3882.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX3881.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX3884.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX3886.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38A5.bin.xz
@@ -2361,12 +2367,12 @@ lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX3882.bin.xz -> /tmp/apkg-
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38CB.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38CD.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38D3.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38D4.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38D3.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38D4.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38D5.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TAS2XXX38D6.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38DF.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38E0.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38DF.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ti/tas2781/TAS2XXX38E0.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ti/tas2781/TAS2XXX38C3.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TIAS2781RCA2.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/tas2781/TIAS2781RCA4.bin.xz
 -rw-r--r-- root/root    lib/firmware/ti/vpdma-1b8.bin.xz
@@ -2387,7 +2393,7 @@ drwxr-xr-x root/root    lib/firmware/ueagle-atm/
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMV9i.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMV9p.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVei.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ueagle-atm/CMVeiWO.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ueagle-atm/CMVei.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ueagle-atm/CMVeiWO.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ueagle-atm/CMVei.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVep.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVepES.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVepES03.bin.xz
@@ -2395,7 +2401,7 @@ lrwxrwxrwx root/root    lib/firmware/ueagle-atm/CMVeiWO.bin.xz -> /tmp/apkg-pkg-
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVepFR04.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVepFR10.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/CMVepIT.bin.xz
-lrwxrwxrwx root/root    lib/firmware/ueagle-atm/CMVepWO.bin.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/ueagle-atm/CMVepFR.bin.xz
+lrwxrwxrwx root/root    lib/firmware/ueagle-atm/CMVepWO.bin.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/ueagle-atm/CMVepFR.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/DSP4p.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/DSP9i.bin.xz
 -rw-r--r-- root/root    lib/firmware/ueagle-atm/DSP9p.bin.xz
@@ -2426,7 +2432,7 @@ drwxr-xr-x root/root    lib/firmware/vxge/
 drwxr-xr-x root/root    lib/firmware/wfx/
 -rw-r--r-- root/root    lib/firmware/wfx/brd4001a.pds.xz
 -rw-r--r-- root/root    lib/firmware/wfx/brd8022a.pds.xz
-lrwxrwxrwx root/root    lib/firmware/wfx/brd8023a.pds.xz -> /tmp/apkg-pkg-linux-firmware/lib/firmware/wfx/brd4001a.pds.xz
+lrwxrwxrwx root/root    lib/firmware/wfx/brd8023a.pds.xz -> /mnt/data/tmp/apkg-pkg-linux-firmware/lib/firmware/wfx/brd4001a.pds.xz
 -rw-r--r-- root/root    lib/firmware/wfx/wfm_wf200_C0.sec.xz
 -rw-r--r-- root/root    lib/firmware/whiteheat.fw.xz
 -rw-r--r-- root/root    lib/firmware/whiteheat_loader.fw.xz
