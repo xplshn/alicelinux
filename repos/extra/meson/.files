@@ -4,13 +4,13 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.12/
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/entry_points.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/requires.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.4.1-py3.12.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/entry_points.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/meson-1.5.0-py3.12.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/
@@ -32,6 +32,8 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/envconfig.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/environment.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/environment.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/machinefile.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/machinefile.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mcompile.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mcompile.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mconf.cpython-312.opt-1.pyc
@@ -46,6 +48,8 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mesonlib.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mesonmain.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mesonmain.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mformat.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/mformat.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/minit.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/minit.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/minstall.cpython-312.opt-1.pyc
@@ -66,6 +70,8 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/munstable_coredata.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/optinterpreter.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/optinterpreter.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/options.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/options.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/programs.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/programs.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/__pycache__/rewriter.cpython-312.opt-1.pyc
@@ -243,6 +249,8 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mi
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/__init__.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/__init__.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/apple.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/apple.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/arm.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/arm.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/ccrx.cpython-312.opt-1.pyc
@@ -273,6 +281,7 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mi
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/visualstudio.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/xc16.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/__pycache__/xc16.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/apple.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/arm.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/ccrx.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/compilers/mixins/clang.py
@@ -462,6 +471,7 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/linkers/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/linkers/base.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/linkers/detect.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/linkers/linkers.py
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/machinefile.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mcompile.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mconf.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mdevenv.py
@@ -469,6 +479,7 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/linkers/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mesondata.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mesonlib.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mesonmain.py
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mformat.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/minit.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/minstall.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mintro.py
@@ -478,6 +489,8 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/__init__.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/__init__.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/_qt.cpython-312.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/_qt.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/cmake.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/cmake.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/cuda.cpython-312.opt-1.pyc
@@ -508,8 +521,6 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/python.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/python3.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/python3.cpython-312.pyc
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/qt.cpython-312.opt-1.pyc
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/qt.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/qt4.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/qt4.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/qt5.cpython-312.opt-1.pyc
@@ -526,6 +537,7 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/wayland.cpython-312.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/windows.cpython-312.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__pycache__/windows.cpython-312.pyc
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/_qt.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/cmake.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/cuda.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/dlang.py
@@ -541,7 +553,6 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/pkgconfig.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/python.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/python3.py
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/qt.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/qt4.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/qt5.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/qt6.py
@@ -556,6 +567,7 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/modules/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/mtest.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/munstable_coredata.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/optinterpreter.py
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/options.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/programs.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/mesonbuild/rewriter.py
 drwxr-xr-x root/root    usr/lib/python3.12/site-packages/mesonbuild/scripts/
