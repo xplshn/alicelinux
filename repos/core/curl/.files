@@ -27,6 +27,7 @@ drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/libcurl.m4
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/curl-config.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/curl.1.gz
 drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/CURLINFO_ACTIVESOCKET.3.gz
@@ -387,6 +388,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SUPPRESS_CONNECT_HEADERS.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_FASTOPEN.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_KEEPALIVE.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_KEEPCNT.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_KEEPIDLE.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_KEEPINTVL.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_TCP_NODELAY.3.gz
