@@ -1,0 +1,10 @@
+name=nsxiv
+version=32
+release=1
+source="https://codeberg.org/${name}/${name}/archive/v${version}.tar.gz"
+
+build() {
+	make PREFIX=/usr HAVE_LIBEXIF=0
+	make PREFIX=/usr HAVE_LIBEXIF=0 install
+	make PREFIX=/usr HAVE_LIBEXIF=0 install-desktop
+}
