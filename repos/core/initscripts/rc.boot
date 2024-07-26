@@ -2,7 +2,7 @@
 
 PATH=/bin:/usr/bin:/sbin:/usr/sbin
 
-echo "Alice booting"
+echo "Alice booting..."
 
 mountpoint -q /proc    || mount -t proc proc /proc -o nosuid,noexec,nodev
 mountpoint -q /sys     || mount -t sysfs sys /sys -o nosuid,noexec,nodev
@@ -16,20 +16,15 @@ if [ "$(command -v udevd)" ]; then
 	udevd --daemon
 	udevadm trigger --action=add    --type=subsystems
 	udevadm trigger --action=add    --type=devices
-	udevadm trigger --action=change --type=devices
 	udevadm settle
 else
 	echo "/sbin/mdev" > /proc/sys/kernel/hotplug
-	for i in $(find /sys/devices -name 'usb[0-9]*'); do
-		[ -e $i/uevent ] && echo add > $i/uevent
-	done
 	mdev -s
 	find /sys -name 'modalias' -type f -exec cat '{}' + | sort -u | xargs modprobe -b -a 2>/dev/null
-	find /sys -name 'modalias' -type f -exec cat '{}' + | sort -u | xargs modprobe -b -a 2>/dev/null
 	ln -s /proc/self/fd /dev/fd
-        ln -s fd/0          /dev/stdin
-        ln -s fd/1          /dev/stdout
-        ln -s fd/2          /dev/stderr
+	ln -s fd/0          /dev/stdin
+	ln -s fd/1          /dev/stdout
+	ln -s fd/2          /dev/stderr
 fi
 
 swapon -a
@@ -58,7 +53,7 @@ mount -o remount,rw /
 mount -a
 
 if [ ! -f /etc/hostname ]; then
-	echo linux > /etc/hostname
+	echo alice > /etc/hostname
 fi
 hostname -F /etc/hostname
 
@@ -82,6 +77,9 @@ fi
 
 dmesg >/var/log/dmesg.log
 
-for i in /etc/rc.modules /etc/rc.boot.local ; do
-	[ -x "$i" ] && "$i"
-done
+if [ -x /etc/rc.boot.local ]; then
+        /etc/rc.boot.local
+fi
+
+IFS=. read -r boottime _ < /proc/uptime
+echo "booted in ${boottime}s..."
