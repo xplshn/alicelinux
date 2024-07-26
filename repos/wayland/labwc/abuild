@@ -1,4 +1,4 @@
 name=labwc
-version=0.7.2
+version=0.7.4
 release=1
 source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz"
