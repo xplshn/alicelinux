@@ -1,0 +1,4 @@
+name=swayfx
+version=0.4
+release=1
+source="https://github.com/WillPower3309/${name}/archive/${version}/${name}-${version}.tar.gz"
