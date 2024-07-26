@@ -1,4 +1,4 @@
 name=imlib2
-version=1.12.2
+version=1.12.3
 release=1
 source="https://downloads.sourceforge.net/enlightenment/$name-$version.tar.xz"
