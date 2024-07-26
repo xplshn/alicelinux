@@ -1,0 +1,18 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/scenefx/
+drwxr-xr-x root/root    usr/include/scenefx/render/
+drwxr-xr-x root/root    usr/include/scenefx/render/fx_renderer/
+-rw-r--r-- root/root    usr/include/scenefx/render/fx_renderer/fx_effect_framebuffers.h
+-rw-r--r-- root/root    usr/include/scenefx/render/fx_renderer/fx_renderer.h
+-rw-r--r-- root/root    usr/include/scenefx/render/pass.h
+drwxr-xr-x root/root    usr/include/scenefx/types/
+drwxr-xr-x root/root    usr/include/scenefx/types/fx/
+-rw-r--r-- root/root    usr/include/scenefx/types/fx/blur_data.h
+-rw-r--r-- root/root    usr/include/scenefx/types/fx/shadow_data.h
+-rw-r--r-- root/root    usr/include/scenefx/types/wlr_scene.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libscenefx.so -> libscenefx.so.1
+-rwxr-xr-x root/root    usr/lib/libscenefx.so.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/scenefx.pc

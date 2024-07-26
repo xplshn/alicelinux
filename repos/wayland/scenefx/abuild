@@ -1,0 +1,4 @@
+name=scenefx
+version=0.1
+release=1
+source="https://github.com/wlrfx/${name}/archive/${version}/${name}-${version}.tar.gz"
