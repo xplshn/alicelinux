@@ -1,4 +1,4 @@
 name=perl-data-dump
-version=1.23
+version=1.25
 release=1
-source="https://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Data-Dump-$version.tar.gz"
+source="https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Dump-${version}.tar.gz"
