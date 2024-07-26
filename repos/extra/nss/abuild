@@ -1,9 +1,8 @@
 name=nss
-version=3.102
-ver=${version%.*}
-sion=${version#*.}
+version=3.102.1
+_version=$(echo $version | sed 's/\./_/g')
 release=1
-source="https://archive.mozilla.org/pub/security/nss/releases/NSS_${ver}_${sion}_RTM/src/nss-$version.tar.gz
+source="https://archive.mozilla.org/pub/security/nss/releases/NSS_${_version}_RTM/src/nss-$version.tar.gz
 	nss-3.92-standalone-1.patch"
 
 build() {
