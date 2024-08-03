@@ -69,7 +69,7 @@ I'm also going to set `NINJAJOBS` here. Without it, `ninja` will use all threads
 ```
 Next, we need to set the package's build scripts path (I'll call it `package repos`) so `apkg` can find them. The `APKG_REPO` variable can accept multiple values for multiple `package repos`.
 
-Alice provides two (2) `package repos` (at the time of this writing), `core` and `extra`. `core` contains all base packages, and `extra` includes other packages beyond the base.
+Alice provides two (4) `package repos` (at the time of this writing): `core`, `extra`, `xorg` and `wayland`. `core` contains all base packages, and `extra` includes other packages beyond the base. `xorg` and `wayland` contain packages for gui and their dependencies.
 
 First, get the absolute path of the `package repos` where we cloned them. By the way, we are still inside the `/var/lib` directory where we cloned the repo.
 >NOTE: USE TAB COMPLETION!
@@ -83,6 +83,8 @@ After we have the path of our `package repos`, add it to the `APKG_REPO` variabl
 ```
 # echo 'APKG_REPO="/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"' >> /etc/apkg.conf
 ```
+>NOT: All repo paths must be declared in the APKG_REPO variable, seperated by a single space.
+ 
 After setting up our `package repos`, make sure `apkg` can find the packages. We can use `apkg -s <pattern>` to search for packages.
 ```
 # apkg -s sway
