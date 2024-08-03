@@ -69,7 +69,7 @@ I'm also going to set `NINJAJOBS` here. Without it, `ninja` will use all threads
 ```
 Next, we need to set the package's build scripts path (I'll call it `package repos`) so `apkg` can find them. The `APKG_REPO` variable can accept multiple values for multiple `package repos`.
 
-Alice provides two (4) `package repos` (at the time of this writing): `core`, `extra`, `xorg` and `wayland`. `core` contains all base packages, and `extra` includes other packages beyond the base. `xorg` and `wayland` contain packages for gui and their dependencies.
+Alice provides four (4) `package repos` (at the time of this writing): `core`, `extra`, `xorg` and `wayland`. `core` contains all base packages, and `extra` includes other packages beyond the base. `xorg` and `wayland` contain packages for gui and their dependencies.
 
 First, get the absolute path of the `package repos` where we cloned them. By the way, we are still inside the `/var/lib` directory where we cloned the repo.
 >NOTE: USE TAB COMPLETION!
