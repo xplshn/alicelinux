@@ -1,0 +1,11 @@
+name=pcmanfm
+version=1.3.2
+release=1
+source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz
+	gcc14-support.patch"
+build_opt="--with-gtk=3"
+
+prebuild() {
+	sed 's/po//' -i Makefile.am
+	autoreconf -fi
+}
