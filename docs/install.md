@@ -83,7 +83,7 @@ After we have the path of our `package repos`, add it to the `APKG_REPO` variabl
 ```
 # echo 'APKG_REPO="/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"' >> /etc/apkg.conf
 ```
->NOT: All repo paths must be declared in the APKG_REPO variable, seperated by a single space.
+>NOTE: All repo paths must be declared in the APKG_REPO variable, seperated by a single space.
  
 After setting up our `package repos`, make sure `apkg` can find the packages. We can use `apkg -s <pattern>` to search for packages.
 ```
