@@ -3,7 +3,7 @@ version=393
 release=1
 source="https://invisible-mirror.net/archives/$name/$name-$version.tgz"
 export TERMINFO=/usr/share/terminfo
-build_opt="--with-app-defaults=/usr/share/X11/app-defaults --enable-freetype --enable-wide-chars --with-x"
+build_opt="--with-app-defaults=/usr/share/X11/app-defaults --enable-freetype --enable-wide-chars --with-x --with-tty-group=tty"
 
 prebuild() {
 	sed -i '/v0/{n;s/new:/new:kb=^?:/}' termcap
