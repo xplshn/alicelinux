@@ -278,6 +278,15 @@ util-macros
 ...
 ```
 
+- remove installed packages
+```
+# apkg -r wlroots pango sway
+[...] Package 'wlroots' removed.
+[...] Package 'pango' removed.
+[...] Package 'sway' removed.
+
+```
+
 - print package path
 ```
 $ apkg -p sway
@@ -310,4 +319,106 @@ apkg - config file
 # APKG_CONF=/etc/apkg-local.conf apkg <args>
 ```
 
+revdep
+------
 
+`revdep` is script to find broken packages. Its recomended to run after packages is removed or upgraded.
+
+Usage:
+```
+(print out broken packages)
+$ revdep
+
+(verbosely print missing libraries)
+$ revdep -v
+```
+
+You can combine with `apkg` to rebuild broken packages, example;
+```
+# apkg -f -u $(revdep)
+```
+> NOTE: `revdep` does not solve dependencies, so you might need manually rebuild broken packages instead combine with `apkg`.
+
+updateconf
+----------
+
+`updateconf` is script to update configuration files inside `/etc` directory. Its recomended to run after packages upgrades.
+
+apkg-chroot
+-----------
+Script to entering chroot environment of custom root location.
+
+```
+# apkg-chroot <customroot path>
+# apkg-chroot <customroot path> <command>
+```
+
+apkg-clean
+----------
+Print out old package and source caches.
+
+Options:
+```
+  -s  print sources only
+  -p  print packages only
+```
+
+Usage:
+```
+(to remove old packages)
+# apkg-clean -p | xargs rm
+
+(to remove old sources)
+# apkg-clean -s | xargs rm
+
+(to remove both old packages and sources)
+# apkg-clean | xargs rm
+```
+
+apkg-deps
+---------
+
+Script to find runtime linked dependencies of installed package. Its good to use when writing package template.
+
+Usage:
+```
+$ apkg-deps <pkg>
+```
+
+apkg-foreign
+------------
+
+Script to list installed package outside package repo.
+
+Usage:
+```
+(print list foreign packages)
+$ apkg-foreign
+
+(remove foreign packages)
+# apkg -r $(apkg-foreign)
+```
+
+apkg-orphan
+-----------
+
+Script to print list package without parent dependencies.
+
+Usage:
+```
+$ apkg-orphan
+```
+
+apkg-redundantdeps
+------------------
+
+Script to print package's redundant dependencies. Its good to use when writing package template for minimizing dependencies and speed up `apkg` dependencies solving.
+
+usage:
+```
+(print package contains redundant dependencies)
+$ apkg-redundantdeps
+
+(remove redundant dependencies for depends list)
+$ apkg-redundantdeps -f
+```
