@@ -1,0 +1,37 @@
+name=libfm
+version=1.3.2
+release=1
+source="https://downloads.sourceforge.net/pcmanfm/$name-$version.tar.xz
+	gcc14-support.patch
+	fix-background-colour-gtk3.patch"
+build_opt="--with-gtk=3 --disable-old-actions"
+
+prebuild() {
+	# Update xarchiver option
+	# https://github.com/lxde/libfm/issues/35
+	sed -i 's/create=xarchiver --add-to %F/create=xarchiver --compress %F/' data/archivers.list
+	
+	# disable gtk-doc
+	sed -ie '/^SUBDIR.*=/s#docs##' Makefile.am
+	sed -ie '/^[[:space:]]*docs/d' configure.ac
+
+	# faking gtkdocize
+	mkdir bin
+	touch bin/gtkdocize
+	chmod +x bin/gtkdocize
+	export PATH=$PATH:$PWD/bin
+
+	autoreconf -fi
+}
+
+postbuild() {
+	rm $PKG/usr/include/libfm
+	mv $PKG/usr/include/libfm-1.0 $PKG/usr/include/libfm
+	rm $PKG/usr/lib/libfm-extra.so* \
+	   $PKG/usr/lib/libfm-extra.a \
+	   $PKG/usr/lib/libfm-extra.la
+	rm $PKG/usr/lib/pkgconfig/libfm-extra.pc
+	rm $PKG/usr/include/libfm/fm-extra.h \
+	   $PKG/usr/include/libfm/fm-version.h \
+	   $PKG/usr/include/libfm/fm-xml-file.h
+}
