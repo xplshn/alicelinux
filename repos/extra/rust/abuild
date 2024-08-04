@@ -1,9 +1,9 @@
 name=rust
-version=1.79.0
+version=1.80.0
 
 ##cat src/stage0.txt
-export _date=2024-05-02
-export _rustc=1.78.0
+export _date=2024-06-13
+export _rustc=1.79.0
 export _cargo=$_rustc
 ##
 
@@ -90,7 +90,7 @@ EOF
 	mkdir "$SRC/rust"
 	export RUST_BACKTRACE=1
 	
-	python x.py build
+	#python x.py build
 	python x.py install
 	
 	rm -rf $PKG/usr/lib/rustlib/src/ \
