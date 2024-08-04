@@ -1,0 +1,12 @@
+name=lowdown
+version=1.1.0
+release=1
+commit_hash=67d206caffde1de6667319d5ecda1d00eb758827
+source="https://github.com/kristapsdz/lowdown/archive/${commit_hash}.tar.gz"
+
+build(){
+	./configure PREFIX=/usr
+	make
+	make regress
+	make install install_libs
+}
