@@ -1,11 +1,11 @@
 name=lowdown
 version=1.1.0
+_v=$(echo $version | sed 's/\./_/g')
 release=1
-commit_hash=67d206caffde1de6667319d5ecda1d00eb758827
-source="https://github.com/kristapsdz/lowdown/archive/${commit_hash}.tar.gz"
+source="https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_${_v}.tar.gz"
 
 build(){
-	./configure PREFIX=/usr
+	./configure PREFIX=/usr MANDIR=/usr/share/man
 	make
 	make regress
 	make install install_libs
