@@ -1,5 +1,5 @@
 name=binutils
-version=2.42
+version=2.43
 release=1
 source="https://sourceware.org/pub/$name/releases/$name-$version.tar.xz"
 
