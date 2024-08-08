@@ -1,4 +1,4 @@
 name=libx11
-version=1.8.9
+version=1.8.10
 release=1
 source="https://www.x.org/pub/individual/lib/libX11-$version.tar.xz"
