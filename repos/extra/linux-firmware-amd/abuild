@@ -1,0 +1,11 @@
+name=linux-firmware-amd
+version=20240709
+release=1
+source="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/snapshot/linux-firmware-$version.tar.gz"
+
+build() {
+	make FIRMWAREDIR=/lib/firmware_tmp install-xz
+	mkdir -p $PKG/lib/firmware
+	mv $PKG/lib/firmware_tmp/amd* $PKG/lib/firmware_tmp/radeon $PKG/lib/firmware
+	rm -rf $PKG/lib/firmware_tmp
+}
