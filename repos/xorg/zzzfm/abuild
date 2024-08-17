@@ -1,0 +1,11 @@
+name=zzzfm
+_version=1.0.7-5
+version=${_version/-/.}
+release=1
+source="https://gitlab.com/antix-contribs/${name}/-/archive/${_version}/${name}-${_version}.tar.gz"
+build_opt="--disable-video-thumbnails"
+export CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types"
+
+prebuild() {
+	autoreconf -fiv
+}
