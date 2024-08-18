@@ -1,0 +1,16 @@
+alsa-lib
+gtk3
+libvpx
+libwebp
+libxcomposite
+libxcursor
+libxdamage
+libxdmcp
+libxinerama
+nss
+clang
+rust
+cbindgen
+nodejs
+libice
+libsm
