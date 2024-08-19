@@ -2,4 +2,4 @@
 exec 2>&1
 set -e
 alsactl restore
-exec chpst -b alsa pause
+exec pause
