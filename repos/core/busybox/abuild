@@ -1,6 +1,6 @@
 name=busybox
 version=1.36.1
-release=1
+release=2
 source="https://${name}.net/downloads/${name}-${version}.tar.bz2
 	config
 	mdev.conf
@@ -22,7 +22,9 @@ source="https://${name}.net/downloads/${name}-${version}.tar.bz2
 	tty3.run
 	tty4.run
 	tty5.run
-	ttyS0.run"
+	ttyS0.run
+	pause.c
+	pause.1"
 sv="acpid.run
     crond.run
     ntpd.run
@@ -35,19 +37,14 @@ sv="acpid.run
     ttyS0.run"
 
 build() {
-	#make defconfig
-	#sed -i "s/# CONFIG_STATIC .*/CONFIG_STATIC=y/" .config
-	
-	#for o in LINUXRC STRINGS XZ UNXZ XZCAT LZCAT UNLZMA LZMA PATCH BZIP2 BZCAT BUNZIP2; do
-	#	sed -i "s/CONFIG_${o}=y/# CONFIG_${o} is not set/" .config
-	#done
-	
-	#sed -i "s/^CONFIG_MODPROBE_SMALL*/# CONFIG_MODPROBE_SMALL is not set/" .config
-	
+	if [ "$BOOTSTRAP" ]; then
+		_opt="ARCH=$CARCH CROSS_COMPILE=$CTARGET-"
+	fi
+
 	cp $SRC/config .config
 	#make menuconfig
-	make
-	make CONFIG_PREFIX=$PKG install
+	make $_opt
+	make $_opt CONFIG_PREFIX=$PKG install
 	mkdir -p $PKG/usr/share/busybox
 	cat .config > $PKG/usr/share/busybox/config
 	
@@ -92,4 +89,8 @@ build() {
 	
 	rm $PKG/usr/bin/diff
 	ln -s busybox $PKG/bin/diff
+	
+	${CC:-gcc} ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
+	install -d $PKG/usr/share/man/man1
+	install -m644 $SRC/pause.1 $PKG/usr/share/man/man1/pause.1	
 }

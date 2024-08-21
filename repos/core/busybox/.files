@@ -261,6 +261,7 @@ lrwxrwxrwx root/root    usr/bin/od -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/openvt -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/passwd -> ../../bin/busybox-suid
 lrwxrwxrwx root/root    usr/bin/paste -> ../../bin/busybox
+-rwxr-xr-x root/root    usr/bin/pause
 lrwxrwxrwx root/root    usr/bin/pgrep -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/pkill -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/pmap -> ../../bin/busybox
@@ -402,3 +403,6 @@ lrwxrwxrwx root/root    usr/sbin/udhcpd -> ../../bin/busybox
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/busybox/
 -rw-r--r-- root/root    usr/share/busybox/config
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/pause.1.gz
