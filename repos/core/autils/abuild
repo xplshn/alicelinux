@@ -1,16 +1,18 @@
 name=autils
-version=20240701
-_commit=73e405670670b4ff676d0fd26c4b9f9fdf63644c
+version=20240824
+_commit=4bf6e463a6f22e1a58150bf2bb9000af0f5bab55
 release=1
 source="$name-$_commit.tar.gz::https://codeberg.org/emmett1/autils/archive/$_commit.tar.gz"
 
 build() {
-	mkdir -p $PKG/usr/bin $PKG/etc
+	mkdir -p $PKG/usr/bin $PKG/etc $PKG/usr/share
 	for i in *; do
+		[ -d $i ] && continue
 		case $i in
-			README*|LICENSE);;
+			README*|LICENSE|*.sh);;
 			*.conf) install -Dm644 $i $PKG/etc/$i;;
 			     *) install -Dm755 $i $PKG/usr/bin/$i;;
 		esac
 	done
+	cp -r doc/man $PKG/usr/share
 }
