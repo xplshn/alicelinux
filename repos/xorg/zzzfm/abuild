@@ -1,8 +1,9 @@
 name=zzzfm
-_version=1.0.7-5
-version=${_version/-/.}
+version=1.0.7.5
+_ver=${version%.*}
+_sion=${version##*.}
 release=1
-source="https://gitlab.com/antix-contribs/${name}/-/archive/${_version}/${name}-${_version}.tar.gz"
+source="https://gitlab.com/antix-contribs/${name}/-/archive/${_ver}-${_sion}/${name}-${_ver}-${_sion}.tar.gz"
 build_opt="--disable-video-thumbnails"
 export CFLAGS="$CFLAGS -Wno-error=implicit-function-declaration -Wno-error=incompatible-pointer-types"
 
