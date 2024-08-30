@@ -1,7 +1,6 @@
 #!/bin/sh
 
 while [ "$1" ]; do
-	#set -- ${1%/}
 	unset curver port
 	[ -f $1/abuild ] && port=${1%/}
 	[ "$port" ] || { shift; continue; }
@@ -10,22 +9,21 @@ while [ "$1" ]; do
 	[ "$curver" ] || { shift; continue; }
 	case $pname in
 		python-*) pname=python:${pname#python-};;
-		clang) pname=llvm;;
-		dejavu-fonts-ttf) pame=fonts:dejavu;;
-		lcms2) pname=lcms;;
+		perl-*) pname=perl:${pname#perl-};;
 	esac
-	#echo $pname
-	v=$(curl -SsZA a https://repology.org/badge/latest-versions/$pname.svg | grep middle | sed 's/.*middle">//;s/<.*//;s/,//' | tr ' ' '\n' | tail -n1)
-	#if [ "$curver" = "$v" ]; then
-		#echo "$1: $curver (OK)"
-	#elif [ "$v" = "-" ]; then
-		#echo "$1: $curver (404)"
-	#else
-		#echo "$1: $curver > $v"
-	#fi
+		#clang) pname=llvm;;
+		#dejavu-fonts-ttf) pame=fonts:dejavu;;
+		#lcms2) pname=lcms;;
+		#libconfig) pname=libconfig-hyperrealm;;
+		#xf86-input-libinput) pname=xdrv:libinput;;
+	#esac
+	if [ -s $port/outdated ]; then
+		pname=$(cat $port/outdated | tail -n1)
+	fi
+	v=$(curl -SsZA tmp https://repology.org/badge/latest-versions/$pname.svg | grep middle | sed 's/.*middle">//;s/<.*//;s/,//' | tr ' ' '\n' | tail -n1)
+	[ "$v" ] || v=404
 	if [ "$curver" != "$v" ]; then
 		echo "$port $v ($curver)"
 	fi
-	#echo $1: ${v:-404}
 	shift
 done
