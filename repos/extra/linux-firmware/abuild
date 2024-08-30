@@ -1,12 +1,21 @@
 name=linux-firmware
-version=20240709
+version=20240811
 release=1
 source="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/$name.git/snapshot/$name-$version.tar.gz"
 
 build() {
-	make FIRMWAREDIR=/lib/firmware install-xz
+	make install
+
 	# make separate port for them
 	for i in amd* radeon brcm cypress nvidia qcom netronome mellanox mrvl; do
 	        rm -rf $PKG/lib/firmware/$i
+	done
+
+	# fix broken symlinks
+	for f in $(find $PKG -type l); do
+		#[ -e $f ] || continue
+		p=$(readlink $f) || continue
+		p=$(echo $p | sed "s:$PKG::")
+		ln -svf $p $f
 	done
 }
