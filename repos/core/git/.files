@@ -122,6 +122,7 @@ lrwxrwxrwx root/root    usr/libexec/git-core/git-read-tree -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-rebase -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-receive-pack -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-reflog -> git
+lrwxrwxrwx root/root    usr/libexec/git-core/git-refs -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-remote -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-remote-ext -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-remote-fd -> git
