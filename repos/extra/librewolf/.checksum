@@ -1,2 +1,3 @@
+72e5976122617a501046e99b90762ade92291c7b8ea0bbd8da0b8aadb037ce8a  0004-Bug-1912663-Fix-some-build-issues-with-cbindgen-0.27.patch
 504da8aa33992b09a74d8ec262ec6c99752e64fb1d03441f86a49a21a874f95e  fix-rust-target.patch
-c30aa3fd5786db618bd12f619f201256de1618879cd6eabcf236169354befd54  librewolf-129.0.1-1.source.tar.gz
+3fdaa0b074ec2fe697f956fd6b57e89d44d7da06f506d64b4bf666d8a7a00f54  librewolf-129.0.2-1.source.tar.gz
