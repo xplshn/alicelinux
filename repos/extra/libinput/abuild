@@ -1,5 +1,5 @@
 name=libinput
-version=1.26.1
+version=1.26.2
 release=1
 source="https://gitlab.freedesktop.org/$name/$name/-/archive/$version/$name-$version.tar.gz"
 build_opt="-Ddebug-gui=false -Dtests=false -Dlibwacom=false"
