@@ -7,9 +7,9 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/ares_nameser.h
 -rw-r--r-- root/root    usr/include/ares_version.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libcares.so -> libcares.so.2.18.0
-lrwxrwxrwx root/root    usr/lib/libcares.so.2 -> libcares.so.2.18.0
--rwxr-xr-x root/root    usr/lib/libcares.so.2.18.0
+lrwxrwxrwx root/root    usr/lib/libcares.so -> libcares.so.2.18.1
+lrwxrwxrwx root/root    usr/lib/libcares.so.2 -> libcares.so.2.18.1
+-rwxr-xr-x root/root    usr/lib/libcares.so.2.18.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcares.pc
 drwxr-xr-x root/root    usr/share/
