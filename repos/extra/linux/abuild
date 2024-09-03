@@ -29,7 +29,7 @@ build() {
 	kernver=${version}$(grep CONFIG_LOCALVERSION= .config | cut -d '"' -f2)
 	
 	[ "$MENUCONFIG" ] && make menuconfig
-cat .config > $HERE/dotconfig	
+	
 	make bzImage modules
 	make INSTALL_MOD_PATH=$PKG INSTALL_MOD_STRIP=1 modules_install
 	
