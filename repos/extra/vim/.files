@@ -435,6 +435,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/aspvbs.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/astro.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/asy.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/autohotkey.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/automake.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/awk.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/bash.vim
@@ -528,6 +529,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gitrebase.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gitsendemail.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/go.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/goaccess.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gomod.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gpg.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gprof.vim
@@ -738,6 +740,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tex.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/text.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tf.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/thrift.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tidy.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tmux.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/toml.vim
@@ -897,6 +900,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/indent/
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/postscr.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/pov.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/prolog.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/indent/proto.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/ps1.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/pyrex.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/python.vim
@@ -936,6 +940,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/indent/
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/teraterm.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/tex.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/tf.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/indent/thrift.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/tilde.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/treetop.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/indent/typescript.vim
@@ -1351,6 +1356,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gnash.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gnuplot.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/go.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/goaccess.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/godoc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gp.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gpg.vim
@@ -1385,6 +1391,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/hostconf.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/hostsaccess.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/html.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/htmlangular.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/htmlcheetah.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/htmldjango.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/htmlm4.vim
@@ -1767,6 +1774,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/shared/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/texinfo.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/texmf.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/tf.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/thrift.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/tidy.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/tilde.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/tli.vim
