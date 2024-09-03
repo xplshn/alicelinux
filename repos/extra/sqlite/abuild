@@ -1,6 +1,12 @@
 name=sqlite
-version=3.46.0
-_version=$(echo $version | sed 's|\.||g')000
+version=3.46.1
+_v=${version%%.*}
+_vv=${version#*.}; _vv=${_vv%.*}
+_vvv=${version##*.}
+case $_vvv in
+        ?) _vvv=0${_vvv};;
+esac
+_version=${_v}${_vv}${_vvv}00
 release=1
 source="https://sqlite.org/2024/$name-autoconf-$_version.tar.gz"
 
