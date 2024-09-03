@@ -2,7 +2,8 @@ name=firefox
 version=129.0.2
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
-	fix-target-detection.patch"
+	fix-target-detection.patch
+	0004-Bug-1912663-Fix-some-build-issues-with-cbindgen-0.27.patch"
 
 build() {
 	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
