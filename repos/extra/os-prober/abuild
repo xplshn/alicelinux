@@ -1,5 +1,5 @@
 name=os-prober
-version=1.82
+version=1.83
 release=1
 source="http://ftp.de.debian.org/debian/pool/main/o/$name/${name}_$version.tar.xz"
 
