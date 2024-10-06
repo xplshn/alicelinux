@@ -9,7 +9,11 @@ drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/compton -> picom
 lrwxrwxrwx root/root    usr/bin/compton-trans -> picom-trans
 -rwxr-xr-x root/root    usr/bin/picom
+lrwxrwxrwx root/root    usr/bin/picom-inspect -> picom
 -rwxr-xr-x root/root    usr/bin/picom-trans
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/picom-api.pc
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/compton.desktop
