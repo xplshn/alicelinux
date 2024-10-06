@@ -7,14 +7,14 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/expat_external.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/
-drwxr-xr-x root/root    usr/lib/cmake/expat-2.6.2/
--rw-r--r-- root/root    usr/lib/cmake/expat-2.6.2/expat-config-version.cmake
--rw-r--r-- root/root    usr/lib/cmake/expat-2.6.2/expat-config.cmake
--rw-r--r-- root/root    usr/lib/cmake/expat-2.6.2/expat-noconfig.cmake
--rw-r--r-- root/root    usr/lib/cmake/expat-2.6.2/expat.cmake
-lrwxrwxrwx root/root    usr/lib/libexpat.so -> libexpat.so.1.9.2
-lrwxrwxrwx root/root    usr/lib/libexpat.so.1 -> libexpat.so.1.9.2
--rwxr-xr-x root/root    usr/lib/libexpat.so.1.9.2
+drwxr-xr-x root/root    usr/lib/cmake/expat-2.6.3/
+-rw-r--r-- root/root    usr/lib/cmake/expat-2.6.3/expat-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/expat-2.6.3/expat-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/expat-2.6.3/expat-noconfig.cmake
+-rw-r--r-- root/root    usr/lib/cmake/expat-2.6.3/expat.cmake
+lrwxrwxrwx root/root    usr/lib/libexpat.so -> libexpat.so.1.9.3
+lrwxrwxrwx root/root    usr/lib/libexpat.so.1 -> libexpat.so.1.9.3
+-rwxr-xr-x root/root    usr/lib/libexpat.so.1.9.3
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/expat.pc
 drwxr-xr-x root/root    usr/share/
