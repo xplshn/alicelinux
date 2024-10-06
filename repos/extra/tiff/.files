@@ -1,8 +1,21 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/fax2ps
+-rwxr-xr-x root/root    usr/bin/fax2tiff
+-rwxr-xr-x root/root    usr/bin/pal2rgb
+-rwxr-xr-x root/root    usr/bin/ppm2tiff
+-rwxr-xr-x root/root    usr/bin/raw2tiff
+-rwxr-xr-x root/root    usr/bin/tiff2bw
+-rwxr-xr-x root/root    usr/bin/tiff2pdf
+-rwxr-xr-x root/root    usr/bin/tiff2ps
+-rwxr-xr-x root/root    usr/bin/tiff2rgba
+-rwxr-xr-x root/root    usr/bin/tiffcmp
 -rwxr-xr-x root/root    usr/bin/tiffcp
+-rwxr-xr-x root/root    usr/bin/tiffcrop
+-rwxr-xr-x root/root    usr/bin/tiffdither
 -rwxr-xr-x root/root    usr/bin/tiffdump
 -rwxr-xr-x root/root    usr/bin/tiffinfo
+-rwxr-xr-x root/root    usr/bin/tiffmedian
 -rwxr-xr-x root/root    usr/bin/tiffset
 -rwxr-xr-x root/root    usr/bin/tiffsplit
 drwxr-xr-x root/root    usr/include/
@@ -12,20 +25,36 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/tiffio.hxx
 -rw-r--r-- root/root    usr/include/tiffvers.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libtiff.so -> libtiff.so.6.0.2
-lrwxrwxrwx root/root    usr/lib/libtiff.so.6 -> libtiff.so.6.0.2
--rwxr-xr-x root/root    usr/lib/libtiff.so.6.0.2
-lrwxrwxrwx root/root    usr/lib/libtiffxx.so -> libtiffxx.so.6.0.2
-lrwxrwxrwx root/root    usr/lib/libtiffxx.so.6 -> libtiffxx.so.6.0.2
--rwxr-xr-x root/root    usr/lib/libtiffxx.so.6.0.2
+lrwxrwxrwx root/root    usr/lib/libtiff.so -> libtiff.so.6.1.0
+lrwxrwxrwx root/root    usr/lib/libtiff.so.6 -> libtiff.so.6.1.0
+-rwxr-xr-x root/root    usr/lib/libtiff.so.6.1.0
+lrwxrwxrwx root/root    usr/lib/libtiffxx.so -> libtiffxx.so.6.1.0
+lrwxrwxrwx root/root    usr/lib/libtiffxx.so.6 -> libtiffxx.so.6.1.0
+-rwxr-xr-x root/root    usr/lib/libtiffxx.so.6.1.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libtiff-4.pc
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/fax2ps.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/fax2tiff.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/pal2rgb.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/ppm2tiff.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/raw2tiff.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/rgb2ycbcr.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/thumbnail.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiff2bw.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiff2pdf.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiff2ps.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiff2rgba.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiffcmp.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/tiffcp.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiffcrop.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiffdither.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/tiffdump.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiffgt.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/tiffinfo.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/tiffmedian.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/tiffset.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/tiffsplit.1.gz
 drwxr-xr-x root/root    usr/share/man/man3/
