@@ -1,5 +1,5 @@
 name=icu
-version=74.2
+version=75.1
 ver=${version%.*}
 sion=${version#*.}
 release=1
