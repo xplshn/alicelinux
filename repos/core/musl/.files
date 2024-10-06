@@ -1,7 +1,7 @@
 drwxr-xr-x root/root    lib/
 lrwxrwxrwx root/root    lib/ld-musl-x86_64.so.1 -> /usr/lib/libc.so
 drwxr-xr-x root/root    sbin/
-lrwxrwxrwx root/root    sbin/ldconfig -> ../bin/true
+-rwxr-xr-x root/root    sbin/ldconfig
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/getconf
