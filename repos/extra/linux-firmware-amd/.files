@@ -5,6 +5,7 @@ drwxr-xr-x root/root    lib/firmware/amd/
 -rw-r--r-- root/root    lib/firmware/amd/amd_sev_fam17h_model3xh.sbin
 -rw-r--r-- root/root    lib/firmware/amd/amd_sev_fam19h_model0xh.sbin
 -rw-r--r-- root/root    lib/firmware/amd/amd_sev_fam19h_model1xh.sbin
+lrwxrwxrwx root/root    lib/firmware/amd/amd_sev_fam19h_modelaxh.sbin -> /lib/firmware/amd/amd_sev_fam19h_model1xh.sbin
 drwxr-xr-x root/root    lib/firmware/amdgpu/
 -rw-r--r-- root/root    lib/firmware/amdgpu/aldebaran_mec.bin
 lrwxrwxrwx root/root    lib/firmware/amdgpu/aldebaran_mec2.bin -> /lib/firmware/amdgpu/aldebaran_mec.bin
