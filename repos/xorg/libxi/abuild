@@ -1,4 +1,4 @@
 name=libxi
-version=1.8.1
+version=1.8.2
 release=1
 source="https://www.x.org/pub/individual/lib/libXi-$version.tar.xz"
