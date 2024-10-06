@@ -10,6 +10,7 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/qemu-pr-helper
 -rwxr-xr-x root/root    usr/bin/qemu-storage-daemon
 -rwxr-xr-x root/root    usr/bin/qemu-system-x86_64
+-rwxr-xr-x root/root    usr/bin/qemu-vmsr-helper
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/qemu-plugin.h
 drwxr-xr-x root/root    usr/libexec/
@@ -62,6 +63,8 @@ drwxr-xr-x root/root    usr/share/qemu/
 -rw-r--r-- root/root    usr/share/qemu/edk2-i386-secure-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-i386-vars.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-licenses.txt
+-rw-r--r-- root/root    usr/share/qemu/edk2-riscv-code.fd
+-rw-r--r-- root/root    usr/share/qemu/edk2-riscv-vars.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-x86_64-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-x86_64-secure-code.fd
 -rw-r--r-- root/root    usr/share/qemu/efi-e1000.rom
