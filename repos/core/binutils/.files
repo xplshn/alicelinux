@@ -6,8 +6,8 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/c++filt
 -rwxr-xr-x root/root    usr/bin/dwp
 -rwxr-xr-x root/root    usr/bin/elfedit
--rwxr-xr-x root/root    usr/bin/ld
--rwxr-xr-x root/root    usr/bin/ld.bfd -> usr/bin/ld
+-rwxr-xr-x root/root    usr/bin/ld -> usr/bin/ld.bfd
+-rwxr-xr-x root/root    usr/bin/ld.bfd
 -rwxr-xr-x root/root    usr/bin/ld.gold
 -rwxr-xr-x root/root    usr/bin/nm
 -rwxr-xr-x root/root    usr/bin/objcopy
