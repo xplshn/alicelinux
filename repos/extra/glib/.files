@@ -3,6 +3,9 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/gapplication
 -rwxr-xr-x root/root    usr/bin/gdbus
 -rwxr-xr-x root/root    usr/bin/gdbus-codegen
+-rwxr-xr-x root/root    usr/bin/gi-compile-repository
+-rwxr-xr-x root/root    usr/bin/gi-decompile-typelib
+-rwxr-xr-x root/root    usr/bin/gi-inspect-typelib
 -rwxr-xr-x root/root    usr/bin/gio
 -rwxr-xr-x root/root    usr/bin/gio-querymodules
 -rwxr-xr-x root/root    usr/bin/glib-compile-resources
@@ -184,6 +187,33 @@ drwxr-xr-x root/root    usr/include/glib-2.0/gio/
 -rw-r--r-- root/root    usr/include/glib-2.0/gio/gvolumemonitor.h
 -rw-r--r-- root/root    usr/include/glib-2.0/gio/gzlibcompressor.h
 -rw-r--r-- root/root    usr/include/glib-2.0/gio/gzlibdecompressor.h
+drwxr-xr-x root/root    usr/include/glib-2.0/girepository/
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gi-visibility.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giarginfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gibaseinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gicallableinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gicallbackinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giconstantinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gienuminfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gifieldinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giflagsinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gifunctioninfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giinterfaceinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giobjectinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gipropertyinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giregisteredtypeinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/girepository-autocleanups.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/girepository.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/girffi.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gisignalinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gistructinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gitypeinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gitypelib.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/gitypes.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giunioninfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/giunresolvedinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/givalueinfo.h
+-rw-r--r-- root/root    usr/include/glib-2.0/girepository/givfuncinfo.h
 -rw-r--r-- root/root    usr/include/glib-2.0/glib-object.h
 -rw-r--r-- root/root    usr/include/glib-2.0/glib-unix.h
 -rw-r--r-- root/root    usr/include/glib-2.0/glib.h
@@ -275,7 +305,6 @@ drwxr-xr-x root/root    usr/include/glib-2.0/glib/deprecated/
 -rw-r--r-- root/root    usr/include/glib-2.0/glib/gvarianttype.h
 -rw-r--r-- root/root    usr/include/glib-2.0/glib/gversion.h
 -rw-r--r-- root/root    usr/include/glib-2.0/glib/gversionmacros.h
--rw-r--r-- root/root    usr/include/glib-2.0/glib/gwin32.h
 -rw-r--r-- root/root    usr/include/glib-2.0/gmodule.h
 drwxr-xr-x root/root    usr/include/glib-2.0/gmodule/
 -rw-r--r-- root/root    usr/include/glib-2.0/gmodule/gmodule-visibility.h
@@ -307,27 +336,39 @@ drwxr-xr-x root/root    usr/include/glib-2.0/gobject/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/gio/
 drwxr-xr-x root/root    usr/lib/gio/modules/
+drwxr-xr-x root/root    usr/lib/girepository-1.0/
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GIRepository-3.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GLib-2.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GLibUnix-2.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GModule-2.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GObject-2.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/Gio-2.0.typelib
+-rw-r--r-- root/root    usr/lib/girepository-1.0/GioUnix-2.0.typelib
 drwxr-xr-x root/root    usr/lib/glib-2.0/
 drwxr-xr-x root/root    usr/lib/glib-2.0/include/
 -rw-r--r-- root/root    usr/lib/glib-2.0/include/glibconfig.h
 lrwxrwxrwx root/root    usr/lib/libgio-2.0.so -> libgio-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.7800.4
--rwxr-xr-x root/root    usr/lib/libgio-2.0.so.0.7800.4
+lrwxrwxrwx root/root    usr/lib/libgio-2.0.so.0 -> libgio-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libgio-2.0.so.0.8200.1
+lrwxrwxrwx root/root    usr/lib/libgirepository-2.0.so -> libgirepository-2.0.so.0
+lrwxrwxrwx root/root    usr/lib/libgirepository-2.0.so.0 -> libgirepository-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libgirepository-2.0.so.0.8200.1
 lrwxrwxrwx root/root    usr/lib/libglib-2.0.so -> libglib-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.7800.4
--rwxr-xr-x root/root    usr/lib/libglib-2.0.so.0.7800.4
+lrwxrwxrwx root/root    usr/lib/libglib-2.0.so.0 -> libglib-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libglib-2.0.so.0.8200.1
 lrwxrwxrwx root/root    usr/lib/libgmodule-2.0.so -> libgmodule-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.7800.4
--rwxr-xr-x root/root    usr/lib/libgmodule-2.0.so.0.7800.4
+lrwxrwxrwx root/root    usr/lib/libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libgmodule-2.0.so.0.8200.1
 lrwxrwxrwx root/root    usr/lib/libgobject-2.0.so -> libgobject-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.7800.4
--rwxr-xr-x root/root    usr/lib/libgobject-2.0.so.0.7800.4
+lrwxrwxrwx root/root    usr/lib/libgobject-2.0.so.0 -> libgobject-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libgobject-2.0.so.0.8200.1
 lrwxrwxrwx root/root    usr/lib/libgthread-2.0.so -> libgthread-2.0.so.0
-lrwxrwxrwx root/root    usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.7800.4
--rwxr-xr-x root/root    usr/lib/libgthread-2.0.so.0.7800.4
+lrwxrwxrwx root/root    usr/lib/libgthread-2.0.so.0 -> libgthread-2.0.so.0.8200.1
+-rwxr-xr-x root/root    usr/lib/libgthread-2.0.so.0.8200.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/gio-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/gio-unix-2.0.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/girepository-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/glib-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/gmodule-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/gmodule-export-2.0.pc
@@ -352,12 +393,20 @@ drwxr-xr-x root/root    usr/share/gdb/
 drwxr-xr-x root/root    usr/share/gdb/auto-load/
 drwxr-xr-x root/root    usr/share/gdb/auto-load/usr/
 drwxr-xr-x root/root    usr/share/gdb/auto-load/usr/lib/
--rw-r--r-- root/root    usr/share/gdb/auto-load/usr/lib/libglib-2.0.so.0.7800.4-gdb.py
--rw-r--r-- root/root    usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.7800.4-gdb.py
+-rw-r--r-- root/root    usr/share/gdb/auto-load/usr/lib/libglib-2.0.so.0.8200.1-gdb.py
+-rw-r--r-- root/root    usr/share/gdb/auto-load/usr/lib/libgobject-2.0.so.0.8200.1-gdb.py
 drwxr-xr-x root/root    usr/share/gettext/
 drwxr-xr-x root/root    usr/share/gettext/its/
 -rw-r--r-- root/root    usr/share/gettext/its/gschema.its
 -rw-r--r-- root/root    usr/share/gettext/its/gschema.loc
+drwxr-xr-x root/root    usr/share/gir-1.0/
+-rw-r--r-- root/root    usr/share/gir-1.0/GIRepository-3.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/GLib-2.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/GLibUnix-2.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/GModule-2.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/GObject-2.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/Gio-2.0.gir
+-rw-r--r-- root/root    usr/share/gir-1.0/GioUnix-2.0.gir
 drwxr-xr-x root/root    usr/share/glib-2.0/
 drwxr-xr-x root/root    usr/share/glib-2.0/codegen/
 -rw-r--r-- root/root    usr/share/glib-2.0/codegen/__init__.py
