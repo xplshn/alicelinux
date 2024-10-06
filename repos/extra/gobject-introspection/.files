@@ -35,10 +35,6 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 -rw-r--r-- root/root    usr/lib/girepository-1.0/DBusGLib-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/GIRepository-2.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/GL-1.0.typelib
--rw-r--r-- root/root    usr/lib/girepository-1.0/GLib-2.0.typelib
--rw-r--r-- root/root    usr/lib/girepository-1.0/GModule-2.0.typelib
--rw-r--r-- root/root    usr/lib/girepository-1.0/GObject-2.0.typelib
--rw-r--r-- root/root    usr/lib/girepository-1.0/Gio-2.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/Vulkan-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/cairo-1.0.typelib
 -rw-r--r-- root/root    usr/lib/girepository-1.0/fontconfig-2.0.typelib
@@ -52,7 +48,7 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 drwxr-xr-x root/root    usr/lib/gobject-introspection/
 drwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/__init__.py
--rwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/_giscanner.cpython-311-x86_64-linux-musl.so
+-rwxr-xr-x root/root    usr/lib/gobject-introspection/giscanner/_giscanner.cpython-312-x86_64-linux-musl.so
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/_version.py
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/annotationmain.py
 -rw-r--r-- root/root    usr/lib/gobject-introspection/giscanner/annotationparser.py
@@ -165,10 +161,6 @@ drwxr-xr-x root/root    usr/share/gir-1.0/
 -rw-r--r-- root/root    usr/share/gir-1.0/DBusGLib-1.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/GIRepository-2.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/GL-1.0.gir
--rw-r--r-- root/root    usr/share/gir-1.0/GLib-2.0.gir
--rw-r--r-- root/root    usr/share/gir-1.0/GModule-2.0.gir
--rw-r--r-- root/root    usr/share/gir-1.0/GObject-2.0.gir
--rw-r--r-- root/root    usr/share/gir-1.0/Gio-2.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/Vulkan-1.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/cairo-1.0.gir
 -rw-r--r-- root/root    usr/share/gir-1.0/fontconfig-2.0.gir
@@ -195,6 +187,8 @@ drwxr-xr-x root/root    usr/share/gobject-introspection-1.0/tests/
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/gimarshallingtests.c
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/gimarshallingtests.h
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/gitestmacros.h
+-rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/regress-unix.c
+-rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/regress-unix.h
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/regress.c
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/regress.h
 -rw-r--r-- root/root    usr/share/gobject-introspection-1.0/tests/utility.c
