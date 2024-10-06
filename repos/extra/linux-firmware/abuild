@@ -1,5 +1,5 @@
 name=linux-firmware
-version=20240811
+version=20240909
 release=1
 source="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/$name.git/snapshot/$name-$version.tar.gz"
 

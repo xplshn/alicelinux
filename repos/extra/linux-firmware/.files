@@ -246,6 +246,12 @@ lrwxrwxrwx root/root    lib/firmware/ath11k/IPQ8074/hw2.0/Notice.txt -> /lib/fir
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/q6_fw.b08
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/q6_fw.flist
 -rw-r--r-- root/root    lib/firmware/ath11k/IPQ8074/hw2.0/q6_fw.mdt
+drwxr-xr-x root/root    lib/firmware/ath11k/QCA2066/
+drwxr-xr-x root/root    lib/firmware/ath11k/QCA2066/hw2.1/
+-rw-r--r-- root/root    lib/firmware/ath11k/QCA2066/hw2.1/Notice.txt
+-rw-r--r-- root/root    lib/firmware/ath11k/QCA2066/hw2.1/amss.bin
+-rw-r--r-- root/root    lib/firmware/ath11k/QCA2066/hw2.1/board-2.bin
+-rw-r--r-- root/root    lib/firmware/ath11k/QCA2066/hw2.1/m3.bin
 drwxr-xr-x root/root    lib/firmware/ath11k/QCA6390/
 drwxr-xr-x root/root    lib/firmware/ath11k/QCA6390/hw2.0/
 -rw-r--r-- root/root    lib/firmware/ath11k/QCA6390/hw2.0/Notice.txt
@@ -274,7 +280,7 @@ drwxr-xr-x root/root    lib/firmware/ath11k/WCN6750/hw1.0/
 -rw-r--r-- root/root    lib/firmware/ath11k/WCN6750/hw1.0/wpss.mdt
 drwxr-xr-x root/root    lib/firmware/ath11k/WCN6855/
 drwxr-xr-x root/root    lib/firmware/ath11k/WCN6855/hw2.0/
--rw-r--r-- root/root    lib/firmware/ath11k/WCN6855/hw2.0/Notice.txt
+lrwxrwxrwx root/root    lib/firmware/ath11k/WCN6855/hw2.0/Notice.txt -> /lib/firmware/ath11k/QCA2066/hw2.1/Notice.txt
 -rw-r--r-- root/root    lib/firmware/ath11k/WCN6855/hw2.0/amss.bin
 -rw-r--r-- root/root    lib/firmware/ath11k/WCN6855/hw2.0/board-2.bin
 -rw-r--r-- root/root    lib/firmware/ath11k/WCN6855/hw2.0/m3.bin
@@ -1106,6 +1112,16 @@ drwxr-xr-x root/root    lib/firmware/cirrus/cs35l41/v6.80.0/
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41/v6.80.0/halo_cspl_RAM_revB2_29.82.0.wmfw
 drwxr-xr-x root/root    lib/firmware/cirrus/cs35l41/v6.83.0/
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l41/v6.83.0/halo_cspl_RAM_revB2_29.85.0.wmfw
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d01-amp1.bin
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d01-amp2.bin
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d01-amp3.bin
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d01-amp4.bin
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d01.wmfw -> cs35l56/CS35L56_Rev3.11.18.wmfw
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08-amp1.bin -> cs35l54-b0-dsp1-misc-103c8d01-amp1.bin
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08-amp2.bin -> cs35l54-b0-dsp1-misc-103c8d01-amp2.bin
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08-amp3.bin -> cs35l54-b0-dsp1-misc-103c8d01-amp3.bin
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08-amp4.bin -> cs35l54-b0-dsp1-misc-103c8d01-amp4.bin
+lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l54-b0-dsp1-misc-103c8d08.wmfw -> cs35l56/CS35L56_Rev3.11.18.wmfw
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp1.bin
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp2.bin
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10280c62-spkid0-amp3.bin
@@ -1178,6 +1194,7 @@ lrwxrwxrwx root/root    lib/firmware/cirrus/cs35l56-b0-dsp1-misc-10431e83-spkid1
 drwxr-xr-x root/root    lib/firmware/cirrus/cs35l56/
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev3.11.11.wmfw
 -rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev3.11.16.wmfw
+-rw-r--r-- root/root    lib/firmware/cirrus/cs35l56/CS35L56_Rev3.11.18.wmfw
 drwxr-xr-x root/root    lib/firmware/cis/
 -rw-r--r-- root/root    lib/firmware/cis/3CCFEM556.cis
 -rw-r--r-- root/root    lib/firmware/cis/3CXEM556.cis
@@ -1721,6 +1738,8 @@ drwxr-xr-x root/root    lib/firmware/isci/
 -rw-r--r-- root/root    lib/firmware/iwlwifi-QuZ-a0-jf-b0-73.ucode
 -rw-r--r-- root/root    lib/firmware/iwlwifi-QuZ-a0-jf-b0-74.ucode
 -rw-r--r-- root/root    lib/firmware/iwlwifi-QuZ-a0-jf-b0-77.ucode
+-rw-r--r-- root/root    lib/firmware/iwlwifi-bz-b0-fm-c0-92.ucode
+-rw-r--r-- root/root    lib/firmware/iwlwifi-bz-b0-fm-c0.pnvm
 -rw-r--r-- root/root    lib/firmware/iwlwifi-cc-a0-50.ucode
 -rw-r--r-- root/root    lib/firmware/iwlwifi-cc-a0-59.ucode
 -rw-r--r-- root/root    lib/firmware/iwlwifi-cc-a0-66.ucode
@@ -2160,10 +2179,13 @@ drwxr-xr-x root/root    lib/firmware/rtl_bt/
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8192eu_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723a_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723b_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA0623.bin -> rtl8723bs_config-OBDA8723.bin
--rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA8723.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA0623.bin -> rtl8723bs_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA8723.bin -> rtl8723bs_config.bin
+-rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723bs_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723bs_fw.bin
--rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723d_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723cs_xx_config.bin -> rtl8723bs_config.bin
+-rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723cs_xx_fw.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723d_config.bin -> rtl8821c_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8723d_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8761a_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8761b_config.bin
@@ -2173,27 +2195,29 @@ lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8723bs_config-OBDA0623.bin -> rtl
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8812ae_fw.bin
 lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821a_config.bin -> rtl8821c_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821a_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821c_config.bin -> /lib/firmware/rtl_bt/rtl8723d_config.bin
+-rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821c_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821c_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821cs_config.bin -> /lib/firmware/rtl_bt/rtl8761b_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8821cs_config.bin -> rtl8761b_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8821cs_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822b_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822b_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cs_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cs_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8822cu_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8822cu_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8822cu_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8851bu_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8851bu_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8851bu_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852au_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852au_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852au_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852btu_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852btu_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852btu_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852bu_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852bu_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852bu_fw.bin
-lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852cu_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8852cu_config.bin -> rtl8761bu_config.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852cu_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8852cu_fw_v2.bin
+lrwxrwxrwx root/root    lib/firmware/rtl_bt/rtl8922au_config.bin -> /lib/firmware/rtl_bt/rtl8761bu_config.bin
+-rw-r--r-- root/root    lib/firmware/rtl_bt/rtl8922au_fw.bin
 drwxr-xr-x root/root    lib/firmware/rtl_nic/
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8105e-1.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8106e-1.fw
@@ -2204,6 +2228,7 @@ drwxr-xr-x root/root    lib/firmware/rtl_nic/
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8125b-1.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8125b-2.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8126a-2.fw
+-rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8126a-3.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8153a-2.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8153a-3.fw
 -rw-r--r-- root/root    lib/firmware/rtl_nic/rtl8153a-4.fw
@@ -2287,6 +2312,7 @@ drwxr-xr-x root/root    lib/firmware/rtw89/
 -rw-r--r-- root/root    lib/firmware/rtw89/rtw8852bt_fw.bin
 -rw-r--r-- root/root    lib/firmware/rtw89/rtw8852c_fw-1.bin
 -rw-r--r-- root/root    lib/firmware/rtw89/rtw8852c_fw.bin
+-rw-r--r-- root/root    lib/firmware/rtw89/rtw8922a_fw-1.bin
 -rw-r--r-- root/root    lib/firmware/rtw89/rtw8922a_fw.bin
 lrwxrwxrwx root/root    lib/firmware/s2250.fw -> go7007/s2250-2.fw
 lrwxrwxrwx root/root    lib/firmware/s2250_loader.fw -> go7007/s2250-1.fw
