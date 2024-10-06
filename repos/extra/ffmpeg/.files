@@ -154,30 +154,30 @@ drwxr-xr-x root/root    usr/include/libswscale/
 -rw-r--r-- root/root    usr/include/libswscale/version.h
 -rw-r--r-- root/root    usr/include/libswscale/version_major.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libavcodec.so -> libavcodec.so.61.3.100
-lrwxrwxrwx root/root    usr/lib/libavcodec.so.61 -> libavcodec.so.61.3.100
--rwxr-xr-x root/root    usr/lib/libavcodec.so.61.3.100
-lrwxrwxrwx root/root    usr/lib/libavdevice.so -> libavdevice.so.61.1.100
-lrwxrwxrwx root/root    usr/lib/libavdevice.so.61 -> libavdevice.so.61.1.100
--rwxr-xr-x root/root    usr/lib/libavdevice.so.61.1.100
-lrwxrwxrwx root/root    usr/lib/libavfilter.so -> libavfilter.so.10.1.100
-lrwxrwxrwx root/root    usr/lib/libavfilter.so.10 -> libavfilter.so.10.1.100
--rwxr-xr-x root/root    usr/lib/libavfilter.so.10.1.100
-lrwxrwxrwx root/root    usr/lib/libavformat.so -> libavformat.so.61.1.100
-lrwxrwxrwx root/root    usr/lib/libavformat.so.61 -> libavformat.so.61.1.100
--rwxr-xr-x root/root    usr/lib/libavformat.so.61.1.100
-lrwxrwxrwx root/root    usr/lib/libavutil.so -> libavutil.so.59.8.100
-lrwxrwxrwx root/root    usr/lib/libavutil.so.59 -> libavutil.so.59.8.100
--rwxr-xr-x root/root    usr/lib/libavutil.so.59.8.100
-lrwxrwxrwx root/root    usr/lib/libpostproc.so -> libpostproc.so.58.1.100
-lrwxrwxrwx root/root    usr/lib/libpostproc.so.58 -> libpostproc.so.58.1.100
--rwxr-xr-x root/root    usr/lib/libpostproc.so.58.1.100
-lrwxrwxrwx root/root    usr/lib/libswresample.so -> libswresample.so.5.1.100
-lrwxrwxrwx root/root    usr/lib/libswresample.so.5 -> libswresample.so.5.1.100
--rwxr-xr-x root/root    usr/lib/libswresample.so.5.1.100
-lrwxrwxrwx root/root    usr/lib/libswscale.so -> libswscale.so.8.1.100
-lrwxrwxrwx root/root    usr/lib/libswscale.so.8 -> libswscale.so.8.1.100
--rwxr-xr-x root/root    usr/lib/libswscale.so.8.1.100
+lrwxrwxrwx root/root    usr/lib/libavcodec.so -> libavcodec.so.61.19.100
+lrwxrwxrwx root/root    usr/lib/libavcodec.so.61 -> libavcodec.so.61.19.100
+-rwxr-xr-x root/root    usr/lib/libavcodec.so.61.19.100
+lrwxrwxrwx root/root    usr/lib/libavdevice.so -> libavdevice.so.61.3.100
+lrwxrwxrwx root/root    usr/lib/libavdevice.so.61 -> libavdevice.so.61.3.100
+-rwxr-xr-x root/root    usr/lib/libavdevice.so.61.3.100
+lrwxrwxrwx root/root    usr/lib/libavfilter.so -> libavfilter.so.10.4.100
+lrwxrwxrwx root/root    usr/lib/libavfilter.so.10 -> libavfilter.so.10.4.100
+-rwxr-xr-x root/root    usr/lib/libavfilter.so.10.4.100
+lrwxrwxrwx root/root    usr/lib/libavformat.so -> libavformat.so.61.7.100
+lrwxrwxrwx root/root    usr/lib/libavformat.so.61 -> libavformat.so.61.7.100
+-rwxr-xr-x root/root    usr/lib/libavformat.so.61.7.100
+lrwxrwxrwx root/root    usr/lib/libavutil.so -> libavutil.so.59.39.100
+lrwxrwxrwx root/root    usr/lib/libavutil.so.59 -> libavutil.so.59.39.100
+-rwxr-xr-x root/root    usr/lib/libavutil.so.59.39.100
+lrwxrwxrwx root/root    usr/lib/libpostproc.so -> libpostproc.so.58.3.100
+lrwxrwxrwx root/root    usr/lib/libpostproc.so.58 -> libpostproc.so.58.3.100
+-rwxr-xr-x root/root    usr/lib/libpostproc.so.58.3.100
+lrwxrwxrwx root/root    usr/lib/libswresample.so -> libswresample.so.5.3.100
+lrwxrwxrwx root/root    usr/lib/libswresample.so.5 -> libswresample.so.5.3.100
+-rwxr-xr-x root/root    usr/lib/libswresample.so.5.3.100
+lrwxrwxrwx root/root    usr/lib/libswscale.so -> libswscale.so.8.3.100
+lrwxrwxrwx root/root    usr/lib/libswscale.so.8 -> libswscale.so.8.3.100
+-rwxr-xr-x root/root    usr/lib/libswscale.so.8.3.100
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libavcodec.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libavdevice.pc

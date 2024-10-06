@@ -1,5 +1,5 @@
 name=ffmpeg
-version=7.0.2
+version=7.1
 release=1
 source="https://$name.org/releases/$name-$version.tar.xz
 	gcc-14.patch"
