@@ -9,6 +9,7 @@ drwxr-xr-x root/root    usr/include/glslang/Include/
 -rw-r--r-- root/root    usr/include/glslang/Include/ResourceLimits.h
 -rw-r--r-- root/root    usr/include/glslang/Include/glslang_c_interface.h
 -rw-r--r-- root/root    usr/include/glslang/Include/glslang_c_shader_types.h
+-rw-r--r-- root/root    usr/include/glslang/Include/visibility.h
 drwxr-xr-x root/root    usr/include/glslang/MachineIndependent/
 -rw-r--r-- root/root    usr/include/glslang/MachineIndependent/Versions.h
 drwxr-xr-x root/root    usr/include/glslang/Public/
@@ -19,6 +20,7 @@ drwxr-xr-x root/root    usr/include/glslang/SPIRV/
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/GlslangToSpv.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/Logger.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/SPVRemapper.h
+-rw-r--r-- root/root    usr/include/glslang/SPIRV/SpvTools.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/disassemble.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/spirv.hpp
 -rw-r--r-- root/root    usr/include/glslang/build_info.h
