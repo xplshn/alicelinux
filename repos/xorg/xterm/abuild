@@ -1,5 +1,5 @@
 name=xterm
-version=393
+version=394
 release=1
 source="https://invisible-mirror.net/archives/$name/$name-$version.tgz"
 export TERMINFO=/usr/share/terminfo
