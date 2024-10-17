@@ -1,9 +1,9 @@
 name=rust
-version=1.80.1
+version=1.81.0
 
 ##cat src/stage0.txt
-export _date=2024-06-13
-export _rustc=1.79.0
+export _date=2024-08-08
+export _rustc=1.80.1
 export _cargo=$_rustc
 ##
 

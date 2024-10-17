@@ -1,4 +1,4 @@
-fa27f18a5c3f71e2f3861d2a81c982351693ace20a23a2fa1dad2a17bf70a98b  cargo-1.79.0-x86_64-unknown-linux-musl.tar.xz
-1feb6c04e199b0f058f36e4af810fb419f5b832f701b2ad2426b8ce9b673e60e  rust-std-1.79.0-x86_64-unknown-linux-musl.tar.xz
-41e831d93c128ec469ecae59b2b50612272e7ae860531859aa798cd1273514a4  rustc-1.79.0-x86_64-unknown-linux-musl.tar.xz
-bd90d8d4bf87d214abfe94f264b2a18d3fd0d65bd3d344e0461d22233e13b5a3  rustc-1.80.1-src.tar.xz
+35df610d37dbb146c3cb0ac7b523eec203b213335ee1b2d3c2cc3302c09650ac  cargo-1.80.1-x86_64-unknown-linux-musl.tar.xz
+56d0146af011d4d15d09e80d64b17c798b7f3610916577cea4145eb188620a1b  rust-std-1.80.1-x86_64-unknown-linux-musl.tar.xz
+c8ab95494c2689cb44c35d18aff2cf5e8b65a888154eec17644da5ba2030e569  rustc-1.80.1-x86_64-unknown-linux-musl.tar.xz
+5119ad701c5ec6b635dda222e474675398be55d63b691a01fbe188b9e915a99c  rustc-1.81.0-src.tar.xz
