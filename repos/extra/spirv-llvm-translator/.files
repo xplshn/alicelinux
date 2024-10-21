@@ -1,0 +1,13 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/llvm-spirv
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/LLVMSPIRVLib/
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVExtensions.inc
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVLib.h
+-rw-r--r-- root/root    usr/include/LLVMSPIRVLib/LLVMSPIRVOpts.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libLLVMSPIRVLib.so -> libLLVMSPIRVLib.so.18.1
+-rwxr-xr-x root/root    usr/lib/libLLVMSPIRVLib.so.18.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/LLVMSPIRVLib.pc
