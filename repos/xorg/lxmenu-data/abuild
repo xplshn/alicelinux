@@ -1,4 +1,8 @@
 name=lxmenu-data
-version=0.1.5
+version=0.1.6
 release=1
-source="https://downloads.sourceforge.net/lxde/$name-$version.tar.xz"
+source="https://github.com/lxde/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+prebuild() {
+	autoreconf -fi
+}
