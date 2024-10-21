@@ -1,4 +1,4 @@
 name=xtrans
-version=1.5.0
+version=1.5.1
 release=1
 source="https://www.x.org/pub/individual/lib/$name-$version.tar.xz"
