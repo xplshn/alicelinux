@@ -1,0 +1,4 @@
+name=libclc
+version=18.1.8
+release=1
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/${name}-${version}.src.tar.xz"
