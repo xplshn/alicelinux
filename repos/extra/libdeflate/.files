@@ -1,7 +1,7 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
--rwxr-xr-x root/root    usr/bin/libdeflate-gunzip -> usr/bin/libdeflate-gzip
--rwxr-xr-x root/root    usr/bin/libdeflate-gzip
+-rwxr-xr-x root/root    usr/bin/libdeflate-gunzip
+-rwxr-xr-x root/root    usr/bin/libdeflate-gzip -> usr/bin/libdeflate-gunzip
 drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/libdeflate.h
 drwxr-xr-x root/root    usr/lib/
