@@ -5,3 +5,4 @@ libxcvt
 libxdmcp
 libxfont2
 nettle
+libxkbfile
