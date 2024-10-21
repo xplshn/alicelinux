@@ -1,5 +1,5 @@
 name=libuv
-version=1.49.0
+version=1.49.2
 release=1
 source="https://dist.$name.org/dist/v$version/$name-v$version.tar.gz"
 
