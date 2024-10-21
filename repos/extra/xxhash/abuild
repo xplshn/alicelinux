@@ -1,0 +1,4 @@
+name=xxhash
+version=0.8.2
+release=1
+source="https://github.com/Cyan4973/xxHash/archive/v${version}/xxHash-v${version}.tar.gz"
