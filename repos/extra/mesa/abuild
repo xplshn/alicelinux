@@ -1,14 +1,12 @@
 name=mesa
-version=24.0.8
-release=2
+version=24.2.5
+release=1
 source="https://archive.mesa3d.org/$name-$version.tar.xz"
 keep_static=1
 [ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland"
 [ -f $SPM_PKGDB/libx11 ] && platform="-Dplatforms=x11"
 [ -f $SPM_PKGDB/libx11 ] && [ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland,x11"
-[ -f $SPM_PKGDB/llvm ] || buildopt="-Dllvm=disabled -Dvulkan-drivers="
 build_opt="
-	$buildopt
 	$platform
 	-Dgallium-drivers=auto
 	-Dvalgrind=disabled
@@ -16,4 +14,5 @@ build_opt="
 	-Dglx=disabled
 	-Dglvnd=true
 	-Db_lto=false
+	-Dvulkan-drivers=
 "

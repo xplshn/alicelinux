@@ -6,3 +6,6 @@ wayland-protocols
 elfutils
 libxshmfence
 libxrandr
+libclc
+python-pyyaml
+python-ply
