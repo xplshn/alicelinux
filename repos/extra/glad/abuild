@@ -1,4 +1,13 @@
 name=glad
-version=2.0.7
+version=2.0.8
 release=1
 source="https://github.com/Dav1dde/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+	gpep517 build-wheel \
+		--wheel-dir .dist \
+		--output-fd 3 3>&1 >&2
+	python3 -m installer -d "$PKG" \
+		.dist/*.whl
+
+}
