@@ -6,7 +6,7 @@ export PATH=$APKG_WORK_DIR/tmpbin:$PATH
 
 prebuild() {
 	autoreconf -fiv
-	mkdir $APKG_WORK_DIR/tmpbin
+	mkdir -p $APKG_WORK_DIR/tmpbin
 	echo -e "#/bin/sh\n/bin/true" > $APKG_WORK_DIR/tmpbin/makeinfo
 	chmod +x $APKG_WORK_DIR/tmpbin/makeinfo
 }
