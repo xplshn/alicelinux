@@ -1,15 +1,13 @@
 name=elfutils
-version=0.191
+version=0.192
 release=1
 source="https://sourceware.org/ftp/$name/$version/$name-$version.tar.bz2
 	musl.patch"
 
 build() {
 	# get from KISS
-	# Build sometimes forces -Werror.
-	export CFLAGS="$CFLAGS -Wno-error"
 	
-	sh ./configure \
+	./configure \
 	    --prefix=/usr \
 	    --disable-symbol-versioning \
 	    --disable-debuginfod \
