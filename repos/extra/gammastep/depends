@@ -5,3 +5,4 @@ libxext
 libxxf86vm
 wayland
 intltool
+gettext-tiny
