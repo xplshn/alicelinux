@@ -6,7 +6,6 @@ drwxr-xr-x root/root    usr/include/nspr/
 drwxr-xr-x root/root    usr/include/nspr/md/
 -rw-r--r-- root/root    usr/include/nspr/md/_aix32.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_aix64.cfg
--rw-r--r-- root/root    usr/include/nspr/md/_bsdi.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_darwin.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_freebsd.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_hpux32.cfg
@@ -15,13 +14,9 @@ drwxr-xr-x root/root    usr/include/nspr/md/
 -rw-r--r-- root/root    usr/include/nspr/md/_netbsd.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_nto.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_openbsd.cfg
--rw-r--r-- root/root    usr/include/nspr/md/_os2.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_qnx.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_riscos.cfg
--rw-r--r-- root/root    usr/include/nspr/md/_scoos.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_solaris.cfg
--rw-r--r-- root/root    usr/include/nspr/md/_unixware.cfg
--rw-r--r-- root/root    usr/include/nspr/md/_unixware7.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_win95.cfg
 -rw-r--r-- root/root    usr/include/nspr/md/_winnt.cfg
 -rw-r--r-- root/root    usr/include/nspr/nspr.h
@@ -80,7 +75,7 @@ drwxr-xr-x root/root    usr/include/nspr/private/
 -rw-r--r-- root/root    usr/include/nspr/prtrace.h
 -rw-r--r-- root/root    usr/include/nspr/prtypes.h
 -rw-r--r-- root/root    usr/include/nspr/prvrsion.h
--rw-r--r-- root/root    usr/include/nspr/prwin16.h
+-rw-r--r-- root/root    usr/include/nspr/prwin.h
 drwxr-xr-x root/root    usr/lib/
 -rwxr-xr-x root/root    usr/lib/libnspr4.so
 -rwxr-xr-x root/root    usr/lib/libplc4.so
