@@ -5,8 +5,8 @@ drwxr-xr-x root/root    usr/include/fcft/
 -rw-r--r-- root/root    usr/include/fcft/stride.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libfcft.so -> libfcft.so.4
-lrwxrwxrwx root/root    usr/lib/libfcft.so.4 -> libfcft.so.4.1.8
--rwxr-xr-x root/root    usr/lib/libfcft.so.4.1.8
+lrwxrwxrwx root/root    usr/lib/libfcft.so.4 -> libfcft.so.4.1.9
+-rwxr-xr-x root/root    usr/lib/libfcft.so.4.1.9
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/fcft.pc
 drwxr-xr-x root/root    usr/share/
