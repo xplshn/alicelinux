@@ -1,4 +1,4 @@
 gdk-pixbuf
 pango
-rust
+cargo-c
 vala
