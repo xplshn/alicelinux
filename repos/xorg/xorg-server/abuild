@@ -1,6 +1,6 @@
 name=xorg-server
-version=21.1.13
-release=2
+version=21.1.14
+release=1
 source="https://www.x.org/pub/individual/xserver/$name-$version.tar.xz"
 build_opt="
 	-Dsuid_wrapper=true   \
