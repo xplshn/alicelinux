@@ -1,5 +1,5 @@
 name=python-flit-core
-version=3.9.0
+version=3.10.0
 release=1
 source="https://files.pythonhosted.org/packages/source/f/flit/flit-${version}.tar.gz"
 
@@ -9,5 +9,4 @@ build() {
 	python3 build_dists.py
 	python3 -m installer -d $PKG \
 		dist/flit_core-$version-py3-none-any.whl
-	rm -r $PKG/usr/lib/python3*/site-packages/flit_core/tests
 }
