@@ -1,4 +1,4 @@
 name=dtc
-version=1.7.1
+version=1.7.2
 release=1
 source="https://mirrors.edge.kernel.org/pub/software/utils/${name}/${name}-${version}.tar.xz"
