@@ -1176,9 +1176,6 @@ drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/grub-set-default
 -rwxr-xr-x root/root    usr/sbin/grub-sparc64-setup
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/fonts/
-drwxr-xr-x root/root    usr/share/fonts/unifont/
--rw-r--r-- root/root    usr/share/fonts/unifont/unifont.pcf
 drwxr-xr-x root/root    usr/share/grub/
 -rw-r--r-- root/root    usr/share/grub/ascii.h
 -rw-r--r-- root/root    usr/share/grub/ascii.pf2
