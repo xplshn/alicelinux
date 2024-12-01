@@ -1,5 +1,5 @@
 name=strace
-version=6.11
+version=6.12
 release=1
 source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.xz"
 build_opt="--enable-mpers=no"
