@@ -1,18 +1,21 @@
 name=mesa
-version=24.2.6
+version=24.2.8
 release=1
 source="https://archive.mesa3d.org/$name-$version.tar.xz"
 keep_static=1
-[ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland"
+[ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland -Dglx=disabled"
 [ -f $SPM_PKGDB/libx11 ] && platform="-Dplatforms=x11"
 [ -f $SPM_PKGDB/libx11 ] && [ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland,x11"
 build_opt="
 	$platform
-	-Dgallium-drivers=auto
+	-Dgallium-drivers=r300,r600,radeonsi,nouveau,virgl,svga,swrast,i915,iris,crocus,zink
+	-Dvulkan-drivers=amd,intel,intel_hasvk,swrast,virtio
 	-Dvalgrind=disabled
 	-Dlibunwind=disabled
-	-Dglx=disabled
-	-Dglvnd=true
+	-Dglvnd=enabled
 	-Db_lto=false
-	-Dvulkan-drivers=
 "
+
+# vulkan driver for nouveau disabled becaused required unusable rust shit!
+# FUCK RUST SHIT
+# FUCK MESA DEV
