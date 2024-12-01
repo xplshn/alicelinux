@@ -78,8 +78,10 @@ drwxr-xr-x root/root    usr/share/libinput/
 -rw-r--r-- root/root    usr/share/libinput/50-system-google.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-gpd.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-graviton.quirks
+-rw-r--r-- root/root    usr/share/libinput/50-system-honor.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-hp.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-huawei.quirks
+-rw-r--r-- root/root    usr/share/libinput/50-system-icl.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-lenovo.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-lg.quirks
 -rw-r--r-- root/root    usr/share/libinput/50-system-minisforum.quirks
