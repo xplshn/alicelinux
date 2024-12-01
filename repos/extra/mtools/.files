@@ -12,6 +12,7 @@ lrwxrwxrwx root/root    usr/bin/mcopy -> mtools
 lrwxrwxrwx root/root    usr/bin/mdel -> mtools
 lrwxrwxrwx root/root    usr/bin/mdeltree -> mtools
 lrwxrwxrwx root/root    usr/bin/mdir -> mtools
+lrwxrwxrwx root/root    usr/bin/mdoctorfat -> mtools
 lrwxrwxrwx root/root    usr/bin/mdu -> mtools
 lrwxrwxrwx root/root    usr/bin/mformat -> mtools
 lrwxrwxrwx root/root    usr/bin/minfo -> mtools
@@ -47,6 +48,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/mdel.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/mdeltree.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/mdir.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/mdoctorfat.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/mdu.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/mformat.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/minfo.1.gz
