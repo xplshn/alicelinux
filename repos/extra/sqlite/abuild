@@ -1,5 +1,5 @@
 name=sqlite
-version=3.47.0
+version=3.47.1
 _v=${version%%.*}
 _vv=${version#*.}; _vv=${_vv%.*}
 _vvv=${version##*.}
