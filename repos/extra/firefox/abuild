@@ -1,5 +1,5 @@
 name=firefox
-version=131.0.2
+version=133.0
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
 	fix-target-detection.patch"
