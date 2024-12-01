@@ -74,6 +74,7 @@ lrwxrwxrwx root/root    usr/bin/llvm-strip -> llvm-objcopy
 lrwxrwxrwx root/root    usr/bin/llvm-windres -> llvm-rc
 -rwxr-xr-x root/root    usr/bin/llvm-xray
 -rwxr-xr-x root/root    usr/bin/opt
+-rwxr-xr-x root/root    usr/bin/reduce-chunk-list
 -rwxr-xr-x root/root    usr/bin/sancov
 -rwxr-xr-x root/root    usr/bin/sanstats
 -rwxr-xr-x root/root    usr/bin/verify-uselistorder
@@ -137,6 +138,7 @@ drwxr-xr-x root/root    usr/include/llvm/ADT/
 -rw-r--r-- root/root    usr/include/llvm/ADT/DenseSet.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/DepthFirstIterator.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/DirectedGraph.h
+-rw-r--r-- root/root    usr/include/llvm/ADT/DynamicAPInt.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/EnumeratedArray.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/EpochTracker.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/EquivalenceClasses.h
@@ -179,6 +181,7 @@ drwxr-xr-x root/root    usr/include/llvm/ADT/
 -rw-r--r-- root/root    usr/include/llvm/ADT/Sequence.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/SetOperations.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/SetVector.h
+-rw-r--r-- root/root    usr/include/llvm/ADT/SlowDynamicAPInt.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/SmallBitVector.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/SmallPtrSet.h
 -rw-r--r-- root/root    usr/include/llvm/ADT/SmallSet.h
@@ -252,6 +255,8 @@ drwxr-xr-x root/root    usr/include/llvm/Analysis/
 -rw-r--r-- root/root    usr/include/llvm/Analysis/DominanceFrontierImpl.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/EHUtils.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/FunctionPropertiesAnalysis.h
+-rw-r--r-- root/root    usr/include/llvm/Analysis/GenericDomTreeUpdater.h
+-rw-r--r-- root/root    usr/include/llvm/Analysis/GenericDomTreeUpdaterImpl.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/GlobalsModRef.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/GuardUtils.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/HeatUtils.h
@@ -270,9 +275,6 @@ drwxr-xr-x root/root    usr/include/llvm/Analysis/
 -rw-r--r-- root/root    usr/include/llvm/Analysis/InstructionPrecedenceTracking.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/InstructionSimplify.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/InteractiveModelRunner.h
--rw-r--r-- root/root    usr/include/llvm/Analysis/Interval.h
--rw-r--r-- root/root    usr/include/llvm/Analysis/IntervalIterator.h
--rw-r--r-- root/root    usr/include/llvm/Analysis/IntervalPartition.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/IteratedDominanceFrontier.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/LazyBlockFrequencyInfo.h
 -rw-r--r-- root/root    usr/include/llvm/Analysis/LazyBranchProbabilityInfo.h
@@ -359,6 +361,7 @@ drwxr-xr-x root/root    usr/include/llvm/AsmParser/
 -rw-r--r-- root/root    usr/include/llvm/AsmParser/LLLexer.h
 -rw-r--r-- root/root    usr/include/llvm/AsmParser/LLParser.h
 -rw-r--r-- root/root    usr/include/llvm/AsmParser/LLToken.h
+-rw-r--r-- root/root    usr/include/llvm/AsmParser/NumberedValues.h
 -rw-r--r-- root/root    usr/include/llvm/AsmParser/Parser.h
 -rw-r--r-- root/root    usr/include/llvm/AsmParser/SlotMapping.h
 drwxr-xr-x root/root    usr/include/llvm/BinaryFormat/
@@ -430,6 +433,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/AsmPrinter.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/AsmPrinterHandler.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/AssignmentTrackingAnalysis.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/AtomicExpand.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/AtomicExpandUtils.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/BasicBlockSectionUtils.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/BasicBlockSectionsProfileReader.h
@@ -441,7 +445,6 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/CallBrPrepare.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/CallingConvLower.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/CodeGenCommonISel.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/CodeGenPassBuilder.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/CodeGenPrepare.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/CommandFlags.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ComplexDeinterleavingPass.h
@@ -451,6 +454,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DIE.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DIEValue.def
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DbgEntityHistoryCalculator.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/DeadMachineInstructionElim.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DebugHandlerBase.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DetectDeadLanes.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/DwarfEHPrepare.h
@@ -464,6 +468,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ExpandVectorPredication.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/FastISel.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/FaultMaps.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/FinalizeISel.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/FunctionLoweringInfo.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/GCMetadata.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/GCMetadataPrinter.h
@@ -511,6 +516,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/GlobalISel/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LexicalScopes.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LinkAllAsmWriterComponents.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LinkAllCodegenComponents.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveDebugVariables.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveInterval.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveIntervalCalc.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveIntervalUnion.h
@@ -522,8 +528,8 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/GlobalISel/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveRegUnits.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveStacks.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LiveVariables.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/LocalStackSlotAllocation.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LoopTraversal.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/LowLevelType.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LowLevelTypeUtils.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/LowerEmuTLS.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MBFIWrapper.h
@@ -542,11 +548,14 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/MIRParser/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineCFGPrinter.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineCombinerPattern.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineConstantPool.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineConvergenceVerifier.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineCycleAnalysis.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineDomTreeUpdater.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineDominanceFrontier.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineDominators.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineFrameInfo.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineFunction.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineFunctionAnalysis.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineFunctionPass.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineInstr.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineInstrBuilder.h
@@ -563,7 +572,6 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/MIRParser/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineOptimizationRemarkEmitter.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineOutliner.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachinePassManager.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/MachinePassRegistry.def
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachinePassRegistry.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachinePipeliner.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachinePostDominators.h
@@ -576,7 +584,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/MIRParser/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineStableHash.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineTraceMetrics.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineUniformityAnalysis.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineValueType.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/MachineVerifier.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MacroFusion.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ModuloSchedule.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/MultiHazardRecognizer.h
@@ -588,7 +596,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/PBQP/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/PBQP/ReductionRules.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/PBQP/Solution.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/PBQPRAConstraint.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/ParallelCG.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/PHIElimination.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/Passes.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/PreISelIntrinsicLowering.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/PseudoSourceValue.h
@@ -598,6 +606,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/PBQP/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/RDFRegisters.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ReachingDefAnalysis.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/RegAllocCommon.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/RegAllocFast.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/RegAllocPBQP.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/RegAllocRegistry.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/Register.h
@@ -609,8 +618,9 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/PBQP/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/RegisterUsageInfo.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ReplaceWithVeclib.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ResourcePriorityQueue.h
--rw-r--r-- root/root    usr/include/llvm/CodeGen/RuntimeLibcalls.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/RuntimeLibcallUtil.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/SDNodeProperties.td
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/SDPatternMatch.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/SafeStack.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ScheduleDAG.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/ScheduleDAGInstrs.h
@@ -645,6 +655,7 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/PBQP/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/TargetSchedule.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/TargetSubtargetInfo.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/TileShapeInfo.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/TwoAddressInstructionPass.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/TypePromotion.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/UnreachableBlockElim.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/VLIWMachineScheduler.h
@@ -655,6 +666,13 @@ drwxr-xr-x root/root    usr/include/llvm/CodeGen/PBQP/
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/WasmEHPrepare.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/WinEHFuncInfo.h
 -rw-r--r-- root/root    usr/include/llvm/CodeGen/WinEHPrepare.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGen/WindowScheduler.h
+drwxr-xr-x root/root    usr/include/llvm/CodeGenData/
+-rw-r--r-- root/root    usr/include/llvm/CodeGenData/OutlinedHashTree.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGenData/OutlinedHashTreeRecord.h
+drwxr-xr-x root/root    usr/include/llvm/CodeGenTypes/
+-rw-r--r-- root/root    usr/include/llvm/CodeGenTypes/LowLevelType.h
+-rw-r--r-- root/root    usr/include/llvm/CodeGenTypes/MachineValueType.h
 drwxr-xr-x root/root    usr/include/llvm/Config/
 -rw-r--r-- root/root    usr/include/llvm/Config/AsmParsers.def
 -rw-r--r-- root/root    usr/include/llvm/Config/AsmPrinters.def
@@ -798,6 +816,7 @@ drwxr-xr-x root/root    usr/include/llvm/DebugInfo/GSYM/
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/GSYM/LineTable.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/GSYM/LookupResult.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/GSYM/ObjectFileTransformer.h
+-rw-r--r-- root/root    usr/include/llvm/DebugInfo/GSYM/OutputAggregator.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/GSYM/StringTable.h
 drwxr-xr-x root/root    usr/include/llvm/DebugInfo/LogicalView/
 drwxr-xr-x root/root    usr/include/llvm/DebugInfo/LogicalView/Core/
@@ -820,7 +839,7 @@ drwxr-xr-x root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/LVBinaryReader.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/LVCodeViewReader.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/LVCodeViewVisitor.h
--rw-r--r-- root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/LVELFReader.h
+-rw-r--r-- root/root    usr/include/llvm/DebugInfo/LogicalView/Readers/LVDWARFReader.h
 drwxr-xr-x root/root    usr/include/llvm/DebugInfo/MSF/
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/MSF/IMSFFile.h
 -rw-r--r-- root/root    usr/include/llvm/DebugInfo/MSF/MSFBuilder.h
@@ -1026,6 +1045,7 @@ drwxr-xr-x root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/DebuggerSupport.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/DebuggerSupportPlugin.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/PerfSupportPlugin.h
+-rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/VTuneSupportPlugin.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/ELFNixPlatform.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/EPCDebugObjectRegistrar.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/EPCDynamicLibrarySearchGenerator.h
@@ -1055,6 +1075,7 @@ drwxr-xr-x root/root    usr/include/llvm/ExecutionEngine/Orc/Debugging/
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/ObjectTransformLayer.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/OrcABISupport.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
+-rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/SectCreate.h
 drwxr-xr-x root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/AllocationActions.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/ExecutorAddress.h
@@ -1067,6 +1088,7 @@ drwxr-xr-x root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/SimplePackedSerialization.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/SimpleRemoteEPCUtils.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/TargetProcessControlTypes.h
+-rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/VTuneSharedStructs.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/Shared/WrapperFunctionUtils.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/SimpleRemoteEPC.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/SpeculateAnalyses.h
@@ -1077,6 +1099,7 @@ drwxr-xr-x root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/ExecutorSharedMemoryMapperService.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/JITLoaderGDB.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/JITLoaderPerf.h
+-rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/JITLoaderVTune.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/RegisterEHFrames.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/SimpleExecutorDylibManager.h
 -rw-r--r-- root/root    usr/include/llvm/ExecutionEngine/Orc/TargetProcess/SimpleExecutorMemoryManager.h
@@ -1107,6 +1130,10 @@ drwxr-xr-x root/root    usr/include/llvm/Frontend/OpenACC/
 -rw-r--r-- root/root    usr/include/llvm/Frontend/OpenACC/ACC.inc
 -rw-r--r-- root/root    usr/include/llvm/Frontend/OpenACC/ACC.td
 drwxr-xr-x root/root    usr/include/llvm/Frontend/OpenMP/
+-rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/ClauseT.h
+-rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/ConstructCompositionT.h
+-rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/ConstructDecompositionT.h
+-rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/OMP.h
 -rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/OMP.h.inc
 -rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/OMP.inc
 -rw-r--r-- root/root    usr/include/llvm/Frontend/OpenMP/OMP.td
@@ -1126,6 +1153,7 @@ drwxr-xr-x root/root    usr/include/llvm/FuzzMutate/
 -rw-r--r-- root/root    usr/include/llvm/FuzzMutate/RandomIRBuilder.h
 drwxr-xr-x root/root    usr/include/llvm/IR/
 -rw-r--r-- root/root    usr/include/llvm/IR/AbstractCallSite.h
+-rw-r--r-- root/root    usr/include/llvm/IR/Analysis.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Argument.h
 -rw-r--r-- root/root    usr/include/llvm/IR/AssemblyAnnotationWriter.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Assumptions.h
@@ -1143,12 +1171,14 @@ drwxr-xr-x root/root    usr/include/llvm/IR/
 -rw-r--r-- root/root    usr/include/llvm/IR/ConstantFold.h
 -rw-r--r-- root/root    usr/include/llvm/IR/ConstantFolder.h
 -rw-r--r-- root/root    usr/include/llvm/IR/ConstantRange.h
+-rw-r--r-- root/root    usr/include/llvm/IR/ConstantRangeList.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Constants.h
 -rw-r--r-- root/root    usr/include/llvm/IR/ConstrainedOps.def
 -rw-r--r-- root/root    usr/include/llvm/IR/ConvergenceVerifier.h
 -rw-r--r-- root/root    usr/include/llvm/IR/CycleInfo.h
 -rw-r--r-- root/root    usr/include/llvm/IR/DIBuilder.h
 -rw-r--r-- root/root    usr/include/llvm/IR/DataLayout.h
+-rw-r--r-- root/root    usr/include/llvm/IR/DbgVariableFragmentInfo.h
 -rw-r--r-- root/root    usr/include/llvm/IR/DebugInfo.h
 -rw-r--r-- root/root    usr/include/llvm/IR/DebugInfoFlags.def
 -rw-r--r-- root/root    usr/include/llvm/IR/DebugInfoMetadata.h
@@ -1167,6 +1197,7 @@ drwxr-xr-x root/root    usr/include/llvm/IR/
 -rw-r--r-- root/root    usr/include/llvm/IR/FixedPointBuilder.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Function.h
 -rw-r--r-- root/root    usr/include/llvm/IR/GCStrategy.h
+-rw-r--r-- root/root    usr/include/llvm/IR/GEPNoWrapFlags.h
 -rw-r--r-- root/root    usr/include/llvm/IR/GVMaterializer.h
 -rw-r--r-- root/root    usr/include/llvm/IR/GenericConvergenceVerifierImpl.h
 -rw-r--r-- root/root    usr/include/llvm/IR/GetElementPtrTypeIterator.h
@@ -1238,6 +1269,7 @@ drwxr-xr-x root/root    usr/include/llvm/IR/
 -rw-r--r-- root/root    usr/include/llvm/IR/MDBuilder.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Mangler.h
 -rw-r--r-- root/root    usr/include/llvm/IR/MatrixBuilder.h
+-rw-r--r-- root/root    usr/include/llvm/IR/MemoryModelRelaxationAnnotations.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Metadata.def
 -rw-r--r-- root/root    usr/include/llvm/IR/Metadata.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Module.h
@@ -1261,6 +1293,7 @@ drwxr-xr-x root/root    usr/include/llvm/IR/
 -rw-r--r-- root/root    usr/include/llvm/IR/PseudoProbe.h
 -rw-r--r-- root/root    usr/include/llvm/IR/ReplaceConstant.h
 -rw-r--r-- root/root    usr/include/llvm/IR/RuntimeLibcalls.def
+-rw-r--r-- root/root    usr/include/llvm/IR/RuntimeLibcalls.h
 -rw-r--r-- root/root    usr/include/llvm/IR/SSAContext.h
 -rw-r--r-- root/root    usr/include/llvm/IR/SafepointIRVerifier.h
 -rw-r--r-- root/root    usr/include/llvm/IR/Statepoint.h
@@ -1320,7 +1353,6 @@ drwxr-xr-x root/root    usr/include/llvm/MC/
 -rw-r--r-- root/root    usr/include/llvm/MC/MCAsmInfoGOFF.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCAsmInfoWasm.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCAsmInfoXCOFF.h
--rw-r--r-- root/root    usr/include/llvm/MC/MCAsmLayout.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCAsmMacro.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCAssembler.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCCodeEmitter.h
@@ -1336,6 +1368,7 @@ drwxr-xr-x root/root    usr/include/llvm/MC/MCDisassembler/
 -rw-r--r-- root/root    usr/include/llvm/MC/MCDisassembler/MCRelocationInfo.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCDisassembler/MCSymbolizer.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCDwarf.h
+-rw-r--r-- root/root    usr/include/llvm/MC/MCELFExtras.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCELFObjectWriter.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCELFStreamer.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCExpr.h
@@ -1388,6 +1421,7 @@ drwxr-xr-x root/root    usr/include/llvm/MC/MCParser/
 -rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolELF.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolGOFF.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolMachO.h
+-rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolTableEntry.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolWasm.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCSymbolXCOFF.h
 -rw-r--r-- root/root    usr/include/llvm/MC/MCTargetOptions.h
@@ -1523,15 +1557,20 @@ drwxr-xr-x root/root    usr/include/llvm/Option/
 -rw-r--r-- root/root    usr/include/llvm/PassRegistry.h
 -rw-r--r-- root/root    usr/include/llvm/PassSupport.h
 drwxr-xr-x root/root    usr/include/llvm/Passes/
+-rw-r--r-- root/root    usr/include/llvm/Passes/CodeGenPassBuilder.h
+-rw-r--r-- root/root    usr/include/llvm/Passes/MachinePassRegistry.def
 -rw-r--r-- root/root    usr/include/llvm/Passes/OptimizationLevel.h
 -rw-r--r-- root/root    usr/include/llvm/Passes/PassBuilder.h
 -rw-r--r-- root/root    usr/include/llvm/Passes/PassPlugin.h
 -rw-r--r-- root/root    usr/include/llvm/Passes/StandardInstrumentations.h
+-rw-r--r-- root/root    usr/include/llvm/Passes/TargetPassRegistry.inc
 drwxr-xr-x root/root    usr/include/llvm/ProfileData/
 drwxr-xr-x root/root    usr/include/llvm/ProfileData/Coverage/
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/Coverage/CoverageMapping.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/Coverage/CoverageMappingReader.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/Coverage/CoverageMappingWriter.h
+-rw-r--r-- root/root    usr/include/llvm/ProfileData/Coverage/MCDCTypes.h
+-rw-r--r-- root/root    usr/include/llvm/ProfileData/CtxInstrContextNode.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/FunctionId.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/GCOV.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/HashKeyMap.h
@@ -1544,6 +1583,9 @@ drwxr-xr-x root/root    usr/include/llvm/ProfileData/Coverage/
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/MIBEntryDef.inc
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/MemProf.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/MemProfData.inc
+-rw-r--r-- root/root    usr/include/llvm/ProfileData/MemProfReader.h
+-rw-r--r-- root/root    usr/include/llvm/ProfileData/PGOCtxProfReader.h
+-rw-r--r-- root/root    usr/include/llvm/ProfileData/PGOCtxProfWriter.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/ProfileCommon.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/RawMemProfReader.h
 -rw-r--r-- root/root    usr/include/llvm/ProfileData/SampleProf.h
@@ -1563,6 +1605,11 @@ drwxr-xr-x root/root    usr/include/llvm/Remarks/
 -rw-r--r-- root/root    usr/include/llvm/Remarks/RemarkStreamer.h
 -rw-r--r-- root/root    usr/include/llvm/Remarks/RemarkStringTable.h
 -rw-r--r-- root/root    usr/include/llvm/Remarks/YAMLRemarkSerializer.h
+drwxr-xr-x root/root    usr/include/llvm/SandboxIR/
+-rw-r--r-- root/root    usr/include/llvm/SandboxIR/SandboxIR.h
+-rw-r--r-- root/root    usr/include/llvm/SandboxIR/SandboxIRValues.def
+-rw-r--r-- root/root    usr/include/llvm/SandboxIR/Tracker.h
+-rw-r--r-- root/root    usr/include/llvm/SandboxIR/Use.h
 drwxr-xr-x root/root    usr/include/llvm/Support/
 -rw-r--r-- root/root    usr/include/llvm/Support/AMDGPUAddrSpace.h
 -rw-r--r-- root/root    usr/include/llvm/Support/AMDGPUMetadata.h
@@ -1618,7 +1665,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/
 -rw-r--r-- root/root    usr/include/llvm/Support/CrashRecoveryContext.h
 -rw-r--r-- root/root    usr/include/llvm/Support/DJB.h
 -rw-r--r-- root/root    usr/include/llvm/Support/DOTGraphTraits.h
--rw-r--r-- root/root    usr/include/llvm/Support/DXILOperationCommon.h
+-rw-r--r-- root/root    usr/include/llvm/Support/DXILABI.h
 -rw-r--r-- root/root    usr/include/llvm/Support/DataExtractor.h
 -rw-r--r-- root/root    usr/include/llvm/Support/DataTypes.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Debug.h
@@ -1637,6 +1684,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/
 -rw-r--r-- root/root    usr/include/llvm/Support/ErrorHandling.h
 -rw-r--r-- root/root    usr/include/llvm/Support/ErrorOr.h
 -rw-r--r-- root/root    usr/include/llvm/Support/ExitCodes.h
+-rw-r--r-- root/root    usr/include/llvm/Support/ExponentialBackoff.h
 -rw-r--r-- root/root    usr/include/llvm/Support/ExtensibleRTTI.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Extension.def
 -rw-r--r-- root/root    usr/include/llvm/Support/FileCollector.h
@@ -1660,6 +1708,8 @@ drwxr-xr-x root/root    usr/include/llvm/Support/FileSystem/
 -rw-r--r-- root/root    usr/include/llvm/Support/GlobPattern.h
 -rw-r--r-- root/root    usr/include/llvm/Support/GraphWriter.h
 -rw-r--r-- root/root    usr/include/llvm/Support/HashBuilder.h
+-rw-r--r-- root/root    usr/include/llvm/Support/HexagonAttributeParser.h
+-rw-r--r-- root/root    usr/include/llvm/Support/HexagonAttributes.h
 -rw-r--r-- root/root    usr/include/llvm/Support/InitLLVM.h
 -rw-r--r-- root/root    usr/include/llvm/Support/InstructionCost.h
 -rw-r--r-- root/root    usr/include/llvm/Support/JSON.h
@@ -1670,6 +1720,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/FileSystem/
 -rw-r--r-- root/root    usr/include/llvm/Support/LineIterator.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Locale.h
 -rw-r--r-- root/root    usr/include/llvm/Support/LockFileManager.h
+-rw-r--r-- root/root    usr/include/llvm/Support/LogicalResult.h
 -rw-r--r-- root/root    usr/include/llvm/Support/MD5.h
 -rw-r--r-- root/root    usr/include/llvm/Support/MSP430AttributeParser.h
 -rw-r--r-- root/root    usr/include/llvm/Support/MSP430Attributes.h
@@ -1698,7 +1749,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/FileSystem/
 -rw-r--r-- root/root    usr/include/llvm/Support/Program.h
 -rw-r--r-- root/root    usr/include/llvm/Support/RISCVAttributeParser.h
 -rw-r--r-- root/root    usr/include/llvm/Support/RISCVAttributes.h
--rw-r--r-- root/root    usr/include/llvm/Support/RISCVISAInfo.h
+-rw-r--r-- root/root    usr/include/llvm/Support/RISCVISAUtils.h
 -rw-r--r-- root/root    usr/include/llvm/Support/RWMutex.h
 -rw-r--r-- root/root    usr/include/llvm/Support/RandomNumberGenerator.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Recycler.h
@@ -1715,6 +1766,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/FileSystem/
 -rw-r--r-- root/root    usr/include/llvm/Support/ScopedPrinter.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Signals.h
 -rw-r--r-- root/root    usr/include/llvm/Support/Signposts.h
+-rw-r--r-- root/root    usr/include/llvm/Support/SipHash.h
 -rw-r--r-- root/root    usr/include/llvm/Support/SmallVectorMemoryBuffer.h
 drwxr-xr-x root/root    usr/include/llvm/Support/Solaris/
 drwxr-xr-x root/root    usr/include/llvm/Support/Solaris/sys/
@@ -1757,6 +1809,7 @@ drwxr-xr-x root/root    usr/include/llvm/Support/Windows/
 -rw-r--r-- root/root    usr/include/llvm/Support/YAMLParser.h
 -rw-r--r-- root/root    usr/include/llvm/Support/YAMLTraits.h
 -rw-r--r-- root/root    usr/include/llvm/Support/circular_raw_ostream.h
+-rw-r--r-- root/root    usr/include/llvm/Support/float128.h
 -rw-r--r-- root/root    usr/include/llvm/Support/raw_os_ostream.h
 -rw-r--r-- root/root    usr/include/llvm/Support/raw_ostream.h
 -rw-r--r-- root/root    usr/include/llvm/Support/raw_sha1_ostream.h
@@ -1792,20 +1845,26 @@ drwxr-xr-x root/root    usr/include/llvm/Target/GlobalISel/
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetItinerary.td
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetLoweringObjectFile.h
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetMachine.h
+-rw-r--r-- root/root    usr/include/llvm/Target/TargetMacroFusion.td
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetOptions.h
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetPfmCounters.td
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetSchedule.td
 -rw-r--r-- root/root    usr/include/llvm/Target/TargetSelectionDAG.td
 drwxr-xr-x root/root    usr/include/llvm/TargetParser/
+-rw-r--r-- root/root    usr/include/llvm/TargetParser/AArch64CPUFeatures.inc
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/AArch64TargetParser.h
+-rw-r--r-- root/root    usr/include/llvm/TargetParser/AArch64TargetParserDef.inc
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/ARMTargetParser.def
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/ARMTargetParser.h
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/ARMTargetParserCommon.h
+-rw-r--r-- root/root    usr/include/llvm/TargetParser/ARMTargetParserDef.inc
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/CSKYTargetParser.def
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/CSKYTargetParser.h
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/Host.h
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/LoongArchTargetParser.def
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/LoongArchTargetParser.h
+-rw-r--r-- root/root    usr/include/llvm/TargetParser/PPCTargetParser.def
+-rw-r--r-- root/root    usr/include/llvm/TargetParser/RISCVISAInfo.h
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/RISCVTargetParser.h
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/RISCVTargetParserDef.inc
 -rw-r--r-- root/root    usr/include/llvm/TargetParser/SubtargetFeature.h
@@ -1827,6 +1886,7 @@ drwxr-xr-x root/root    usr/include/llvm/TextAPI/
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/Architecture.h
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/ArchitectureSet.h
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/DylibReader.h
+-rw-r--r-- root/root    usr/include/llvm/TextAPI/FileTypes.h
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/InterfaceFile.h
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/PackedVersion.h
 -rw-r--r-- root/root    usr/include/llvm/TextAPI/Platform.h
@@ -1870,6 +1930,7 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/IPO/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/DeadArgumentElimination.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/ElimAvailExtern.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/EmbedBitcodePass.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/ExpandVariadics.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/ExtractGV.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/ForceFunctionAttrs.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/FunctionAttrs.h
@@ -1894,6 +1955,7 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/IPO/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/SCCP.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/SampleContextTracker.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/SampleProfile.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/SampleProfileMatcher.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/SampleProfileProbe.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/StripDeadPrototypes.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/IPO/StripSymbols.h
@@ -1919,8 +1981,12 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/Instrumentation/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/InstrOrderFile.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/InstrProfiling.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/KCFI.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/LowerAllowCheckPass.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/MemProfiler.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/MemorySanitizer.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/NumericalStabilitySanitizer.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/PGOCtxProfLowering.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/PGOForceFunctionAttrs.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/PGOInstrumentation.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/PoisonChecking.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Instrumentation/SanitizerBinaryMetadata.h
@@ -1953,6 +2019,7 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/Scalar/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/InferAddressSpaces.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/InferAlignment.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/InstSimplifyPass.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/JumpTableToSwitch.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/JumpThreading.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LICM.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopAccessAnalysisPrinter.h
@@ -1968,7 +2035,6 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/Scalar/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopLoadElimination.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopPassManager.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopPredication.h
--rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopReroll.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopRotation.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopSimplifyCFG.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Scalar/LoopSink.h
@@ -2027,6 +2093,7 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/Utils/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/CodeMoverUtils.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/CountVisits.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/CtorUtils.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/DXILResource.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/DXILUpgrade.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/Debugify.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/EntryExitInstrumenter.h
@@ -2093,6 +2160,7 @@ drwxr-xr-x root/root    usr/include/llvm/Transforms/Utils/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Utils/ValueMapper.h
 drwxr-xr-x root/root    usr/include/llvm/Transforms/Vectorize/
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Vectorize/LoadStoreVectorizer.h
+-rw-r--r-- root/root    usr/include/llvm/Transforms/Vectorize/LoopIdiomVectorize.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Vectorize/LoopVectorizationLegality.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Vectorize/LoopVectorize.h
 -rw-r--r-- root/root    usr/include/llvm/Transforms/Vectorize/SLPVectorizer.h
@@ -2141,7 +2209,6 @@ drwxr-xr-x root/root    usr/lib/cmake/llvm/
 -rw-r--r-- root/root    usr/lib/cmake/llvm/FindLibpfm.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/FindOCaml.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/FindSphinx.cmake
--rw-r--r-- root/root    usr/lib/cmake/llvm/FindTerminfo.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/FindZ3.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/Findzstd.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/GenerateVersionFromVCS.cmake
@@ -2166,9 +2233,9 @@ drwxr-xr-x root/root    usr/lib/cmake/llvm/
 -rw-r--r-- root/root    usr/lib/cmake/llvm/UseLibtool.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/VersionFromVCS.cmake
 -rw-r--r-- root/root    usr/lib/cmake/llvm/llvm-driver-template.cpp.in
-lrwxrwxrwx root/root    usr/lib/libLLVM-18.so -> libLLVM.so.18.1
-lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.18.1
--rwxr-xr-x root/root    usr/lib/libLLVM.so.18.1
+lrwxrwxrwx root/root    usr/lib/libLLVM-19.so -> libLLVM.so.19.1
+lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.19.1
+-rwxr-xr-x root/root    usr/lib/libLLVM.so.19.1
 -rw-r--r-- root/root    usr/lib/libLLVMAMDGPUAsmParser.a
 -rw-r--r-- root/root    usr/lib/libLLVMAMDGPUCodeGen.a
 -rw-r--r-- root/root    usr/lib/libLLVMAMDGPUDesc.a
@@ -2187,6 +2254,7 @@ lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.18.1
 -rw-r--r-- root/root    usr/lib/libLLVMCFGuard.a
 -rw-r--r-- root/root    usr/lib/libLLVMCFIVerify.a
 -rw-r--r-- root/root    usr/lib/libLLVMCodeGen.a
+-rw-r--r-- root/root    usr/lib/libLLVMCodeGenData.a
 -rw-r--r-- root/root    usr/lib/libLLVMCodeGenTypes.a
 -rw-r--r-- root/root    usr/lib/libLLVMCore.a
 -rw-r--r-- root/root    usr/lib/libLLVMCoroutines.a
@@ -2241,6 +2309,7 @@ lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.18.1
 -rw-r--r-- root/root    usr/lib/libLLVMObjCopy.a
 -rw-r--r-- root/root    usr/lib/libLLVMObject.a
 -rw-r--r-- root/root    usr/lib/libLLVMObjectYAML.a
+-rw-r--r-- root/root    usr/lib/libLLVMOptDriver.a
 -rw-r--r-- root/root    usr/lib/libLLVMOption.a
 -rw-r--r-- root/root    usr/lib/libLLVMOrcDebugging.a
 -rw-r--r-- root/root    usr/lib/libLLVMOrcJIT.a
@@ -2250,13 +2319,14 @@ lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.18.1
 -rw-r--r-- root/root    usr/lib/libLLVMProfileData.a
 -rw-r--r-- root/root    usr/lib/libLLVMRemarks.a
 -rw-r--r-- root/root    usr/lib/libLLVMRuntimeDyld.a
+-rw-r--r-- root/root    usr/lib/libLLVMSandboxIR.a
 -rw-r--r-- root/root    usr/lib/libLLVMScalarOpts.a
 -rw-r--r-- root/root    usr/lib/libLLVMSelectionDAG.a
 -rw-r--r-- root/root    usr/lib/libLLVMSupport.a
 -rw-r--r-- root/root    usr/lib/libLLVMSymbolize.a
 -rw-r--r-- root/root    usr/lib/libLLVMTableGen.a
+-rw-r--r-- root/root    usr/lib/libLLVMTableGenBasic.a
 -rw-r--r-- root/root    usr/lib/libLLVMTableGenCommon.a
--rw-r--r-- root/root    usr/lib/libLLVMTableGenGlobalISel.a
 -rw-r--r-- root/root    usr/lib/libLLVMTarget.a
 -rw-r--r-- root/root    usr/lib/libLLVMTargetParser.a
 -rw-r--r-- root/root    usr/lib/libLLVMTextAPI.a
@@ -2273,10 +2343,10 @@ lrwxrwxrwx root/root    usr/lib/libLLVM.so -> libLLVM.so.18.1
 -rw-r--r-- root/root    usr/lib/libLLVMX86TargetMCA.a
 -rw-r--r-- root/root    usr/lib/libLLVMXRay.a
 -rw-r--r-- root/root    usr/lib/libLLVMipo.a
-lrwxrwxrwx root/root    usr/lib/libLTO.so -> libLTO.so.18.1
--rwxr-xr-x root/root    usr/lib/libLTO.so.18.1
-lrwxrwxrwx root/root    usr/lib/libRemarks.so -> libRemarks.so.18.1
--rwxr-xr-x root/root    usr/lib/libRemarks.so.18.1
+lrwxrwxrwx root/root    usr/lib/libLTO.so -> libLTO.so.19.1
+-rwxr-xr-x root/root    usr/lib/libLTO.so.19.1
+lrwxrwxrwx root/root    usr/lib/libRemarks.so -> libRemarks.so.19.1
+-rwxr-xr-x root/root    usr/lib/libRemarks.so.19.1
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/opt-viewer/
 -rwxr-xr-x root/root    usr/share/opt-viewer/opt-diff.py
