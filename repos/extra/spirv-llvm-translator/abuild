@@ -1,5 +1,5 @@
 name=spirv-llvm-translator
-version=18.1.2
+version=19.1.1
 release=1
 source="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v${version}/SPIRV-LLVM-Translator-${version}.tar.gz"
 build_opt="-D BUILD_SHARED_LIBS=ON -D CMAKE_SKIP_INSTALL_RPATH=ON -D LLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr"
