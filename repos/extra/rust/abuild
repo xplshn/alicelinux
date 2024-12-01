@@ -1,9 +1,9 @@
 name=rust
-version=1.81.0
+version=1.82.0
 
 ##cat src/stage0.txt
-export _date=2024-08-08
-export _rustc=1.80.1
+export _date=2024-09-05
+export _rustc=1.81.0
 export _cargo=$_rustc
 ##
 
@@ -48,9 +48,6 @@ tools          = [ "cargo", "rustfmt" ]
 sanitizers     = false
 profiler       = false
 full-bootstrap = false
-@CARGO@
-@RUST@
-@RUSTFMT@
 
 [install]
 prefix = "/usr"
@@ -77,15 +74,6 @@ jemalloc          = false
 rpath             = false
 dist-src          = false
 EOF
-
-	if [ -e /usr/bin/rustc ]; then
-		sed	-e 's|@CARGO@|cargo = "/usr/bin/cargo"|' \
-			-e 's|@RUST@|rustc = "/usr/bin/rustc"|' \
-			-e 's|@RUSTFMT@|rustfmt = "/usr/bin/rustfmt"|' \
-			-i config.toml
-	else
-		sed -e 's|@CARGO@||' -e 's|@RUST@||' -e 's|@RUSTFMT@||' -i config.toml
-	fi
 	
 	mkdir "$SRC/rust"
 	export RUST_BACKTRACE=1
