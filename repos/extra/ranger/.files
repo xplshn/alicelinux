@@ -273,11 +273,11 @@ drwxr-xr-x root/root    usr/lib/python3.12/site-packages/ranger/gui/widgets/__py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger/gui/widgets/view_base.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger/gui/widgets/view_miller.py
 -rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger/gui/widgets/view_multipane.py
-drwxr-xr-x root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.3-py3.12.egg-info/
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.3-py3.12.egg-info/PKG-INFO
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.3-py3.12.egg-info/SOURCES.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.3-py3.12.egg-info/dependency_links.txt
--rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.3-py3.12.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.4-py3.12.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.4-py3.12.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.4-py3.12.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.4-py3.12.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.12/site-packages/ranger_fm-1.9.4-py3.12.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-rw-r-- root/root    usr/share/applications/ranger.desktop
