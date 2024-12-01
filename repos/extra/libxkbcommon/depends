@@ -1,3 +1,4 @@
 wayland-protocols
 xkeyboard-config
 libxcb
+libxml2
