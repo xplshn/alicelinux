@@ -1,9 +1,9 @@
 name=rust
-version=1.82.0
+version=1.83.0
 
 ##cat src/stage0.txt
-export _date=2024-09-05
-export _rustc=1.81.0
+export _date=2024-10-17
+export _rustc=1.82.0
 export _cargo=$_rustc
 ##
 
@@ -30,7 +30,8 @@ build() {
 		
 	cat > config.toml <<EOF
 [llvm]
-link-shared = true
+link-shared      = true
+download-ci-llvm = false
 
 [build]
 build     = "$_tuplet"
