@@ -1,5 +1,5 @@
 name=cargo-c
-version=0.10.5
+version=0.10.7
 release=1
 source="https://github.com/lu-zero/${name}/archive/v${version}/${name}-${version}.tar.gz
 	cargo-${version}.lock::https://github.com/lu-zero/cargo-c/releases/download/v${version}/Cargo.lock"
