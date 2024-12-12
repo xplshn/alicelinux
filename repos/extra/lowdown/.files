@@ -11,6 +11,8 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -r--r--r-- root/root    usr/lib/pkgconfig/lowdown.pc
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/lowdown/
+drwxr-xr-x root/root    usr/share/lowdown/html/
+-r--r--r-- root/root    usr/share/lowdown/html/default.html
 drwxr-xr-x root/root    usr/share/lowdown/odt/
 -r--r--r-- root/root    usr/share/lowdown/odt/styles.xml
 drwxr-xr-x root/root    usr/share/man/
