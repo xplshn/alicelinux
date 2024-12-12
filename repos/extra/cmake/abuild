@@ -1,5 +1,5 @@
 name=cmake
-version=3.31.1
+version=3.31.2
 release=1
 source="https://$name.org/files/v${version%.*}/$name-$version.tar.gz"
 build_opt="--system-libs"
