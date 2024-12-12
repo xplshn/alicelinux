@@ -219,30 +219,30 @@ drwxr-xr-x root/root    usr/include/unicode/
 -rw-r--r-- root/root    usr/include/unicode/vtzone.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/icu/
-drwxr-xr-x root/root    usr/lib/icu/75.1/
--rw-r--r-- root/root    usr/lib/icu/75.1/Makefile.inc
--rw-r--r-- root/root    usr/lib/icu/75.1/pkgdata.inc
+drwxr-xr-x root/root    usr/lib/icu/76.1/
+-rw-r--r-- root/root    usr/lib/icu/76.1/Makefile.inc
+-rw-r--r-- root/root    usr/lib/icu/76.1/pkgdata.inc
 lrwxrwxrwx root/root    usr/lib/icu/Makefile.inc -> current/Makefile.inc
-lrwxrwxrwx root/root    usr/lib/icu/current -> 75.1
+lrwxrwxrwx root/root    usr/lib/icu/current -> 76.1
 lrwxrwxrwx root/root    usr/lib/icu/pkgdata.inc -> current/pkgdata.inc
-lrwxrwxrwx root/root    usr/lib/libicudata.so -> libicudata.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicudata.so.75 -> libicudata.so.75.1
--rwxr-xr-x root/root    usr/lib/libicudata.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicui18n.so -> libicui18n.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicui18n.so.75 -> libicui18n.so.75.1
--rwxr-xr-x root/root    usr/lib/libicui18n.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicuio.so -> libicuio.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicuio.so.75 -> libicuio.so.75.1
--rwxr-xr-x root/root    usr/lib/libicuio.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicutest.so -> libicutest.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicutest.so.75 -> libicutest.so.75.1
--rwxr-xr-x root/root    usr/lib/libicutest.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicutu.so -> libicutu.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicutu.so.75 -> libicutu.so.75.1
--rwxr-xr-x root/root    usr/lib/libicutu.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicuuc.so -> libicuuc.so.75.1
-lrwxrwxrwx root/root    usr/lib/libicuuc.so.75 -> libicuuc.so.75.1
--rwxr-xr-x root/root    usr/lib/libicuuc.so.75.1
+lrwxrwxrwx root/root    usr/lib/libicudata.so -> libicudata.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicudata.so.76 -> libicudata.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicudata.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicui18n.so -> libicui18n.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicui18n.so.76 -> libicui18n.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicui18n.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicuio.so -> libicuio.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicuio.so.76 -> libicuio.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicuio.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicutest.so -> libicutest.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicutest.so.76 -> libicutest.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicutest.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicutu.so -> libicutu.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicutu.so.76 -> libicutu.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicutu.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicuuc.so -> libicuuc.so.76.1
+lrwxrwxrwx root/root    usr/lib/libicuuc.so.76 -> libicuuc.so.76.1
+-rwxr-xr-x root/root    usr/lib/libicuuc.so.76.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/icu-i18n.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/icu-io.pc
@@ -256,12 +256,12 @@ drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/icupkg
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icu/
-drwxr-xr-x root/root    usr/share/icu/75.1/
--rw-r--r-- root/root    usr/share/icu/75.1/LICENSE
-drwxr-xr-x root/root    usr/share/icu/75.1/config/
--rw-r--r-- root/root    usr/share/icu/75.1/config/mh-linux
--rwxr-xr-x root/root    usr/share/icu/75.1/install-sh
--rwxr-xr-x root/root    usr/share/icu/75.1/mkinstalldirs
+drwxr-xr-x root/root    usr/share/icu/76.1/
+-rw-r--r-- root/root    usr/share/icu/76.1/LICENSE
+drwxr-xr-x root/root    usr/share/icu/76.1/config/
+-rw-r--r-- root/root    usr/share/icu/76.1/config/mh-linux
+-rwxr-xr-x root/root    usr/share/icu/76.1/install-sh
+-rwxr-xr-x root/root    usr/share/icu/76.1/mkinstalldirs
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/derb.1.gz
