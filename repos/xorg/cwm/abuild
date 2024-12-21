@@ -1,4 +1,0 @@
-name=cwm
-version=7.4
-release=1
-source="https://github.com/leahneukirchen/${name}/archive/v${version}/${name}-v${version}.tar.gz"

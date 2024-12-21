@@ -1,4 +1,0 @@
-name=acpi
-version=1.7
-release=1
-source="https://sourceforge.net/projects/${name}client/files/${name}client/${version}/${name}-${version}.tar.gz"

@@ -1,4 +1,0 @@
-name=cfm
-version=0.6.6
-release=1
-source="https://github.com/willeccles/${name}/archive/v${version}/${name}-v${version}.tar.gz"

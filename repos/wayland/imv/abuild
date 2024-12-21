@@ -1,6 +1,0 @@
-name=imv
-version=4.5.0
-release=1
-source="imv-${version}.tar.gz::https://git.sr.ht/~exec64/${name}/archive/v${version}.tar.gz"
-[ -f $SPM_PKGDB/libx11 ] && build_opt="-Dwindows=x11"
-[ -f $SPM_PKGDB/wayland ] && build_opt="-Dwindows=wayland"

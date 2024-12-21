@@ -1,4 +1,0 @@
-name=libxcursor
-version=1.2.3
-release=1
-source="https://www.x.org/pub/individual/lib/libXcursor-$version.tar.xz"

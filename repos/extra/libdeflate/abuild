@@ -1,4 +1,0 @@
-name=libdeflate
-version=1.22
-release=1
-source="https://github.com/ebiggers/$name/releases/download/v$version/$name-$version.tar.gz"

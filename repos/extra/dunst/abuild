@@ -1,6 +1,0 @@
-name=dunst
-version=1.12.0
-release=1
-source="https://github.com/$name-project/$name/archive/v$version/$name-$version.tar.gz"
-[ -f $SPM_PKGDB/libx11 ] || export X11=0
-[ -f $SPM_PKGDB/wayland ] || export WAYLAND=0

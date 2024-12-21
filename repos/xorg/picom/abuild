@@ -1,9 +1,0 @@
-name=picom
-version=12.5
-release=1
-source="https://github.com/yshui/$name/archive/v$version/$name-$version.tar.gz"
-
-postbuild() {
-	install -Dm644 picom.sample.conf $PKG/etc/xdg/picom.conf
-	install -Dm644 picom.sample.conf $PKG/etc/xdg/picom.conf.example
-}

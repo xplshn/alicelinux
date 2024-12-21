@@ -1,6 +1,0 @@
-name=dropbear
-version=2024.86
-release=1
-source="https://matt.ucc.asn.au/${name}/releases/${name}-${version}.tar.bz2
-	run"
-sv="run"

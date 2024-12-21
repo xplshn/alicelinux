@@ -1,7 +1,0 @@
-seatd
-libxkbcommon
-pixman
-libinput
-mesa
-libdisplay-info
-xcb-util-renderutil

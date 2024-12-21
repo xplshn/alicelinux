@@ -1,6 +1,0 @@
-#!/bin/sh
-
-for i in /lib/modules/*; do
-	[ -f $i/modules.dep ] || continue
-	depmod ${i##*/}
-done

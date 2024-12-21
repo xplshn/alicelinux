@@ -1,4 +1,0 @@
-name=labwc-menu-generator
-version=efed0194947c45123287ea057c5fdb13894854cd
-release=1
-source="$name-$version.tar.gz::https://github.com/labwc/${name}/archive/${version}.tar.gz"

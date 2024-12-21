@@ -1,4 +1,0 @@
-name=dmenu
-version=5.3
-release=1
-source="https://dl.suckless.org/tools/${name}-${version}.tar.gz"

@@ -1,4 +1,0 @@
-name=libxcvt
-version=0.1.2
-release=1
-source="https://www.x.org/pub/individual/lib/$name-$version.tar.xz"
