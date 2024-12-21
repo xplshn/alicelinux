@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alice Linux - docs</title>
+	<style>
+		.centered-wrapper {
+			width: 800px;
+			margin: 0 auto;
+		}
+		.note {
+			padding: 15px;
+			text-align: center;
+		}
+		html, body {
+			font-family: monospace;
+			font-size: 14px;
+			text-align: left;
+			word-wrap: break-word;
+			height: 100%;
+		}
+		pre {
+			padding-left: 25px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			background-color: #f4f4f4;
+		}
+		code {
+			font-family: "Courier New", monospace;
+			background-color: #f4f4f4;
+			color: #819400;
+		}
+		hr {
+			border: 0;
+			border-top: 1px dashed #141c21;
+			margin: 20px 0;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 8px;
+			text-align: left;
+		}
+
+		th {
+			background-color: #f4f4f4;
+		}
+
+		table, th, td {
+			border: 2px dashed #f4f4f4;
+		}
+		img {
+			width: 800px;
+		}
+	</style>
+</head>
+<body>
+<div class="centered-wrapper">
+	<h1>docs</h1>
+	<a href="/">home</a> / <a href="/docs">docs</a> / <a href="https://codeberg.org/emmett1/alicelinux">development</a> / <a href="https://codeberg.org/emmett1/alicelinux/releases">download</a> / <a href="https://sourceforge.net/projects/alice-linux/files/iso/">iso</a> / <a href="/community.html">community</a> / <a href="/donate.html">donate</a>
+	<hr>
+<h1>Package Manager</h1>
+<p>In Alice, theres two package manager used, <a href="https://codeberg.org/emmett1/spm">spm</a> and <a href="https://codeberg.org/emmett1/autils">autils</a>. Why two package manager? <code>spm</code> was written for generic package manager for linux distribution. And <code>autils</code> is written specifically for <code>Alice</code> and required <code>spm</code>.</p>
+<h2>spm</h2>
+<p><code>spm</code> stands for <code>simple package manager</code>. It does simple and minimal written in POSIX compliance shell script. It only depends on core utils and tar (or busybox's utils and tar). <code>spm</code> only intended for compressing some directory into package, then extract package into system with files being tracked into database. Theres is no build script, recipe or ports in <code>spm</code>. You can write your own tools to use with <code>spm</code> either like Arch Linux's <code>makepkg</code>, CRUX's <code>pkgmk</code> or Slackware's <code>slackbuild</code> script.</p>
+<h2>spm - usage</h2>
+<p>list <code>spm</code> usage:</p>
+<pre><code>-a         print all installed packages
+-b &lt;path&gt;  build &lt;path&gt; directory into package
+-h         print this help message
+-i &lt;file&gt;  install &lt;file&gt; package into system
+-l &lt;pkg&gt;   list files installed by &lt;pkg&gt;
+-o &lt;file&gt;  print owner of &lt;file&gt;
+-r &lt;name&gt;  remove installed &lt;name&gt; from system
+-u &lt;pkg&gt;   re-install/upgrade &lt;pkg&gt;
+</code></pre>
+<p>list all install package with version:</p>
+<pre><code>$ spm -a
+...
+neofetch 7.1.0-1
+nettle 3.10-1
+nghttp2 1.62.1-1
+ninja 1.12.1-1
+nodejs 22.5.1-1
+nspr 4.35-1
+nss 3.102.1-1
+nsxiv 32-1
+...
+</code></pre>
+<p>build package from directory:</p>
+<pre><code>(build package)
+$ ./configure --prefix=/usr
+$ make
+
+(install into fake directory)
+$ make DESTDIR=$PWD/fakeroot install
+
+(turn fake directory into package (package.spm))
+# spm -b $PWD/fakeroot 
+
+(mv 'package.spm' into correct format (name#version-release.spm))
+# mv package.spm pkgname#pkgversion-pkgrelease.spm
+
+(install package into system)
+# spm -i pkgname#pkgversion-pkgrelease.spm
+</code></pre>
+<p>install package into system:</p>
+<pre><code># spm -i pkgname#pkgversion-pkgrelease.spm
+[pkgname] Verify package...
+[pkgname] Checking for conflicts...
+[pkgname] Installing package...
+[pkgname] Package 'pkgname#pkgversion-pkgrelease' installed.
+</code></pre>
+<p>list files installed by 'packagename'$ spm -l test:</p>
+<pre><code>usr/
+usr/share/
+usr/share/aaa
+usr/bin/
+usr/bin/aaa
+</code></pre>
+<p>list package owner of a file (can use regex):</p>
+<pre><code>$ spm -o gcc$
+ccache usr/lib/ccache/gcc
+gcc usr/bin/gcc
+gcc usr/bin/x86_64-pc-linux-musl-gcc
+linux lib/modules/6.6.41-Alice/build/scripts/dummy-tools/gcc
+</code></pre>
+<p>upgrade/reinstall installed package:</p>
+<pre><code># spm -u pkgname#pkgversion-pkgrelease.spm
+[pkgname] Verify package...
+[pkgname] Checking for conflicts...
+[pkgname] Upgrading package...
+[pkgname] Package 'pkgname#pkgversion-pkgrelease' upgraded.
+</code></pre>
+<h2>spm - environment</h2>
+<table>
+<tr><th>env</th><th>description</th></tr>
+<tr><td>SPM_ROOT</td><td>use custom root location for package installation</td></tr>
+<tr><td>SPM_FORCEINSTALL</td><td>set any value to ignore conflicted files</td></tr>
+</table>
+<p>You can pass these environment to <code>spm</code> command, example:</p>
+<pre><code># SPM_ROOT=/mnt/rootfs spm -i pkgname#pkgversion-pkgrelease.spm
+# SPM_FORCEINSTALL=1 SPM_ROOT=/mnt/rootfs spm -i pkgname#pkgversion-pkgrelease.spm
+</code></pre>
+<h2>autils</h2>
+<p><code>autils</code> stands for <code>alice utilitis</code>. <code>autils</code> contains main package manager (apkg), utilities (apkg-<util>) and <random util script>. <code>autils</code> is specifically written to manage <code>Alice</code> packages.</p>
+<h2>apkg</h2>
+<p><code>apkg</code> is a main package manager that can solve dependencies, batch install/upgrade/remove packages, system upgrades, trigger necessary caches, and etc. <code>apkg</code> can be run inside or outside package template.</p>
+<p>When running outside package template, <code>apkg</code> will need 'package names' as arguments, and those 'package names' will search through <code>APKG_REPO</code> environment. Example:</p>
+<pre><code># apkg testpkg testpkg2 (build testpkg and testpkg2)
+# apkg testpkg testpkg2 -i (build and install testpkg and testpkg2)
+# apkg -u testpkg testpkg2 (upgrade/reinstall testpkg and testpkg2)
+# apkg -f -u testpkg testpkg2 (force rebuild then upgrade/reinstall testpkg and testpkg2)
+</code></pre>
+<p>When running inside package template, <code>apkg</code> will do operation for current directory package. Example:</p>
+<pre><code># cd /path/to/local/testpkg
+# apkg (build testpkg)
+# apkg -i (build and install testpkg)
+# apkg -u (upgrade/reinstall testpkg)
+# apkg -u -f (force rebuild then upgrade/reinstall testpkg)
+</code></pre>
+<h2>apkg - usage</h2>
+<pre><code>-i &lt;pkg(s)&gt;  install package(s)
+-I &lt;pkg(s)&gt;  install packages(s) with dependencies
+-d &lt;pkg&gt;     list &lt;pkg&gt; dependencies
+-D &lt;pkg(s)&gt;  list all dependencies
+-j &lt;pkg&gt;     list all dependents
+-u &lt;pkg(s)&gt;  upgrade package(s)
+-t [pkg(s)]  trigger system cache/db updates
+-U           update system
+-f           force rebuild
+-o &lt;pkg(s)&gt;  download source
+-p &lt;pkg&gt;     print package path
+-s &lt;pattern&gt; search packages
+-h           print this help message
+</code></pre>
+<p>I won't explain details on every each options here, but I will give quick tips/tricks to use <code>apkg</code></p>
+<p>installing package and its dependencies (mind the uppercase <code>i</code>):</p>
+<pre><code># apkg -I sway
+[...] Solving dependencies...
+[...] Installing 3 package(s):  mesa pango sway
+[...] Press ENTER to continue operation.
+[...] Press Ctrl + C to abort.
+</code></pre>
+<p>search available packages:</p>
+<pre><code>$ apkg -s sway
+swaybg
+swaylock
+sway
+swayidle
+swayfx
+</code></pre>
+<p>install all package with 'sway' name and its dependencies:</p>
+<pre><code># apkg -I $(apkg -s sway)
+...
+[...] Package 'mesa' is installed
+[...] Package 'swaybg' is installed
+[...] Package 'swaylock' is installed
+[...] Package 'swayidle' is installed
+[...] Package 'swayfx' is installed
+[...] Solving dependencies...
+[...] Installing 2 package(s):  pango sway
+[...] Press ENTER to continue operation.
+[...] Press Ctrl + C to abort.
+</code></pre>
+<p>install package without solving dependencies (mind the lowercase <code>i</code> and theres no prompt for this option):</p>
+<pre><code># apkg -i wlroots mesa
+[...] Package 'wlroots' already installed.
+[...] Package 'mesa' already installed.
+</code></pre>
+<p>list all installed packages:</p>
+<pre><code>$ apkg -a
+...
+qemu
+ranger
+rdfind
+readline
+rsync
+rtorrent
+rust
+...
+</code></pre>
+<p>list all installed packages with filter (will only print installed package contains word filter):</p>
+<pre><code>$ apkg -a sway
+swaybg
+swayfx
+swayidle
+swaylock
+</code></pre>
+<p>list dependencies of a package:</p>
+<pre><code>$ apkg -d sway
+wlroots
+json-c
+pango
+</code></pre>
+<p>list all dependencies tree of package(s):</p>
+<pre><code>$ apkg -D sway dwm
+...
+wayland
+wayland-protocols
+xkeyboard-config
+xcb-proto
+xorgproto
+util-macros
+...
+</code></pre>
+<p>upgrade/reinstall package(s):</p>
+<pre><code># apkg -u wlroots cwm pango
+[wlroots] Verify package...
+[wlroots] Checking for conflicts...
+[wlroots] Upgrading package...
+[wlroots] Package 'wlroots#0.17.4-1' upgraded.
+[cwm] Verify package...
+[cwm] Checking for conflicts...
+[cwm] Upgrading package...
+[cwm] Package 'cwm#7.4-1' upgraded.
+[pango] Verify package...
+[pango] Checking for conflicts...
+[pango] Upgrading package...
+[pango] Package 'pango#1.54.0-1' upgraded.
+</code></pre>
+<p>full system upgrades (mind uppercase <code>u</code> and will prompt first if theres package updates):</p>
+<pre><code># apkg -U
+[...] Checking for outdated packages...
+[...] Solving dependencies...
+[...] Upgrading 3 package(s):  initscripts mesa sowm
+[...] Press ENTER to continue operation.
+[...] Press Ctrl + C to abort.
+</code></pre>
+<p>make full system rebuild in dependencies order (<code>-f</code>: force rebuild, <code>-u</code>: upgrade/reinstall, <code>-D</code>: solve dependency order, <code>-a</code>: list all installed package(s)):</p>
+<pre><code># apkg -f -u $(apkg -D $(apkg -a))
+</code></pre>
+<p>...
+(start rebuilding package in dependencies order here)
+...</p>
+<p>remove installed packages:</p>
+<pre><code># apkg -r wlroots pango sway
+[...] Package 'wlroots' removed.
+[...] Package 'pango' removed.
+[...] Package 'sway' removed.
+</code></pre>
+<p>print package path:</p>
+<pre><code>$ apkg -p sway
+/home/emmett/codeberg/alicelinux/repos/wayland/sway
+</code></pre>
+<h2>apkg - environment</h2>
+<p>You can pass environment to <code>apkg</code> to override defaults and in <code>/etc/apkg.conf</code>. Available environment and its default value as follows:</p>
+<table>
+<tr><th>env</th><th>default value</th><th>description</th></tr>
+<tr><td>APKG_ROOT</td><td>/</td><td>root for package installation</td></tr>
+<tr><td>APKG_CONF</td><td>/etc/apkg.conf</td><td>apkg's config file</td></tr>
+<tr><td>APKG_REPO</td><td></td><td>defaults is empty, template repo path, space separated variable</td></tr>
+<tr><td>APKG_PACKAGE_DIR</td><td>$PWD</td><td>prebuilt package directory path</td></tr>
+<tr><td>APKG_SOURCE_DIR</td><td>$PWD</td><td>package source directory path</td></tr>
+<tr><td>APKG_WORK_DIR</td><td>$PWD</td><td>package working directory path</td></tr>
+<tr><td>APKG_NOPROMPT</td><td></td><td>skip prompt, use any value</td></tr>
+</table>
+<p>You can add these environment into <code>apkg</code> config file.</p>
+<h2>/etc/apkg.conf</h2>
+<p><code>apkg</code> can work without its config file by using all default value. Default config path for <code>apkg</code> is <code>/etc/apkg.conf</code>. You can override config path by append <code>APKG_CONF</code> to <code>apkg</code>, example:
+</p>
+<pre><code># APKG_CONF=/etc/apkg-local.conf apkg &lt;args&gt;
+</code></pre>
+<h2>revdep</h2>
+<p><code>revdep</code> is script to find broken packages. Its recomended to run after packages is removed or upgraded.</p>
+<p>Usage:</p>
+<pre><code>(print out broken packages)
+$ revdep
+
+(verbosely print missing libraries)
+$ revdep -v
+</code></pre>
+<p>You can combine with <code>apkg</code> to rebuild broken packages, example;</p>
+<pre><code># apkg -f -u $(revdep)
+</code></pre>
+<blockquote><p>NOTE: <code>revdep</code> does not solve dependencies, so you might need manually rebuild broken packages instead combine with <code>apkg</code>.</p>
+</blockquote>
+<h2>updateconf</h2>
+<p><code>updateconf</code> is script to update configuration files inside <code>/etc</code> directory. Its recomended to run after packages upgrades.</p>
+<h2>apkg-chroot</h2>
+<p>Script to entering chroot environment of custom root location.</p>
+<pre><code># apkg-chroot &lt;customroot path&gt;
+# apkg-chroot &lt;customroot path&gt; &lt;command&gt;
+</code></pre>
+<h2>apkg-clean</h2>
+<p>Print out old package and source caches.</p>
+<p>Options:</p>
+<pre><code>-s  print sources only
+-p  print packages only
+</code></pre>
+<p>Usage:</p>
+<pre><code>(to remove old packages)
+# apkg-clean -p | xargs rm
+
+(to remove old sources)
+# apkg-clean -s | xargs rm
+
+(to remove both old packages and sources)
+# apkg-clean | xargs rm
+</code></pre>
+<h2>apkg-deps</h2>
+<p>Script to find runtime linked dependencies of installed package. Its good to figure out dependenciess when writing package template.</p>
+<p>Usage:
+</p>
+<pre><code>$ apkg-deps &lt;pkg&gt;
+</code></pre>
+<h2>apkg-foreign</h2>
+<p>Script to list installed package outside package repo.</p>
+<p>Usage:</p>
+<pre><code>(print list foreign packages)
+$ apkg-foreign
+
+(remove foreign packages)
+# apkg -r $(apkg-foreign)
+</code></pre>
+<h2>apkg-orphan</h2>
+<p>Script to print list package without parent dependencies.</p>
+<p>Usage:</p>
+<pre><code>$ apkg-orphan
+</code></pre>
+<h2>apkg-redundantdeps</h2>
+<p>Script to print package's redundant dependencies. Its good to use when writing package template for minimizing dependencies and speed up <code>apkg</code> dependencies solving.</p>
+<p>usage:</p>
+<pre><code>(print package contains redundant dependencies)
+$ apkg-redundantdeps
+
+(remove redundant dependencies for depends list)
+$ apkg-redundantdeps -f
+</code></pre>
+	<br><hr>
+	<p>Copyright (C) Alice Linux, 2024</p>
+</div>
+</body>
+</html>
