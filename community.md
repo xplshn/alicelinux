@@ -1,4 +1,4 @@
 Come join Alice Linux community:
 
-- [https://t.me/alicelinux](: telegram)
+- [telegram](https://t.me/alicelinux)
 - irc (soon)

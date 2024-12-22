@@ -5,57 +5,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alice Linux - docs</title>
 	<style>
-		.centered-wrapper {
-			width: 800px;
-			margin: 0 auto;
-		}
-		.note {
-			padding: 15px;
-			text-align: center;
-		}
-		html, body {
-			font-family: monospace;
-			font-size: 14px;
-			text-align: left;
-			word-wrap: break-word;
-			height: 100%;
-		}
-		pre {
-			padding-left: 25px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			background-color: #f4f4f4;
-		}
-		code {
-			font-family: "Courier New", monospace;
-			background-color: #f4f4f4;
-			color: #819400;
-		}
-		hr {
-			border: 0;
-			border-top: 1px dashed #141c21;
-			margin: 20px 0;
-		}
-		table {
-			width: 100%;
-			border-collapse: collapse;
-		}
-
-		th, td {
-			padding: 8px;
-			text-align: left;
-		}
-
-		th {
-			background-color: #f4f4f4;
-		}
-
-		table, th, td {
-			border: 2px dashed #f4f4f4;
-		}
-		img {
-			width: 800px;
-		}
+	body {
+		font-family: monospace;
+		font-size: 14px;
+		line-height: 1.25;
+		max-width: 60em;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 1em;
+		padding-right: 1em;
+		background-color: #383838;
+		color: #fefefe;
+	}
+	pre {
+		background-color: #221e1f;
+		border-radius: 3px;
+		padding: 10px;
+		overflow-x: auto;
+	}
+	code {
+		color: #f7f3d6;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+	}
+	hr {
+		border: 0;
+		border-top: 1px dashed #fefefe;
+		margin: 20px 0;
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding: 4px;
+	}
+	th {
+		background-color: #221e1f;
+	}
+	table, th, td {
+		border: 1px dashed #e7e8eb;
+	}
+	a {
+		color: #90cbf9;
+		text-decoration: none
+	}
+	a:hover {
+		color: #869edc;
+		text-decoration: underline
+	}
 	</style>
 </head>
 <body>
@@ -63,9 +63,9 @@
 	<h1>docs</h1>
 	<a href="/">home</a> / <a href="/docs">docs</a> / <a href="https://codeberg.org/emmett1/alicelinux">development</a> / <a href="https://codeberg.org/emmett1/alicelinux/releases">download</a> / <a href="https://sourceforge.net/projects/alice-linux/files/iso/">iso</a> / <a href="/community.html">community</a> / <a href="/donate.html">donate</a>
 	<hr>
-<h2>Install Alice</h2>
+<h1>Install Alice</h1>
 <p>Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.</p>
-<h3>Get Alice rootfs tarball</h3>
+<h2>Get Alice rootfs tarball</h2>
 <p>Download the Alice rootfs tarball from the <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page, along with its <code>sha256sum</code> file.
 </p>
 <pre><code>$ curl -O &lt;url&gt;
@@ -78,7 +78,7 @@ $ curl -O &lt;url&gt;.sha256sum
 </p>
 <pre><code>alicelinux-rootfs-20240525.tar.xz: OK
 </code></pre>
-<h3>Prepare the partition and filesystem</h3>
+<h2>Prepare the partition and filesystem</h2>
 <p>Prepare the partition and filesystem of your choice. In this guide, I will use ext4 as an example.
 </p>
 <pre><code># cfdisk /dev/sdX
@@ -89,25 +89,25 @@ $ curl -O &lt;url&gt;.sha256sum
 <pre><code># mkdir /mnt/alice
 # mount /dev/sdXY /mnt/alice
 </code></pre>
-<h3>Extract the Alice rootfs tarball</h3>
+<h2>Extract the Alice rootfs tarball</h2>
 <p>Extract the Alice rootfs into the mounted partition.
 </p>
 <pre><code>$ tar xvf alicelinux-rootfs-*.tar.xz -C /mnt/alice
 </code></pre>
-<h3>Enter chroot</h3>
+<h2>Enter chroot</h2>
 <p>First, chroot into Alice. (Replace /mnt/alice with your chosen mount point.)
 </p>
 <pre><code># /mnt/alice/usr/bin/apkg-chroot /mnt/alice
 </code></pre>
 <p>Any further commands after this will be executed inside the Alice environment. </p>
-<h3>Clone Alice repos</h3>
+<h2>Clone Alice repos</h2>
 <p>Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var/lib directory to keep the system clean.
 </p>
 <pre><code># cd /var/lib
 # git clone --depth=1 https://codeberg.org/emmett1/alicelinux
 </code></pre>
 <p>Once we have the repositories cloned, we need to configure <code>apkg</code>. <code>apkg</code> is Alice's package build system (or package manager). By default, Alice does not provide an <code>apkg</code> config file (yes, <code>apkg</code> can work without a config file), but we need to create one. The <code>apkg</code> config file should be located at <code>/etc/apkg.conf</code> by default. Let's create one. </p>
-<h3>Configure apkg.conf</h3>
+<h2>Configure apkg.conf</h2>
 <p>First, we set <code>CFLAGS</code> and <code>CXXFLAGS</code>. Alice base packages are built using <code>-O3 -march=x86-64 -pipe</code>. You can use these settings or change them to your preference.
 </p>
 <pre><code># echo 'export CFLAGS=&quot;-O3 -march=x86-64 -pipe&quot;' &gt;&gt; /etc/apkg.conf
@@ -164,7 +164,7 @@ sway
 # echo 'APKG_SOURCE_DIR=/var/cache/src' &gt;&gt; /etc/apkg.conf
 # echo 'APKG_WORK_DIR=/var/cache/work' &gt;&gt; /etc/apkg.conf
 </code></pre>
-<h3>Full system upgrade/rebuild</h3>
+<h2>Full system upgrade/rebuild</h2>
 <p>On the first install, we should upgrade the system first.
 </p>
 <blockquote><p>NOTE: Use uppercase <code>U</code> for a system upgrade, and lowercase <code>u</code> to upgrade a specific package of your choice.</p>
@@ -177,12 +177,12 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 </blockquote>
 <pre><code># apkg -u $(apkg -a)
 </code></pre>
-<h3>Install development packages</h3>
+<h2>Install development packages</h2>
 <p>Before installing any additional packages, we need to install development packages.
 </p>
 <pre><code># apkg -I meson cmake pkgconf libtool automake perl
 </code></pre>
-<h3>Install kernel</h3>
+<h2>Install kernel</h2>
 <p>You can configure your own kernel from <a href="https://kernel.org/">kernel.org</a> or use the one provided by Alice.
 </p>
 <blockquote><p>NOTE: The provided kernel will take a lot of time to compile because many options are enabled.</p>
@@ -191,12 +191,12 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 </p>
 <pre><code># apkg -I linux
 </code></pre>
-<h3>Install firmware</h3>
+<h2>Install firmware</h2>
 <p>If your hardware requires firmware, install it using:
 </p>
 <pre><code># apkg -I linux-firmware linux-firmware-nvidia
 </code></pre>
-<h3>Install bootloader</h3>
+<h2>Install bootloader</h2>
 <p>In this guide, I'm going to use <code>grub</code> as the bootloader. Install <code>grub</code>:
 </p>
 <pre><code># apkg -I grub
@@ -206,18 +206,18 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 <pre><code># grub-install /dev/sdX
 # grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
-<h3>Hostname</h3>
+<h2>Hostname</h2>
 <p>Change <code>alice</code> to the hostname of your choice.
 </p>
 <pre><code># echo alice &gt; /etc/hostname
 </code></pre>
-<h3>Fstab</h3>
+<h2>Fstab</h2>
 <p>Change the partition and filesystem of your choice below:
 </p>
 <pre><code># echo '/dev/sda1 swap swap defaults 0 1' &gt;&gt; /etc/fstab
 # echo '/dev/sda2 / ext4 defaults 0 0' &gt;&gt; /etc/fstab
 </code></pre>
-<h3>Enable runit services</h3>
+<h2>Enable runit services</h2>
 <p>Alice uses busybox's <code>runit</code> as its main service manager. Enable the required services:
 </p>
 <pre><code># ln -s /etc/sv/tty1 /var/service
@@ -229,7 +229,7 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 <blockquote><p>The runit service directory is <code>/etc/sv</code>.
 Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service</code> to enable it; remove the symlink to disable it.</p>
 </blockquote>
-<h3>Setup user and password</h3>
+<h2>Setup user and password</h2>
 <p>Add your user:
 </p>
 <pre><code># adduser &lt;user&gt;
@@ -244,12 +244,12 @@ Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service
 # adduser &lt;user&gt; video
 # adduser &lt;user&gt; audio
 </code></pre>
-<h3>Root password</h3>
+<h2>Root password</h2>
 <p>Set the password for the <code>root</code> user:
 </p>
 <pre><code># passwd
 </code></pre>
-<h3>Networking</h3>
+<h2>Networking</h2>
 <p>You might want to set up networking before rebooting. Use <code>wpa_supplicant</code> and <code>dhcpcd</code>.
 </p>
 <pre><code># apkg -I wpa_supplicant dhcpcd
@@ -263,7 +263,7 @@ Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service
 <pre><code># ln -s /etc/sv/wpa_supplicant /var/service
 # ln -s /etc/sv/dhcpcd /var/service
 </code></pre>
-<h3>Timezone</h3>
+<h2>Timezone</h2>
 <p>Install <code>tzdata</code>:
 </p>
 <pre><code># apkg -I tzdata
@@ -277,14 +277,14 @@ Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service
 <pre><code># cp /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 # apkg -r tzdata
 </code></pre>
-<h3>Reboot and enjoy!</h3>
+<h2>Reboot and enjoy!</h2>
 <p>Exit the chroot environment and unmount the Alice partition, then reboot:
 </p>
 <pre><code># exit
 # umount /mnt/alice
 # reboot
 </code></pre>
-<h2>Some important notes</h2>
+<h1>Some important notes</h1>
 <ul>
 <li><code>Alice</code> uses <code>spm</code> and <code>apkg</code> as its package manager and package build system. Run with the <code>-h</code> flag to see available options.</li>
 <li>Additional scripts are provided with the name <code>apkg-&lt;script&gt;</code> which will be added (or removed) from time to time.</li>

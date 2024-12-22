@@ -12,11 +12,12 @@ for i in *.md; do
 	} > ${i%.md}.html
 done
 
-echo "Here lie the docs" > docs/docs.md
+echo 'Here lie the documentations for Alice Linux.' > docs/index.md
 for i in docs/*.md; do
+	case $i in docs/index.md) continue; esac
+	title=$(head -n1 $i)
 	i=${i#*/}
-	case $i in docs.md) continue; esac
-	echo "- [${i%.md}](./${i%.md}.html)" >> docs/docs.md
+	echo "- [$title](./${i%.md}.html)" >> docs/index.md
 done
 
 for i in docs/*.md; do
@@ -27,6 +28,5 @@ for i in docs/*.md; do
 		cat footer
 	} > docs/${i%.md}.html
 done
-rm -f docs/docs.md
 
 exit 0

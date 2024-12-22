@@ -1,8 +1,10 @@
-## Install Alice
+Install Alice
+=============
 
 Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.
 
-### Get Alice rootfs tarball
+Get Alice rootfs tarball
+------------------------
 
 Download the Alice rootfs tarball from the [release](https://codeberg.org/emmett1/alicelinux/releases) page, along with its `sha256sum` file.
 	$ curl -O <url>
@@ -15,7 +17,8 @@ Make sure it prints:
 	alicelinux-rootfs-20240525.tar.xz: OK
 
 
-### Prepare the partition and filesystem
+Prepare the partition and filesystem
+------------------------------------
 
 Prepare the partition and filesystem of your choice. In this guide, I will use ext4 as an example.
 	# cfdisk /dev/sdX
@@ -25,19 +28,22 @@ Mount your created partition somewhere. In this guide, I will use /mnt/alice as 
 	# mkdir /mnt/alice
 	# mount /dev/sdXY /mnt/alice
 
-### Extract the Alice rootfs tarball
+Extract the Alice rootfs tarball
+--------------------------------
 
 Extract the Alice rootfs into the mounted partition.
 	$ tar xvf alicelinux-rootfs-*.tar.xz -C /mnt/alice
 
-### Enter chroot
+Enter chroot
+------------
 
 First, chroot into Alice. (Replace /mnt/alice with your chosen mount point.)
 	# /mnt/alice/usr/bin/apkg-chroot /mnt/alice
 
 Any further commands after this will be executed inside the Alice environment. 
 
-### Clone Alice repos
+Clone Alice repos
+-----------------
 
 Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var/lib directory to keep the system clean.
 	# cd /var/lib
@@ -45,7 +51,8 @@ Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var
 
 Once we have the repositories cloned, we need to configure `apkg`. `apkg` is Alice's package build system (or package manager). By default, Alice does not provide an `apkg` config file (yes, `apkg` can work without a config file), but we need to create one. The `apkg` config file should be located at `/etc/apkg.conf` by default. Let's create one. 
 
-### Configure apkg.conf
+Configure apkg.conf
+-------------------
 
 First, we set `CFLAGS` and `CXXFLAGS`. Alice base packages are built using `-O3 -march=x86-64 -pipe`. You can use these settings or change them to your preference.
 	# echo 'export CFLAGS="-O3 -march=x86-64 -pipe"' >> /etc/apkg.conf
@@ -97,7 +104,8 @@ Then add these paths to `/etc/apkg.conf`.
 	# echo 'APKG_SOURCE_DIR=/var/cache/src' >> /etc/apkg.conf
 	# echo 'APKG_WORK_DIR=/var/cache/work' >> /etc/apkg.conf
 
-### Full system upgrade/rebuild
+Full system upgrade/rebuild
+---------------------------
 
 On the first install, we should upgrade the system first.
 > NOTE: Use uppercase `U` for a system upgrade, and lowercase `u` to upgrade a specific package of your choice.
@@ -110,12 +118,14 @@ If you changed `CFLAGS` and `CXXFLAGS` to something other than the default, it's
 
 	# apkg -u $(apkg -a)
 
-### Install development packages
+Install development packages
+----------------------------
 
 Before installing any additional packages, we need to install development packages.
 	# apkg -I meson cmake pkgconf libtool automake perl
 
-### Install kernel
+Install kernel
+--------------
 
 You can configure your own kernel from [kernel.org](https://kernel.org/) or use the one provided by Alice.
 > NOTE: The provided kernel will take a lot of time to compile because many options are enabled.
@@ -123,12 +133,14 @@ You can configure your own kernel from [kernel.org](https://kernel.org/) or use 
 If you want to use Alice's kernel, just run:
 	# apkg -I linux
 
-### Install firmware
+Install firmware
+----------------
 
 If your hardware requires firmware, install it using:
 	# apkg -I linux-firmware linux-firmware-nvidia
 
-### Install bootloader
+Install bootloader
+------------------
 
 In this guide, I'm going to use `grub` as the bootloader. Install `grub`:
 	# apkg -I grub
@@ -137,18 +149,21 @@ Then generate grub config:
 	# grub-install /dev/sdX
 	# grub-mkconfig -o /boot/grub/grub.cfg
 
-### Hostname
+Hostname
+--------
 
 Change `alice` to the hostname of your choice.
 	# echo alice > /etc/hostname
 
-### Fstab
+Fstab
+-----
 
 Change the partition and filesystem of your choice below:
 	# echo '/dev/sda1 swap swap defaults 0 1' >> /etc/fstab
 	# echo '/dev/sda2 / ext4 defaults 0 0' >> /etc/fstab
 
-### Enable runit services
+Enable runit services
+---------------------
 
 Alice uses busybox's `runit` as its main service manager. Enable the required services:
 	# ln -s /etc/sv/tty1 /var/service
@@ -159,7 +174,8 @@ I'm enabling 3 `tty` services. `tty` is required; without it, you won't be able 
 > The runit service directory is `/etc/sv`.
 > Create a symlink from `/etc/sv/<service>` to `/var/service` to enable it; remove the symlink to disable it.
 
-### Setup user and password
+Setup user and password
+-----------------------
 
 Add your user:
 	# adduser <user>
@@ -173,12 +189,14 @@ You might need to add your user to the `input` and `video` groups to start the W
 	# adduser <user> audio
 
 
-### Root password
+Root password
+-------------
 
 Set the password for the `root` user:
 	# passwd
 
-### Networking
+Networking
+----------
 
 You might want to set up networking before rebooting. Use `wpa_supplicant` and `dhcpcd`.
 	# apkg -I wpa_supplicant dhcpcd
@@ -190,7 +208,8 @@ Enable the service:
 	# ln -s /etc/sv/wpa_supplicant /var/service
 	# ln -s /etc/sv/dhcpcd /var/service
 
-### Timezone
+Timezone
+--------
 
 Install `tzdata`:
 	# apkg -I tzdata
@@ -202,14 +221,16 @@ Alternatively, you can copy it and then uninstall `tzdata` to keep your installe
 	# cp /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 	# apkg -r tzdata
 
-### Reboot and enjoy!
+Reboot and enjoy!
+-----------------
 
 Exit the chroot environment and unmount the Alice partition, then reboot:
 	# exit
 	# umount /mnt/alice
 	# reboot
 
-## Some important notes
+Some important notes
+====================
 
 - `Alice` uses `spm` and `apkg` as its package manager and package build system. Run with the `-h` flag to see available options.
 - Additional scripts are provided with the name `apkg-<script>` which will be added (or removed) from time to time.
