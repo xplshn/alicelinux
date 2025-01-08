@@ -1,5 +1,5 @@
 name=xorg-server
-version=21.1.14
+version=21.1.15
 release=1
 source="https://www.x.org/pub/individual/xserver/$name-$version.tar.xz"
 build_opt="
