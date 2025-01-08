@@ -1,5 +1,5 @@
 name=p7zip
-version=17.05
+version=17.06
 release=1
 source="https://github.com/$name-project/$name/archive/v$version/$name-$version.tar.gz"
 
