@@ -6,12 +6,14 @@ drwxr-xr-x root/root    usr/include/wayland-protocols/
 -rw-r--r-- root/root    usr/include/wayland-protocols/content-type-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/cursor-shape-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/drm-lease-v1-enum.h
+-rw-r--r-- root/root    usr/include/wayland-protocols/ext-data-control-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-foreign-toplevel-list-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-idle-notify-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-image-capture-source-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-image-copy-capture-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-session-lock-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/ext-transient-seat-v1-enum.h
+-rw-r--r-- root/root    usr/include/wayland-protocols/ext-workspace-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/fifo-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/fractional-scale-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/fullscreen-shell-unstable-v1-enum.h
@@ -77,6 +79,8 @@ drwxr-xr-x root/root    usr/share/wayland-protocols/staging/cursor-shape/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/cursor-shape/cursor-shape-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/drm-lease/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/drm-lease/drm-lease-v1.xml
+drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-data-control/
+-rw-r--r-- root/root    usr/share/wayland-protocols/staging/ext-data-control/ext-data-control-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-foreign-toplevel-list/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-idle-notify/
@@ -89,6 +93,8 @@ drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-session-lock/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/ext-session-lock/ext-session-lock-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-transient-seat/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/ext-transient-seat/ext-transient-seat-v1.xml
+drwxr-xr-x root/root    usr/share/wayland-protocols/staging/ext-workspace/
+-rw-r--r-- root/root    usr/share/wayland-protocols/staging/ext-workspace/ext-workspace-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/fifo/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/fifo/fifo-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/fractional-scale/
