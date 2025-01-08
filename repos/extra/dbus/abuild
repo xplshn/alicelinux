@@ -1,15 +1,6 @@
 name=dbus
-version=1.14.10
+version=1.16.0
 release=1
 source="https://$name.freedesktop.org/releases/$name/$name-$version.tar.xz
 	run"
 sv="run"
-build_opt="
-        --disable-doxygen-docs
-        --disable-xml-docs
-        --disable-static
-        --with-systemduserunitdir=no
-        --with-systemdsystemunitdir=no
-        --with-system-socket=/run/dbus/system_bus_socket
-        --with-console-auth-dir=/run/console
-"
