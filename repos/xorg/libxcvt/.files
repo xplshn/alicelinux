@@ -7,8 +7,8 @@ drwxr-xr-x root/root    usr/include/libxcvt/
 -rw-r--r-- root/root    usr/include/libxcvt/libxcvt_mode.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libxcvt.so -> libxcvt.so.0
-lrwxrwxrwx root/root    usr/lib/libxcvt.so.0 -> libxcvt.so.0.1.2
--rwxr-xr-x root/root    usr/lib/libxcvt.so.0.1.2
+lrwxrwxrwx root/root    usr/lib/libxcvt.so.0 -> libxcvt.so.0.1.3
+-rwxr-xr-x root/root    usr/lib/libxcvt.so.0.1.3
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libxcvt.pc
 drwxr-xr-x root/root    usr/share/
