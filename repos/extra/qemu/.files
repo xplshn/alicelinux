@@ -63,6 +63,8 @@ drwxr-xr-x root/root    usr/share/qemu/
 -rw-r--r-- root/root    usr/share/qemu/edk2-i386-secure-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-i386-vars.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-licenses.txt
+-rw-r--r-- root/root    usr/share/qemu/edk2-loongarch64-code.fd
+-rw-r--r-- root/root    usr/share/qemu/edk2-loongarch64-vars.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-riscv-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-riscv-vars.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-x86_64-code.fd
@@ -81,9 +83,10 @@ drwxr-xr-x root/root    usr/share/qemu/firmware/
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-aarch64.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-arm.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-i386.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-loongarch64.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-x86_64.json
--rwxr-xr-x root/root    usr/share/qemu/hppa-firmware.img
--rwxr-xr-x root/root    usr/share/qemu/hppa-firmware64.img
+-rw-r--r-- root/root    usr/share/qemu/hppa-firmware.img
+-rw-r--r-- root/root    usr/share/qemu/hppa-firmware64.img
 drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/keymaps/ar
 -rw-r--r-- root/root    usr/share/qemu/keymaps/bepo
@@ -144,7 +147,6 @@ drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/qemu-nsis.bmp
 -rw-r--r-- root/root    usr/share/qemu/qemu_vga.ndrv
 -rw-r--r-- root/root    usr/share/qemu/s390-ccw.img
--rw-r--r-- root/root    usr/share/qemu/s390-netboot.img
 -rw-r--r-- root/root    usr/share/qemu/skiboot.lid
 -rw-r--r-- root/root    usr/share/qemu/slof.bin
 -rw-r--r-- root/root    usr/share/qemu/trace-events-all

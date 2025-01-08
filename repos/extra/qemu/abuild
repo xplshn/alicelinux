@@ -1,7 +1,6 @@
 name=qemu
-version=9.1.2
+version=9.2.0
 release=1
-source="https://download.$name.org/$name-$version.tar.xz
-	lfs64.patch"
+source="https://download.$name.org/$name-$version.tar.xz"
 build_type=configure_build
 build_opt="--target-list=x86_64-softmmu --disable-gtk --enable-slirp --audio-drv-list=alsa"
