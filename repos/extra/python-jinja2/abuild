@@ -1,5 +1,5 @@
 name=python-jinja2
-version=3.1.4
+version=3.1.5
 release=1
 source="https://github.com/pallets/jinja/releases/download/${version}/jinja2-${version}.tar.gz"
 
