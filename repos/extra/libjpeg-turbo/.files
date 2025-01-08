@@ -23,8 +23,8 @@ lrwxrwxrwx root/root    usr/lib/libjpeg.so -> libjpeg.so.8
 lrwxrwxrwx root/root    usr/lib/libjpeg.so.8 -> libjpeg.so.8.3.2
 -rwxr-xr-x root/root    usr/lib/libjpeg.so.8.3.2
 lrwxrwxrwx root/root    usr/lib/libturbojpeg.so -> libturbojpeg.so.0
-lrwxrwxrwx root/root    usr/lib/libturbojpeg.so.0 -> libturbojpeg.so.0.3.0
--rwxr-xr-x root/root    usr/lib/libturbojpeg.so.0.3.0
+lrwxrwxrwx root/root    usr/lib/libturbojpeg.so.0 -> libturbojpeg.so.0.4.0
+-rwxr-xr-x root/root    usr/lib/libturbojpeg.so.0.4.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libjpeg.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libturbojpeg.pc
