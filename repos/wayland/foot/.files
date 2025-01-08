@@ -37,6 +37,7 @@ drwxr-xr-x root/root    usr/share/foot/themes/
 -rw-r--r-- root/root    usr/share/foot/themes/gruvbox-dark
 -rw-r--r-- root/root    usr/share/foot/themes/gruvbox-light
 -rw-r--r-- root/root    usr/share/foot/themes/hacktober
+-rw-r--r-- root/root    usr/share/foot/themes/iterm
 -rw-r--r-- root/root    usr/share/foot/themes/jetbrains-darcula
 -rw-r--r-- root/root    usr/share/foot/themes/kitty
 -rw-r--r-- root/root    usr/share/foot/themes/material-amber
@@ -60,6 +61,8 @@ drwxr-xr-x root/root    usr/share/foot/themes/
 -rw-r--r-- root/root    usr/share/foot/themes/poimandres
 -rw-r--r-- root/root    usr/share/foot/themes/rezza
 -rw-r--r-- root/root    usr/share/foot/themes/rose-pine
+-rw-r--r-- root/root    usr/share/foot/themes/rose-pine-dawn
+-rw-r--r-- root/root    usr/share/foot/themes/rose-pine-moon
 -rw-r--r-- root/root    usr/share/foot/themes/selenized-black
 -rw-r--r-- root/root    usr/share/foot/themes/selenized-dark
 -rw-r--r-- root/root    usr/share/foot/themes/selenized-light
