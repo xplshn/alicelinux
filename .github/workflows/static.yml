@@ -56,7 +56,9 @@ jobs:
           done
 
       - name: Build with Hugo
-        run: hugo
+        run: |
+          cd www
+          hugo --config
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
