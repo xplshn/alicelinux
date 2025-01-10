@@ -19,7 +19,15 @@ jobs:
       run: |
         git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
 
-    - name: Fetch and push changes
+    - name: Fetch changes from Codeberg
       run: |
-        git fetch --all
+        git fetch codeberg
+
+    - name: Rename branch from main to master
+      run: |
+        git checkout main
+        git branch -m master
+
+    - name: Push changes to GitHub
+      run: |
         git push --mirror https://github.com/xplshn/alicelinux.git
