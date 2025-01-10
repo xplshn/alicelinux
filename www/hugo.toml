@@ -1,9 +1,0 @@
-title = 'AliceLinux'
-baseURL = 'https://alicelinux.github.io'
-languageCode = 'en-us'
-enableRobotsTXT = true
-publishDir = 'pub'
-theme='smigle'
-
-[params]
-    dateFmt = "02.01.2006 15:04"
