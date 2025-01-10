@@ -1,0 +1,19 @@
+# .woodpecker.yml
+pipeline:
+  generate-html:
+    image: alpine:latest
+    when:
+      branch: main
+      event: [push, pull_request]
+    commands:
+      - apk add --no-cache pandoc git
+      - git config --global user.email "ci@alicelinux.emmett1.net"
+      - git config --global user.name "󰬭 [AliceLinux CI] "
+      - git fetch origin pages
+      - git checkout pages
+      - git merge main --allow-unrelated-histories -X theirs
+      - chmod +x genhtml.sh
+      - ./genhtml.sh
+      - git add .
+      - git commit -m "󰬭 [CI]  - Update pages" || echo "No changes to commit"
+      - git push origin pages
