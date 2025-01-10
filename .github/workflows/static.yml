@@ -31,7 +31,7 @@ jobs:
       - name: Install Hugo
         run: |
           apk update
-          apk add hugo
+          apk add hugo git
 
       - name: Add metadata to articles and build Hugo site
         run: |
