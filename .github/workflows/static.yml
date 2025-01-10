@@ -52,7 +52,7 @@ jobs:
               echo "title = '$TITLE'"
               echo "+++"
               cat "$FILE"
-            } > "./www/contents/articles/$FILENAME"
+            } > "./www/content/posts/$FILENAME"
           done
 
       - name: Build with Hugo
