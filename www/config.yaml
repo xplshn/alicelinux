@@ -1,0 +1,60 @@
+title: AliceLinux
+baseURL: 'https://alicelinux.github.io'
+languageCode: en-us
+theme: smigle
+publishDir: 'pub'
+enableRobotsTXT: true
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 3
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 4
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 5
+    - identifier: rss
+      name: RSS
+      url: /index.xml
+      weight: 6
+params:
+  abbrDateFmt: "Jan 2"
+  author: "Emmett1"
+  brandIconFile: "images/icon.svg"
+  dateFmt: "02.01.2006 15:04"
+  ##
+  ## Options for overriding theme or page defaults
+  ##
+  #customStylesheets: # Use to override theme styles, like logo size
+  #  - "css/custom.css"
+  #readingSpeed: 600 # Use to set custom reading speed
+  #readingSpeedMin: 25 # Use to set custom reading speed range
+  #readingSpeedMax: 175 # Use to set custom reading speed range
+  social:
+    - name: Codeberg
+      url: 'https://codeberg.org/emmett1/alicelinux'
+    - name: Github
+      url: 'https://github.com/xplshn/alicelinux'
+    - name: Telegram
+      url: 'https://t.me/alicelinux'
+    - name: Paypal
+      url: 'https://paypal.me/syazwanemmett'
+    - name: ko-fi
+      url: 'https://ko-fi.com/emmett1'
+    - name: buymeacoffee
+      url: 'https://buymeacoffee.com/emmett1'
+
+  subtitle: "AliceLinux's official documentation and dev blog"

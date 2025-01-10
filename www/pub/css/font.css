@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Iosevka';
+  src: local('Iosevka'),
+    url('/fonts/iosevka-regular.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Iosevka';
+  src: local('Iosevka'),
+    url('/fonts/iosevka-bold.woff2') format("woff2");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'Iosevka';
+  src: local('Iosevka'),
+    url('/fonts/iosevka-oblique.woff2') format("woff2");
+  font-weight: italic;
+  font-style: italic;
+}
