@@ -1,7 +1,7 @@
 title: AliceLinux
 baseURL: 'https://alicelinux.github.io'
 languageCode: en-us
-theme: werc-hugo
+theme: hugo-werx
 publishDir: 'pub'
 enableRobotsTXT: true
 menu:

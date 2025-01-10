@@ -1,113 +1,108 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en-us">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/style_002.css">
-    
-    
-    <title>AliceLinux | Tags</title>
-</head>
-<body><div id="superHeader" class="superHeader">
-<div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
-        
-        <a class="nav-link" href="/">
-        
-        Home
-        |
-        </a>
-        
-        <a class="nav-link" href="/about/">
-        
-        About
-        |
-        </a>
-        
-        <a class="nav-link" href="/posts/">
-        
-        Posts
-        |
-        </a>
-        
-        <a class="nav-link" href="/categories/">
-        
-        Categories
-        |
-        </a>
-        
-        <a class="nav-link" href="/tags/">
-        
-        Tags
-        |
-        </a>
-        
-        <a class="nav-link" href="/index.xml">
-        
-        RSS
-        |
-        </a>
-        
-    </nav>
+    <title>Tags | AliceLinux</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://alicelinux.github.io/tags">
+  </head>
+  <body>
+    <div id="header">
+  <div class ="super">
+	  <div class="pull-left">
+		|
+		
+	  </div>
+
+      <div class="pull-right">
+	      |
+	      
+      </div>
+  </div>
+  <div class="mid">
+	  <h1 class="headerTitle">
+		  <a href="https://www.0x44.pw/">0x44
+		  <span id="headerSubtitle">The digital home of pard68</span>
+		  </a>
+	  </h1>
+  </div>
 </div>
+
+    <div id="sidebar">
+	<div>
+		
+		
+		
+		<a href=" /" title="">>Home</a>
+		
+		
+		
+		<a href=" /about/" title="">>About</a>
+		
+		
+		
+		<a href=" /posts/" title="">>Posts</a>
+		
+		
+		
+		<a href=" /categories/" title="">>Categories</a>
+		
+		
+		
+		<a href=" /tags/" title="">>Tags</a>
+		
+		
+		
+		<a href=" /index.xml" title="">>RSS</a>
+		
+		
+	</div>
 </div>
-<div id="midHeader" class="midHeader">
-    <h1 class="headerTitle">
-        <a href="index.html">  AliceLinux </a>
-    </h1>
-</div>
-<div id="side-bar" class="side-bar">
+
+    <div id="main">
 
 
-    
-        <i>
-        <a href="/">»Home</a>
-        </i>
-    
-
-    
-        <i>
-        <a href="/about/">»About</a>
-        </i>
-    
-
-    
-        <i>
-        <a href="/posts/">»Posts</a>
-        </i>
-    
-
-    
-        <i>
-        <a href="/categories/">»Categories</a>
-        </i>
-    
-
-    
-        <i>
-        <a href="/tags/">›Tags</a>
-        </i>
-    
-
-    
-        <i>
-        <a href="/index.xml">»RSS</a>
-        </i>
-    
-
-</div>
-<div id="content">
-
-<div class="main-copy" id="main-copy">
 <h1>Tags</h1>
 
-</div>
+<ul class="terms">
+  
+</ul>
 
-        </div><div id="footer" class="footer">
-    <div class="left"> 
-        2025
+</div>
+<div id="footer">
+	<div class="pull-left">
+		<a href="https://gohugo.io">Powered by Hugo.</a>
+	</div>
+      
+<script>
+(function() {
+  function center_el(tagName) {
+    var tags = document.getElementsByTagName(tagName), i, tag;
+    for (i = 0; i < tags.length; i++) {
+      tag = tags[i];
+      var parent = tag.parentElement;
+      
+      if (parent.childNodes.length === 1) {
+        
+        if (parent.nodeName === 'A') {
+          parent = parent.parentElement;
+          if (parent.childNodes.length != 1) continue;
+        }
+        if (parent.nodeName === 'P') parent.style.textAlign = 'center';
+      }
+    }
+  }
+  var tagNames = ['img', 'embed', 'object'];
+  for (var i = 0; i < tagNames.length; i++) {
+    center_el(tagNames[i]);
+  }
+})();
+</script>
+
+      
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
+

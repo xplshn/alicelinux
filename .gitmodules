@@ -4,3 +4,6 @@
 [submodule "www/themes/hugo-werc"]
 	path = www/themes/hugo-werc
 	url = https://github.com/ctis-me/hugo-werc.git
+[submodule "www/themes/hugo-werx"]
+	path = www/themes/hugo-werx
+	url = https://github.com/ispringle/hugo-werx
