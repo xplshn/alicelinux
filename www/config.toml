@@ -11,10 +11,30 @@ preserveTaxonomyNames = true
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 
+
+
 [module]
-[[module.mounts]]
-  source = 'assets'
-  target = 'assets'
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
+  [[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+  [[module.mounts]]
+    source = 'data'
+    target = 'data'
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'i18n'
+    target = 'i18n'
+  [[module.mounts]]
+    source = 'archetypes'
+    target = 'archetypes'
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
