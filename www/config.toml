@@ -11,10 +11,6 @@ preserveTaxonomyNames = true
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 
-[[module.mounts]]
-  source = 'assets'
-  target = 'assets'
-
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
 

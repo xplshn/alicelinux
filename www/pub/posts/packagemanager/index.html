@@ -1,75 +1,96 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>packagemanager | AliceLinux</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://xplshn.github.io/home/anto/Documents/TrulyMine/alicelinux/www/content/posts/packagemanager.md">
-  </head>
-  <body>
-    <div id="header">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/languages/go.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/alicelinux/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/alicelinux/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/alicelinux/favicon-16x16.png">
+  <link rel="manifest" href="/alicelinux/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="AliceLinux">
+  <meta name="application-name" content="AliceLinux">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    html { cursor: url('/alicelinux/9cursor.png'), auto; }
+  </style>
+
+  <title>packagemanager</title>
+  
+  <meta name="author" content="Emmett1">
+  <link rel="stylesheet" href="/alicelinux/css/style.css">
+  
+  
+</head>
+<body>
+  <div id="header">
   <div class="super">
     <div class="pull-left">
       |
       
     </div>
-
     <div class="pull-right">
       |
       
-        <a href="/index.xml">subscribe</a> |
+        <a href="/alicelinux/index.xml">subscribe</a> |
       
     </div>
   </div>
-
   <div class="mid">
     <h1 class="headerTitle">
-      <a href="https://xplshn.github.io/">AliceLinux
+      <a href="https://xplshn.github.io/alicelinux/">AliceLinux
         <span id="headerSubtitle"></span>
       </a>
     </h1>
   </div>
 </div>
 
+  <div id="layout">
     <div id="sidebar">
-	<div>
-		
-		
-		
-		<a href=" /" title="">>Home</a>
-		
-		
-		
-		<a href=" /categories/" title="">>Categories</a>
-		
-		
-		
-		<a href=" /tags/" title="">>Tags</a>
-		
-		
-	</div>
+      <div id="sidebar">
+  <div>
+    
+    
+      
+        <a href="/alicelinux/" title="">>Home</a>
+      
+    
+      
+        <a href="/alicelinux/categories/" title="">>Categories</a>
+      
+    
+      
+        <a href="/alicelinux/tags/" title="">>Tags</a>
+      
+    
+  </div>
 </div>
 
+    </div>
     <div id="main">
-
-<div class="article-meta">
-<h1><span class="title">packagemanager</span></h1>
-
-<h2 class="date">2025/01/10</h2>
-<p class="terms">
+      
+  <div class="article-meta">
+    <h1><span class="title">packagemanager</span></h1>
+    
+    <h2 class="date">2025/01/10</h2>
+    <p class="terms">
+      
+        
+      
+        
+      
+    </p>
+  </div>
   
-  
-  
-  
-  
-</p>
-</div>
-
-
-
-<main>
-<h1 id="package-manager">PACKAGE MANAGER</h1>
+  <main>
+    <h1 id="package-manager">PACKAGE MANAGER</h1>
 <p>In Alice, theres two package manager used, <a href="https://codeberg.org/emmett1/spm">spm</a> and <a href="https://codeberg.org/emmett1/autils">autils</a>. Why two package manager? <code>spm</code> was written for generic package manager for linux distribution. And <code>autils</code> is written specifically for <code>Alice</code> and required <code>spm</code>.</p>
 <h2 id="spm">spm</h2>
 <p><code>spm</code> stands for <code>simple package manager</code>. It does simple and minimal written in POSIX compliance shell script. It only depends on core utils and tar (or busybox&rsquo;s utils and tar). <code>spm</code> only intended for compressing some directory into package, then extract package into system with files being tracked into database. Theres is no build script, recipe or ports in <code>spm</code>. You can write your own tools to use with <code>spm</code> either like Arch Linux&rsquo;s <code>makepkg</code>, CRUX&rsquo;s <code>pkgmk</code> or Slackware&rsquo;s <code>slackbuild</code> script.</p>
@@ -431,9 +452,11 @@ $ apkg-redundantdeps
 (remove redundant dependencies for depends list)
 $ apkg-redundantdeps -f
 </code></pre>
-</main>
+  </main>
 
-</div>
+    </div>
+  </div>
+  </div>
 <div id="footer">
 	<div class="pull-left">
 		<a href="https://gohugo.io">Powered by Hugo.</a>
@@ -470,3 +493,5 @@ $ apkg-redundantdeps -f
   </body>
 </html>
 
+</body>
+</html>
