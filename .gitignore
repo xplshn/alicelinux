@@ -3,4 +3,4 @@
 *.tar.xz
 *.sha256sum
 *.pkglist
-.m
+.p*
