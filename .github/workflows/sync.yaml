@@ -23,9 +23,12 @@ jobs:
       run: |
         git fetch codeberg
 
+    - name: Checkout main branch from Codeberg
+      run: |
+        git checkout --track codeberg/main
+
     - name: Rename branch from main to master
       run: |
-        git checkout main
         git branch -m master
 
     - name: Push changes to GitHub
