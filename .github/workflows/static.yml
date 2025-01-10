@@ -31,7 +31,7 @@ jobs:
       - name: Install Hugo
         run: |
           apk update
-          apk add --no-cache hugo
+          apk add hugo
 
       - name: Add metadata to articles
         run: |
@@ -54,9 +54,7 @@ jobs:
               cat "$FILE"
             } > "./www/content/posts/$FILENAME"
           done
-
-      - name: Build with Hugo
-        run: |
+          # Build with Hugo
           cd ./www
           hugo
 
