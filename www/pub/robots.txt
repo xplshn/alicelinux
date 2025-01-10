@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tag/
+Disallow: /category/
+Sitemap: https://alicelinux.github.io//sitemap.xml
