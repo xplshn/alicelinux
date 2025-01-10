@@ -102,7 +102,7 @@ You can pass these environment to `spm` command, example:
 autils
 ------
 
-`autils` stands for `alice utilitis`. `autils` contains main package manager (apkg), utilities (apkg-<util>) and <random util script>. `autils` is specifically written to manage `Alice` packages.
+`autils` stands for `alice utilitis`. `autils` contains main package manager (apkg), utilities (apkg-\<util\>) and \<random util script\>. `autils` is specifically written to manage `Alice` packages.
 
 apkg
 ----
