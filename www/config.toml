@@ -1,6 +1,6 @@
 title = "AliceLinux"
 subtitle = "AliceLinux's official documentation and dev blog"
-baseURL = "https://xplshn.github.io"
+baseURL = "https://xplshn.github.io/alicelinux"
 languageCode = "en-us"
 theme = "hugo-werx"
 publishDir = "pub"
