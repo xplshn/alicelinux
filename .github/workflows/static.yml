@@ -33,7 +33,7 @@ jobs:
           apk update
           apk add hugo
 
-      - name: Add metadata to articles
+      - name: Add metadata to articles and build Hugo site
         run: |
           # Loop over markdown files in ./docs
           for FILE in ./docs/*.md; do
@@ -57,6 +57,13 @@ jobs:
           # Build with Hugo
           cd ./www
           hugo
+
+          # Git push after build
+          git config --global user.name "[CI]"
+          git config --global user.email "xplshn@murena.io"
+          git add .
+          git commit -m "Update [WWW]"
+          git push origin master
 
       - name: Install shitty tar (gnu), so that configure-pages@v5 doesn't bitch about it
         run: |
