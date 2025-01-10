@@ -14,6 +14,9 @@ fi
 for FILE in ./content/posts/*.md; do
     rm -f "./content/posts/$(basename "$FILE")"
 done
+for FILE in ../files/*; do
+    rm -f "./static/assets/$(basename "$FILE")"
+done
 
 # Loop over markdown files in ./docs
 for FILE in ../docs/*.md; do
@@ -33,6 +36,10 @@ for FILE in ../docs/*.md; do
 		echo "+++"
 		cat "$FILE"
 	} >"./content/posts/$FILENAME"
+done
+
+for FILE in ../files/*; do
+    cp "$FILE" "./static/assets/$(basename "$FILE")"
 done
 
 # Build with Hugo
