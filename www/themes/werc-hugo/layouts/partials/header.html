@@ -1,0 +1,18 @@
+<div id="superHeader" class="superHeader">
+<div id="nav-border" class="container">
+    <nav id="nav" class="nav justify-content-center">
+        {{ range .Site.Menus.main }}
+        <a class="nav-link" href="{{ .URL }}">
+        {{ $text := print .Name | safeHTML }}
+        {{ $text }}
+        |
+        </a>
+        {{ end }}
+    </nav>
+</div>
+</div>
+<div id="midHeader" class="midHeader">
+    <h1 class="headerTitle">
+        <a href="index.html">  {{ .Site.Title }} </a>
+    </h1>
+</div>
