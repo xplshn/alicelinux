@@ -37,7 +37,7 @@ jobs:
         run: |
           set -x
           ls ./docs
-          ls ./www
+          tree ./www
           # Loop over markdown files in ./docs
           for FILE in ./docs/*.md; do
             # Extract the filename
