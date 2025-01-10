@@ -35,9 +35,6 @@ jobs:
 
       - name: Add metadata to articles
         run: |
-          set -x
-          ls ./docs
-          tree ./www
           # Loop over markdown files in ./docs
           for FILE in ./docs/*.md; do
             # Extract the filename
