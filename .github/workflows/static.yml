@@ -1,0 +1,71 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    container:
+      image: alpine:latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo
+        run: |
+          apk update
+          apk add --no-cache hugo bash
+
+      - name: Add metadata to articles
+        run: |
+          # Loop over markdown files in ./docs
+          for FILE in ./docs/*.md; do
+            # Extract the filename
+            FILENAME=$(basename "$FILE")
+            
+            # Prepare the metadata header
+            DATE=$(date +"%Y-%m-%dT%H:%M:%S%:z")
+            TITLE=$(basename "$FILE" .md)
+            
+            # Create the target markdown file with metadata
+            {
+              echo "+++"
+              echo "date = '$DATE'"
+              echo "draft = false"
+              echo "title = '$TITLE'"
+              echo "+++"
+              cat "$FILE"
+            } > "./www/contents/articles/$FILENAME"
+          done
+
+      - name: Build with Hugo
+        run: hugo
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './www/pub'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

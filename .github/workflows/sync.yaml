@@ -14,12 +14,21 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0  # Fetch all history for all branches and tags
+        ref: 'master'  # Checkout the master branch
 
     - name: Add Codeberg remote
       run: |
         git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
 
-    - name: Fetch and push changes
+    - name: Fetch changes from Codeberg
       run: |
-        git fetch --all
-        git push --mirror https://github.com/xplshn/alicelinux.git
+        git fetch codeberg
+
+    - name: Merge changes from Codeberg
+      run: |
+        git checkout master
+        git merge --allow-unrelated-histories codeberg/main
+
+    - name: Push changes to GitHub
+      run: |
+        git push origin master
