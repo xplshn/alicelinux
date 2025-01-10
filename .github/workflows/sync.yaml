@@ -1,0 +1,25 @@
+name: Sync with Codeberg
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *'  # Run every 3 days at midnight
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Fetch all history for all branches and tags
+
+    - name: Add Codeberg remote
+      run: |
+        git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
+
+    - name: Fetch and push changes
+      run: |
+        git fetch --all
+        git push --mirror https://github.com/xplshn/alicelinux.git
