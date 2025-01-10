@@ -31,7 +31,7 @@ jobs:
       - name: Install Hugo
         run: |
           apk update
-          apk add --no-cache hugo bash
+          apk add --no-cache hugo
 
       - name: Add metadata to articles
         run: |
@@ -59,6 +59,10 @@ jobs:
         run: |
           cd ./www
           hugo
+
+      - name: Install shitty tar (gnu), so that configure-pages@v5 doesn't bitch about it
+        run: |
+          apk add tar
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
