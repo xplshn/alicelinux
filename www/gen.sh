@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if [ ! "$(basename "$PWD")" = "www" ] || [ ! -f "$PWD/config.toml" ]; then
+    if [ -d "$PWD/www" ]; then
+        echo "You must enter ./www"
+        exit 1
+    else
+        echo "Where the fuck are we? You must enter https://github.com/xplshn/alicelinux/www, run me within of the ./www directory!"
+        exit 1
+    fi
+fi
+
+# Cleanup older files
+for FILE in ./content/posts/*.md; do
+    rm -f "./content/posts/$(basename "$FILE")"
+done
+
+# Loop over markdown files in ./docs
+for FILE in ../docs/*.md; do
+	# Extract the filename
+	FILENAME="$(basename "$FILE")"
+
+	# Prepare the metadata header
+	DATE="$(date +"%Y-%m-%dT%H:%M:%S%:z")"
+	TITLE="$(basename "$FILE" .md)"
+
+	# Create the target markdown file with metadata
+	{
+		echo "+++"
+		echo "date = '$DATE'"
+		echo "draft = false"
+		echo "title = '$TITLE'"
+		echo "+++"
+		cat "$FILE"
+	} >"./content/posts/$FILENAME"
+done
+
+# Build with Hugo
+hugo

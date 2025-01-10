@@ -323,3 +323,14 @@ dd a, dd a:visited, dd a:hover, dd a:active { color: var(--text-accent)!importan
 	background-color: transparent;
 }
 
+/* ######### */
+/* #  IMG  # */
+/* ######### */
+
+img {
+	border:	0.4em	solid	black;
+	background-color:	white!important;
+	padding:	0.2em;
+	max-width: 100%;
+    max-height: 100%;
+}

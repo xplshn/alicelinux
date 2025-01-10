@@ -1,9 +1,19 @@
 title: AliceLinux
+subtitle: "AliceLinux's official documentation and dev blog"
 baseURL: 'https://alicelinux.github.io'
 languageCode: en-us
 theme: hugo-werx
 publishDir: 'pub'
 enableRobotsTXT: true
+
+ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+preserveTaxonomyNames: true
+enableEmoji: true
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug/"
+
 menu:
   main:
     - identifier: home
@@ -14,22 +24,24 @@ menu:
       name: About
       url: /about/
       weight: 2
-    - identifier: posts
-      name: Posts
-      url: /posts/
-      weight: 3
     - identifier: categories
       name: Categories
       url: /categories/
-      weight: 4
+      weight: 3
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 5
+      weight: 4
+  feed:
     - identifier: rss
-      name: RSS
+      name: Subscribe
       url: /index.xml
-      weight: 6
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+
 params:
   abbrDateFmt: "Jan 2"
   author: "Emmett1"
@@ -57,4 +69,7 @@ params:
     - name: buymeacoffee
       url: 'https://buymeacoffee.com/emmett1'
 
-  subtitle: "AliceLinux's official documentation and dev blog"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

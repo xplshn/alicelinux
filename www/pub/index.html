@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-	<meta name="generator" content="Hugo 0.139.4">
+	<meta name="generator" content="Hugo 0.139.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AliceLinux | AliceLinux</title>
+    <title>Home | AliceLinux</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://alicelinux.github.io/">
+    <link rel="stylesheet" href="http://localhost:1313/home/anto/Documents/TrulyMine/alicelinux/www/content/_index.md">
   </head>
   <body>
     <div id="header">
@@ -19,13 +19,15 @@
     <div class="pull-right">
       |
       
+        <a href="/index.xml">subscribe</a> |
+      
     </div>
   </div>
 
   <div class="mid">
     <h1 class="headerTitle">
-      <a href="https://alicelinux.github.io/">AliceLinux
-        <span id="headerSubtitle">AliceLinux&#39;s official documentation and dev blog</span>
+      <a href="http://localhost:1313/">AliceLinux
+        <span id="headerSubtitle"></span>
       </a>
     </h1>
   </div>
@@ -40,23 +42,11 @@
 		
 		
 		
-		<a href=" /about/" title="">>About</a>
-		
-		
-		
-		<a href=" /posts/" title="">>Posts</a>
-		
-		
-		
 		<a href=" /categories/" title="">>Categories</a>
 		
 		
 		
 		<a href=" /tags/" title="">>Tags</a>
-		
-		
-		
-		<a href=" /index.xml" title="">>RSS</a>
 		
 		
 	</div>
@@ -67,11 +57,91 @@
 
 
 
+<p>
+<figure>
+  <img src="/assets/AliceLinux.png" alt="alicelinux" />
+</figure>
+
+
+
+
+<figure>
+  <img src="/assets/grimshot-240524-234840.png" alt="alicelinux" />
+</figure>
+
+
+</p>
+<p><strong>Alice Linux</strong> is my personal daily driver minimal distro that used <a href="https://musl.libc.org/">musl</a> libc, <a href="https://www.busybox.net/">busybox</a> as main core utilities, package manager written in POSIX shell script, <a href="https://wayland.freedesktop.org/">Wayland</a> and/or <a href="https://www.x.org/wiki/">Xorg</a> as the gui server and trying to be minimal, lightweight and usable as possible.</p>
+<ul>
+<li>no systemd</li>
+<li>no PAM</li>
+<li>no polkit</li>
+<li>musl instead of glibc</li>
+<li>busybox instead of coreutils/util-linux/etc</li>
+<li>busybox&rsquo;s runit instead of systemd/openrc/etc</li>
+<li>libudev-zero instead of udev/eudev</li>
+<li>gettext-tiny instead of gettext</li>
+<li>mandoc instead of man-db</li>
+<li>doas instead of sudo</li>
+</ul>
 
 
 <h2>Recent Posts</h2>
 <dl>
-	
+  
+     
+      <dt>
+        <span class="date">2025/01/10 &ndash; </span>
+        <a href="http://localhost:1313/posts/install/">install</a>
+      </dt>
+      <dd>
+        <p><h2 id="install-alice">Install Alice</h2>
+<p>Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.</p>
+<h3 id="get-alice-rootfs-tarball">Get Alice rootfs tarball</h3>
+<p>Download the Alice rootfs tarball from the <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page, along with its <code>sha256sum</code> file.</p></p>
+        
+          <a href="http://localhost:1313/posts/install/">Read more...</a>
+        
+      </dd>
+    
+  
+     
+      <dt>
+        <span class="date">2025/01/10 &ndash; </span>
+        <a href="http://localhost:1313/posts/packagemanager/">packagemanager</a>
+      </dt>
+      <dd>
+        <p><h1 id="package-manager">PACKAGE MANAGER</h1>
+<p>In Alice, theres two package manager used, <a href="https://codeberg.org/emmett1/spm">spm</a> and <a href="https://codeberg.org/emmett1/autils">autils</a>. Why two package manager? <code>spm</code> was written for generic package manager for linux distribution. And <code>autils</code> is written specifically for <code>Alice</code> and required <code>spm</code>.</p>
+<h2 id="spm">spm</h2>
+<p><code>spm</code> stands for <code>simple package manager</code>. It does simple and minimal written in POSIX compliance shell script. It only depends on core utils and tar (or busybox&rsquo;s utils and tar). <code>spm</code> only intended for compressing some directory into package, then extract package into system with files being tracked into database. Theres is no build script, recipe or ports in <code>spm</code>. You can write your own tools to use with <code>spm</code> either like Arch Linux&rsquo;s <code>makepkg</code>, CRUX&rsquo;s <code>pkgmk</code> or Slackware&rsquo;s <code>slackbuild</code> script.</p></p>
+        
+          <a href="http://localhost:1313/posts/packagemanager/">Read more...</a>
+        
+      </dd>
+    
+  
+     
+      <dt>
+        <span class="date">2025/01/10 &ndash; </span>
+        <a href="http://localhost:1313/posts/repos/">repos</a>
+      </dt>
+      <dd>
+        <p><h1 id="package-repository">PACKAGE REPOSITORY</h1>
+<p>Theres 4 repos available in Alice:</p>
+<ul>
+<li>core: contains base packages for Alice (required)</li>
+<li>wayland: contains packages that required wayland installed</li>
+<li>xorg: contains packages that required xorg installed</li>
+<li>extra: contains packages that can be built with or without either wayland and xorg</li>
+</ul>
+<p>For <code>wayland</code> and <code>xorg</code> repo, you can choose either one or enabled both. If both is enabled, packages will be built against both. So you can have either &lsquo;pure wayland&rsquo;, &lsquo;pure xorg&rsquo; or &lsquo;hybrid&rsquo;.</p></p>
+        
+          <a href="http://localhost:1313/posts/repos/">Read more...</a>
+        
+      </dd>
+    
+  
 </dl>
 
 </div>
