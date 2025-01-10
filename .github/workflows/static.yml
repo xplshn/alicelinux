@@ -35,28 +35,8 @@ jobs:
 
       - name: Add metadata to articles
         run: |
-          # Loop over markdown files in ./docs
-          for FILE in ./docs/*.md; do
-            # Extract the filename
-            FILENAME=$(basename "$FILE")
-            
-            # Prepare the metadata header
-            DATE=$(date +"%Y-%m-%dT%H:%M:%S%:z")
-            TITLE=$(basename "$FILE" .md)
-            
-            # Create the target markdown file with metadata
-            {
-              echo "+++"
-              echo "date = '$DATE'"
-              echo "draft = false"
-              echo "title = '$TITLE'"
-              echo "+++"
-              cat "$FILE"
-            } > "./www/content/posts/$FILENAME"
-          done
-          # Build with Hugo
           cd ./www
-          hugo
+          sh ./gen.sh
 
       - name: Install shitty tar (gnu), so that configure-pages@v5 doesn't bitch about it
         run: |
