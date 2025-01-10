@@ -27,6 +27,10 @@ jobs:
       run: |
         git checkout --track codeberg/main
 
+    - name: Delete existing master branch
+      run: |
+        git branch -D master || true
+
     - name: Rename branch from main to master
       run: |
         git branch -m master
