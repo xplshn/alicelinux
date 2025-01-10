@@ -11,6 +11,7 @@ preserveTaxonomyNames = true
 enableEmoji = true
 footnotereturnlinkcontents = "↩"
 
+[module]
 [[module.mounts]]
   source = 'assets'
   target = 'assets'
