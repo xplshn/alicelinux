@@ -7,5 +7,5 @@ postbuild() {
 	mkdir -p $PKG/usr/bin
 	
 	"${CC:-gcc}" -static $LDFLAGS $CFLAGS $CPPFLAGS \
-	    -o "$PKG/usr/bin/libudev-zero-helper" contrib/helper.c
+	    -o "$PKG/usr/libexec/libudev-zero-helper" contrib/helper.c
 }
