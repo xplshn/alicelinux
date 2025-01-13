@@ -28,23 +28,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Hugo, Git, and WORSE Tar (so that upload-pages* doesnt bitch about it)
+      - name: Install dependencies
         run: |
           apk update
           apk add hugo git tar
 
-      - name: Update the site's contents
+      - name: Generate the site
         run: |
+          # Navigate to the ./www directory and generate site content
           cd ./www
           sh ./gen.sh
           cd ..
-          # Configure Git
-          git config --global user.name '󰬭 [CI] '
-          git config --global user.email 'action@github.com'
-          # Commit changes
-          git add ./www || true
-          git commit -m "[www]" || true
-          git push || true
+
+          # Prepare git to commit changes in ./www
+          git config user.name '󰬭 [CI] '
+          git config user.email 'action@github.com'
+
+          # Commit changes in ./www
+          git add www
+          git commit -m "[www]" || echo "Nothing to commit"
+          git push origin HEAD || echo "Push failed; check repository settings"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -52,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './www/pub'
+          path: './www/public'
 
       - name: Deploy to GitHub Pages
         id: deployment
