@@ -36,6 +36,7 @@ jobs:
         with:
           ref: 'master'
           submodules: 'true'
+          depth: 0
 
       - name: Configure Git safe.directory
         run: |
