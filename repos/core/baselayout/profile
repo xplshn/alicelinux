@@ -1,7 +1,9 @@
 # /etc/profile
 
 # Set the initial path
-export PATH=/bin:/usr/bin:/sbin:/usr/sbin
+PATH="/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin"
+LC_ALL="C.UTF-8"
+export PATH LC_ALL LD_PRELOAD
 
 # Set umask
 umask 022
