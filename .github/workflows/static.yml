@@ -38,6 +38,24 @@ jobs:
           cd ./www
           sh ./gen.sh
 
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            echo "changes=false" >> $GITHUB_ENV
+          else
+            echo "Changes detected"
+            echo "changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Add, commit, and push changes
+        if: env.changes == 'true'
+        run: |
+          git add ./www
+          git commit -m "[www]"
+          git push
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
