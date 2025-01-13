@@ -1,8 +1,8 @@
 +++
-date = '2024-08-03T15:21:50'
+date = '2025-01-13T22:50:11'
 draft = false
 title = 'install'
-author = 'emmett1'
+author = '[CI]'
 +++
 ## Install Alice
 Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.
