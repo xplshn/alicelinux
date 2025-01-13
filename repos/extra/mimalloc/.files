@@ -1,0 +1,20 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/mimalloc-3.0/
+-rw-r--r-- root/root    usr/include/mimalloc-3.0/mimalloc-new-delete.h
+-rw-r--r-- root/root    usr/include/mimalloc-3.0/mimalloc-override.h
+-rw-r--r-- root/root    usr/include/mimalloc-3.0/mimalloc.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/mimalloc-3.0/
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-3.0/mimalloc-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-3.0/mimalloc-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-3.0/mimalloc-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-3.0/mimalloc.cmake
+lrwxrwxrwx root/root    usr/lib/libmimalloc.so -> libmimalloc.so.3
+lrwxrwxrwx root/root    usr/lib/libmimalloc.so.3 -> libmimalloc.so.3.0
+-rwxr-xr-x root/root    usr/lib/libmimalloc.so.3.0
+drwxr-xr-x root/root    usr/lib/mimalloc-3.0/
+-rw-r--r-- root/root    usr/lib/mimalloc-3.0/mimalloc.o
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/mimalloc.pc

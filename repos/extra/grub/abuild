@@ -1,8 +1,9 @@
 name=grub
 version=2.12
-release=2
+_fontver=16.0.02
+release=3
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
-	https://ftp.gnu.org/gnu/unifont/unifont-16.0.01/unifont-16.0.01.bdf.gz
+	https://ftp.gnu.org/gnu/unifont/unifont-$_fontver/unifont-$_fontver.pcf.gz
 	no-asorti.patch
 	grub.default"
 skip_patch=1
@@ -35,7 +36,8 @@ build() {
 	_build_grub --with-platform=efi --target=x86_64 --disable-efiemu
 	
 	mkdir -p $PKG/usr/share/grub
-	gunzip -c $SRC/unifont-16.0.01.bdf.gz > $PKG/usr/share/grub/unicode.pf2
+	gunzip $SRC/unifont-$_fontver.pcf.gz
+	$PKG/usr/bin/grub-mkfont $SRC/unifont-$_fontver.pcf -o $PKG/usr/share/grub/unicode.pf2
 	
 	mkdir -p $PKG/etc/default
 	cp $SRC/grub.default $PKG/etc/default/grub

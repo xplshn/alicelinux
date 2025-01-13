@@ -1,6 +1,6 @@
 name=busybox
 version=1.36.1
-release=2
+release=3
 source="https://${name}.net/downloads/${name}-${version}.tar.bz2
 	config
 	mdev.conf
