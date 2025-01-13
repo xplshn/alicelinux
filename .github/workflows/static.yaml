@@ -36,13 +36,8 @@ jobs:
 
       - name: Generate the site
         run: |
-          # Use dynamic paths based on GITHUB_WORKSPACE
-          GEN_DIR="${GITHUB_WORKSPACE}/www"
-          PUBLIC_DIR="${GEN_DIR}/public"
-
-          # Navigate to the generation directory and run the script
-          cd "${GEN_DIR}"
-          sh ./gen.sh
+          cd "${GITHUB_WORKSPACE}/www"
+          ./gen.sh
           cd "${GITHUB_WORKSPACE}"
 
           # Prepare git to commit changes
@@ -50,7 +45,7 @@ jobs:
           git config user.email 'action@github.com'
 
           # Commit changes dynamically
-          git add "${GEN_DIR}"
+          git add "${GITHUB_WORKSPACE}/www"
           git commit -m "[www]" || echo "Nothing to commit"
           git push origin HEAD || echo "Push failed; check repository settings"
 
@@ -60,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "${GITHUB_WORKSPACE}/www/public"
+          path: "${GITHUB_WORKSPACE}/www/pub"
 
       - name: Deploy to GitHub Pages
         id: deployment
