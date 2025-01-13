@@ -41,7 +41,7 @@ jobs:
           git config --global user.name '󰬭 [CI] '
           git config --global user.email 'action@github.com'
           # Commit changes
-          git add $PWD || true
+          git add . || true
           git commit -m "[www]" || true
           git push || true
 
