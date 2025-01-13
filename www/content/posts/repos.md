@@ -1,8 +1,8 @@
 +++
-date = '2025-01-13T22:50:11'
+date = '2025-01-13T22:52:01'
 draft = false
 title = 'repos'
-author = '[CI]'
+author = 'xplshn'
 +++
 PACKAGE REPOSITORY
 ==================
