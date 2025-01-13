@@ -28,19 +28,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 'Install Hugo, Git, and WORSE Tar (so that upload-pages* doesnt bitch about it)'
+      - name: Install Hugo, Git, and WORSE Tar (so that upload-pages* doesnt bitch about it)
         run: |
           apk update
           apk add hugo git tar
 
-      - name: Add metadata to articles
+      - name: Update the site's contents
         run: |
           cd ./www
           sh ./gen.sh
-
-      - name: Check for changes
-        id: check_changes
-        run: |
+          
           if git diff --quiet; then
             echo "No changes to commit"
             echo "changes=false" >> $GITHUB_ENV
