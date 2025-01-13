@@ -26,6 +26,7 @@ for FILE in ../docs/*.md; do
 	# Prepare the metadata header
 	DATE="$(date +"%Y-%m-%dT%H:%M:%S%:z")"
 	TITLE="$(basename "$FILE" .md)"
+	AUTHOR="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
 
 	# Create the target markdown file with metadata
 	{
@@ -33,6 +34,7 @@ for FILE in ../docs/*.md; do
 		echo "date = '$DATE'"
 		echo "draft = false"
 		echo "title = '$TITLE'"
+		echo "author = '$AUTHOR'"
 		echo "+++"
 		cat "$FILE"
 	} >"./content/posts/$FILENAME"
