@@ -26,6 +26,8 @@ jobs:
 
     - name: Merge changes from Codeberg
       run: |
+        git config user.name '󰬭 [CI] '
+        git config user.email 'action@github.com'
         git checkout master
         git merge --allow-unrelated-histories codeberg/main
 
