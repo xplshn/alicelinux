@@ -28,8 +28,7 @@ jobs:
       - name: Checkout GitHub repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for all branches and tags
-          ref: 'master'  # Checkout the master branch
+          ref: 'master'
 
       - name: Configure Git safe.directory
         run: |
