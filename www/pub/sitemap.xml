@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://xplshn.github.io/alicelinux/</loc>
+    <lastmod>2024-08-03T17:15:52+00:00</lastmod>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/posts/packagemanager/</loc>
+    <lastmod>2024-08-03T17:15:52+00:00</lastmod>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/posts/</loc>
+    <lastmod>2024-08-03T17:15:52+00:00</lastmod>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/posts/install/</loc>
+    <lastmod>2024-08-03T15:21:50+00:00</lastmod>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/posts/repos/</loc>
+    <lastmod>2024-08-03T14:53:27+00:00</lastmod>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/about/</loc>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/categories/</loc>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/series/</loc>
+  </url><url>
+    <loc>https://xplshn.github.io/alicelinux/tags/</loc>
+  </url>
+</urlset>
