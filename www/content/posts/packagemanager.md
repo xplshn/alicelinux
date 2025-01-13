@@ -1,7 +1,8 @@
 +++
-date = '2025-01-10T15:11:11'
+date = '2025-01-13T18:58:35'
 draft = false
 title = 'packagemanager'
+author = 'emmett1'
 +++
 PACKAGE MANAGER
 ===============

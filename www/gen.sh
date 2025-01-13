@@ -24,7 +24,7 @@ for FILE in ../docs/*.md; do
 	FILENAME="$(basename "$FILE")"
 
 	# Prepare the metadata header
-	DATE="$(date +"%Y-%m-%dT%H:%M:%S%:z")"
+	DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
 	TITLE="$(basename "$FILE" .md)"
 	AUTHOR="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
 
