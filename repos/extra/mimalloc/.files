@@ -1,0 +1,21 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/mimalloc-2.1/
+-rw-r--r-- root/root    usr/include/mimalloc-2.1/mimalloc-new-delete.h
+-rw-r--r-- root/root    usr/include/mimalloc-2.1/mimalloc-override.h
+-rw-r--r-- root/root    usr/include/mimalloc-2.1/mimalloc.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/mimalloc-2.1/
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-2.1/mimalloc-config-version.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-2.1/mimalloc-config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-2.1/mimalloc-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mimalloc-2.1/mimalloc.cmake
+lrwxrwxrwx root/root    usr/lib/libmimalloc.so -> libmimalloc.so.2
+lrwxrwxrwx root/root    usr/lib/libmimalloc.so.2 -> libmimalloc.so.2.1
+-rwxr-xr-x root/root    usr/lib/libmimalloc.so.2.1
+drwxr-xr-x root/root    usr/lib/mimalloc-2.1/
+-rw-r--r-- root/root    usr/lib/mimalloc-2.1/libmimalloc.a
+-rw-r--r-- root/root    usr/lib/mimalloc-2.1/mimalloc.o
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/mimalloc.pc

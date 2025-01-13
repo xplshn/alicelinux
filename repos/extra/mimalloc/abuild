@@ -1,5 +1,5 @@
 name=mimalloc
-version=v2.1.9 # V2 is the stable branch, V3 is still very experimental
+version=2.1.9
 release=1
 source="https://github.com/microsoft/${name}/archive/v${version}/${name}-v${version}.tar.gz"
 keep_static=1
