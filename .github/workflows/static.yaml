@@ -26,7 +26,7 @@ jobs:
       image: alpine:latest
 
     steps:
-      - name: Install dependencies
+      - name: Install Hugo, Git, and the worst version of Tar
         run: |
           apk update
           apk add hugo git tar
