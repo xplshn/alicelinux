@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
@@ -24,8 +25,11 @@ jobs:
       image: alpine:latest
 
     steps:
-      - name: Checkout
+      - name: Checkout GitHub repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for all branches and tags
+          ref: 'master'  # Checkout the master branch
 
       - name: Install dependencies
         run: |
