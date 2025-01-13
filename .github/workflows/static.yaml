@@ -37,6 +37,9 @@ jobs:
         run: |
           cd ./www
           sh ./gen.sh
+          # Configure Git
+          git config user.name '󰬭 [CI] '
+          git config user.email 'action@github.com'
           # Commit changes
           git add $PWD || true
           git commit -m "[www]" || true
