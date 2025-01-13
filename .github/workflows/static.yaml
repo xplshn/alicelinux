@@ -31,19 +31,27 @@ jobs:
           fetch-depth: 0  # Fetch all history for all branches and tags
           ref: 'master'  # Checkout the master branch
 
+      - name: Configure Git safe.directory
+        run: |
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
+
       - name: Generate the site
         run: |
-          # Navigate to the ./www directory and generate site content
-          cd ./www
-          sh ./gen.sh
-          cd ..
+          # Use dynamic paths based on GITHUB_WORKSPACE
+          GEN_DIR="${GITHUB_WORKSPACE}/www"
+          PUBLIC_DIR="${GEN_DIR}/public"
 
-          # Prepare git to commit changes in ./www
-          git config user.name '󰬭 [CI] '
+          # Navigate to the generation directory and run the script
+          cd "${GEN_DIR}"
+          sh ./gen.sh
+          cd "${GITHUB_WORKSPACE}"
+
+          # Prepare git to commit changes
+          git config user.name '[CI]'
           git config user.email 'action@github.com'
 
-          # Commit changes in ./www
-          git add www
+          # Commit changes dynamically
+          git add "${GEN_DIR}"
           git commit -m "[www]" || echo "Nothing to commit"
           git push origin HEAD || echo "Push failed; check repository settings"
 
@@ -53,7 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './www/public'
+          path: "${GITHUB_WORKSPACE}/www/public"
 
       - name: Deploy to GitHub Pages
         id: deployment
