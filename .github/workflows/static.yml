@@ -28,19 +28,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Hugo
+      - name: 'Install Hugo, Git, and WORSE Tar (so that upload-pages* doesnt bitch about it)'
         run: |
           apk update
-          apk add hugo
+          apk add hugo git tar
 
       - name: Add metadata to articles
         run: |
           cd ./www
           sh ./gen.sh
-
-      - name: Install shitty tar (gnu), so that configure-pages@v5 doesn't bitch about it
-        run: |
-          apk add tar
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
