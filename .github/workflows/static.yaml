@@ -37,10 +37,8 @@ jobs:
         run: |
           cd ./www
           sh ./gen.sh
-
-      - name: Add, commit, and push changes
-        run: |
-          git add ./www || true
+          # Commit changes
+          git add $PWD || true
           git commit -m "[www]" || true
           git push || true
 
