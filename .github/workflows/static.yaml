@@ -43,6 +43,7 @@ jobs:
       - name: Generate the site
         run: |
           cd "${GITHUB_WORKSPACE}/www"
+          tree
           ./gen.sh
           cd "${GITHUB_WORKSPACE}"
 
