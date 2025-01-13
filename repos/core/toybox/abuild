@@ -1,0 +1,21 @@
+name=toybox
+version=master
+_commit=master
+#_commit=279cec88898c2386430d701847739209fabf6208
+release=1
+source="$name-$_commit.tar.xz::https://github.com/landley/${name}/archive/$_commit.tar.gz
+	config
+	pause.c
+	pause.1"
+
+build() {
+	cp "$SRC/config" .config
+	make $_opt LDFLAGS="-static"
+	make $_opt CONFIG_PREFIX="$PKG" PREFIX="$PKG" install
+}
+
+postbuild() {
+	${CC:-gcc} ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
+	install -d $PKG/usr/share/man/man1
+	install -m644 $SRC/pause.1 $PKG/usr/share/man/man1/pause.1	
+}

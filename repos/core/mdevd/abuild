@@ -1,0 +1,22 @@
+name=mdevd
+version=master
+version=0.1.6.5
+release=1
+source="https://github.com/skarnet/${name}/archive/v${version}/${name}-v${version}.tar.gz
+		mdevd.conf
+		mdevd.run"
+sv="mdevd.run"
+keep_static=1
+
+build() {
+	./configure \
+	    --prefix=/usr \
+	    --enable-static-libc \
+	    --disable-shared
+	make
+	make install
+
+	mkdir "$PKG/etc"
+	mv "$SRC/mdevd.conf" "$PKG/etc/mdevd.conf"
+	sed '/mdev/ { /#/! s/^/#/; }' /etc/rc.boot >"$PKG/etc/rc.boot"
+}

@@ -4,3 +4,4 @@
 *.sha256sum
 *.pkglist
 .p*
+repos/*/.*
