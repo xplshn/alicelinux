@@ -37,11 +37,12 @@ jobs:
         run: |
           cd ./www
           sh ./gen.sh
+          cd ..
           # Configure Git
           git config --global user.name '󰬭 [CI] '
           git config --global user.email 'action@github.com'
           # Commit changes
-          git add . || true
+          git add ./www || true
           git commit -m "[www]" || true
           git push || true
 
