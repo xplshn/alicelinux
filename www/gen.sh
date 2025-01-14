@@ -12,6 +12,7 @@ check_directory() {
 }
 
 process_markdown_files() {
+    mkdir -p "$2"
     for FILE in "$1"/*.md; do
         FILENAME="$(basename "$FILE")"
         DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
@@ -47,11 +48,12 @@ rm -rf -- ./content/docs/*
 rm -rf -- ./static/assets/*
 process_markdown_files "../docs" "./content/docs" "Documentation"
 cp ../files/* ./static/assets
-cp ../README.md ./content/_index.html && {
+{
     echo "---"
     echo "title: 'Home'"
     echo "---"
-} >"./content/_index.html"
+} >./content/_index.md
+sed 's|src="files/|src="assets/|g' ../README.md >>./content/_index.md
 
 # Build with Hugo
 hugo
