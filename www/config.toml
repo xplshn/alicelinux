@@ -1,5 +1,4 @@
 title = "AliceLinux"
-subtitle = "AliceLinux's official documentation and dev blog"
 baseURL = "https://xplshn.github.io/alicelinux"
 languageCode = "en-us"
 theme = "hugo-werx"
@@ -44,14 +43,10 @@ footnotereturnlinkcontents = "↩"
     tag = "tags"
 
 [params]
-    abbrDateFmt = "Jan 2"
-    author = "Emmett1"
+    subtitle = "AliceLinux's (un)official documentation and devblog"
     brandIconFile = "assets/images/icon.svg"
+    abbrDateFmt = "Jan 2"
     dateFmt = "02.01.2006 15:04"
-    #customStylesheets = ["css/custom.css"]
-    #readingSpeed = 600
-    #readingSpeedMin = 25
-    #readingSpeedMax = 175
 
 [[social]]
     name = "Codeberg"
