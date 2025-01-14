@@ -33,13 +33,14 @@ process_markdown_files() {
         } >"$2/$FILENAME"
     done
 
-    if [ "$(find "$2" -maxdepth 1 -type f | wc -l)" -gt 0 ]; then
-        {
-            echo "---"
-            echo "title: '$3'"
-            echo "---"
-        } >"$2/_index.html"
-    fi
+    # Disabled because I manually created the ./content/docs/_index.md
+    #if [ "$(find "$2" -maxdepth 1 -type f | wc -l)" -gt 0 ]; then
+    #    {
+    #        echo "---"
+    #        echo "title: '$3'"
+    #        echo "---"
+    #    } >"$2/_index.md"
+    #fi
 }
 
 # Main script execution
