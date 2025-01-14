@@ -1,9 +1,9 @@
 <p align="center">
-	<img src="https://codeberg.org/emmett1/alicelinux/raw/branch/main/files/AliceLinux.png" width="400"/>
+	<img src="files/AliceLinux.png" width="400" alt="AliceLinux logo (it just says AliceLinux with a nice font)"/>
 </p>
 
 <p align="center">
-	<img src="https://codeberg.org/emmett1/alicelinux/raw/branch/main/files/grimshot-240524-234840.png" width="800"/>
+	<img src="https://codeberg.org/emmett1/alicelinux/raw/branch/main/files/grimshot-240524-234840.png" width="800" alt="Screenshot of AliceLinux running Sway, foot and pfetch. Showcasing the 95megabytes of memory footprint and running on QEMU platform PC-i440fx-9.0"/>
 </p>
 
 <p align="center">
