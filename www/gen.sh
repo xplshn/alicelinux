@@ -47,6 +47,11 @@ rm -rf -- ./content/docs/*
 rm -rf -- ./static/assets/*
 process_markdown_files "../docs" "./content/docs" "Documentation"
 cp ../files/* ./static/assets
+cp ../README.md ./content/_index.html && {
+    echo "---"
+    echo "title: 'Home'"
+    echo "---"
+} >"./content/_index.html"
 
 # Build with Hugo
 hugo
