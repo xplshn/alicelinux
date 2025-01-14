@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-	<img src="https://codeberg.org/emmett1/alicelinux/raw/branch/main/files/grimshot-240524-234840.png" width="800" alt="Screenshot of AliceLinux running Sway, foot and pfetch. Showcasing the 95megabytes of memory footprint and running on QEMU platform PC-i440fx-9.0"/>
+	<img src="files/grimshot-240524-234840.png" width="800" alt="Screenshot of AliceLinux running Sway, foot and pfetch. Showcasing the 95megabytes of memory footprint and running on QEMU platform PC-i440fx-9.0"/>
 </p>
 
 <p align="center">

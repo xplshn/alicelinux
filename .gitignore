@@ -3,5 +3,8 @@
 *.tar.xz
 *.sha256sum
 *.pkglist
-.p*
+
+# MISC
 repos/*/.*
+.p*
+.hugo_build.lock
