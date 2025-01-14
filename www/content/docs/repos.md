@@ -1,8 +1,10 @@
 +++
-date = '2024-08-03T14:53:27'
+date = '2025-01-10T04:34:30'
 draft = false
 title = 'repos'
-author = 'emmett1'
+[params.author]
+  name = 'emmett1'
+  email = 'emmett1.2miligrams@protonmail.com'
 +++
 PACKAGE REPOSITORY
 ==================

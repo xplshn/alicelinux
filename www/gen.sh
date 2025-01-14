@@ -1,48 +1,52 @@
 #!/bin/sh
 
-if [ ! "$(basename "$PWD")" = "www" ] || [ ! -f "$PWD/config.toml" ]; then
-    if [ -d "$PWD/www" ]; then
-        echo "You must enter ./www"
-        exit 1
-    else
-        echo "Where the fuck are we? You must enter https://github.com/xplshn/alicelinux/www, run me within of the ./www directory!"
+check_directory() {
+    if [ ! "$(basename "$PWD")" = "www" ] || [ ! -f "$PWD/config.toml" ]; then
+        if [ -d "$PWD/www" ]; then
+            echo "You must enter ./www"
+        else
+            echo "Where the fuck are we? You must enter https://github.com/xplshn/alicelinux/www, run me within of the ./www directory!"
+        fi
         exit 1
     fi
-fi
+}
 
-# Cleanup older files
-for FILE in ./content/posts/*.md; do
-    rm -f "./content/posts/$(basename "$FILE")"
-done
-for FILE in ../files/*; do
-    rm -f "./static/assets/$(basename "$FILE")"
-done
+process_markdown_files() {
+    for FILE in "$1"/*.md; do
+        FILENAME="$(basename "$FILE")"
+        DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
+        TITLE="$(basename "$FILE" .md)"
+        AUTHOR_NAME="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
+        AUTHOR_EMAIL="$(git log --follow --format="%ae" -- "$FILE" | tail -n 1)"
 
-# Loop over markdown files in ./docs
-for FILE in ../docs/*.md; do
-	# Extract the filename
-	FILENAME="$(basename "$FILE")"
+        {
+            echo "+++"
+            echo "date = '$DATE'"
+            echo "draft = false"
+            echo "title = '$TITLE'"
+            echo "[params.author]"
+            echo "  name = '$AUTHOR_NAME'"
+            echo "  email = '$AUTHOR_EMAIL'"
+            echo "+++"
+            cat "$FILE"
+        } >"$2/$FILENAME"
+    done
 
-	# Prepare the metadata header
-	DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
-	TITLE="$(basename "$FILE" .md)"
-	AUTHOR="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
+    if [ "$(find "$2" -maxdepth 1 -type f | wc -l)" -gt 0 ]; then
+        {
+            echo "---"
+            echo "title: '$3'"
+            echo "---"
+        } >"$2/_index.html"
+    fi
+}
 
-	# Create the target markdown file with metadata
-	{
-		echo "+++"
-		echo "date = '$DATE'"
-		echo "draft = false"
-		echo "title = '$TITLE'"
-		echo "author = '$AUTHOR'"
-		echo "+++"
-		cat "$FILE"
-	} >"./content/posts/$FILENAME"
-done
-
-for FILE in ../files/*; do
-    cp "$FILE" "./static/assets/$(basename "$FILE")"
-done
+# Main script execution
+check_directory
+rm -rf -- ./content/docs/*
+rm -rf -- ./static/assets/*
+process_markdown_files "../docs" "./content/docs" "Documentation"
+cp ../files/* ./static/assets
 
 # Build with Hugo
 hugo
