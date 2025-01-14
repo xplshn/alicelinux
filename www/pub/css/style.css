@@ -33,6 +33,7 @@
 .pull-left {
   float: left;
 }
+
 .pull-right {
   float: right;
 }
@@ -40,6 +41,7 @@
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -63,6 +65,17 @@ body {
   color: var(--super-text);
   background-color: var(--super-accent);
   height: 1.6em;
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.super::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 .super a {
@@ -81,6 +94,7 @@ body {
 .super .pull-left {
   left: 0.4em;
 }
+
 .super .pull-right {
   right: 0.4em;
 }
@@ -109,6 +123,7 @@ body {
 .headerTitle a {
   color: var(--fg-color);
 }
+
 .headerTitle a:hover {
   text-decoration: none;
 }
@@ -328,21 +343,23 @@ input#menu-toggle {
 .menu-button {
   display: none;
   cursor: pointer;
-  background-color: var(--super-accent);
+  background-color: var(--fg-color);
   color: var(--super-text);
   position: fixed;
   z-index: 2;
+  padding: 0.12rem;
 }
 
-.menu-toggle:checked + .menu-button {
+.menu-toggle:checked+.menu-button {
   display: block;
 }
 
-.menu-toggle:checked ~ #sidebar {
+.menu-toggle:checked~#sidebar {
   transform: translateX(0);
 }
 
 @media screen and (max-width: 620px) {
+
   /* Show menu button */
   .menu-button {
     display: block;
