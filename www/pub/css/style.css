@@ -398,14 +398,3 @@ input#menu-toggle {
     padding: 0.3em 0;
   }
 }
-
-/* Handle landscape orientation on mobile */
-@media screen and (max-height: 480px) and (orientation: landscape) {
-  #sidebar {
-    padding-top: 3rem;
-  }
-
-  .menu-button {
-    top: 0.5rem;
-  }
-}
