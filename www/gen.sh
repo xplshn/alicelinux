@@ -16,7 +16,7 @@ process_markdown_files() {
     for FILE in "$1"/*.md; do
         FILENAME="$(basename "$FILE")"
         DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
-        TITLE="$(basename "$FILE" .md)"
+        TITLE="$(basename "$FILE")" #TITLE="$(basename "$FILE" .md)"
         AUTHOR_NAME="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
         AUTHOR_EMAIL="$(git log --follow --format="%ae" -- "$FILE" | tail -n 1)"
 
