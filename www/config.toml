@@ -38,7 +38,7 @@ footnotereturnlinkcontents = "↩"
     url = "/index.xml"
     weight = 100
 [[menu.feed]]
-    name = "Xplshn's Neoblog"
+    name = "neoblog"
     url = "https://fatbuffalo.neocities.org/def"
     weight = 90
 [[menu.feed]]
@@ -46,8 +46,8 @@ footnotereturnlinkcontents = "↩"
     url = "https://github.com/xplshn/dbin"
     weight = 80
 [[menu.feed]]
-    name = "cat-v.org"
-    url = "https://cat-v.org"
+    name = "harmful.cat-v.org"
+    url = "https://harmful.cat-v.org"
     weight = 70
 [[menu.feed]]
     name = "nosystemd.org"
