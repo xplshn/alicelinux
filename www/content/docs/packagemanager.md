@@ -1,7 +1,7 @@
 +++
 date = '2024-08-03T17:15:52'
 draft = false
-title = 'packagemanager'
+title = 'packagemanager.md'
 [params.author]
   name = 'emmett1'
   email = 'emmett1.2miligrams@protonmail.com'

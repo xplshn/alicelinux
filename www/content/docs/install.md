@@ -1,7 +1,7 @@
 +++
 date = '2024-08-03T15:21:50'
 draft = false
-title = 'install'
+title = 'install.md'
 [params.author]
   name = 'emmett1'
   email = 'emmett1.2miligrams@protonmail.com'

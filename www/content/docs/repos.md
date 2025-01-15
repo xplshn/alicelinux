@@ -1,7 +1,7 @@
 +++
 date = '2024-08-03T14:53:27'
 draft = false
-title = 'repos'
+title = 'repos.md'
 [params.author]
   name = 'emmett1'
   email = 'emmett1.2miligrams@protonmail.com'
