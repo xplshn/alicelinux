@@ -1,5 +1,3 @@
-/* github.com/xplshn/hugo-werx - a Hugo theme that closely resembles cat-v.org's werc.cat-v.org */
-
 /* Color Schemes */
 :root {
   /* Light theme (default) */
@@ -29,310 +27,54 @@
   }
 }
 
-/* Generic */
-.pull-left {
-  float: left;
-}
+/* Original WERC CSS */
+body { display: flex; flex-wrap: wrap; font-family: sans; }
+header { flex-basis: 100%; flex-shrink: 0; }
+article { flex-basis: 60%; padding-left: 1em; }
+footer { flex-basis: 100%; flex-shrink: 0; }
+header nav { display: flex; justify-content: space-between; }
+nav a, header a { text-decoration: none ; color: inherit; }
+header h1 span { margin-left: 1em; font-size: 50%; font-style: italic; }
+body > nav { flex-basis: content; padding-right: 1vw; min-width: 16em; }
+nav ul { display: flex; flex-direction: column; list-style-type: none; list-style-position: outside; padding-left: 0;  }
+nav li ul { padding-left: 0.6em }
+footer { display: flex; justify-content: space-between; }
 
-.pull-right {
-  float: right;
-}
+/* Additional styles from WERC */
+body { margin:0; padding: 0; font-size: 84%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
+a { text-decoration: none; color: }
+a:hover { text-decoration: underline; }
+.thisPage { color: black; }
 
-a {
-  text-decoration: none;
-}
+/* header and top bar */
+header nav { background-color: rgb(100,135,220); color: white; padding: 0.3em; border-bottom: 2px solid black; font-size: 91%; }
+header h1 { background-color: #ff6d06; color: black; margin: 0; border-bottom: 2px solid black; font-weight: normal; padding: 0.25ex; font-size: 233%; }
+header a:hover { text-decoration: none; }
 
-a:hover {
-  text-decoration: underline;
-}
+/* sidebar */
+body > nav { border-right: 1px solid #ddd; padding: 0;  }
+body > nav > div { border-bottom: 1px solid #ddd; }
+body > nav > div a { color: rgb(0, 102, 204); display: block; text-transform: capitalize; font-weight: bold; padding: 0.25em 1ex 0.25em 2mm; font-size: 102%}
+body > nav > div a:hover { color: white; background-color: rgb(100,135,220); border-left: black solid 0.2em; text-decoration: none; }
+body > nav > div p { font-weight: bold; margin: 0 0 0.5em 2mm; padding: 1em 0 0 0; }
 
-li ul {
-  padding-left: 0.6em !important;
-}
+/* main copy */
+article { padding: 0.5ex 0 5vh 1vw;  }
+article h1, article h2 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; border-bottom: 2px solid rgb(0,102,204); }
+article h3, article h4, article h5 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; }
+article h6, article h7, article h8 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; }
+article a { color: rgb(0,102,204); }
+article a:hover { color:  rgb(100,135,220); }
 
-/* Body */
-body {
-  color: var(--fg-color);
-  background-color: var(--bg-color);
-  font-family: Arial, sans-serif;
-  font-size: 84%;
-  margin: 0;
-  padding: 0;
-}
+/* footer */
+footer { color: white; background-color: rgb(100,135,220); }
+footer a { color: inherit; }
+footer div { padding: 1em; }
 
-/* Header */
-.super {
-  color: var(--super-text);
-  background-color: var(--super-accent);
-  height: 1.6em;
-  white-space: nowrap;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-.super::-webkit-scrollbar {
-  display: none;
-  /* Safari and Chrome */
-}
-
-.super a {
-  color: var(--super-text);
-  background-color: transparent;
-  font-size: 91%;
-  margin: 0;
-  padding: 0 0.5ex 0 0.25ex;
-}
-
-.super div {
-  position: absolute;
-  top: 0.4ex;
-}
-
-.super .pull-left {
-  left: 0.4em;
-}
-
-.super .pull-right {
-  right: 0.4em;
-}
-
-.mid {
-  color: var(--mid-text);
-  background-color: var(--mid-accent);
-  border: solid 0 var(--header-border);
-  border-width: 2px 0;
-}
-
-.headerTitle {
-  color: var(--mid-text);
-  font-size: 233%;
-  font-weight: normal;
-  margin: 0 0 0 4mm;
-  padding: 0.25ex 0;
-}
-
-#headerSubtitle {
-  font-size: 50%;
-  font-style: italic;
-  margin-left: 1em;
-}
-
-.headerTitle a {
-  color: var(--fg-color);
-}
-
-.headerTitle a:hover {
-  text-decoration: none;
-}
-
-.sub {
-  display: none;
-  color: var(--bg-color);
-  background-color: rgb(0, 51, 153);
-  margin: 0;
-  padding: 1ex 1ex 1ex 1.5mm;
-}
-
-.sub a {
-  color: var(--bg-color);
-  background-color: transparent;
-  font-weight: bold;
-  margin: 0;
-  padding: 0 0.75ex 0 0.5ex;
-}
-
-.super .highlight,
-.sub .highlight {
-  color: rgb(253, 160, 91);
-  background-color: transparent;
-}
-
-/* Sidebar */
-#sidebar {
-  width: 16em;
-  float: left;
-  clear: left;
-  border-right: 1px solid var(--sidebar-border);
-}
-
-#sidebar div {
-  border-bottom: 1px solid var(--sidebar-border);
-}
-
-.sidebarTitle {
-  font-weight: bold;
-  margin: 0 0.5em 2mm;
-  padding: 1em 0 0 0;
-}
-
-#sidebar ul {
-  list-style-type: none;
-  list-style-position: outside;
-  margin: 0;
-  padding: 0 0 0.3em 0;
-}
-
-#sidebar li {
-  margin: 0;
-  padding: 0.1ex 0;
-}
-
-#sidebar a {
-  color: var(--text-accent);
-  background-color: transparent;
-  margin: 0;
-  padding: 0.25em 1ex 0.25em 2mm;
-  display: block;
-  text-transform: capitalize;
-  font-weight: bold !important;
-  font-size: 102%;
-  border-left: var(--sidebar-border) solid 0.2em;
-}
-
-.thisPage,
-.thisPage a {
-  color: var(--fg-color) !important;
-  background-color: var(--super-accent);
-  border-left: var(--sidebar-border) solid 0.2em;
-  text-decoration: none;
-}
-
-#sidebar a:hover {
-  color: var(--bg-color);
-  background-color: var(--super-accent);
-  border-left: var(--sidebar-border) solid 0.2em;
-  text-decoration: none;
-}
-
-.sidebarText {
-  line-height: 1.5em;
-  margin: 0 0 1em 0;
-  padding: 0 1.5ex 0 2.5mm;
-  display: block;
-}
-
-#sidebar .sidebarText a {
-  margin: 0;
-  padding: 0;
-  display: inline;
-}
-
-#sidebar .sidebarText a:hover {
-  color: var(--text-accent);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-/* Main */
-#main {
-  max-width: 70em;
-  color: var(--fg-color);
-  background-color: transparent;
-  text-align: justify;
-  line-height: 1.5em;
-  margin: 0 0 0 16em;
-  padding: 0.5mm 5mm 5mm 5mm;
-  border-left: 1px solid var(--sidebar-border);
-}
-
-#main h1,
-#main h2 {
-  color: var(--text-accent);
-  background-color: transparent;
-  font-size: 145.5%;
-  font-weight: bold;
-  margin: 2em 0 0 0;
-  padding: 0.5ex 0 0.5ex 0.6ex;
-  border-bottom: 2px solid var(--text-accent);
-}
-
-#main h2 {
-  font-size: 115.5%;
-  border-bottom: 1px solid var(--text-accent);
-}
-
-main a,
-main a:visited,
-main a:hover,
-main a:active {
-  color: var(--text-accent) !important;
-}
-
-#main .topOfPage {
-  color: var(--text-accent);
-  background-color: transparent;
-  font-size: 91%;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 3ex 1ex 0 0;
-  padding: 0;
-  float: right;
-}
-
-dl {
-  margin: 1em 1ex 2em 1ex;
-  padding: 0;
-}
-
-dt {
-  font-weight: bold;
-  margin: 0 0 0 0;
-  padding: 0;
-}
-
-dd {
-  margin: 0 0 2em 2em;
-  padding: 0;
-}
-
-dt a,
-dt a:visited,
-dt a:hover,
-dt a:active,
-dd a,
-dd a:visited,
-dd a:hover,
-dd a:active {
-  color: var(--text-accent) !important;
-}
-
-/* Footer */
-#footer {
-  color: var(--super-text);
-  background-color: var(--super-accent);
-  padding: 1em;
-  clear: both;
-  height: 25px;
-}
-
-#footer .pull-left {
-  text-align: left;
-  line-height: 1.55em;
-  float: left;
-  clear: left;
-}
-
-#footer .pull-right {
-  text-align: right;
-  line-height: 1.45em;
-}
-
-#footer a {
-  color: var(--super-text);
-  background-color: transparent;
-}
-
-/* Images */
-img {
-  border: 0.4em solid var(--fg-color);
-  background-color: white !important;
-  padding: 0.2em;
-  max-width: 100%;
-  max-height: 100%;
-}
+/* tables */
+table { border: 1px solid rgba(128,128,128,0.5); padding: 0; }
+th { color: white; background-color: rgb(100,135,220); }
+tr:nth-child(odd) { background-color: rgba(128,128,128,0.1)  }
 
 /* Responsive Design */
 
@@ -400,7 +142,7 @@ input#menu-toggle {
     font-size: 90%;
   }
 
-  .headerTitle {
+  .nav h1 {
     font-size: 180%;
   }
 
@@ -408,7 +150,7 @@ input#menu-toggle {
     padding: 0.5rem;
   }
 
-  .super div {
+  .nav div {
     position: static;
     text-align: center;
     transform: none;

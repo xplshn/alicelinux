@@ -1,9 +1,3 @@
-[submodule "www/themes/smigle"]
-	path = www/themes/smigle
-	url = https://gitlab.com/ian-s-mcb/smigle-hugo-theme.git
-[submodule "www/themes/hugo-werc"]
-	path = www/themes/hugo-werc
-	url = https://github.com/ctis-me/hugo-werc.git
-[submodule "www/themes/hugo-werx"]
-	path = www/themes/hugo-werx
-	url = https://github.com/ispringle/hugo-werx
+[submodule "www/themes/werx"]
+	path = www/themes/werx
+	url = https://github.com/xplshn/werx

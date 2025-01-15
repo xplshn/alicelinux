@@ -1,5 +1,5 @@
 +++
-date = '2024-08-03T17:15:52'
+date = '2025-01-10T04:34:30'
 draft = false
 title = 'packagemanager.md'
 [params.author]

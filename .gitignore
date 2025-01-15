@@ -8,3 +8,5 @@
 repos/*/.*
 .p*
 .hugo_build.lock
+.TODO
+.hugo-werx.bak
