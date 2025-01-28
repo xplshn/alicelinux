@@ -1,7 +1,7 @@
 name=e2fsprogs
-version=1.47.1
+version=1.47.2
 release=1
-source="https://downloads.sourceforge.net/project/$name/$name/v$version/$name-$version.tar.gz"
+source="https://www.kernel.org/pub/linux/kernel/people/tytso/$name/v$version/$name-$version.tar.xz"
 build_opt="
 	--with-root-prefix=
 	--enable-elf-shlibs
@@ -11,7 +11,3 @@ build_opt="
 	--disable-fsck
 	--disable-fuse2fs
 "
-
-prebuild() {
-	sed 's|my_llseek|llseek|g' -i lib/blkid/llseek.c
-}
