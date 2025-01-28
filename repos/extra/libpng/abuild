@@ -1,5 +1,4 @@
 name=libpng
-version=1.6.44
+version=1.6.46
 release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz
-	libpng-apng.patch"
+source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz"
