@@ -12,7 +12,6 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/spirv-val
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/spirv-tools/
--rw-r--r-- root/root    usr/include/spirv-tools/instrument.hpp
 -rw-r--r-- root/root    usr/include/spirv-tools/libspirv.h
 -rw-r--r-- root/root    usr/include/spirv-tools/libspirv.hpp
 -rw-r--r-- root/root    usr/include/spirv-tools/linker.hpp
