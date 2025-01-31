@@ -7,6 +7,7 @@ drwxr-xr-x root/root    etc/mc/
 -rw-r--r-- root/root    etc/mc/mc.ext.ini.new
 lrwxrwxrwx root/root    etc/mc/mc.keymap -> mc.default.keymap
 -rw-r--r-- root/root    etc/mc/mc.menu.new
+-rw-r--r-- root/root    etc/mc/mc.vim.keymap.new
 -rw-r--r-- root/root    etc/mc/mcedit.menu.new
 -rw-r--r-- root/root    etc/mc/sfs.ini.new
 drwxr-xr-x root/root    usr/
@@ -50,6 +51,7 @@ drwxr-xr-x root/root    usr/libexec/mc/extfs.d/
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/rpm
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/rpms+
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/s3+
+-rwxr-xr-x root/root    usr/libexec/mc/extfs.d/torrent
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/trpm
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/u7z
 -rwxr-xr-x root/root    usr/libexec/mc/extfs.d/uace

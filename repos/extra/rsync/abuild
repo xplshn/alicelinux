@@ -1,5 +1,5 @@
 name=rsync
-version=3.3.0
+version=3.4.1
 release=1
 source="https://www.samba.org/ftp/$name/src/$name-$version.tar.gz
 	rsyncd.run"

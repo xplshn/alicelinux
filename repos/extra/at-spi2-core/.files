@@ -1,7 +1,5 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/xdg/
-drwxr-xr-x root/root    etc/xdg/Xwayland-session.d/
--rwxr-xr-x root/root    etc/xdg/Xwayland-session.d/00-at-spi.new
 drwxr-xr-x root/root    etc/xdg/autostart/
 -rw-r--r-- root/root    etc/xdg/autostart/at-spi-dbus-bus.desktop.new
 drwxr-xr-x root/root    usr/
@@ -16,7 +14,6 @@ drwxr-xr-x root/root    usr/include/at-spi-2.0/atspi/
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-constants.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-legacy.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-listener.h
--rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device-x11.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-device.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-document.h
 -rw-r--r-- root/root    usr/include/at-spi-2.0/atspi/atspi-editabletext.h
@@ -91,8 +88,8 @@ drwxr-xr-x root/root    usr/lib/gtk-2.0/
 drwxr-xr-x root/root    usr/lib/gtk-2.0/modules/
 -rwxr-xr-x root/root    usr/lib/gtk-2.0/modules/libatk-bridge.so
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so -> libatk-1.0.so.0
-lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25409.1
--rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25409.1
+lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25410.1
+-rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25410.1
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so -> libatk-bridge-2.0.so.0
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so.0 -> libatk-bridge-2.0.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libatk-bridge-2.0.so.0.0.0

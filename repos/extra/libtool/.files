@@ -9,9 +9,9 @@ drwxr-xr-x root/root    usr/include/libltdl/
 -rw-r--r-- root/root    usr/include/libltdl/lt_system.h
 -rw-r--r-- root/root    usr/include/ltdl.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libltdl.so -> libltdl.so.7.3.2
-lrwxrwxrwx root/root    usr/lib/libltdl.so.7 -> libltdl.so.7.3.2
--rwxr-xr-x root/root    usr/lib/libltdl.so.7.3.2
+lrwxrwxrwx root/root    usr/lib/libltdl.so -> libltdl.so.7.3.3
+lrwxrwxrwx root/root    usr/lib/libltdl.so.7 -> libltdl.so.7.3.3
+-rwxr-xr-x root/root    usr/lib/libltdl.so.7.3.3
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/libtool.m4
