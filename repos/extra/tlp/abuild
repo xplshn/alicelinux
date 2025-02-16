@@ -1,0 +1,12 @@
+name=tlp
+version=1.8.0
+release=1
+source="https://github.com/linrunner/TLP/archive/${version}/TLP-${version}.tar.gz"
+
+postbuild() {
+	rm -rf \
+		$PKG/usr/lib/udev \
+		$PKG/usr/lib/systemd \
+		$PKG/usr/lib/elogind
+}
+
