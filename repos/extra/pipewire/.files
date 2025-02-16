@@ -8,32 +8,24 @@ drwxr-xr-x root/root    usr/bin/
 lrwxrwxrwx root/root    usr/bin/pipewire-aes67 -> pipewire
 lrwxrwxrwx root/root    usr/bin/pipewire-avb -> pipewire
 lrwxrwxrwx root/root    usr/bin/pipewire-pulse -> pipewire
--rwxr-xr-x root/root    usr/bin/pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-cli
 -rwxr-xr-x root/root    usr/bin/pw-config
 -rwxr-xr-x root/root    usr/bin/pw-container
 -rwxr-xr-x root/root    usr/bin/pw-dot
-lrwxrwxrwx root/root    usr/bin/pw-dsdplay -> pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-dump
-lrwxrwxrwx root/root    usr/bin/pw-encplay -> pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-jack
 -rwxr-xr-x root/root    usr/bin/pw-link
 -rwxr-xr-x root/root    usr/bin/pw-loopback
 -rwxr-xr-x root/root    usr/bin/pw-metadata
 -rwxr-xr-x root/root    usr/bin/pw-mididump
-lrwxrwxrwx root/root    usr/bin/pw-midiplay -> pw-cat
-lrwxrwxrwx root/root    usr/bin/pw-midirecord -> pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-mon
-lrwxrwxrwx root/root    usr/bin/pw-play -> pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-profiler
-lrwxrwxrwx root/root    usr/bin/pw-record -> pw-cat
 -rwxr-xr-x root/root    usr/bin/pw-reserve
 -rwxr-xr-x root/root    usr/bin/pw-top
 -rwxr-xr-x root/root    usr/bin/spa-acp-tool
 -rwxr-xr-x root/root    usr/bin/spa-inspect
 -rwxr-xr-x root/root    usr/bin/spa-json-dump
 -rwxr-xr-x root/root    usr/bin/spa-monitor
--rwxr-xr-x root/root    usr/bin/spa-resample
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/pipewire-0.3/
 drwxr-xr-x root/root    usr/include/pipewire-0.3/pipewire/
@@ -265,8 +257,6 @@ drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/alsa-lib/
 -rwxr-xr-x root/root    usr/lib/alsa-lib/libasound_module_ctl_pipewire.so
 -rwxr-xr-x root/root    usr/lib/alsa-lib/libasound_module_pcm_pipewire.so
-drwxr-xr-x root/root    usr/lib/gstreamer-1.0/
--rwxr-xr-x root/root    usr/lib/gstreamer-1.0/libgstpipewire.so
 lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so -> libpipewire-0.3.so.0
 lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so.0 -> libpipewire-0.3.so.0.1207.0
 -rwxr-xr-x root/root    usr/lib/libpipewire-0.3.so.0.1207.0
@@ -331,13 +321,6 @@ drwxr-xr-x root/root    usr/lib/spa-0.2/audiotestsrc/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/audiotestsrc/libspa-audiotestsrc.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/avb/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/avb/libspa-avb.so
-drwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-bluez5.so
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-codec-bluez5-aac.so
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-codec-bluez5-faststream.so
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-codec-bluez5-opus-g.so
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-codec-bluez5-opus.so
--rwxr-xr-x root/root    usr/lib/spa-0.2/bluez5/libspa-codec-bluez5-sbc.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/control/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/control/libspa-control.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/support/
@@ -349,9 +332,6 @@ drwxr-xr-x root/root    usr/lib/spa-0.2/videoconvert/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/videoconvert/libspa-videoconvert.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/videotestsrc/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/videotestsrc/libspa-videotestsrc.so
-drwxr-xr-x root/root    usr/lib/udev/
-drwxr-xr-x root/root    usr/lib/udev/rules.d/
--rw-r--r-- root/root    usr/lib/udev/rules.d/90-pipewire-alsa.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/alsa-card-profile/
 drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/
@@ -465,6 +445,3 @@ drwxr-xr-x root/root    usr/share/pipewire/pipewire-pulse.conf.avail/
 drwxr-xr-x root/root    usr/share/pipewire/pipewire.conf.avail/
 -rw-r--r-- root/root    usr/share/pipewire/pipewire.conf.avail/10-rates.conf
 -rw-r--r-- root/root    usr/share/pipewire/pipewire.conf.avail/20-upmix.conf
-drwxr-xr-x root/root    usr/share/spa-0.2/
-drwxr-xr-x root/root    usr/share/spa-0.2/bluez5/
--rw-r--r-- root/root    usr/share/spa-0.2/bluez5/bluez-hardware.conf
