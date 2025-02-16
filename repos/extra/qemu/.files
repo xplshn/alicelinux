@@ -84,6 +84,7 @@ drwxr-xr-x root/root    usr/share/qemu/firmware/
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-arm.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-i386.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-loongarch64.json
+-rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-riscv64.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-x86_64.json
 -rw-r--r-- root/root    usr/share/qemu/hppa-firmware.img
 -rw-r--r-- root/root    usr/share/qemu/hppa-firmware64.img
