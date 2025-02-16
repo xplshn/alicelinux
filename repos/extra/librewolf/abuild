@@ -1,18 +1,13 @@
 name=librewolf
-version=129.0.2.1
+version=135.0.1
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
 release=1
-source="https://gitlab.com/api/v4/projects/32320088/packages/generic/${name}-source/${_version}/${name}-${_version}.source.tar.gz
-	fix-rust-target.patch
-	0004-Bug-1912663-Fix-some-build-issues-with-cbindgen-0.27.patch"
+source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
+	fix-rust-target.patch"
 
 build() {
-	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
-	export MOZBUILD_STATE_PATH=${PWD}/mozbuild
-	export RUST_TARGET=x86_64-unknown-linux-musl
-	
 	cat > mozconfig << EOF
 ac_add_options --prefix=/usr
 ac_add_options --libdir=/usr/lib
@@ -63,6 +58,10 @@ EOF
 	       echo 'ac_add_options --enable-ccache' >> mozconfig
 	       PATH=$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')
 	fi
+	
+	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+	export MOZBUILD_STATE_PATH=${PWD}/mozbuild
+	export RUST_TARGET=x86_64-unknown-linux-musl
 	
 	export CFLAGS="$CFLAGS -w"
 	export CXXFLAGS="$CXXFLAGS -w"
