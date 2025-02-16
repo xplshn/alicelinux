@@ -4,11 +4,9 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ar
 -rwxr-xr-x root/root    usr/bin/as
 -rwxr-xr-x root/root    usr/bin/c++filt
--rwxr-xr-x root/root    usr/bin/dwp
 -rwxr-xr-x root/root    usr/bin/elfedit
--rwxr-xr-x root/root    usr/bin/ld -> usr/bin/ld.bfd
--rwxr-xr-x root/root    usr/bin/ld.bfd
--rwxr-xr-x root/root    usr/bin/ld.gold
+-rwxr-xr-x root/root    usr/bin/ld
+-rwxr-xr-x root/root    usr/bin/ld.bfd -> usr/bin/ld
 -rwxr-xr-x root/root    usr/bin/nm
 -rwxr-xr-x root/root    usr/bin/objcopy
 -rwxr-xr-x root/root    usr/bin/objdump
@@ -158,16 +156,16 @@ drwxr-xr-x root/root    usr/lib/ldscripts/
 -rw-r--r-- root/root    usr/lib/ldscripts/elf_x86_64.xwe
 -rw-r--r-- root/root    usr/lib/ldscripts/elf_x86_64.xwer
 -rw-r--r-- root/root    usr/lib/ldscripts/stamp
--rwxr-xr-x root/root    usr/lib/libbfd-2.43.1.so
-lrwxrwxrwx root/root    usr/lib/libbfd.so -> libbfd-2.43.1.so
+-rwxr-xr-x root/root    usr/lib/libbfd-2.44.so
+lrwxrwxrwx root/root    usr/lib/libbfd.so -> libbfd-2.44.so
 lrwxrwxrwx root/root    usr/lib/libctf-nobfd.so -> libctf-nobfd.so.0.0.0
 lrwxrwxrwx root/root    usr/lib/libctf-nobfd.so.0 -> libctf-nobfd.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libctf-nobfd.so.0.0.0
 lrwxrwxrwx root/root    usr/lib/libctf.so -> libctf.so.0.0.0
 lrwxrwxrwx root/root    usr/lib/libctf.so.0 -> libctf.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libctf.so.0.0.0
--rwxr-xr-x root/root    usr/lib/libopcodes-2.43.1.so
-lrwxrwxrwx root/root    usr/lib/libopcodes.so -> libopcodes-2.43.1.so
+-rwxr-xr-x root/root    usr/lib/libopcodes-2.44.so
+lrwxrwxrwx root/root    usr/lib/libopcodes.so -> libopcodes-2.44.so
 lrwxrwxrwx root/root    usr/lib/libsframe.so -> libsframe.so.1.0.0
 lrwxrwxrwx root/root    usr/lib/libsframe.so.1 -> libsframe.so.1.0.0
 -rwxr-xr-x root/root    usr/lib/libsframe.so.1.0.0
