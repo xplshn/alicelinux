@@ -39,4 +39,10 @@ build() {
 	for h in tree.h queue.h cdefs.h; do
 	        install -D $SRC/$h $PKG/usr/include/sys/
 	done
+
+	# library path
+	mkdir -p $PKG/etc
+	echo /lib > $PKG/etc/ld-musl-x86_64.path
+	echo /usr/lib >> $PKG/etc/ld-musl-x86_64.path
+	echo /usr/lib/x86_64-pc-linux-musl >> $PKG/etc/ld-musl-x86_64.path
 }

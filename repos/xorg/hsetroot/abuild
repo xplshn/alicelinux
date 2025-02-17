@@ -1,9 +1,0 @@
-name=hsetroot
-version=1.0.5
-release=1
-source="https://github.com/himdel/${name}/archive/${version}/${name}-${version}.tar.gz"
-
-build() {
-	make
-	install -Dt $PKG/usr/bin hsetroot hsr-outputs
-}

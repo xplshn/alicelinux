@@ -520,7 +520,6 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/eruby.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/eterm.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/expect.vim
--rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/exports.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/falcon.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/fennel.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/fetchmail.vim
@@ -727,7 +726,6 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/rst.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/ruby.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/rust.vim
--rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/samba.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/sass.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/sbt.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/scala.vim

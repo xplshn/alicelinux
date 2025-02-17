@@ -37,20 +37,16 @@ sv="acpid.run
     ttyS0.run"
 
 build() {
-	if [ "$BOOTSTRAP" ]; then
-		_opt="ARCH=$CARCH CROSS_COMPILE=$CTARGET-"
-	fi
-
 	cp $SRC/config .config
 	#make menuconfig
-	make $_opt
-	make $_opt CONFIG_PREFIX=$PKG install
+	make
+	make CONFIG_PREFIX=$PKG install
 	mkdir -p $PKG/usr/share/busybox
 	cat .config > $PKG/usr/share/busybox/config
 	
 	BIN="$BIN xzcat xz unxz unlzma lzcat lzma" #xz
 	#BIN="$BIN zcat gunzip gzip" #gzip
-	BIN="$BIN strings" #binutils
+	#BIN="$BIN strings" #binutils
 	BIN="$BIN clear reset" #ncurses
 	BIN="$BIN patch" #patch
 	BIN="$BIN bzcat bunzip2 bzip2" #bzip2
@@ -90,7 +86,7 @@ build() {
 	rm $PKG/usr/bin/diff
 	ln -s busybox $PKG/bin/diff
 	
-	${CC:-gcc} ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
+	clang ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
 	install -d $PKG/usr/share/man/man1
 	install -m644 $SRC/pause.1 $PKG/usr/share/man/man1/pause.1	
 }

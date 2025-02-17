@@ -1,4 +1,0 @@
-name=xf86-input-libinput
-version=1.4.0
-release=1
-source="https://www.x.org/pub/individual/driver/$name-$version.tar.xz"

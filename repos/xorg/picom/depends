@@ -1,9 +1,0 @@
-libconfig
-uthash
-libev
-xcb-util-renderutil
-xcb-util-image
-pixman
-pcre2
-dbus
-libepoxy

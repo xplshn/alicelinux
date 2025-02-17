@@ -84,6 +84,9 @@ drwxr-xr-x root/root    usr/lib/girepository-1.0/
 drwxr-xr-x root/root    usr/lib/gnome-settings-daemon-3.0/
 drwxr-xr-x root/root    usr/lib/gnome-settings-daemon-3.0/gtk-modules/
 -rw-r--r-- root/root    usr/lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
+drwxr-xr-x root/root    usr/lib/gtk-2.0/
+drwxr-xr-x root/root    usr/lib/gtk-2.0/modules/
+-rwxr-xr-x root/root    usr/lib/gtk-2.0/modules/libatk-bridge.so
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so -> libatk-1.0.so.0
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25410.1
 -rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25410.1
@@ -97,6 +100,9 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/atk-bridge-2.0.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/atk.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/atspi-2.pc
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/at-spi-dbus-bus.service
 drwxr-xr-x root/root    usr/libexec/
 -rwxr-xr-x root/root    usr/libexec/at-spi-bus-launcher
 -rwxr-xr-x root/root    usr/libexec/at-spi2-registryd

@@ -1,5 +1,5 @@
 name=curl
-version=8.12.1
+version=8.12.0
 release=1
 source="https://$name.se/download/$name-$version.tar.xz"
 build_opt="

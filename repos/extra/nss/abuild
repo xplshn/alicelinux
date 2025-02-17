@@ -3,7 +3,8 @@ version=3.108
 _version=$(echo $version | sed 's/\./_/g')
 release=1
 source="https://archive.mozilla.org/pub/security/nss/releases/NSS_${_version}_RTM/src/nss-$version.tar.gz
-	nss-3.92-standalone-1.patch"
+	nss-3.92-standalone-1.patch
+	clang-ias.patch"
 
 build() {
 	cd nss

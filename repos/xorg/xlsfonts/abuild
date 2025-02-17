@@ -1,4 +1,0 @@
-name=xlsfonts
-version=1.0.8
-release=1
-source="https://xorg.freedesktop.org/archive/individual/app/${name}-${version}.tar.xz"

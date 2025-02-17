@@ -1,6 +1,6 @@
 drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    etc/iwd/
--rw-r--r-- root/root    etc/iwd/main.conf.new
+-rwxr-xr-x root/root    etc/iwd/main.conf.new
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/eiwd/
 -rwxr-xr-x root/root    etc/sv/eiwd/run.new

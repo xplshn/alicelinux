@@ -1,4 +1,0 @@
-name=confuse
-version=3.3
-release=1
-source="https://github.com/lib${name}/lib${name}/releases/download/v${version}/${name}-${version}.tar.xz"

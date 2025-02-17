@@ -1,4 +1,0 @@
-name=scrot
-version=1.11.1
-release=1
-source="https://github.com/resurrecting-open-source-projects/scrot/releases/download/$version/$name-$version.tar.gz"

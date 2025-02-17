@@ -1,0 +1,4 @@
+name=musl-locales
+version=0.1.0
+release=1
+source="https://git.adelielinux.org/adelie/${name}/-/archive/${version}/${name}-${version}.tar.gz"

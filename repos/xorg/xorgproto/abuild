@@ -1,4 +1,0 @@
-name=xorgproto
-version=2024.1
-release=1
-source="https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.xz"

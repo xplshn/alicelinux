@@ -11,6 +11,13 @@ lrwxrwxrwx root/root    usr/lib/libinput.so.10 -> libinput.so.10.13.0
 -rwxr-xr-x root/root    usr/lib/libinput.so.10.13.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libinput.pc
+drwxr-xr-x root/root    usr/lib/udev/
+-rwxr-xr-x root/root    usr/lib/udev/libinput-device-group
+-rwxr-xr-x root/root    usr/lib/udev/libinput-fuzz-extract
+-rwxr-xr-x root/root    usr/lib/udev/libinput-fuzz-to-zero
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/80-libinput-device-groups.rules
+-rw-r--r-- root/root    usr/lib/udev/rules.d/90-libinput-fuzz-override.rules
 drwxr-xr-x root/root    usr/libexec/
 drwxr-xr-x root/root    usr/libexec/libinput/
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-analyze
