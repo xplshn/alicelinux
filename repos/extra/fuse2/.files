@@ -1,4 +1,3 @@
-drwxr-xr-x root/root    etc/
 drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/mount.fuse
 drwxr-xr-x root/root    usr/
@@ -26,9 +25,6 @@ lrwxrwxrwx root/root    usr/lib/libulockmgr.so.1 -> libulockmgr.so.1.0.1
 -rwxr-xr-x root/root    usr/lib/libulockmgr.so.1.0.1
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/fuse.pc
-drwxr-xr-x root/root    usr/lib/udev/
-drwxr-xr-x root/root    usr/lib/udev/rules.d/
--rw-r--r-- root/root    usr/lib/udev/rules.d/99-fuse.rules
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/

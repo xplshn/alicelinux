@@ -1,4 +1,4 @@
 name=lcms2
-version=2.16
+version=2.17
 release=1
 source="https://github.com/mm2/Little-CMS/releases/download/$name.${version#*.}/$name-$version.tar.gz"

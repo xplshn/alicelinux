@@ -11,5 +11,5 @@ prebuild() {
 }
 
 postbuild() {
-	rm -rf $PKG/dev $PKG/etc/init.d
+	rm -rf $PKG/dev $PKG/etc $PKG/usr/lib/udev
 }
