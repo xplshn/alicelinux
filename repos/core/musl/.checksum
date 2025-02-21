@@ -1,3 +1,5 @@
+8471ed3317ec31cd92b0c6055407115bc7377aaad8da552ffbe6655871c9840b  0001-iconv-fix-erroneous-input-validation-in-EUC-KR-decod.patch
+18d1d243e0d7a479bc795d8af152d5f43b8f53f09da038d8e46ca2ac9207ecf4  0002-iconv-harden-UTF-8-output-code-path-against-input-de.patch
 936eb5830af322af38a1d08d02cc1d31ae95efdbc2e381b0e5fa6e91eebe693e  cdefs.h
 ae7b2598293d87cff4fc4e8bed5faabe486615ad7484a08d6dfea807786af895  elfutils-0.190-relr.patch
 676213e6d717200470f5f8b2c30c171e47e20eebfa669891afe43c514e1b72b5  getconf.1
