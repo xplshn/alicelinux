@@ -1,4 +1,4 @@
 name=papirus-icon-theme
-version=20240501
+version=20250201
 release=1
 source="https://github.com/PapirusDevelopmentTeam/${name}/archive/${version}/${name}-${version}.tar.gz"
