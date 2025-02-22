@@ -1,4 +1,0 @@
-name=dwm
-version=6.5
-release=1
-source="http://dl.suckless.org/${name}/${name}-${version}.tar.gz"

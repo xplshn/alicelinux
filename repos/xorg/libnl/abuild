@@ -1,5 +1,0 @@
-name=libnl
-version=3.11.0
-v=$(echo $version | sed 's/\./_/g')
-release=1
-source="https://github.com/thom311/$name/releases/download/$name${v}/$name-$version.tar.gz"

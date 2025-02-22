@@ -1,9 +1,0 @@
-name=imagemagick
-version=7.1.1.43
-release=1
-source="https://www.$name.org/archive/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz"
-build_opt="--enable-shared --mandir=/usr/share/man
-	--with-fftw --with-gslib --with-hdri --with-heic --with-modules
-	--with-perl --with-png --with-rsvg --with-threads --with-tiff
-	--with-webp --with-x --with-xml"
-keep_libtool=1

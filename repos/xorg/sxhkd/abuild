@@ -1,4 +1,0 @@
-name=sxhkd
-version=0.6.2
-release=1
-source="https://github.com/baskerville/${name}/archive/${version}/${name}-${version}.tar.gz"
