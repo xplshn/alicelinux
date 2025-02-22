@@ -9009,6 +9009,7 @@ drwxr-xr-x root/root    usr/lib/go/src/log/syslog/
 -rwxr-xr-x root/root    usr/lib/go/src/make.bash
 -rw-r--r-- root/root    usr/lib/go/src/make.bat
 -rwxr-xr-x root/root    usr/lib/go/src/make.rc
+-rwxr-xr-x root/root    usr/lib/go/src/make.sh
 drwxr-xr-x root/root    usr/lib/go/src/maps/
 -rw-r--r-- root/root    usr/lib/go/src/maps/example_test.go
 -rw-r--r-- root/root    usr/lib/go/src/maps/iter.go
