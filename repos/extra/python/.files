@@ -2544,7 +2544,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_datetime.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_decimal.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_elementtree.cpython-313-x86_64-linux-musl.so
--rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_hashlib.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_heapq.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_interpchannels.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_interpqueues.cpython-313-x86_64-linux-musl.so
@@ -2579,7 +2578,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testlimitedcapi.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testmultiphase.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testsinglephase.cpython-313-x86_64-linux-musl.so
--rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_uuid.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_xxtestfuzz.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_zoneinfo.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/array.cpython-313-x86_64-linux-musl.so
@@ -2590,7 +2588,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/math.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/mmap.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/pyexpat.cpython-313-x86_64-linux-musl.so
--rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/readline.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/resource.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/select.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/syslog.cpython-313-x86_64-linux-musl.so
