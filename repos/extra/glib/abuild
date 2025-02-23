@@ -11,3 +11,7 @@ build_opt="
 	-Dtests=false
 	$_opt
 "
+
+postbuild() {
+	rm -rf $PKG/usr/share/bash-completion
+}

@@ -7,9 +7,6 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/applications/
 -rw-r--r-- root/root    usr/share/applications/mpv.desktop
-drwxr-xr-x root/root    usr/share/bash-completion/
-drwxr-xr-x root/root    usr/share/bash-completion/completions/
--rw-r--r-- root/root    usr/share/bash-completion/completions/mpv
 drwxr-xr-x root/root    usr/share/icons/
 drwxr-xr-x root/root    usr/share/icons/hicolor/
 drwxr-xr-x root/root    usr/share/icons/hicolor/128x128/
@@ -32,6 +29,3 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/symbolic/apps/
 -rw-r--r-- root/root    usr/share/icons/hicolor/symbolic/apps/mpv-symbolic.svg
 drwxr-xr-x root/root    usr/share/metainfo/
 -rw-r--r-- root/root    usr/share/metainfo/mpv.metainfo.xml
-drwxr-xr-x root/root    usr/share/zsh/
-drwxr-xr-x root/root    usr/share/zsh/site-functions/
--rw-r--r-- root/root    usr/share/zsh/site-functions/_mpv

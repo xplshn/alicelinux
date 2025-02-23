@@ -6,11 +6,6 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/cmake.m4
-drwxr-xr-x root/root    usr/share/bash-completion/
-drwxr-xr-x root/root    usr/share/bash-completion/completions/
--rw-r--r-- root/root    usr/share/bash-completion/completions/cmake
--rw-r--r-- root/root    usr/share/bash-completion/completions/cpack
--rw-r--r-- root/root    usr/share/bash-completion/completions/ctest
 drwxr-xr-x root/root    usr/share/cmake-3.31/
 drwxr-xr-x root/root    usr/share/cmake-3.31/Help/
 drwxr-xr-x root/root    usr/share/cmake-3.31/Help/command/
