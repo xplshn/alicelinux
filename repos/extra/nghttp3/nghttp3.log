@@ -1,0 +1,324 @@
++ _configure_build
++ ./configure '--prefix=/usr' '--sysconfdir=/etc' '--localstatedir=/var' '--libdir=/usr/lib' '--infodir=/usr/share/info' '--mandir=/usr/share/man'
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-pc-linux-musl
+checking host system type... x86_64-pc-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-pc-linux-musl file names to x86_64-pc-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for file... file
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking target system type... x86_64-pc-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ././install-sh -c -d
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... none
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking dependency style of g++... gcc3
+checking how to run the C preprocessor... gcc -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.20... yes
+checking whether g++ supports C++17 features by default... yes
+checking for arpa/inet.h... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/endian.h... no
+checking for endian.h... yes
+checking for byteswap.h... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for uid_t in sys/types.h... yes
+checking for ptrdiff_t... yes
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for memmove... yes
+checking for memset... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether be64toh is declared... yes
+checking whether bswap_64 is declared... yes
+checking whether C compiler accepts -fvisibility=hidden... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libnghttp3.pc
+config.status: creating lib/includes/Makefile
+config.status: creating lib/includes/nghttp3/version.h
+config.status: creating tests/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/source/conf.py
+config.status: creating examples/Makefile
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+configure: summary of build options:
+
+    Package version: 1.8.0
+    Library version: 11:6:2
+    Install prefix:  /usr
+    System types:
+      Build:         x86_64-pc-linux-musl
+      Host:          x86_64-pc-linux-musl
+      Target:        x86_64-pc-linux-musl
+    Compiler:
+      C preprocessor: gcc -E
+      CPPFLAGS:       
+      C compiler:     gcc
+      CFLAGS:         -O3 -march=x86-64 -pipe
+      C++ compiler:   g++
+      CXXFLAGS:       -O3 -march=x86-64 -pipe
+      LDFLAGS:        
+      WARNCFLAGS:     
+      WARNCXXFLAGS:   
+      EXTRACFLAG:     -fvisibility=hidden
+      LIBS:           
+    Library:
+      Shared:         yes
+      Static:         yes
+    Debug:
+      Debug:          no (CFLAGS='')
+    Library only:     no
+    Examples:         yes
+
++ make
+make  all-recursive
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+Making all in lib
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+Making all in includes
+make[3]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[3]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+  CC       nghttp3_rcbuf.lo
+  CC       nghttp3_mem.lo
+  CC       nghttp3_str.lo
+  CC       nghttp3_conv.lo
+  CC       nghttp3_buf.lo
+  CC       nghttp3_ringbuf.lo
+  CC       nghttp3_pq.lo
+  CC       nghttp3_map.lo
+  CC       nghttp3_ksl.lo
+  CC       nghttp3_qpack.lo
+  CC       nghttp3_qpack_huffman.lo
+  CC       nghttp3_qpack_huffman_data.lo
+  CC       nghttp3_err.lo
+  CC       nghttp3_debug.lo
+  CC       nghttp3_conn.lo
+  CC       nghttp3_stream.lo
+  CC       nghttp3_frame.lo
+  CC       nghttp3_tnode.lo
+  CC       nghttp3_vec.lo
+  CC       nghttp3_gaptr.lo
+  CC       nghttp3_idtr.lo
+  CC       nghttp3_range.lo
+  CC       nghttp3_http.lo
+  CC       nghttp3_version.lo
+  CC       nghttp3_balloc.lo
+  CC       nghttp3_opl.lo
+  CC       nghttp3_objalloc.lo
+  CC       nghttp3_unreachable.lo
+  CC       sfparse/sfparse.lo
+  CCLD     libnghttp3.la
+make[3]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+Making all in tests
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+Making all in doc
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+Making all in examples
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+  CXX      qpack.o
+  CXX      qpack_encode.o
+  CXX      qpack_decode.o
+  CXX      util.o
+  CXXLD    qpack
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
++ make 'DESTDIR=/tmp/apkg-pkg-nghttp3' install
+Making install in lib
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+Making install in includes
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[3]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[3]: Nothing to be done for 'install-exec-am'.
+ ../../././install-sh -c -d '/tmp/apkg-pkg-nghttp3/usr/include'
+ ../../././install-sh -c -d '/tmp/apkg-pkg-nghttp3/usr/include/nghttp3'
+ /usr/bin/install -c -m 644  nghttp3/nghttp3.h nghttp3/version.h '/tmp/apkg-pkg-nghttp3/usr/include/nghttp3'
+make[3]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib/includes'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+make[3]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+ ../././install-sh -c -d '/tmp/apkg-pkg-nghttp3/usr/lib'
+ ../././install-sh -c -d '/tmp/apkg-pkg-nghttp3/usr/lib/pkgconfig'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libnghttp3.la '/tmp/apkg-pkg-nghttp3/usr/lib'
+ /usr/bin/install -c -m 644 libnghttp3.pc '/tmp/apkg-pkg-nghttp3/usr/lib/pkgconfig'
+libtool: install: /usr/bin/install -c .libs/libnghttp3.so.9.2.6 /tmp/apkg-pkg-nghttp3/usr/lib/libnghttp3.so.9.2.6
+libtool: install: (cd /tmp/apkg-pkg-nghttp3/usr/lib && { ln -s -f libnghttp3.so.9.2.6 libnghttp3.so.9 || { rm -f libnghttp3.so.9 && ln -s libnghttp3.so.9.2.6 libnghttp3.so.9; }; })
+libtool: install: (cd /tmp/apkg-pkg-nghttp3/usr/lib && { ln -s -f libnghttp3.so.9.2.6 libnghttp3.so || { rm -f libnghttp3.so && ln -s libnghttp3.so.9.2.6 libnghttp3.so; }; })
+libtool: install: /usr/bin/install -c .libs/libnghttp3.lai /tmp/apkg-pkg-nghttp3/usr/lib/libnghttp3.la
+libtool: install: /usr/bin/install -c .libs/libnghttp3.a /tmp/apkg-pkg-nghttp3/usr/lib/libnghttp3.a
+libtool: install: chmod 644 /tmp/apkg-pkg-nghttp3/usr/lib/libnghttp3.a
+libtool: install: ranlib /tmp/apkg-pkg-nghttp3/usr/lib/libnghttp3.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[3]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/lib'
+Making install in tests
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/tests'
+Making install in doc
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/doc'
+Making install in examples
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0/examples'
+make[1]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+make[2]: Entering directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+ ././install-sh -c -d '/tmp/apkg-pkg-nghttp3/usr/share/doc/nghttp3'
+ /usr/bin/install -c -m 644 README.rst '/tmp/apkg-pkg-nghttp3/usr/share/doc/nghttp3'
+make[2]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+make[1]: Leaving directory '/tmp/apkg-src-nghttp3/nghttp3-1.8.0'
+[nghttp3] build nghttp3-1.8.0-1 success
+[0K[...] Packaging /tmp/apkg-pkg-nghttp3.
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/include/
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/include/nghttp3/
+-rw-r--r-- root/root     93753 2025-02-24 03:13:22 usr/include/nghttp3/nghttp3.h
+-rw-r--r-- root/root      1657 2025-02-24 03:13:22 usr/include/nghttp3/version.h
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/share/
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/lib/
+-rwxr-xr-x root/root    185584 2025-02-24 03:13:22 usr/lib/libnghttp3.so.9.2.6
+lrwxrwxrwx root/root         0 2025-02-24 03:13:22 usr/lib/libnghttp3.so -> libnghttp3.so.9.2.6
+lrwxrwxrwx root/root         0 2025-02-24 03:13:22 usr/lib/libnghttp3.so.9 -> libnghttp3.so.9.2.6
+drwxr-xr-x root/root         0 2025-02-24 03:13:22 usr/lib/pkgconfig/
+-rw-r--r-- root/root      1386 2025-02-24 03:13:22 usr/lib/pkgconfig/libnghttp3.pc
+[...] Package created: /var/cache/pkg/package.spm.
+[nghttp3] filelist updated.
