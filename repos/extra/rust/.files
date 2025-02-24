@@ -11,7 +11,7 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/rustc
 -rwxr-xr-x root/root    usr/bin/rustfmt
 drwxr-xr-x root/root    usr/lib/
--rw-r--r-- root/root    usr/lib/librustc_driver-65b9b6b98ba223b6.so
+-rw-r--r-- root/root    usr/lib/librustc_driver-ce439f79e4196a4c.so
 drwxr-xr-x root/root    usr/lib/rustlib/
 -rw-r--r-- root/root    usr/lib/rustlib/components
 drwxr-xr-x root/root    usr/lib/rustlib/etc/
