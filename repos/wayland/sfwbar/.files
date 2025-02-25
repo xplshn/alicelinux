@@ -7,6 +7,7 @@ drwxr-xr-x root/root    usr/lib/sfwbar/
 -rwxr-xr-x root/root    usr/lib/sfwbar/bluez.so
 -rwxr-xr-x root/root    usr/lib/sfwbar/idleinhibit.so
 -rwxr-xr-x root/root    usr/lib/sfwbar/libsfwbar.so
+-rwxr-xr-x root/root    usr/lib/sfwbar/mpd.so
 -rwxr-xr-x root/root    usr/lib/sfwbar/network.so
 -rwxr-xr-x root/root    usr/lib/sfwbar/wifi-iwd.so
 -rwxr-xr-x root/root    usr/lib/sfwbar/wifi-nm.so
@@ -21,6 +22,7 @@ drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/sfwbar-bluez.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/sfwbar-idleinhibit.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/sfwbar-mpd.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/sfwbar-network.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/sfwbar-volume.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/sfwbar-wifi.1.gz

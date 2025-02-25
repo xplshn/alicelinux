@@ -1,8 +1,9 @@
 name=go
 version=1.24.0
-release=1
+release=2
 source="https://${name}lang.org/dl/${name}${version}.src.tar.gz
-	https://golang.org/dl/go${version}.linux-amd64.tar.gz::noextract"
+	https://golang.org/dl/go${version}.linux-amd64.tar.gz::noextract
+	make.sh"
 
 build() {
 	if [ ! "$(which go)" ]; then
@@ -14,15 +15,16 @@ build() {
 	fi
 	
 	export GOCACHE=$SRC/.go
-    export GOROOT_FINAL=/usr/lib/go
+	export GOROOT_FINAL=/usr/lib/go
 
-    cd src
-    ./make.bash
+	cd src
+	cp $SRC/make.sh .
+	./make.sh
 
-    install -d $PKG/usr/lib
-    mv $SRC/go $PKG/usr/lib/
+	install -d $PKG/usr/lib
+	mv $SRC/go $PKG/usr/lib/
 
-    install -d $PKG/usr/bin
-    ln -s /usr/lib/go/bin/go $PKG/usr/bin/
-    ln -s /usr/lib/go/bin/gofmt $PKG/usr/bin/
+	install -d $PKG/usr/bin
+	ln -s /usr/lib/go/bin/go $PKG/usr/bin/
+	ln -s /usr/lib/go/bin/gofmt $PKG/usr/bin/
 }

@@ -1,0 +1,5 @@
+name=fmt
+version=11.1.3
+release=1
+source="https://github.com/${name}lib/${name}/archive/${version}/${name}-${version}.tar.gz"
+keep_static=1

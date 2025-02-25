@@ -1,4 +1,9 @@
 name=wl-clipboard
 version=2.2.1
-release=1
+release=2
 source="https://github.com/bugaevc/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+build_opt="-Dzshcompletiondir=no -Dfishcompletiondir=no"
+
+postbuild() {
+	rm -rf $PKG/usr/share/bash-completion
+}

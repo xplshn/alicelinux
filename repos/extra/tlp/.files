@@ -22,28 +22,6 @@ drwxr-xr-x root/root    usr/lib/NetworkManager/dispatcher.d/
 drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/tlp
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/bash-completion/
-drwxr-xr-x root/root    usr/share/bash-completion/completions/
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/bluetooth -> tlp
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/nfc -> tlp
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/run-on-ac -> tlp
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/run-on-bat -> tlp
--rw-r--r-- root/root    usr/share/bash-completion/completions/tlp
--rw-r--r-- root/root    usr/share/bash-completion/completions/tlp-rdw
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/tlp-stat -> tlp
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/wifi -> tlp
-lrwxrwxrwx root/root    usr/share/bash-completion/completions/wwan -> tlp
-drwxr-xr-x root/root    usr/share/fish/
-drwxr-xr-x root/root    usr/share/fish/vendor_completions.d/
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/bluetooth.fish -> tlp.fish
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/nfc.fish -> tlp.fish
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/run-on-ac.fish -> tlp.fish
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/run-on-bat.fish -> tlp.fish
--rw-r--r-- root/root    usr/share/fish/vendor_completions.d/tlp-rdw.fish
--rw-r--r-- root/root    usr/share/fish/vendor_completions.d/tlp-stat.fish
--rw-r--r-- root/root    usr/share/fish/vendor_completions.d/tlp.fish
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/wifi.fish -> tlp.fish
-lrwxrwxrwx root/root    usr/share/fish/vendor_completions.d/wwan.fish -> tlp.fish
 drwxr-xr-x root/root    usr/share/metainfo/
 -rw-r--r-- root/root    usr/share/metainfo/de.linrunner.tlp.metainfo.xml
 drwxr-xr-x root/root    usr/share/tlp/
@@ -84,13 +62,6 @@ drwxr-xr-x root/root    usr/share/tlp/func.d/
 -rwxr-xr-x root/root    usr/share/tlp/tlp-pcilist
 -rwxr-xr-x root/root    usr/share/tlp/tlp-readconfs
 -rwxr-xr-x root/root    usr/share/tlp/tlp-usblist
-drwxr-xr-x root/root    usr/share/zsh/
-drwxr-xr-x root/root    usr/share/zsh/site-functions/
--rw-r--r-- root/root    usr/share/zsh/site-functions/_tlp
--rw-r--r-- root/root    usr/share/zsh/site-functions/_tlp-radio-device
--rw-r--r-- root/root    usr/share/zsh/site-functions/_tlp-rdw
--rw-r--r-- root/root    usr/share/zsh/site-functions/_tlp-run-on
--rw-r--r-- root/root    usr/share/zsh/site-functions/_tlp-stat
 drwxr-xr-x root/root    var/
 drwxr-xr-x root/root    var/lib/
 drwxr-xr-x root/root    var/lib/tlp/

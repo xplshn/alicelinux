@@ -1,7 +1,8 @@
 name=python
 version=3.13.2
 release=1
-source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz"
+source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz
+	libressl.diff"
 build_opt="--without-ensurepip
 	--enable-shared
 	--with-system-expat
@@ -28,4 +29,3 @@ build() {
 	make DESTDIR=$PKG install
 	ln -s python3 $PKG/usr/bin/python
 }
-	

@@ -6,3 +6,9 @@ source="https://github.com/NetworkConfiguration/$name/releases/download/v$versio
 sv="run"
 build_opt="--without-udev"
 
+prebuild() {
+	# fix when using libressl
+	if [ -f $SPM_PKGDB/libressl ]; then
+		sed -i 's/RAND_priv_bytes/RAND_pseudo_bytes/g' compat/arc4random.c
+	fi
+}

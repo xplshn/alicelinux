@@ -1,6 +1,6 @@
 name=cmake
 version=3.31.5
-release=1
+release=2
 source="https://$name.org/files/v${version%.*}/$name-$version.tar.gz"
 
 build() {
@@ -28,5 +28,5 @@ build() {
 		make
 		make install
 	fi
-	rm -r $PKG/usr/doc
+	rm -r $PKG/usr/doc $PKG/usr/share/bash-completion
 }

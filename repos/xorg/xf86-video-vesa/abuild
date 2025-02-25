@@ -1,4 +1,0 @@
-name=xf86-video-vesa
-version=2.6.0
-release=1
-source="http://xorg.freedesktop.org/archive/individual/driver/$name-$version.tar.xz"

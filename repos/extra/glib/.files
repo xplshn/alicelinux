@@ -382,13 +382,6 @@ drwxr-xr-x root/root    usr/share/aclocal/
 -rw-r--r-- root/root    usr/share/aclocal/glib-2.0.m4
 -rw-r--r-- root/root    usr/share/aclocal/glib-gettext.m4
 -rw-r--r-- root/root    usr/share/aclocal/gsettings.m4
-drwxr-xr-x root/root    usr/share/bash-completion/
-drwxr-xr-x root/root    usr/share/bash-completion/completions/
--rw-r--r-- root/root    usr/share/bash-completion/completions/gapplication
--rw-r--r-- root/root    usr/share/bash-completion/completions/gdbus
--rw-r--r-- root/root    usr/share/bash-completion/completions/gio
--rw-r--r-- root/root    usr/share/bash-completion/completions/gresource
--rw-r--r-- root/root    usr/share/bash-completion/completions/gsettings
 drwxr-xr-x root/root    usr/share/gdb/
 drwxr-xr-x root/root    usr/share/gdb/auto-load/
 drwxr-xr-x root/root    usr/share/gdb/auto-load/usr/
