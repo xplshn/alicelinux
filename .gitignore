@@ -10,3 +10,5 @@ repos/*/.*
 .hugo_build.lock
 .TODO
 .hugo-werx.bak
+.werx.bak
+.werx

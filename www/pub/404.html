@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
+<head><script src="/alicelinux/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=alicelinux/livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,50 +24,10 @@
   
   
   <link href="https://linusg.github.io/serenityos-emoji-font/SerenityOS-Emoji.css" rel="stylesheet" type="text/css">
-  
-  <script>
-  (function() {
-    function center_el(tagName) {
-      var tags = document.getElementsByTagName(tagName), i, tag;
-      for (i = 0; i < tags.length; i++) {
-        tag = tags[i];
-        var parent = tag.parentElement;
-        
-        if (parent.childNodes.length === 1) {
-          
-          if (parent.nodeName === 'A') {
-            parent = parent.parentElement;
-            if (parent.childNodes.length != 1) continue;
-          }
-          if (parent.nodeName === 'P') parent.style.textAlign = 'center';
-        }
-      }
-    }
-    var tagNames = ['img', 'embed', 'object'];
-    for (var i = 0; i < tagNames.length; i++) {
-      center_el(tagNames[i]);
-    }
-  })();
-  </script>
 </head>
 <body>
   <header>
     <nav>
-    <input type="checkbox" id="menu-toggle" value="0">
-    <label for="menu-toggle" class="menu-button">X</label>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const menuToggle = document.getElementById('menu-toggle');
-          const sidebar = document.getElementById('side-bar');
-          menuToggle.addEventListener('change', function() {
-            if (menuToggle.checked) {
-              sidebar.style.transform = 'translateX(0)';
-            } else {
-              sidebar.style.transform = 'translateX(-100%)';
-            }
-          });
-        });
-    </script>
     <div class="left">
       
     </div>
@@ -98,7 +58,7 @@
     </div>
   </nav>
   <h1>
-    <a href="https://xplshn.github.io/alicelinux/">AliceLinux
+    <a href="http://localhost:1313/alicelinux/">AliceLinux
       <span id="headerSubTitle">AliceLinux&#39;s (un)official documentation and devblog</span>
     </a>
   </h1>
@@ -116,7 +76,7 @@
     
     
       
-        <li><a href="https://xplshn.github.io/alicelinux/docs/" title="Docs">&rsaquo; Docs</a></li>
+        <li><a href="http://localhost:1313/alicelinux/docs/" title="Docs">&rsaquo; Docs</a></li>
       
     
     </ul>
