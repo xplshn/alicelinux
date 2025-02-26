@@ -11,12 +11,11 @@ keep_static=1
 build() {
 	./configure \
 	    --prefix=/usr \
-	    --enable-static-libc #\
-	    #--disable-shared
+	    --enable-static-libc \
+	    --disable-shared
 	make
 	make install
 
 	mkdir "$PKG/etc"
 	mv "$SRC/mdevd.conf" "$PKG/etc/mdevd.conf"
-	sed '/mdev/ { /#/! s/^/#/; }' /etc/rc.boot >"$PKG/etc/rc.boot"
 }
