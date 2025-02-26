@@ -11,8 +11,8 @@ keep_static=1
 build() {
 	./configure \
 	    --prefix=/usr \
-	    --enable-static-libc \
-	    --disable-shared
+	    --enable-static-libc #\
+	    #--disable-shared
 	make
 	make install
 

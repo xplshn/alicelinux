@@ -1,5 +1,6 @@
 drwxr-xr-x root/root    etc/
 -rw-r--r-- root/root    etc/mdevd.conf.new
+-rw-r--r-- root/root    etc/rc.boot.new
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/mdevd/
 -rwxr-xr-x root/root    etc/sv/mdevd/run.new
