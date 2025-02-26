@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on AliceLinux</title>
-    <link>http://localhost:1313/alicelinux/series/</link>
+    <link>https://xplshn.github.io/alicelinux/series/</link>
     <description>Recent content in Series on AliceLinux</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/alicelinux/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xplshn.github.io/alicelinux/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
