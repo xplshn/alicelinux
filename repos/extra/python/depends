@@ -1,8 +1,4 @@
-bzip2
 expat
 libffi
 ncurses
-openssl
 sqlite
-xz
-zlib
