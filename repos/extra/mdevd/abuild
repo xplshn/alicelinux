@@ -1,5 +1,4 @@
 name=mdevd
-version=master
 version=0.1.6.5
 release=1
 source="https://github.com/skarnet/${name}/archive/v${version}/${name}-v${version}.tar.gz
