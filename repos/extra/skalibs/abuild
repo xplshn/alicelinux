@@ -1,5 +1,4 @@
 name=skalibs
-version=master
 version=2.14.3.0
 release=1
 source="https://github.com/skarnet/${name}/archive/v${version}/${name}-v${version}.tar.gz"
