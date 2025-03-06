@@ -22,7 +22,4 @@ build() {
 
 	install -dm755 $PKG/usr/bin
 	install -m755 fzf bin/fzf-tmux $PKG/usr/bin/
-
-	install -dm755 $PKG/usr/share/fzf
-	install -m644 shell/*.bash shell/*.zsh $PKG/usr/share/fzf
 }
