@@ -7,6 +7,7 @@ title: 'Home'
 
 <p align="center">
 	<img src="assets/grimshot-240524-234840.png" width="800" alt="Screenshot of AliceLinux running Sway, foot and pfetch. Showcasing the 95megabytes of memory footprint and running on QEMU platform PC-i440fx-9.0"/>
+	</br><em>Screenshot of AliceLinux running Sway, foot and pfetch. Showcasing the 95megabytes of memory footprint and running on QEMU platform PC-i440fx-9.0</em>
 </p>
 
 <p align="center">
@@ -18,6 +19,8 @@ title: 'Home'
 - no PAM</br>
 - no polkit</br>
 - musl instead of glibc</br>
+- libressl instead of openssl</br>
+- LLVM & Clang instead of GCC and libgcc</br>
 - busybox instead of coreutils/util-linux/etc</br>
 - busybox's runit instead of systemd/openrc/etc</br>
 - libudev-zero instead of udev/eudev</br>
