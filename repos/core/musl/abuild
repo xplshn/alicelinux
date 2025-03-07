@@ -1,6 +1,6 @@
 name=musl
 version=1.2.5
-release=2
+release=3
 source="https://www.musl-libc.org/releases/musl-$version.tar.gz
 	getconf.c
 	getconf.1
@@ -11,6 +11,7 @@ source="https://www.musl-libc.org/releases/musl-$version.tar.gz
 	queue.h
 	cdefs.h
 	elfutils-0.190-relr.patch
+	default-locpath.patch
 	0001-iconv-fix-erroneous-input-validation-in-EUC-KR-decod.patch
 	0002-iconv-harden-UTF-8-output-code-path-against-input-de.patch"
 keep_static=1

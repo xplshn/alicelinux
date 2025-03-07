@@ -19,6 +19,7 @@ build() {
 
 	cd src
 	cp $SRC/make.sh .
+	chmod +x make.sh
 	./make.sh
 
 	install -d $PKG/usr/lib

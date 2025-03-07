@@ -41,4 +41,6 @@ build() {
 	
 	mkdir -p $PKG/etc/default
 	cp $SRC/grub.default $PKG/etc/default/grub
+
+	rm -rf $PKG/etc/bash_completion.d
 }

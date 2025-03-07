@@ -2,3 +2,8 @@ name=sfwbar
 version=1.0_beta15
 release=1
 source="https://github.com/LBCrion/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+
+postbuild() {
+	mkdir -p $PKG/etc/revdep.d
+	echo /usr/lib/sfwbar > $PKG/etc/revdep.d/$name
+}

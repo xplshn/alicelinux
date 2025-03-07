@@ -18,8 +18,11 @@ if [ "$(command -v udevd)" ]; then
 	udevadm trigger --action=add    --type=devices
 	udevadm settle
 else
-	echo "/sbin/mdev" > /proc/sys/kernel/hotplug
-	mdev -s
+	# In the case the user may preffer mdevd as opposed to busybox mdev
+	if [ ! -d "/var/service/mdevd" ]; then
+		echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+		mdev -s
+	fi
 	find /sys -name 'modalias' -type f -exec cat '{}' + | sort -u | xargs modprobe -b -a 2>/dev/null
 	ln -s /proc/self/fd /dev/fd
 	ln -s fd/0          /dev/stdin
