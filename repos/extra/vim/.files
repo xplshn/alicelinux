@@ -775,6 +775,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tap.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tcl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tcsh.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tera.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/terminfo.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/terraform.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/tex.vim
@@ -1213,6 +1214,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/abaqus.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/abc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/abel.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/abnf.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/acedb.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ada.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/aflex.vim
@@ -1998,6 +2000,8 @@ drwxr-xr-x root/root    usr/share/vim/vim91/tutor/
 drwxr-xr-x root/root    usr/share/vim/vim91/tutor/en/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/en/vim-01-beginner.tutor
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/en/vim-01-beginner.tutor.json
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/en/vim-02-beginner.tutor
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/en/vim-02-beginner.tutor.json
 drwxr-xr-x root/root    usr/share/vim/vim91/tutor/it/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/it/vim-01-beginner.tutor
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/it/vim-01-beginner.tutor.json
