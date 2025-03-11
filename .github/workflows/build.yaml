@@ -77,3 +77,5 @@ jobs:
           ./alicelinux-rootfs-$(date +%Y%m%d).tar.xz.pkglist
           ./alicelinux-rootfs-$(date +%Y%m%d).tar.xz.sha256sum
       continue-on-error: true
+
+# I like nonsense; it wakes up the brain cells
