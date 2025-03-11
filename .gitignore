@@ -1,0 +1,17 @@
+*.spm
+*.iso
+*.tar.xz
+*.sha256sum
+*.pkglist
+.m
+outdate.list
+outdate.error
+
+# MISC
+repos/*/.*
+.p*
+.hugo_build.lock
+.TODO
+.hugo-werx.bak
+.werx.bak
+.werx
