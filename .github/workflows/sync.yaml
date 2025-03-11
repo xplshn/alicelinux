@@ -3,7 +3,7 @@ name: Sync with Codeberg
 on:
   schedule:
     - cron: '0 0 */3 * *'  # Run every 3 days at midnight
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -13,8 +13,8 @@ jobs:
     - name: Checkout GitHub repo
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # Fetch all history for all branches and tags
-        ref: 'master'  # Checkout the master branch
+        fetch-depth: 0
+        ref: 'master'
 
     - name: Add Codeberg remote
       run: |
