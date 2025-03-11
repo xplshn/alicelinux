@@ -29,7 +29,7 @@ jobs:
         mkdir alice
         wget -qO- https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz | tar xJvf - -C ./alice
         cat <<'EOF' > ./alice/usr/bin/__reconfigure
-        #!/bin/sh -e
+        #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
         git clone --depth=1 https://codeberg.org/xplshn/alicelinux /var/lib/alicelinux
 
