@@ -14,7 +14,7 @@ ROOTFS=/tmp/alicerootfs
 basepkg="baselayout autils binutils bison busybox
 	bzip2 ca-certificates curl file flex gcc
 	git gmp initscripts linux-headers m4 make
-	mpc mpfr musl openssl patch spm xz zlib"
+	mpc mpfr musl libressl patch spm xz zlib"
 
 rm -rf $ROOTFS
 mkdir -p $ROOTFS/var/lib/spm/db
