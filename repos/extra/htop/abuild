@@ -1,5 +1,5 @@
 name=htop
-version=3.3.0
+version=3.4.0
 release=1
 source="https://github.com/$name-dev/$name/releases/download/$version/$name-$version.tar.xz"
 export CFLAGS="$CFLAGS $(pkg-config --cflags libnl-tiny)"
