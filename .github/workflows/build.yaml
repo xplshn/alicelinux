@@ -24,7 +24,7 @@ jobs:
       run: |
         apk add --no-cache wget tar xz
 
-    - name: Add Codeberg remote and prepare rootfs
+    - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh 
       run: |
         mkdir alice
         wget -qO- https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz | tar xJvf - -C ./alice
