@@ -1,5 +1,4 @@
-name: Build with Codeberg
-
+name: Build latest src -> Release up-to-date rootfs
 on:
   schedule:
     - cron: '0 0 */7 * *'  # Run every 7 days at midnight
