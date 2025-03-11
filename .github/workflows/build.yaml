@@ -1,0 +1,64 @@
+name: Build with Codeberg
+
+on:
+  schedule:
+    - cron: '0 0 */7 * *'  # Run every 7 days at midnight
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: alpine:latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout GitHub repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        ref: 'master'
+
+    - name: Add Codeberg remote
+      run: |
+        mkdir alice
+        wget -qO- ./rootfs.tar.xz https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz |
+                  | tar xJvf - -C ./alice
+          cat <<'EOF' > ./alice/usr/bin/__reconfigure
+          #!/bin/sh -e
+          mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
+          git clone --depth=1 https://codeberg.org/xplshn/alicelinux /var/lib/alicelinux
+          
+          cat <<'APKG_CONF' > /etc/apkg.conf
+          # apkg configuration file
+          export CFLAGS="-O2 -pipe"
+          export CXXFLAGS="$CFLAGS"
+          export MAKEFLAGS="-j$(nproc)"
+          export NINJAJOBS="$(nproc)"
+          APKG_REPO="/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra /var/lib/alicelinux/repos/wayland"
+          APKG_PACKAGE_DIR="/var/cache/pkg"
+          APKG_SOURCE_DIR="/var/cache/src"
+          APKG_WORK_DIR="/var/cache/work"
+          export keep_static=1
+          APKG_CONF
+          
+          apkg -s clang && echo "Repos are working"
+          export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
+          apkg -U
+          apkg -u $(apkg -a)
+          apkg -t
+          
+          EOF
+          chmod +x ./alice/usr/bin/__reconfigure
+        ./alice/usr/bin/apkg-chroot ./alice __reconfigure
+        ln -sf ./alice /tmp/alicerootfs
+        ./utils/mkrootfs.sh
+
+    - name: Merge changes from Codeberg
+      run: |
+        git config user.name '󰬭 [CI] '
+        git config user.email 'action@github.com'
+
+    - name: Push changes to GitHub
+      run: |
+        git push origin master
