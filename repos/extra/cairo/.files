@@ -20,14 +20,14 @@ drwxr-xr-x root/root    usr/lib/cairo/
 -rwxr-xr-x root/root    usr/lib/cairo/libcairo-fdr.so
 -rwxr-xr-x root/root    usr/lib/cairo/libcairo-trace.so
 lrwxrwxrwx root/root    usr/lib/libcairo-gobject.so -> libcairo-gobject.so.2
-lrwxrwxrwx root/root    usr/lib/libcairo-gobject.so.2 -> libcairo-gobject.so.2.11802.2
--rwxr-xr-x root/root    usr/lib/libcairo-gobject.so.2.11802.2
+lrwxrwxrwx root/root    usr/lib/libcairo-gobject.so.2 -> libcairo-gobject.so.2.11804.4
+-rwxr-xr-x root/root    usr/lib/libcairo-gobject.so.2.11804.4
 lrwxrwxrwx root/root    usr/lib/libcairo-script-interpreter.so -> libcairo-script-interpreter.so.2
-lrwxrwxrwx root/root    usr/lib/libcairo-script-interpreter.so.2 -> libcairo-script-interpreter.so.2.11802.2
--rwxr-xr-x root/root    usr/lib/libcairo-script-interpreter.so.2.11802.2
+lrwxrwxrwx root/root    usr/lib/libcairo-script-interpreter.so.2 -> libcairo-script-interpreter.so.2.11804.4
+-rwxr-xr-x root/root    usr/lib/libcairo-script-interpreter.so.2.11804.4
 lrwxrwxrwx root/root    usr/lib/libcairo.so -> libcairo.so.2
-lrwxrwxrwx root/root    usr/lib/libcairo.so.2 -> libcairo.so.2.11802.2
--rwxr-xr-x root/root    usr/lib/libcairo.so.2.11802.2
+lrwxrwxrwx root/root    usr/lib/libcairo.so.2 -> libcairo.so.2.11804.4
+-rwxr-xr-x root/root    usr/lib/libcairo.so.2.11804.4
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/cairo-fc.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/cairo-ft.pc
