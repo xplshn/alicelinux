@@ -4,3 +4,5 @@
 *.sha256sum
 *.pkglist
 .m
+outdate.list
+outdate.error
