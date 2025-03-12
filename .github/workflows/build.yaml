@@ -28,7 +28,7 @@ jobs:
       run: |
         mkdir /tmp/alicerootfs
         wget -qO- https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz | tar xJvf - -C /tmp/alicerootfs
-        cat <<'EOF' > ./alice/usr/bin/__reconfigure
+        cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
         git clone --depth=1 https://codeberg.org/xplshn/alicelinux /var/lib/alicelinux
@@ -49,18 +49,13 @@ jobs:
         apkg -s clang && echo "Repos are working"
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
         apkg -U
-        apkg -u $(apkg -a)
         apkg -t
 
         EOF
+
         chmod +x ./tmp/alicerootfs/usr/bin/__reconfigure
-        #/tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __reconfigure
-        
-        #tar -cJpf ./rootfs.tar.xz ./alice
-        
+        /tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __reconfigure
         echo "Trying to prepare a rootfs with mkrootfs.sh"
-        chmod +x ./utils/mkrootfs.sh
-        cp ./utils/mkrootfs.sh /tmp/alicerootfs/usr/bin/__mkrootfs.sh
         /tmp/alicerootfs/usr/bin/apkg-chroot ./tmp/alicerootfs __mkrootfs.sh
 
     - name: Create Release
