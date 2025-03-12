@@ -30,6 +30,7 @@ jobs:
         git config user.email 'action@github.com'
         git checkout master
         git merge --allow-unrelated-histories codeberg/main
+        git merge --allow-unrelated-histories codeberg/clang
 
     - name: Push changes to GitHub
       run: |
