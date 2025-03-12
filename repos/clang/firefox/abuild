@@ -1,0 +1,99 @@
+name=firefox
+version=136.0
+release=1
+source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
+	amdgpu-vaapi.patch atoi.patch clang-ias.patch clang-memory-throw-gcc.patch enable-elfhack-relr.patch fix-fortify-system-wrappers.patch fix-rust-target.patch fix-webrtc-glibcisms.patch lfs64.patch libcxx18.patch lolmalloc.patch no-ccache-stats.patch pgo-notimeout.patch ppc64-webrtc.patch riscv64-reduce-debug.patch rust-lto.patch sandbox-sched_setscheduler.patch sqlite-ppc.patch wasip1.patch xptcall-integrated-as.patch"
+	#fix-target-detection.patch"
+
+build() {
+	cat > .mozconfig << EOF
+ac_add_options --prefix=/usr
+ac_add_options --libdir=/usr/lib
+ac_add_options --enable-strip
+ac_add_options --enable-release
+ac_add_options --enable-rust-simd
+ac_add_options --enable-audio-backends=alsa
+ac_add_options --enable-install-strip
+ac_add_options --enable-official-branding
+ac_add_options --enable-application=browser
+ac_add_options --enable-optimize
+ac_add_options --with-system-ffi
+ac_add_options --with-system-jpeg
+ac_add_options --with-system-libvpx
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+ac_add_options --with-system-pixman
+ac_add_options --with-system-png
+ac_add_options --with-system-webp
+ac_add_options --with-system-zlib
+ac_add_options --without-wasm-sandboxed-libraries
+ac_add_options --disable-eme
+#ac_add_options --disable-dbus
+ac_add_options --disable-tests
+ac_add_options --disable-vtune
+ac_add_options --disable-updater
+ac_add_options --disable-jemalloc
+ac_add_options --disable-elf-hack
+ac_add_options --disable-callgrind
+ac_add_options --disable-profiling
+ac_add_options --disable-necko-wifi
+ac_add_options --disable-crashreporter
+ac_add_options --disable-accessibility
+ac_add_options --disable-debug
+ac_add_options --disable-debug-symbols
+ac_add_options --disable-parental-controls
+ac_add_options --disable-system-extension-dirs
+ac_add_options --enable-linker=lld
+EOF
+	
+	if [ -f $SPM_PKGDB/libx11 ] && [ ! -f $SPM_PKGDB/wayland ]; then
+		echo "ac_add_options --enable-default-toolkit=cairo-gtk3-x11-only" >> .mozconfig
+	elif [ -f $SPM_PKGDB/wayland ] && [ ! -f $SPM_PKGDB/libx11 ]; then
+		echo "ac_add_options --enable-default-toolkit=cairo-gtk3-wayland-only" >> .mozconfig
+	fi
+	
+	if [ -e '/usr/bin/ccache' ]; then
+	        echo 'ac_add_options --enable-ccache' >> .mozconfig
+	        PATH=$(echo ${PATH} | awk -v RS=: -v ORS=: '/ccache/ {next} {print}' | sed 's/:*$//')
+	fi
+	
+	export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none
+	export MOZBUILD_STATE_PATH=${PWD}/mozbuild
+	export RUST_TARGET=x86_64-unknown-linux-musl
+	export CC=clang
+	export CXX=clang++
+
+	export CFLAGS="$CFLAGS -w"
+	export CXXFLAGS="$CXXFLAGS -w"
+	export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/firefox,--enable-new-dtags"
+	export RUSTFLAGS="$RUSTFLAGS -Cdebuginfo=0 -C link-arg=-stdlib=libc++ -C link-arg=-lc++"
+	export MOZ_DEBUG_FLAGS=-g0
+	export MOZ_NOSPAM=1
+	
+	./mach build
+	./mach install
+	
+	mkdir -pv $PKG/usr/share/applications
+	mkdir -pv $PKG/usr/share/pixmaps
+	
+	cat > $PKG/usr/share/applications/firefox.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=Firefox Web Browser
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+Exec=firefox %u
+Terminal=false
+Type=Application
+Icon=firefox
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/xml;text/mml;text/html;application/xhtml+xml;application/vnd.mozilla.xul+xml;x-scheme-handler/http;x-scheme-handler/https
+StartupNotify=true
+EOF
+	
+	mkdir -p $PKG/usr/share/pixmaps
+	ln -sfv /usr/lib/firefox/browser/chrome/icons/default/default128.png \
+	        $PKG/usr/share/pixmaps/firefox.png
+	
+	rm $PKG/usr/lib/firefox/firefox-bin
+}

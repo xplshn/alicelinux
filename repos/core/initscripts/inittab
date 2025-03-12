@@ -1,4 +1,0 @@
-::sysinit:/etc/rc.boot
-::respawn:/usr/bin/runsvdir /var/service
-::ctrlaltdel:/sbin/reboot
-::shutdown:/etc/rc.shutdown

@@ -1,4 +1,0 @@
-name=libpng
-version=1.6.46
-release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz"

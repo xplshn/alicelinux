@@ -1,5 +1,0 @@
-name=basu
-version=0.2.1
-release=1
-source="$name-$version.tar.gz::https://git.sr.ht/~emersion/${name}/archive/v${version}.tar.gz"
-export LDFLAGS="$LDFLAGS -Wl,--undefined-version"

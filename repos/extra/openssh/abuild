@@ -1,8 +1,0 @@
-name=openssh
-version=9.9p1
-release=1
-source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz
-	sshd.run"
-sv="sshd.run"
-build_opt="--without-zlib-version-check --with-privsep-user=nobody --with-privsep-path=/var/empty"
-export CFLAGS="$CFLAGS -Wno-error=incompatible-pointer-types"

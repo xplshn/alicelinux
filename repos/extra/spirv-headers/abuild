@@ -1,4 +1,0 @@
-name=spirv-headers
-version=1.4.304.0
-release=1
-source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-${version}/SPIRV-Headers-${version}.tar.gz"

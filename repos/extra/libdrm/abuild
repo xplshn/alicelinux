@@ -1,8 +1,0 @@
-name=libdrm
-version=2.4.124
-release=1
-source="https://dri.freedesktop.org/$name/$name-$version.tar.xz"
-build_opt="
-        -Dudev=true
-        -Dvalgrind=disabled
-"

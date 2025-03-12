@@ -1,5 +1,0 @@
-name=lm-sensors
-version=3.6.0
-v=$(echo $version | sed 's/\./-/g')
-release=1
-source="https://github.com/$name/$name/archive/V${v}/$name-${v}.tar.gz"

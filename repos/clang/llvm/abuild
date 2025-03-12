@@ -1,0 +1,97 @@
+name=llvm
+version=19.1.7
+release=2
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
+	c89 c99
+	0012-libc-libc-abi-libunwind-disable-multiarch-locations.patch
+	0013-libc-musl-locale-workarounds.patch
+	0014-clang-disable-multiarch-layout-on-musl.patch
+	0017-clang-use-as-needed-by-default.patch
+	0024-clang-link-libcxxabi-on-linux-when-using-libc.patch
+	compiler-rt-sanitizer-supported-arch.patch
+	fix-msan-with-musl.patch
+	musl-stack-size.patch
+	musl-targets.patch"
+keep_static=1
+no_strip=1
+build_type="cmake_build"
+build_dir="llvm-project-${version}.src/llvm"
+patch_opt="-Np1 -d .."
+export CFLAGS="$CFLAGS -fPIC"
+export CXXFLAGS="$CXXFLAGS -fPIC"
+
+# llvm
+build_opt="
+	-DLLVM_BUILD_LLVM_DYLIB=ON
+	-DLLVM_LINK_LLVM_DYLIB=ON
+	-DLLVM_TARGETS_TO_BUILD='host;AMDGPU'
+	-DLLVM_HOST_TRIPLE=x86_64-pc-linux-musl
+	-DLLVM_INCLUDE_BENCHMARKS=OFF
+	-DLLVM_INCLUDE_EXAMPLES=OFF
+	-DLLVM_INCLUDE_DOCS=OFF
+	-DLLVM_INCLUDE_TESTS=OFF
+	-DLLVM_ENABLE_RUNTIMES='compiler-rt;libunwind;libcxx;libcxxabi'
+	-DLLVM_ENABLE_PROJECTS='clang;clang-tools-extra;lld'
+	-DLLVM_ENABLE_RTTI=ON
+	-DLLVM_ENABLE_EH=ON
+	-DLLVM_ENABLE_LIBXML2=OFF
+	-DLLVM_ENABLE_LIBCXX=ON
+	-DLLVM_ENABLE_RTTI=ON
+	-DLLVM_ENABLE_LLD=ON
+	-DLLVM_INSTALL_BINUTILS_SYMLINKS=ON
+	-DLLVM_ENABLE_PER_TARGET_RUNTIME_DIR=ON"
+
+# clang
+build_opt="$build_opt
+	-DCLANG_BUILD_EXAMPLES=OFF
+	-DCLANG_INCLUDE_DOCS=OFF
+	-DCLANG_INCLUDE_TESTS=OFF
+	-DLIBCLANG_BUILD_STATIC=ON
+	-DCLANG_DEFAULT_RTLIB=compiler-rt
+	-DCLANG_DEFAULT_UNWINDLIB=libunwind
+	-DCLANG_DEFAULT_CXX_STDLIB=libc++
+	-DCLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang
+	-DCLANG_LINK_CLANG_DYLIB=Yes"
+
+# libcxx
+build_opt="$build_opt
+	-DLIBCXX_HAS_MUSL_LIBC=ON
+	-DLIBCXX_CXX_ABI=libcxxabi
+	-DLIBCXX_USE_COMPILER_RT=ON
+	-DLIBCXX_HAS_ATOMIC_LIB=No
+	-DLIBCXX_ENABLE_STATIC_ABI_LIBRARY=OFF"
+	
+# libcxxabi
+build_opt="$build_opt
+	-DLIBCXXABI_USE_LLVM_UNWINDER=ON
+	-DLIBCXXABI_USE_COMPILER_RT=ON
+	-DLIBCXXABI_ENABLE_STATIC_UNWINDER=OFF"
+	
+# libunwind
+build_opt="$build_opt
+	-DLIBUNWIND_HAS_NODEFAULTLIBS_FLAG=OFF
+	-DLIBUNWIND_USE_COMPILER_RT=ON
+	-DLIBUNWIND_ENABLE_ASSERTIONS=OFF"
+
+# compiler-rt
+build_opt="$build_opt
+	-DCOMPILER_RT_USE_BUILTINS_LIBRARY=ON
+	-DCOMPILER_RT_INCLUDE_TESTS=OFF
+	-DCOMPILER_RT_BUILD_SANITIZERS=ON
+	-DCOMPILER_RT_BUILD_GWP_ASAN=OFF"
+	
+# etc
+build_opt="$build_opt
+	-DMLIR_INSTALL_AGGREGATE_OBJECTS=OFF
+	-DLLVM_CCACHE_BUILD=ON
+"
+
+postbuild() {
+	ln -s lld $PKG/usr/bin/ld
+	ln -s clang $PKG/usr/bin/cc
+	ln -s clang $PKG/usr/bin/gcc
+	ln -s clang++ $PKG/usr/bin/c++
+	ln -s clang++ $PKG/usr/bin/g++
+	install -m755 $SRC/c89 $PKG/usr/bin/c89
+	install -m755 $SRC/c99 $PKG/usr/bin/c99
+}

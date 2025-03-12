@@ -1,6 +1,0 @@
-name=ntfs-3g
-version=2022.10.3
-release=1
-source="https://tuxera.com/opensource/${name}_ntfsprogs-$version.tgz"
-build_opt="--exec-prefix=/usr --with-fuse=external --disable-ldconfig"
-export CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=64"

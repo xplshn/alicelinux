@@ -1,4 +1,0 @@
-name=swayidle
-version=1.8.0
-release=1
-source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-${version}.tar.gz"

@@ -1,9 +1,0 @@
-name=python-jinja2
-version=3.1.5
-release=1
-source="https://github.com/pallets/jinja/releases/download/${version}/jinja2-${version}.tar.gz"
-
-build() {
-	gpep517 build-wheel --wheel-dir .dist --output-fd 3 3>&1 >&2
-	python3 -m installer -d $PKG .dist/*.whl
-}

@@ -1,0 +1,45 @@
+name=musl
+version=250212
+_commit=c47ad25ea3b484e10326f933e927c0bc8cded3da
+release=1
+source="https://git.musl-libc.org/cgit/musl/snapshot/musl-${_commit}.tar.gz
+	getconf.c
+	getconf.1
+	getent.c
+	getent.1
+	iconv.c
+	tree.h
+	queue.h
+	cdefs.h
+	elfutils-0.190-relr.patch
+	0001-iconv-fix-erroneous-input-validation-in-EUC-KR-decod.patch
+	0002-iconv-harden-UTF-8-output-code-path-against-input-de.patch"
+keep_static=1
+
+build() {
+	./configure \
+	        --prefix=/usr #\
+	        #--syslibdir=/usr/lib
+	make
+	make DESTDIR=$PKG install
+	
+	mkdir -p $PKG/usr/bin
+	ln -sf ../lib/libc.so $PKG/usr/bin/ldd
+	mkdir -p $PKG/sbin
+	echo "#!/bin/sh
+	/bin/true" > $PKG/sbin/ldconfig
+	chmod +x $PKG/sbin/ldconfig
+	
+	for i in getent getconf iconv; do
+	        ${CC:-gcc} $CFLAGS $LDFLAGS -fpie $SRC/$i.c -o $PKG/usr/bin/$i
+	done
+	
+	mkdir -p $PKG/usr/share/man/man1
+	install -m644 $SRC/getconf.1 $PKG/usr/share/man/man1
+	#install -m644 $SRC/getent.1 $PKG/usr/share/man/man1
+	
+	# bsdcompat headers
+	for h in tree.h queue.h cdefs.h; do
+	        install -D $SRC/$h $PKG/usr/include/sys/
+	done
+}

@@ -1,9 +1,0 @@
-name=i3blocks
-version=1.5
-release=1
-source="https://github.com/vivien/${name}/archive/${version}/${name}-${version}.tar.gz"
-export MAKEFLAGS=-j1
-
-prebuild() {
-	autoreconf -fiv
-}

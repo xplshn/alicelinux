@@ -1,0 +1,102 @@
+name=rust
+version=1.84.1
+
+##cat src/stage0.txt
+export _date=2024-11-28
+export _rustc=1.83.0
+export _cargo=$_rustc
+##
+
+release=1
+source="https://static.rust-lang.org/dist/${name}c-$version-src.tar.xz
+	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-musl.tar.xz::noextract
+	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-musl.tar.xz::noextract
+	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-musl.tar.xz::noextract
+	fix-linux_musl_base.patch
+	fix-bootstrap.patch
+	libressl.patch
+	fix-curl.patch"
+build_dir=${name}c-$version-src
+keep_static=1
+no_strip=1
+
+build() {
+	mkdir -p build/cache/$_date
+	
+	_tuplet=x86_64-unknown-linux-musl
+	cp $SRC/rust-std-$_rustc-x86_64-unknown-linux-musl.tar.xz build/cache/$_date/
+	cp $SRC/rustc-$_rustc-x86_64-unknown-linux-musl.tar.xz build/cache/$_date/
+	cp $SRC/cargo-$_cargo-x86_64-unknown-linux-musl.tar.xz build/cache/$_date/
+	
+	sed -i 's/\(crt_static_default = \)true/\1false/' compiler/rustc_target/src/spec/base/linux_musl.rs
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.52+curl-7.81.0/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.74+curl-8.9.0/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.92/.cargo-checksum.json
+	
+	cat > config.toml <<EOF
+[llvm]
+link-shared      = true
+download-ci-llvm = false
+static-libstdcpp = false
+use-libcxx       = true
+
+[build]
+build     = "$_tuplet"
+host      = [ "$_tuplet" ]
+target    = [ "$_tuplet" ]
+
+docs           = false
+compiler-docs  = false
+extended       = true
+submodules     = false
+python         = "python3"
+locked-deps    = true
+vendor         = true
+tools          = [ "cargo", "rustfmt" ]
+sanitizers     = false
+profiler       = false
+full-bootstrap = false
+
+[install]
+prefix = "/usr"
+
+[target.$_tuplet]
+llvm-config = "/usr/bin/llvm-config"
+crt-static  = false
+sanitizers  = false
+
+[dist]
+src-tarball = false
+
+[rust]
+backtrace         = false
+channel           = "stable"
+codegen-tests     = false
+codegen-units-std = 1
+codegen-units     = 0
+debug             = false
+debug-assertions  = false
+debuginfo-level   = 0
+incremental       = false
+jemalloc          = false
+rpath             = false
+dist-src          = false
+llvm-libunwind    = "system"
+EOF
+
+	mkdir -p libgcc
+	printf 'INPUT(-lunwind)\n' > libgcc/libgcc_s.so
+	ln -sf $(cc -print-file-name=libunwind.so) libgcc/libgcc_s.so.1
+	export LD_LIBRARY_PATH="$PWD/libgcc:$LD_LIBRARY_PATH"
+	export LIBRARY_PATH="$PWD/libgcc:$LIBRARY_PATH"
+	
+	mkdir "$SRC/rust"
+	export RUST_BACKTRACE=1
+	
+	#python x.py build
+	python x.py install
+	
+	rm -rf $PKG/usr/lib/rustlib/src/ \
+		$PKG/usr/share/zsh \
+		$PKG/usr/lib/rustlib/uninstall.sh
+}

@@ -1,8 +1,0 @@
-name=kirc
-version=0.3.3
-release=1
-source="https://github.com/mcpcpc/${name}/archive/${version}/${name}-${version}.tar.gz"
-
-build() {
-	make PREFIX=/usr DESTDIR=$PKG install
-}

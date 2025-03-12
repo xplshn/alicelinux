@@ -1,7 +1,0 @@
-name=libplacebo
-version=7.349.0
-release=2
-source="https://github.com/haasn/${name}/archive/v${version}/${name}-${version}.tar.gz
-	no-vulkan-headers.patch"
-build_opt="-Ddemos=false"
-

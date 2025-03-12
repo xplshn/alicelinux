@@ -1,2 +1,0 @@
-#!/bin/sh
-exec dropbear -RF 2>&1
