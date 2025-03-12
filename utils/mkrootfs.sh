@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -ex
 
 [ "$(id -u)" = 0 ] || {
 	echo "making rootfs required root access"
