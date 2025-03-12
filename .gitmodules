@@ -1,3 +1,6 @@
 [submodule "www/themes/werx"]
 	path = www/themes/werx
 	url = https://github.com/xplshn/werx
+[submodule "repos/clang"]
+	path = repos/clang
+	url = https://github.com/xplshn/alicelinux-clang_repo
