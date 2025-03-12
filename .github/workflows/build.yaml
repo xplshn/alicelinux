@@ -27,7 +27,7 @@ jobs:
     - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh 
       run: |
         mkdir /tmp/alicerootfs
-        wget -qO- https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz | tar xJvf - -C /tmp/alicerootfs
+        wget -qO- https://codeberg.org/emmett1/alicelinux/releases/download/20241006/alicelinux-rootfs-20241006.tar.xz | tar xJf - -C /tmp/alicerootfs
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
@@ -45,15 +45,13 @@ jobs:
         APKG_WORK_DIR="/var/cache/work"
         export keep_static=1
         APKG_CONF
-
         apkg -s clang && echo "Repos are working"
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
         apkg -U
         apkg -t
-
         EOF
 
-        chmod +x ./tmp/alicerootfs/usr/bin/__reconfigure
+        chmod +x /tmp/alicerootfs/usr/bin/__reconfigure
         /tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __reconfigure
         echo "Trying to prepare a rootfs with mkrootfs.sh"
         /tmp/alicerootfs/usr/bin/apkg-chroot ./tmp/alicerootfs __mkrootfs.sh
