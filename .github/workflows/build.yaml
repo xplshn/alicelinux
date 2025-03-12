@@ -60,8 +60,7 @@ jobs:
         #tar -cJpf ./rootfs.tar.xz ./alice
         
         echo "Trying to prepare a rootfs with mkrootfs.sh"
-        ls
-        ls $GITHUB_WORKSPACE
+        chmod +x ./utils/mkrootfs.sh
         ./alice/usr/bin/apkg-chroot ./alice ./utils/mkrootfs.sh
 
     - name: Create Release
