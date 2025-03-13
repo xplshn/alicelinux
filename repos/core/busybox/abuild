@@ -1,7 +1,8 @@
 name=busybox
 version=1.36.1
-release=3
+release=4
 source="https://${name}.net/downloads/${name}-${version}.tar.bz2
+	busybox-suidwrapper.c
 	config
 	mdev.conf
 	fsck-resolve-uuid.patch
@@ -63,25 +64,13 @@ build() {
 		rm $PKG/*/$i || true
 		rm $PKG/*/*/$i || true
 	done
-	
-	cp $PKG/bin/busybox $PKG/bin/busybox-suid
-	chmod u+s $PKG/bin/busybox-suid
-	
-	for a in bin/mount \
-		bin/umount \
-		bin/su \
-		bin/ping ; do
-		rm $PKG/$a
-		ln -sv busybox-suid $PKG/$a
-	done
-	
-	for a in usr/bin/crontab \
-		usr/bin/passwd \
-		usr/bin/traceroute \
-		usr/bin/traceroute6 \
-		usr/bin/vlock; do
-		rm $PKG/$a
-		ln -sv ../../bin/busybox-suid $PKG/$a
+
+	${CC:-cc} -o $PKG/bin/busybox-suidwrapper $SRC/busybox-suidwrapper.c
+	chmod u+s $PKG/bin/busybox-suidwrapper
+
+	for i in $($PKG/bin/busybox-suidwrapper -l); do
+		[ -e /bin/$i ] && ln -svf busybox-suidwrapper $PKG/bin/$i
+		[ -e /usr/bin/$i ] && ln -svf ../../bin/busybox-suidwrapper $PKG/usr/bin/$i
 	done
 	
 	mkdir -p $PKG/etc
