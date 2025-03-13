@@ -8,8 +8,6 @@ libxdamage
 libxdmcp
 libxinerama
 nss
-clang
-rust
 cbindgen
 nodejs
 libice
