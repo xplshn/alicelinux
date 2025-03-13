@@ -4,7 +4,7 @@ lrwxrwxrwx root/root    bin/ash -> busybox
 lrwxrwxrwx root/root    bin/base32 -> busybox
 lrwxrwxrwx root/root    bin/base64 -> busybox
 -rwxr-xr-x root/root    bin/busybox
--rwsr-xr-x root/root    bin/busybox-suid
+-rwsr-xr-x root/root    bin/busybox-suidwrapper
 lrwxrwxrwx root/root    bin/cat -> busybox
 lrwxrwxrwx root/root    bin/chgrp -> busybox
 lrwxrwxrwx root/root    bin/chmod -> busybox
@@ -42,7 +42,7 @@ lrwxrwxrwx root/root    bin/link -> busybox
 lrwxrwxrwx root/root    bin/linux32 -> busybox
 lrwxrwxrwx root/root    bin/linux64 -> busybox
 lrwxrwxrwx root/root    bin/ln -> busybox
-lrwxrwxrwx root/root    bin/login -> busybox
+lrwxrwxrwx root/root    bin/login -> busybox-suidwrapper
 lrwxrwxrwx root/root    bin/ls -> busybox
 lrwxrwxrwx root/root    bin/lzop -> busybox
 lrwxrwxrwx root/root    bin/makemime -> busybox
@@ -50,7 +50,7 @@ lrwxrwxrwx root/root    bin/mkdir -> busybox
 lrwxrwxrwx root/root    bin/mknod -> busybox
 lrwxrwxrwx root/root    bin/mktemp -> busybox
 lrwxrwxrwx root/root    bin/more -> busybox
-lrwxrwxrwx root/root    bin/mount -> busybox-suid
+lrwxrwxrwx root/root    bin/mount -> busybox
 lrwxrwxrwx root/root    bin/mountpoint -> busybox
 lrwxrwxrwx root/root    bin/mpstat -> busybox
 lrwxrwxrwx root/root    bin/mt -> busybox
@@ -58,8 +58,8 @@ lrwxrwxrwx root/root    bin/mv -> busybox
 lrwxrwxrwx root/root    bin/netstat -> busybox
 lrwxrwxrwx root/root    bin/nice -> busybox
 lrwxrwxrwx root/root    bin/pidof -> busybox
-lrwxrwxrwx root/root    bin/ping -> busybox-suid
-lrwxrwxrwx root/root    bin/ping6 -> busybox
+lrwxrwxrwx root/root    bin/ping -> busybox-suidwrapper
+lrwxrwxrwx root/root    bin/ping6 -> busybox-suidwrapper
 lrwxrwxrwx root/root    bin/pipe_progress -> busybox
 lrwxrwxrwx root/root    bin/printenv -> busybox
 lrwxrwxrwx root/root    bin/ps -> busybox
@@ -77,12 +77,12 @@ lrwxrwxrwx root/root    bin/sh -> busybox
 lrwxrwxrwx root/root    bin/sleep -> busybox
 lrwxrwxrwx root/root    bin/stat -> busybox
 lrwxrwxrwx root/root    bin/stty -> busybox
-lrwxrwxrwx root/root    bin/su -> busybox-suid
+lrwxrwxrwx root/root    bin/su -> busybox-suidwrapper
 lrwxrwxrwx root/root    bin/sync -> busybox
 lrwxrwxrwx root/root    bin/tar -> busybox
 lrwxrwxrwx root/root    bin/touch -> busybox
 lrwxrwxrwx root/root    bin/true -> busybox
-lrwxrwxrwx root/root    bin/umount -> busybox-suid
+lrwxrwxrwx root/root    bin/umount -> busybox
 lrwxrwxrwx root/root    bin/uname -> busybox
 lrwxrwxrwx root/root    bin/usleep -> busybox
 lrwxrwxrwx root/root    bin/vi -> busybox
@@ -201,7 +201,7 @@ lrwxrwxrwx root/root    usr/bin/cksum -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/cmp -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/comm -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/crc32 -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/crontab -> ../../bin/busybox-suid
+lrwxrwxrwx root/root    usr/bin/crontab -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/cryptpw -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/cut -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/dc -> ../../bin/busybox
@@ -259,7 +259,7 @@ lrwxrwxrwx root/root    usr/bin/nsenter -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/nslookup -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/od -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/openvt -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/passwd -> ../../bin/busybox-suid
+lrwxrwxrwx root/root    usr/bin/passwd -> ../../bin/busybox-suidwrapper
 lrwxrwxrwx root/root    usr/bin/paste -> ../../bin/busybox
 -rwxr-xr-x root/root    usr/bin/pause
 lrwxrwxrwx root/root    usr/bin/pgrep -> ../../bin/busybox
@@ -308,8 +308,8 @@ lrwxrwxrwx root/root    usr/bin/time -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/timeout -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/top -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/tr -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/traceroute -> ../../bin/busybox-suid
-lrwxrwxrwx root/root    usr/bin/traceroute6 -> ../../bin/busybox-suid
+lrwxrwxrwx root/root    usr/bin/traceroute -> ../../bin/busybox-suidwrapper
+lrwxrwxrwx root/root    usr/bin/traceroute6 -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/tree -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/truncate -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/ts -> ../../bin/busybox
@@ -328,10 +328,10 @@ lrwxrwxrwx root/root    usr/bin/uptime -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/users -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/uudecode -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/uuencode -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/vlock -> ../../bin/busybox-suid
+lrwxrwxrwx root/root    usr/bin/vlock -> ../../bin/busybox-suidwrapper
 lrwxrwxrwx root/root    usr/bin/volname -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/w -> ../../bin/busybox
-lrwxrwxrwx root/root    usr/bin/wall -> ../../bin/busybox
+lrwxrwxrwx root/root    usr/bin/wall -> ../../bin/busybox-suidwrapper
 lrwxrwxrwx root/root    usr/bin/wc -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/wget -> ../../bin/busybox
 lrwxrwxrwx root/root    usr/bin/which -> ../../bin/busybox

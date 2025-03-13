@@ -1,4 +1,4 @@
 name=scdoc
 version=1.11.3
 release=1
-source="https://git.sr.ht/~sircmpwn/${name}/archive/${version}.tar.gz"
+source="$name-$version.tar.gz::https://git.sr.ht/~sircmpwn/${name}/archive/${version}.tar.gz"
