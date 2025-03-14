@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        ref: 'main'
+        ref: 'master'
 
     - name: Add Codeberg remote
       run: |
@@ -31,7 +31,7 @@ jobs:
     - name: Copy docs folder from pages branch
       run: |
         cp -r docs ../docs-temp
-        git checkout main
+        git checkout master
         rm -rf docs
         mv ../docs-temp docs
 
