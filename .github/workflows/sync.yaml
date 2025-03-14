@@ -47,6 +47,6 @@ jobs:
 
     - name: Commit and push changes to GitHub
       run: |
-        git add docs
-        git commit -m "Sync docs folder from Codeberg pages branch"
-        git push origin main
+        git add .
+        git commit -m "Sync" || true
+        git push origin master || true
