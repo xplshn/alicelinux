@@ -24,7 +24,7 @@ jobs:
       run: |
         apk add --no-cache wget tar xz
 
-    - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh 
+    - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh
       run: |
         mkdir /tmp/alicerootfs
         wget -qO- https://files.emmett1.net/alice/alice-clang.tar.xz | tar xJf - -C /tmp/alicerootfs
@@ -33,23 +33,23 @@ jobs:
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
         git clone --depth=1 https://github.com/xplshn/alicelinux /var/lib/alicelinux
         cat <<'APKG_CONF' > /etc/apkg.conf
-	    	# apkg configuration file
-		    APKG_REPO="/var/lib/alicelinux/repos/clang /var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"
-    		APKG_PACKAGE_DIR="/var/cache/pkg"
-	    	APKG_SOURCE_DIR="/var/cache/src"
-		    APKG_WORK_DIR="/var/cache/work"
-    		APKG_ALIAS="openssl:libressl clang:llvm gcc:llvm binutils:llvm zlib:zlib-ng"
-		    export keep_doc=1
-		    export keep_static=1
-		    if [ -z "$STANDARD_BUILD_OPTS" ]; then
-			    set -x
-			    export LD="mold" CC="clang" CXX="clang++"
-			    export CFLAGS="-O2 -march=native -pipe" # -static"
-			    set +x
-		    fi
-		    export CXXFLAGS="$CFLAGS"
-		    export MAKEFLAGS="-j$(nproc)"
-		    export NINJAJOBS="$(nproc)"
+        # apkg configuration file
+        APKG_REPO="/var/lib/alicelinux/repos/clang /var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"
+        APKG_PACKAGE_DIR="/var/cache/pkg"
+        APKG_SOURCE_DIR="/var/cache/src"
+        APKG_WORK_DIR="/var/cache/work"
+        APKG_ALIAS="openssl:libressl clang:llvm gcc:llvm binutils:llvm zlib:zlib-ng"
+        export keep_doc=1
+        export keep_static=1
+        if [ -z "$STANDARD_BUILD_OPTS" ]; then
+            set -x
+            export LD="mold" CC="clang" CXX="clang++"
+            export CFLAGS="-O2 -march=native -pipe" # -static"
+            set +x
+        fi
+        export CXXFLAGS="$CFLAGS"
+        export MAKEFLAGS="-j$(nproc)"
+        export NINJAJOBS="$(nproc)"
         APKG_CONF
         apkg -s sway && echo "Repos are working"
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
