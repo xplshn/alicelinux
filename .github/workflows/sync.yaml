@@ -30,6 +30,7 @@ jobs:
 
     - name: Copy docs folder from pages branch
       run: |
+        rm -f ./docs/*.html
         cp -r docs ../docs-temp
         git checkout master
         rm -rf docs
