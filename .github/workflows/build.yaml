@@ -39,6 +39,7 @@ jobs:
         APKG_SOURCE_DIR="/var/cache/src"
         APKG_WORK_DIR="/var/cache/work"
         APKG_ALIAS="openssl:libressl clang:llvm gcc:llvm binutils:llvm zlib:zlib-ng"
+        APKG_MASK="busybox" # FIXME: Remove when the busybox pkg gets fixed
         export keep_doc=1
         export keep_static=1
         if [ -z "$STANDARD_BUILD_OPTS" ]; then
