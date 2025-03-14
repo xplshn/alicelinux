@@ -54,7 +54,7 @@ jobs:
         chmod +x /tmp/alicerootfs/usr/bin/__reconfigure
         /tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __reconfigure
         echo "Trying to prepare a rootfs with mkrootfs.sh"
-        /tmp/alicerootfs/usr/bin/apkg-chroot ./tmp/alicerootfs __mkrootfs.sh
+        /tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __mkrootfs.sh
 
     - name: Create Release
       uses: softprops/action-gh-release@v2.2.1
