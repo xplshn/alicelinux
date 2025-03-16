@@ -1,12 +1,4 @@
 +++
-date = '2025-03-16T20:22:00'
-draft = false
-title = '_index.md'
-[params.author]
-  name = '󰬭 [CI] '
-  email = 'action@github.com'
-+++
-+++
 date = '2025-03-14T06:02:10'
 draft = false
 title = 'Documentation'

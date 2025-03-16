@@ -14,11 +14,25 @@ check_directory() {
 process_markdown_files() {
     mkdir -p "$2"
     for FILE in "$1"/*.md; do
+    	if [ "$FILE" = "_index.md" ]; then
+			echo "Skipping \"$FILE\""
+    	fi
         FILENAME="$(basename "$FILE")"
         DATE="$(git log -1 --format="%ai" -- "$FILE" | awk '{print $1 "T" $2}')"
-        TITLE="$(basename "$FILE")" #TITLE="$(basename "$FILE" .md)"
+        TITLE="$(basename "$FILE")"
         AUTHOR_NAME="$(git log --follow --format="%an" -- "$FILE" | tail -n 1)"
         AUTHOR_EMAIL="$(git log --follow --format="%ae" -- "$FILE" | tail -n 1)"
+
+		case "$TITLE" in
+        "_index.md")
+            cp "$FILE" "./content/docs"
+            continue
+            ;;
+         "index.md")
+         	echo "Skipping \"$FILE\"" 
+            continue
+            ;;
+    	esac
 
         {
             echo "+++"
