@@ -27,7 +27,7 @@ jobs:
     - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh
       run: |
         mkdir /tmp/alicerootfs
-        wget -qO- https://files.emmett1.net/alice/alice-clang.tar.xz | tar xJf - -C /tmp/alicerootfs
+        wget -qO- https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz | tar xJf - -C /tmp/alicerootfs
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
