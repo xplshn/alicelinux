@@ -1,32 +1,3 @@
-/* Color Schemes */
-:root {
-  /* Light theme (default) */
-  --bg-color: white;
-  --fg-color: black;
-  --super-accent: #6487DC;
-  --super-text: white;
-  --mid-accent: #FF6D06;
-  --mid-text: black;
-  --text-accent: #0066CC;
-  --header-border: black;
-  --sidebar-border: #ddd;
-}
-
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #17181c;
-    --fg-color: white;
-    --super-accent: #1b3575;
-    --super-text: white;
-    --mid-accent: #c85300;
-    --mid-text: white;
-    --text-accent: #52b1ff;
-    --header-border: #666666;
-    --sidebar-border: #3a3a3a;
-  }
-}
-
 /* Original WERC CSS */
 body { display: flex; flex-wrap: wrap; font-family: sans; }
 header { flex-basis: 100%; flex-shrink: 0; }
@@ -42,47 +13,54 @@ footer { display: flex; justify-content: space-between; }
 
 /* Additional styles from WERC */
 body { margin:0; padding: 0; font-size: 84%; font-family: Helvetica, Verdana, Arial, 'Liberation Sans', FreeSans, sans-serif; }
-a { text-decoration: none; color: }
+a { text-decoration: none; color: var(--text-accent); }
 a:hover { text-decoration: underline; }
-.thisPage { color: black; }
+.thisPage { color: var(--fg-color); }
 
 /* header and top bar */
-header nav { background-color: rgb(100,135,220); color: white; padding: 0.3em; border-bottom: 2px solid black; font-size: 91%; }
-header h1 { background-color: #ff6d06; color: black; margin: 0; border-bottom: 2px solid black; font-weight: normal; padding: 0.25ex; font-size: 233%; }
+header nav { background-color: var(--super-accent); color: var(--super-text); padding: 0.3em; border-bottom: 2px solid var(--header-border); font-size: 91%; }
+header h1 { background-color: var(--mid-accent); color: var(--mid-text); margin: 0; border-bottom: 2px solid var(--header-border); font-weight: normal; padding: 0.25ex; font-size: 233%; }
 header a:hover { text-decoration: none; }
 
 /* sidebar */
-body > nav { border-right: 1px solid #ddd; padding: 0;  }
-body > nav > div { border-bottom: 1px solid #ddd; }
-body > nav > div a { color: rgb(0, 102, 204); display: block; text-transform: capitalize; font-weight: bold; padding: 0.25em 1ex 0.25em 2mm; font-size: 102%}
-body > nav > div a:hover { color: white; background-color: rgb(100,135,220); border-left: black solid 0.2em; text-decoration: none; }
+body > nav { border-right: 1px solid var(--sidebar-border); padding: 0;  }
+body > nav > div { border-bottom: 1px solid var(--sidebar-border); }
+body > nav > div a { color: var(--text-accent); display: block; text-transform: capitalize; font-weight: bold; padding: 0.25em 1ex 0.25em 2mm; font-size: 102%}
+body > nav > div a:hover { color: var(--super-text); background-color: var(--super-accent); border-left: var(--header-border) solid 0.2em; text-decoration: none; }
 body > nav > div p { font-weight: bold; margin: 0 0 0.5em 2mm; padding: 1em 0 0 0; }
 
 /* main copy */
 article { padding: 0.5ex 0 5vh 1vw;  }
-article h1, article h2 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; border-bottom: 2px solid rgb(0,102,204); }
-article h3, article h4, article h5 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; }
-article h6, article h7, article h8 { color: rgb(0,102,204); font-weight: bold; margin: 2em 0 0 0; }
-article a { color: rgb(0,102,204); }
-article a:hover { color:  rgb(100,135,220); }
+article h1, article h2 { color: var(--text-accent); font-weight: bold; margin: 2em 0 0 0; border-bottom: 2px solid var(--text-accent); }
+article h3, article h4, article h5 { color: var(--text-accent); font-weight: bold; margin: 2em 0 0 0; }
+article h6, article h7, article h8 { color: var(--text-accent); font-weight: bold; margin: 2em 0 0 0; }
+article a { color: var(--text-accent); }
+article a:hover { color: var(--super-accent); }
 
 /* footer */
-footer { color: white; background-color: rgb(100,135,220); }
+footer { color: var(--super-text); background-color: var(--super-accent); }
 footer a { color: inherit; }
 footer div { padding: 1em; }
 
 /* tables */
 table { border: 1px solid rgba(128,128,128,0.5); padding: 0; }
-th { color: white; background-color: rgb(100,135,220); }
+th { color: var(--super-text); background-color: var(--super-accent); }
 tr:nth-child(odd) { background-color: rgba(128,128,128,0.1)  }
 
-/* Responsive Design */
+/* Let people decide which elements should not be printed */
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
 
+/* Responsive Design */
+/* Collapsible sidebar
 input#menu-toggle {
   display: none;
 }
-
-/* Collapsible sidebar
 .menu-button {
   display: none;
   cursor: pointer;
@@ -100,16 +78,13 @@ input#menu-toggle {
 .menu-toggle:checked~#sidebar {
   transform: translateX(0);
 }
-*/
 
 @media screen and (max-width: 620px) {
 
-  /* Show menu button */
   .menu-button {
     display: block;
   }
 
-  /* Hide sidebar by default */
   #sidebar {
     position: fixed;
     top: 0;
@@ -122,14 +97,12 @@ input#menu-toggle {
     color: var(--fg-color);
   }
 
-  /* Adjust main content */
   #main {
     margin-left: 0;
     border-left: none;
     padding: 1rem;
   }
 
-  /* Stack footer content */
   #footer .pull-left,
   #footer .pull-right {
     float: none;
@@ -138,7 +111,6 @@ input#menu-toggle {
   }
 }
 
-/* Very small screens */
 @media screen and (max-width: 480px) {
   body {
     font-size: 90%;
@@ -159,3 +131,4 @@ input#menu-toggle {
     padding: 0.3em 0;
   }
 }
+*/
