@@ -33,7 +33,10 @@ jobs:
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
-        git clone --depth=1 https://github.com/xplshn/alicelinux /var/lib/alicelinux
+        git clone --depth=1 https://github.com/xplshn/alicelinux /var/lib/alicelinux || {
+          cd /var/lib/alicelinux && git pull
+          cd -
+        }
         cat <<'APKG_CONF' > /etc/apkg.conf
         # apkg configuration file
         APKG_REPO="/var/lib/alicelinux/repos/clang /var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"
