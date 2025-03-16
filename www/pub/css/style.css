@@ -82,6 +82,7 @@ input#menu-toggle {
   display: none;
 }
 
+/* Collapsible sidebar
 .menu-button {
   display: none;
   cursor: pointer;
@@ -99,6 +100,7 @@ input#menu-toggle {
 .menu-toggle:checked~#sidebar {
   transform: translateX(0);
 }
+*/
 
 @media screen and (max-width: 620px) {
 

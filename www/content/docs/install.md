@@ -6,6 +6,7 @@ title = 'install.md'
   name = 'emmett1'
   email = 'emmett1.2miligrams@protonmail.com'
 +++
+
 Install Alice
 =============
 
