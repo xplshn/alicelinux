@@ -1,1 +1,2 @@
 .gitignore merge=ours
+./docs/_index.md merge=ours

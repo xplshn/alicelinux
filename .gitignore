@@ -15,3 +15,6 @@ repos/*/.*
 .hugo-werx.bak
 .werx.bak
 .werx
+
+# Interferes with our WWW mirrror
+./docs/index.md
