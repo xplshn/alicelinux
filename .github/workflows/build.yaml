@@ -54,10 +54,9 @@ jobs:
         export MAKEFLAGS="-j$(nproc)"
         export NINJAJOBS="$(nproc)"
         APKG_CONF
-        . /etc/profile
         apkg -s sway && echo "Repos are working"
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
-        dbin add busybox/busybox#nixpkgs.busybox
+        DBIN_INSTALL_DIR="/bin" DBIN_NOCONFIG=1 /usr/local/bin/dbin add busybox/busybox#nixpkgs.busybox
         apkg -U
         apkg -t
         revdep -v
