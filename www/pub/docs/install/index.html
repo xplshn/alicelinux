@@ -189,11 +189,13 @@ $ tar xvf alicelinux-rootfs-*.tar.xz -C /mnt/alice</p>
 # realpath alicelinux/repos/core
 /var/lib/alicelinux/repos/core
 # realpath alicelinux/repos/extra
-/var/lib/alicelinux/repos/extra</p></blockquote>
+/var/lib/alicelinux/repos/extra</p>
+</blockquote>
 <p>After we have the path of our <code>package repos</code>, add it to the <code>APKG_REPO</code> variable in <code>/etc/apkg.conf</code>.
 # echo &lsquo;APKG_REPO=&quot;/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra&quot;&rsquo; &raquo; /etc/apkg.conf</p>
 <blockquote>
-<p>NOTE: All repo paths must be declared in the APKG_REPO variable, seperated by a single space.</p></blockquote>
+<p>NOTE: All repo paths must be declared in the APKG_REPO variable, seperated by a single space.</p>
+</blockquote>
 <p>After setting up our <code>package repos</code>, make sure <code>apkg</code> can find the packages. We can use <code>apkg -s &lt;pattern&gt;</code> to search for packages.
 # apkg -s sway
 swayidle
@@ -214,11 +216,13 @@ sway</p>
 <p>On the first install, we should upgrade the system first.</p>
 <blockquote>
 <p>NOTE: Use uppercase <code>U</code> for a system upgrade, and lowercase <code>u</code> to upgrade a specific package of your choice.
-# apkg -U</p></blockquote>
+# apkg -U</p>
+</blockquote>
 <p>If you changed <code>CFLAGS</code> and <code>CXXFLAGS</code> to something other than the default, it&rsquo;s a good time to perform a full rebuild first. In this case, you can skip upgrading the system because performing a full rebuild will already use the latest version in <code>package repos</code>.</p>
 <blockquote>
 <p>NOTE: Add the <code>-f</code> flag to force rebuild of existing prebuilt package.
-NOTE: <code>apkg -a</code> prints all installed packages on the system.</p></blockquote>
+NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
+</blockquote>
 <pre><code># apkg -u $(apkg -a)
 </code></pre>
 <h2 id="install-development-packages">Install development packages</h2>
@@ -227,7 +231,8 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p></blo
 <h2 id="install-kernel">Install kernel</h2>
 <p>You can configure your own kernel from <a href="https://kernel.org/">kernel.org</a> or use the one provided by Alice.</p>
 <blockquote>
-<p>NOTE: The provided kernel will take a lot of time to compile because many options are enabled.</p></blockquote>
+<p>NOTE: The provided kernel will take a lot of time to compile because many options are enabled.</p>
+</blockquote>
 <p>If you want to use Alice&rsquo;s kernel, just run:
 # apkg -I linux</p>
 <h2 id="install-firmware">Install firmware</h2>
@@ -254,7 +259,8 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p></blo
 <p>I&rsquo;m enabling 3 <code>tty</code> services. <code>tty</code> is required; without it, you won&rsquo;t be able to log in (or run any commands).</p>
 <blockquote>
 <p>The runit service directory is <code>/etc/sv</code>.
-Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service</code> to enable it; remove the symlink to disable it.</p></blockquote>
+Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service</code> to enable it; remove the symlink to disable it.</p>
+</blockquote>
 <h2 id="setup-user-and-password">Setup user and password</h2>
 <p>Add your user:
 # adduser <user></p>
