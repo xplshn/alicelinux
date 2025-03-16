@@ -28,10 +28,12 @@ jobs:
       run: |
         mkdir /tmp/alicerootfs
         wget -qO- https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz | tar xJf - -C /tmp/alicerootfs
+        
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
         git clone --depth=1 https://github.com/xplshn/alicelinux /var/lib/alicelinux
+        wget -qO- "https://raw.githubusercontent.com/xplshn/dbin/master/stubdl" | sh -s -- --install "/tmp/alicerootfs/usr/local/bin/dbin" -v
         cat <<'APKG_CONF' > /etc/apkg.conf
         # apkg configuration file
         APKG_REPO="/var/lib/alicelinux/repos/clang /var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"
@@ -52,8 +54,10 @@ jobs:
         export MAKEFLAGS="-j$(nproc)"
         export NINJAJOBS="$(nproc)"
         APKG_CONF
+        . /etc/profile
         apkg -s sway && echo "Repos are working"
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
+        dbin add busybox/busybox#nixpkgs.busybox
         apkg -U
         apkg -t
         revdep -v
