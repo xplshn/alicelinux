@@ -47,13 +47,106 @@ table { border: 1px solid rgba(128,128,128,0.5); padding: 0; }
 th { color: var(--super-text); background-color: var(--super-accent); }
 tr:nth-child(odd) { background-color: rgba(128,128,128,0.1)  }
 
-/* Let people decide which elements should not be printed */
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
+/* Some elements shall not be printed */
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  article tr,
+  article td {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  article thead {
+    display: table-header-group;
+  }
+  article tfoot {
+    display: table-footer-group;
+  }
+  article table,
+  article blockquote,
+  article pre,
+  article code,
+  article figure,
+  article li,
+  article hr,
+  article ul,
+  article ol,
+  article a,
+  article tr {
+    page-break-inside: avoid;
+  }
+  article h2,
+  article h3,
+  article h4,
+  article p,
+  article a {
+     orphans: 3;
+     widows: 3;
+  }
+  article h1,
+  article h2,
+  article h3,
+  article h4,
+  article h5,
+  article h6 {
+   page-break-after: avoid;
+   page-break-inside: avoid;
+  }
+  article h1 + p + ul,
+  article h2 + p + ul,
+  article h3 + p + ul,
+  article h4 + p + ul,
+  article h5 + p + ul,
+  article h6 + p + ul {
+   page-break-before: avoid;
+   page-break-inside: avoid;
+  }
+  article h1 + p,
+  article h2 + p,
+  article h3 + p {
+    page-break-before: avoid;
+  }
+  article a[href^=http]:after, a[href^=ftp]:after {
+    content: " (" attr(href) ")";
+    font-size: 80%;
+  }
+  article a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after {
+    display: none;
+  }
+  article abbr[title]:after,
+  article acronym[title]:after {
+    content: " (" attr(title) ")";
+  }
+  article a.no-reformat:after {
+    content: "";
+  }
+  article abbr[title].no-reformat:after,
+  article acronym[title].no-reformat:after {
+    content: "";
+  }
+  article .no-reformat abbr:after,
+  article .no-reformat acronym:after,
+  article .no-reformat a:after {
+    content: "";
+  }
+  article .page-break,
+  article .break-before,
+  article .page-break-before {
+    page-break-before: always;
+  }
+  article .break-after,
+  article .page-break-after {
+    page-break-after: always;
+  }
+  article.avoid-break-inside {
+    page-break-inside: avoid;
+  }
+  ::-webkit-input-placeholder,
+  :-moz-placeholder, ::-moz-placeholder,
+  :-ms-input-placeholder {
+  	color: transparent;
+  }
 }
 
 /* Responsive Design */
