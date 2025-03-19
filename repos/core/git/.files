@@ -16,6 +16,7 @@ lrwxrwxrwx root/root    usr/libexec/git-core/git-annotate -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-apply -> git
 -rwxr-xr-x root/root    usr/libexec/git-core/git-archimport
 lrwxrwxrwx root/root    usr/libexec/git-core/git-archive -> git
+lrwxrwxrwx root/root    usr/libexec/git-core/git-backfill -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-bisect -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-blame -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-branch -> git
