@@ -1,6 +1,6 @@
 name=libxkbcommon
-version=1.8.0
-release=2
+version=1.8.1
+release=1
 source="https://github.com/xkbcommon/libxkbcommon/archive/xkbcommon-$version.tar.gz"
 build_opt="-Denable-docs=false -Denable-bash-completion=false"
 [ -f $SPM_PKGDB/libxcb ] || build_opt="$build_opt -Denable-x11=false"
