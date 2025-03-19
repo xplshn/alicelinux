@@ -59,6 +59,7 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/16x16/places/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/16x16/places/user-home.png
 -rw-r--r-- root/root    usr/share/icons/Adwaita/16x16/places/user-trash.png
 drwxr-xr-x root/root    usr/share/icons/Adwaita/cursors/
+-rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/X_cursor
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/alias
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/all-scroll
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/arrow -> default
@@ -195,9 +196,6 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/scalable/status/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/image-loading.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/image-missing.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/scalable/status/user-trash-full.svg
-drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic-up-to-32/
-drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic-up-to-32/status/
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic-up-to-32/status/process-working-symbolic.svg
 drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/
 drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/actions/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/actions/action-unavailable-symbolic.svg
@@ -471,18 +469,6 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/devices/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/devices/video-display-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/devices/video-joined-displays-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/devices/video-single-display-symbolic.svg
-drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/emblems/
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-default-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-documents-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-favorite-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-important-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-music-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-ok-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-photos-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-shared-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-synchronizing-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-system-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emblems/emblem-videos-symbolic.svg
 drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/emotes/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emotes/emote-love-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/emotes/face-angel-symbolic.svg
@@ -602,6 +588,7 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/places/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/places/user-home-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/places/user-trash-symbolic.svg
 drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/status/
+-rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/airplane-mode-disabled-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/airplane-mode-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/alarm-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/appointment-missed-symbolic.svg
@@ -776,14 +763,8 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/symbolic/status/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/orientation-portrait-left-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/orientation-portrait-right-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/orientation-portrait-right-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-balanced-rtl-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-balanced-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-balanced-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-performance-rtl-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-performance-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-performance-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-power-saver-rtl-symbolic.svg
--rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-power-saver-symbolic-rtl.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/power-profile-power-saver-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/printer-error-symbolic.svg
 -rw-r--r-- root/root    usr/share/icons/Adwaita/symbolic/status/printer-printing-symbolic.svg
