@@ -1697,6 +1697,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/modula2/opt/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/promela.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/proto.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/protocols.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/prql.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ps1.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ps1xml.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/psf.vim
@@ -2007,9 +2008,16 @@ drwxr-xr-x root/root    usr/share/vim/vim91/tutor/en/
 drwxr-xr-x root/root    usr/share/vim/vim91/tutor/it/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/it/vim-01-beginner.tutor
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/it/vim-01-beginner.tutor.json
+drwxr-xr-x root/root    usr/share/vim/vim91/tutor/ru/
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/ru/vim-01-beginner.tutor
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/ru/vim-01-beginner.tutor.json
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/ru/vim-02-beginner.tutor
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/ru/vim-02-beginner.tutor.json
 drwxr-xr-x root/root    usr/share/vim/vim91/tutor/sr/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/sr/vim-01-beginner.tutor
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/sr/vim-01-beginner.tutor.json
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/sr/vim-02-beginner.tutor
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/sr/vim-02-beginner.tutor.json
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor.tutor
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor.tutor.json
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor.vim
@@ -2085,6 +2093,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/tutor/sr/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.it
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.it.utf-8
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.ru.utf-8
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.sr.utf-8
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.utf-8
 -rw-r--r-- root/root    usr/share/vim/vim91/vimrc_example.vim
