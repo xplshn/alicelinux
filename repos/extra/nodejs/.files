@@ -2793,7 +2793,6 @@ drwxr-xr-x root/root    usr/include/node/openssl/archs/solaris64-x86_64-gcc/no-a
 -rw-r--r-- root/root    usr/include/node/openssl/prov_ssl.h
 -rw-r--r-- root/root    usr/include/node/openssl/proverr.h
 -rw-r--r-- root/root    usr/include/node/openssl/provider.h
--rw-r--r-- root/root    usr/include/node/openssl/quic.h
 -rw-r--r-- root/root    usr/include/node/openssl/rand.h
 -rw-r--r-- root/root    usr/include/node/openssl/randerr.h
 -rw-r--r-- root/root    usr/include/node/openssl/rc2.h
