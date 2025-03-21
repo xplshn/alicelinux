@@ -1,5 +1,5 @@
 name=rust
-version=1.85.0
+version=1.85.1
 
 ##cat src/stage0.txt
 export _date=2025-01-09
