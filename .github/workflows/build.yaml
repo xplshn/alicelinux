@@ -57,8 +57,8 @@ jobs:
         export MAKEFLAGS="-j$(nproc)"
         export NINJAJOBS="$(nproc)"
         APKG_CONF
+        export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1 PATH="/usr/local/bin:$PATH"
         apkg -s sway && echo "Repos are working"
-        export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1
         DBIN_INSTALL_DIR="/bin" DBIN_NOCONFIG=1 /usr/local/bin/dbin add busybox/busybox#nixpkgs.busybox
         apkg -I meson cmake pkgconf libtool automake perl
         apkg -U
