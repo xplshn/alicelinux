@@ -64,6 +64,7 @@ jobs:
         apkg -U
         apkg -t
         revdep -v
+        rm -rf /var/cache/src/* /var/cache/pkg/* /var/cache/work/*
         EOF
 
         chmod +x /tmp/alicerootfs/usr/bin/__reconfigure
