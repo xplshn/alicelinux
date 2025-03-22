@@ -69,7 +69,7 @@ jobs:
 
         chmod +x /tmp/alicerootfs/usr/bin/__reconfigure
         /tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __reconfigure
-        oPWD=$PWD
+        oPWD="$PWD"
         cd /tmp/alicerootfs && tar -cJpf $oPWD/rootfs.tar.xz *
         #echo "Trying to prepare a rootfs with mkrootfs.sh"
         #/tmp/alicerootfs/usr/bin/apkg-chroot /tmp/alicerootfs __mkrootfs.sh
