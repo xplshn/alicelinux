@@ -1,5 +1,5 @@
 name=librewolf
-version=136.0.1
+version=136.0.2.1
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
