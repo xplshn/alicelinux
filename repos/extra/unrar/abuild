@@ -1,5 +1,5 @@
 name=unrar
-version=7.1.5
+version=7.1.6
 release=1
 source="https://www.rarlab.com/rar/${name}src-$version.tar.gz"
 
