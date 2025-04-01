@@ -1,4 +1,4 @@
 name=inih
-version=58
+version=59
 release=1
 source="https://github.com/benhoyt/$name/archive/r$version/$name-$version.tar.gz"
