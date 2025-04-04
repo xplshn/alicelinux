@@ -1,5 +1,5 @@
 name=qemu
-version=9.2.2
+version=9.2.3
 release=1
 source="https://download.$name.org/$name-$version.tar.xz"
 build_type=configure_build
