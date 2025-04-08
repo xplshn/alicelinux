@@ -5,6 +5,7 @@ drwxr-xr-x root/root    usr/include/
 -rw-r--r-- root/root    usr/include/sfdo-desktop-file.h
 -rw-r--r-- root/root    usr/include/sfdo-desktop.h
 -rw-r--r-- root/root    usr/include/sfdo-icon.h
+-rw-r--r-- root/root    usr/include/sfdo-version.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libsfdo-basedir.so -> libsfdo-basedir.so.0
 -rwxr-xr-x root/root    usr/lib/libsfdo-basedir.so.0
