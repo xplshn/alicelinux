@@ -11011,6 +11011,7 @@ drwxr-xr-x root/root    usr/lib/go/src/runtime/testdata/testprogcgo/
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/bindm.c
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/bindm.go
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/callback.go
+-rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/callback_pprof.go
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/catchpanic.go
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/cgo.go
 -rw-r--r-- root/root    usr/lib/go/src/runtime/testdata/testprogcgo/cgonocallback.c
@@ -14677,6 +14678,8 @@ drwxr-xr-x root/root    usr/lib/go/test/fixedbugs/issue7023.dir/
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue71852.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue71857.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue71932.go
+-rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue72063.go
+-rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue72090.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7214.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7223.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7272.go
