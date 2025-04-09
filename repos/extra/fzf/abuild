@@ -1,0 +1,25 @@
+name=fzf
+version=0.61.1
+release=1
+source="https://github.com/junegunn/${name}/archive/v${version}/${name}-${version}.tar.gz"
+
+build() {
+	export CGO_CPPFLAGS="${CPPFLAGS}"
+	export CGO_CFLAGS="${CFLAGS}"
+	export CGO_CXXFLAGS="${CXXFLAGS}"
+	export CGO_LDFLAGS="${LDFLAGS}"
+
+	mkdir -p $SRC/.gopath
+	export GOPATH=$SRC/.gopath
+
+	go build \
+	-trimpath \
+	-buildmode=pie \
+	-mod=readonly \
+	-modcacherw \
+	-o $name .
+	go build -o $name .
+
+	install -dm755 $PKG/usr/bin
+	install -m755 fzf bin/fzf-tmux $PKG/usr/bin/
+}

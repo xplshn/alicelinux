@@ -1,0 +1,5 @@
+glib
+pixman
+fontconfig
+libxext
+libxrender

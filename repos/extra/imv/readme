@@ -1,0 +1,2 @@
+'imv' has native Wayland and X11 support but on X11 its required dependencies not in repos,
+so it stay in 'wayland' repo until all dependencies satisfied to be in 'extra'.

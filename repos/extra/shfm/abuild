@@ -1,0 +1,8 @@
+name=shfm
+version=0.4.2
+release=1
+source="https://github.com/dylanaraps/${name}/archive/${version}/${name}-${version}.tar.gz"
+
+build() {
+	install -Dm755 shfm $PKG/usr/bin/shfm
+}

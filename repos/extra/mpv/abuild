@@ -1,0 +1,12 @@
+name=mpv
+version=0.40.0
+release=1
+source="https://github.com/${name}-player/${name}/archive/v${version}/${name}-${version}.tar.gz"
+build_opt="-Dwayland=enabled"
+[ -f $SPM_PKGDB/libx11 ] && build_opt="$build_opt -Dx11=enabled"
+
+postbuild() {
+	rm -r \
+		$PKG/usr/share/zsh \
+		$PKG/usr/share/bash-completion
+}

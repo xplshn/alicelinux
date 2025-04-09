@@ -1,0 +1,4 @@
+name=freetype
+version=2.13.3
+release=1
+source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz"

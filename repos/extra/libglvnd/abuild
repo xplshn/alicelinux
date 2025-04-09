@@ -1,0 +1,9 @@
+name=libglvnd
+version=1.7.0
+release=1
+source="https://github.com/NVIDIA/$name/archive/v$version/$name-$version.tar.gz"
+build_opt="
+        -Dgles1=false
+        -Degl=true
+        -Dtls=false
+"

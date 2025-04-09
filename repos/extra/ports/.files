@@ -1,0 +1,17 @@
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/ports/
+-rw-r--r-- root/root    etc/ports/core.git.new
+drwxr-xr-x root/root    etc/ports/drivers/
+-rwxr-xr-x root/root    etc/ports/drivers/git.new
+-rw-r--r-- root/root    etc/ports/extra.git.new
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/ports
+drwxr-xr-x root/root    usr/ports/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man8/
+-rw-r--r-- root/root    usr/share/man/man8/ports.8.gz
+drwxr-xr-x root/root    var/
+drwxr-xr-x root/root    var/lib/
+drwxr-xr-x root/root    var/lib/repos/

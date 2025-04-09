@@ -1,0 +1,9 @@
+name=libinput
+version=1.28.1
+release=1
+source="https://gitlab.freedesktop.org/$name/$name/-/archive/$version/$name-$version.tar.gz"
+build_opt="-Ddebug-gui=false -Dtests=false -Dlibwacom=false -Dzshcompletiondir=no"
+
+postbuild() {
+	rm -rf $PKG/usr/lib/udev
+}

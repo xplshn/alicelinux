@@ -1,0 +1,9 @@
+name=pipewire
+version=1.4.1
+release=1
+source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
+build_opt="-Ddocs=disabled -Dtests=disabled -Dpipewire-v4l2=disabled -Djack=disabled -Dsession-managers=[]"
+
+postbuild() {
+	rm -rf $PKG/usr/lib/udev
+}

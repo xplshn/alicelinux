@@ -1,0 +1,10 @@
+name=i3blocks
+version=1.5
+release=2
+source="https://github.com/vivien/${name}/archive/${version}/${name}-${version}.tar.gz"
+export MAKEFLAGS=-j1
+
+prebuild() {
+	sed -i '33,42d' Makefile.am
+	autoreconf -fiv
+}

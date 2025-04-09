@@ -1,0 +1,11 @@
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/xdg/
+drwxr-xr-x root/root    etc/xdg/autostart/
+-rw-r--r-- root/root    etc/xdg/autostart/xdg-user-dirs.desktop.new
+-rw-r--r-- root/root    etc/xdg/user-dirs.conf.new
+-rw-r--r-- root/root    etc/xdg/user-dirs.defaults.new
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/xdg-user-dir
+-rwxr-xr-x root/root    usr/bin/xdg-user-dirs-update
+drwxr-xr-x root/root    usr/share/

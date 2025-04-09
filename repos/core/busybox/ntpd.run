@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ntpd -n 2>&1
