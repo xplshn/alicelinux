@@ -1,8 +1,0 @@
-name=gammastep
-version=2.0.11
-release=1
-source="https://gitlab.com/chinstrap/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
-
-prebuild() {
-	autoreconf -fiv
-}

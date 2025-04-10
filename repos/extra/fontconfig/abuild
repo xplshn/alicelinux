@@ -1,4 +1,0 @@
-name=fontconfig
-version=2.16.1
-release=1
-source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"

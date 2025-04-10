@@ -1,4 +1,0 @@
-name=fast-float
-version=8.0.2
-release=1
-source="https://github.com/fastfloat/fast_float/archive/v${version}/fast_float-v${version}.tar.gz"

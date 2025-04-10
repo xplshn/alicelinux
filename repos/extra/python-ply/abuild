@@ -1,4 +1,0 @@
-name=python-ply
-version=3.11
-release=1
-source="https://files.pythonhosted.org/packages/source/p/ply/ply-${version}.tar.gz"

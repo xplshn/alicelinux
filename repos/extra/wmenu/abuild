@@ -1,4 +1,0 @@
-name=wmenu
-version=0.1.9
-release=1
-source="${name}-${version}.tar.gz::https://codeberg.org/adnano/wmenu/archive/${version}.tar.gz"

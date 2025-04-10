@@ -1,9 +1,0 @@
-name=ncmpcpp
-version=0.10.1
-release=1
-source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz"
-build_opt="--enable-clock --enable-outputs --enable-visualizer --with-fftw"
-
-prebuild() {
-	autoreconf -fi
-}
