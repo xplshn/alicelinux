@@ -32,7 +32,7 @@ jobs:
       run: |
         rm -f ./docs/*.html
         cp -r docs ../docs-temp
-        git checkout master
+        git checkout clang
         rm -rf docs
         mv ../docs-temp docs
 
