@@ -12,25 +12,39 @@ jobs:
       with:
         fetch-depth: 0
         ref: 'master'
+    
+    - name: Setup Git config
+      run: |
+        git config user.name '󰬭 [CI] '
+        git config user.email 'action@github.com'
+    
     - name: Add Codeberg remote
       run: |
         git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
+    
     - name: Fetch changes from Codeberg
       run: |
         git fetch codeberg
-    - name: Checkout master
+    
+    - name: Merge with clang branch
       run: |
-        git checkout master
-    - name: Fetch changes in submodules
+        # Option 1: Use merge with strategy to preserve history
+        git merge codeberg/clang --allow-unrelated-histories -m "Sync: Merged changes from Codeberg clang branch" || true
+        
+        # Alternative Option 2: Rebase approach if merge doesn't work well
+        # git checkout -b temp-merge
+        # git reset --hard codeberg/clang
+        # git checkout master
+        # git rebase temp-merge || true
+    
+    # Fetch and update submodules
+    - name: Update submodules
       run: |
+        git submodule update --init --recursive
         git submodule update --recursive --remote
-    - name: Merge changes
-      run: |
-        git config user.name '󰬭 [CI] '
-        git config user.email 'action@github.com'
-        git merge --allow-unrelated-histories codeberg/clang
-    - name: Commit and push changes to GitHub
-      run: |
         git add .
-        git commit -m "Sync" || true
+        git commit -m "Sync: Updated submodules" || true
+    
+    - name: Push changes to GitHub
+      run: |
         git push origin master || true
