@@ -36,7 +36,7 @@ jobs:
         git checkout -b temp-pages codeberg/pages
         
         # Copy docs folder to the temporary location
-        cp -r docs/* ../docs-temp/ || true
+        cp -r docs/*.md ../docs-temp/ || true
         
         # Go back to master branch
         git checkout master
