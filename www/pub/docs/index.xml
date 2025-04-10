@@ -6,21 +6,21 @@
     <description>Recent content in Docs on AliceLinux</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Apr 2025 04:12:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Apr 2025 04:21:46 +0000</lastBuildDate>
     <atom:link href="https://xplshn.github.io/alicelinux/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>install.md</title>
       <link>https://xplshn.github.io/alicelinux/docs/install/</link>
-      <pubDate>Thu, 10 Apr 2025 04:12:07 +0000</pubDate>
+      <pubDate>Thu, 10 Apr 2025 04:21:46 +0000</pubDate>
       <guid>https://xplshn.github.io/alicelinux/docs/install/</guid>
-      <description>&lt;h1 id=&#34;install-alice&#34;&gt;Install Alice&lt;/h1&gt;&#xA;&lt;p&gt;=============&lt;/p&gt;&#xA;&lt;p&gt;Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-alice-rootfs-tarball&#34;&gt;Get Alice rootfs tarball&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Download the Alice rootfs tarball from the &lt;a href=&#34;https://codeberg.org/emmett1/alicelinux/releases&#34;&gt;release&lt;/a&gt; page, along with its &lt;code&gt;sha256sum&lt;/code&gt; file.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;install-alice&#34;&gt;Install Alice&lt;/h1&gt;&#xA;&lt;p&gt;Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-alice-rootfs-tarball&#34;&gt;Get Alice rootfs tarball&lt;/h2&gt;&#xA;&lt;p&gt;Download the Alice rootfs tarball from the &lt;a href=&#34;https://codeberg.org/emmett1/alicelinux/releases&#34;&gt;release&lt;/a&gt; page, along with its &lt;code&gt;sha256sum&lt;/code&gt; file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>packagemanager.md</title>
       <link>https://xplshn.github.io/alicelinux/docs/packagemanager/</link>
-      <pubDate>Fri, 14 Mar 2025 06:02:10 +0000</pubDate>
+      <pubDate>Thu, 10 Apr 2025 04:21:46 +0000</pubDate>
       <guid>https://xplshn.github.io/alicelinux/docs/packagemanager/</guid>
-      <description>&lt;h1 id=&#34;package-manager&#34;&gt;Package Manager&lt;/h1&gt;&#xA;&lt;p&gt;In Alice, theres two package manager used, &lt;a href=&#34;https://codeberg.org/emmett1/spm&#34;&gt;spm&lt;/a&gt; and &lt;a href=&#34;https://codeberg.org/emmett1/autils&#34;&gt;autils&lt;/a&gt;. Why two package manager? &lt;code&gt;spm&lt;/code&gt; was written for generic package manager for linux distribution. And &lt;code&gt;autils&lt;/code&gt; is written specifically for &lt;code&gt;Alice&lt;/code&gt; and required &lt;code&gt;spm&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;spm&#34;&gt;spm&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;spm&lt;/code&gt; stands for &lt;code&gt;simple package manager&lt;/code&gt;. It does simple and minimal written in POSIX compliance shell script. It only depends on core utils and tar (or busybox&amp;rsquo;s utils and tar). &lt;code&gt;spm&lt;/code&gt; only intended for compressing some directory into package, then extract package into system with files being tracked into database. Theres is no build script, recipe or ports in &lt;code&gt;spm&lt;/code&gt;. You can write your own tools to use with &lt;code&gt;spm&lt;/code&gt; either like Arch Linux&amp;rsquo;s &lt;code&gt;makepkg&lt;/code&gt;, CRUX&amp;rsquo;s &lt;code&gt;pkgmk&lt;/code&gt; or Slackware&amp;rsquo;s &lt;code&gt;slackbuild&lt;/code&gt; script.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;package-manager&#34;&gt;Package Manager&lt;/h1&gt;&#xA;&lt;p&gt;In Alice, there are two package managers used: &lt;a href=&#34;https://codeberg.org/emmett1/spm&#34;&gt;spm&lt;/a&gt; and &lt;a href=&#34;https://codeberg.org/emmett1/autils&#34;&gt;autils&lt;/a&gt;. Why two package managers? &lt;code&gt;spm&lt;/code&gt; was written as a generic package manager for Linux distributions. &lt;code&gt;autils&lt;/code&gt; is written specifically for &lt;code&gt;Alice&lt;/code&gt; and requires &lt;code&gt;spm&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;spm&#34;&gt;spm&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;spm&lt;/code&gt; stands for &lt;code&gt;simple package manager&lt;/code&gt;. It is simple and minimal, written in POSIX-compliant shell script. It only depends on core utils and tar (or busybox&amp;rsquo;s utils and tar). &lt;code&gt;spm&lt;/code&gt; is intended for compressing a directory into a package and then extracting the package into the system with files being tracked into a database. There is no build script, recipe, or ports in &lt;code&gt;spm&lt;/code&gt;. You can write your own tools to use with &lt;code&gt;spm&lt;/code&gt;, similar to Arch Linux&amp;rsquo;s &lt;code&gt;makepkg&lt;/code&gt;, CRUX&amp;rsquo;s &lt;code&gt;pkgmk&lt;/code&gt;, or Slackware&amp;rsquo;s &lt;code&gt;slackbuild&lt;/code&gt; script.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
