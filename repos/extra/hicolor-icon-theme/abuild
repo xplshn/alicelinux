@@ -1,4 +1,0 @@
-name=hicolor-icon-theme
-version=0.18
-release=1
-source="https://icon-theme.freedesktop.org/releases/${name}-${version}.tar.xz"

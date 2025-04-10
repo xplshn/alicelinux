@@ -1,2 +1,0 @@
-#!/bin/sh
-exec syslogd -s -m0 2>&1

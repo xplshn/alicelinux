@@ -1,6 +1,0 @@
-name=libarchive
-version=3.7.9
-release=1
-source="https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz"
-build_opt="--without-xml2 --without-zstd"
-keep_static=1

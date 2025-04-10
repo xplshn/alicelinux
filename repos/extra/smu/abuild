@@ -1,5 +1,0 @@
-name=smu
-version=20241208
-release=1
-#source="https://github.com/karlb/${name}/archive/v${version}/${name}-v${version}.tar.gz"
-source="https://github.com/karlb/smu/archive/b031248e6db908e51507e189c7c45c22558b9790.tar.gz"

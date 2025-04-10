@@ -1,5 +1,0 @@
-name=gettext-tiny
-version=0.3.2
-release=1
-source="$name-$version.tar.gz::https://codeberg.org/sabotage-linux/${name}/archive/v${version}.tar.gz"
-export LIBINTL=MUSL

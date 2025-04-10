@@ -1,7 +1,0 @@
-name=seatd
-version=0.9.1
-release=1
-source="$name-$version.tar.gz::https://git.sr.ht/~kennylevinsen/${name}/archive/${version}.tar.gz
-	run"
-sv="run"
-build_opt="-Dlibseat-builtin=enabled"

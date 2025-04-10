@@ -1,8 +1,0 @@
-name=libuv
-version=1.50.0
-release=1
-source="https://dist.$name.org/dist/v$version/$name-v$version.tar.gz"
-
-prebuild() {
-	./autogen.sh
-}

@@ -1,5 +1,0 @@
-name=libevdev
-version=1.13.4
-release=1
-source="https://www.freedesktop.org/software/$name/$name-$version.tar.xz"
-build_opt="-Ddocumentation=disabled -Dtests=disabled"

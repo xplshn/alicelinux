@@ -1,4 +1,0 @@
-name=mold
-version=2.37.1
-release=1
-source="https://github.com/rui314/${name}/archive/v${version}/${name}-v${version}.tar.gz"

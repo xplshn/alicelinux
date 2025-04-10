@@ -1,8 +1,0 @@
-name=alsa-utils
-version=1.2.13
-release=1
-source="https://www.alsa-project.org/files/pub/utils/$name-$version.tar.bz2
-	alsa.run
-	alsa.finish"
-sv="alsa.run alsa.finish"
-build_opt="--disable-bat --disable-xmlto --disable-nls"

@@ -1,4 +1,0 @@
-name=fff
-version=2.2
-release=1
-source="https://github.com/dylanaraps/${name}/archive/${version}/${name}-${version}.tar.gz"

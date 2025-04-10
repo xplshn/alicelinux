@@ -1,7 +1,0 @@
-NAME="Alice Linux"
-PRETTY_NAME="Alice Linux"
-VERSION="One"
-ID="alice"
-HOME_URL="https://alicelinux.emmett1.net"
-BUG_REPORT_URL="https://codeberg.org/emmett1/alicelinux/issues"
-ANSI_COLOR="1;34

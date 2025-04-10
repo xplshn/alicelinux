@@ -1,4 +1,0 @@
-name=libclc
-version=19.1.7
-release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/${name}-${version}.src.tar.xz"

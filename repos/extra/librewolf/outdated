@@ -1,3 +1,0 @@
-newver() {
-	newver=$(echo $newver | sed 's/_/\./')
-}
