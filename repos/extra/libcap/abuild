@@ -1,0 +1,11 @@
+name=libcap
+version=2.75
+release=1
+source="https://www.kernel.org/pub/linux/libs/security/linux-privs/${name}2/$name-$version.tar.xz"
+
+build() {
+	sed -i '/install -m.*STA/d' libcap/Makefile
+	sed -i 's;#!/bin/bash;#!/bin/sh;' progs/mkcapshdoc.sh
+	make prefix=/usr lib=lib GOLANG=no
+	make prefix=/usr lib=lib GOLANG=no install
+}

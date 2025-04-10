@@ -1,0 +1,10 @@
+--- pfetch-0.6.0.orig/pfetch
++++ pfetch-0.6.0/pfetch
+@@ -470,6 +470,7 @@
+                 has rpm        && rpm -qa
+                 has xbps-query && xbps-query -l
+                 has apk        && apk info
++                has spm        && spm -a
+                 has guix       && guix package --list-installed
+                 has opkg       && opkg list-installed
+ 

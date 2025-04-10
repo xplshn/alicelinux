@@ -1,0 +1,4 @@
+name=tty-clock
+version=2.3
+release=1
+source="https://github.com/xorg62/${name}/archive/v${version}/${name}-${version}.tar.gz"

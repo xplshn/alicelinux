@@ -1,0 +1,14 @@
+name=mandoc
+version=1.14.6
+release=1
+source="https://${name}.bsd.lv/snapshots/${name}-${version}.tar.gz"
+
+prebuild() {
+cat > configure.local <<EOF
+PREFIX=/usr
+MANDIR=/usr/share/man
+LIBDIR=/usr/lib
+SBINDIR=/usr/bin
+LN="ln -sf"
+EOF
+}

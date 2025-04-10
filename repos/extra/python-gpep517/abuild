@@ -1,0 +1,16 @@
+name=python-gpep517
+version=17
+release=1
+source="https://github.com/mgorny/gpep517/archive/v${version}/gpep517-v${version}.tar.gz
+	default-bytecode-levels.patch
+	gpep517"
+
+build() {
+	sitedir="$(python3 -c 'import site;print(site.getsitepackages()[0])')"
+	mkdir -p $PKG/$sitedir
+	find gpep517 -name "*.orig" -delete
+	cp -a gpep517 $PKG/$sitedir
+	python3 -m compileall $PKG/$sitedir
+
+	install -Dm755 $SRC/gpep517 -t $PKG/usr/bin
+}

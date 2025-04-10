@@ -1,0 +1,4 @@
+name=python-markupsafe
+version=3.0.2
+release=1
+source="https://pypi.io/packages/source/m/markupsafe/markupsafe-$version.tar.gz"

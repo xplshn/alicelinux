@@ -1,0 +1,15 @@
+name=f2fs-tools
+version=1.16.0
+release=1
+source="https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/${name}.git/snapshot/${name}-${version}.tar.gz
+		https://gitlab.alpinelinux.org/alpine/aports/-/raw/master/main/f2fs-tools/no-lfs64.patch"
+keep_static=1
+
+build() {
+	LDFLAGS="$LDFLAGS -static -all-static" ./autogen.sh && \
+	./configure \
+			--prefix="/usr"
+	make
+	make install DESTDIR="$PKG"
+	install -D -m644 mkfs/f2fs_format_utils.h "$PKG/usr/include/f2fs_format_utils.h"
+}

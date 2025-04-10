@@ -1,0 +1,7 @@
+name=wlroots
+version=0.18.2
+release=1
+source="https://gitlab.freedesktop.org/${name}/${name}/-/releases/${version}/downloads/${name}-${version}.tar.gz"
+[ -f $SPM_PKGDB/libx11 ] && xbackends=",x11"
+[ -f $SPM_PKGDB/xwayland ] && build_opt="-Dxwayland=enabled"
+build_opt="$build_opt -Dexamples=false -Ddefault_library=both -Dbackends=drm,libinput$xbackends"
