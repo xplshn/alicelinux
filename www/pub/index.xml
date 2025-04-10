@@ -6,14 +6,14 @@
     <description>Recent content in Home on AliceLinux</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Mar 2025 06:02:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Apr 2025 04:12:07 +0000</lastBuildDate>
     <atom:link href="https://xplshn.github.io/alicelinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>install.md</title>
       <link>https://xplshn.github.io/alicelinux/docs/install/</link>
-      <pubDate>Fri, 14 Mar 2025 06:02:10 +0000</pubDate>
+      <pubDate>Thu, 10 Apr 2025 04:12:07 +0000</pubDate>
       <guid>https://xplshn.github.io/alicelinux/docs/install/</guid>
-      <description>&lt;h1 id=&#34;install-alice&#34;&gt;Install Alice&lt;/h1&gt;&#xA;&lt;p&gt;Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-alice-rootfs-tarball&#34;&gt;Get Alice rootfs tarball&lt;/h2&gt;&#xA;&lt;p&gt;Download the Alice rootfs tarball from the &lt;a href=&#34;https://codeberg.org/emmett1/alicelinux/releases&#34;&gt;release&lt;/a&gt; page, along with its &lt;code&gt;sha256sum&lt;/code&gt; file.&#xA;$ curl -O &lt;url&gt;&#xA;$ curl -O &lt;url&gt;.sha256sum&#xA;Verify the checksum of the Alice rootfs tarball:&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;install-alice&#34;&gt;Install Alice&lt;/h1&gt;&#xA;&lt;p&gt;=============&lt;/p&gt;&#xA;&lt;p&gt;Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-alice-rootfs-tarball&#34;&gt;Get Alice rootfs tarball&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Download the Alice rootfs tarball from the &lt;a href=&#34;https://codeberg.org/emmett1/alicelinux/releases&#34;&gt;release&lt;/a&gt; page, along with its &lt;code&gt;sha256sum&lt;/code&gt; file.&lt;/p&gt;</description>
     </item>
     <item>
       <title>packagemanager.md</title>
