@@ -3,8 +3,8 @@ date = '2025-04-10T04:21:46'
 draft = false
 title = 'packagemanager.md'
 [params.author]
-  name = 'emmett1'
-  email = 'emmett1.2miligrams@protonmail.com'
+  name = '󰬭 [CI] '
+  email = 'action@github.com'
 +++
 # Package Manager
 
