@@ -1,7 +1,8 @@
 name=p7zip
 version=17.06
 release=1
-source="https://github.com/$name-project/$name/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/$name-project/$name/archive/v$version/$name-$version.tar.gz
+	fix-uintxx_t-redefined.patch"
 
 build() {
 	sed '/^gzip/d' -i install.sh

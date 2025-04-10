@@ -2,3 +2,7 @@ name=libslirp
 version=4.9.0
 release=1
 source="https://gitlab.freedesktop.org/slirp/$name/-/archive/v$version/$name-$version.tar.bz2"
+
+prebuild() {
+	sed '221,239d' -i meson.build
+}
