@@ -1,10 +1,8 @@
 # Install Alice
-=============
 
 Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.
 
 ## Get Alice rootfs tarball
-------------------------
 
 Download the Alice rootfs tarball from the [release](https://codeberg.org/emmett1/alicelinux/releases) page, along with its `sha256sum` file.
 
@@ -20,12 +18,12 @@ $ sha256sum -c alicelinux-rootfs-20240525.tar.xz.sha256sum
 ```
 
 Make sure it prints:
+
 ```
 alicelinux-rootfs-20240525.tar.xz: OK
 ```
 
 ## Prepare the partition and filesystem
-------------------------------------
 
 Prepare the partition and filesystem of your choice. In this guide, I will use ext4 as an example.
 
@@ -34,7 +32,7 @@ Prepare the partition and filesystem of your choice. In this guide, I will use e
 # mkfs.ext4 /dev/sdXY
 ```
 
-Mount your created partition somewhere. In this guide, I will use /mnt/alice as the mount point.
+Mount your created partition somewhere. In this guide, I will use `/mnt/alice` as the mount point.
 
 ```sh
 # mkdir /mnt/alice
@@ -42,7 +40,6 @@ Mount your created partition somewhere. In this guide, I will use /mnt/alice as 
 ```
 
 ## Extract the Alice rootfs tarball
---------------------------------
 
 Extract the Alice rootfs into the mounted partition.
 
@@ -51,9 +48,8 @@ $ tar xvf alicelinux-rootfs-*.tar.xz -C /mnt/alice
 ```
 
 ## Enter chroot
-------------
 
-First, chroot into Alice. (Replace /mnt/alice with your chosen mount point.)
+First, chroot into Alice. (Replace `/mnt/alice` with your chosen mount point.)
 
 ```sh
 # /mnt/alice/usr/bin/apkg-chroot /mnt/alice
@@ -62,9 +58,8 @@ First, chroot into Alice. (Replace /mnt/alice with your chosen mount point.)
 Any further commands after this will be executed inside the Alice environment.
 
 ## Clone Alice repos
------------------
 
-Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var/lib directory to keep the system clean.
+Fetch the Alice packages repositories somewhere. I'll fetch them inside the `/var/lib` directory to keep the system clean.
 
 ```sh
 # cd /var/lib
@@ -74,7 +69,6 @@ Fetch the Alice packages repositories somewhere. I'll fetch them inside the /var
 Once we have the repositories cloned, we need to configure `apkg`. `apkg` is Alice's package build system (or package manager). By default, Alice does not provide an `apkg` config file (yes, `apkg` can work without a config file), but we need to create one. The `apkg` config file should be located at `/etc/apkg.conf` by default. Let's create one.
 
 ## Configure apkg.conf
--------------------
 
 First, we set `CFLAGS` and `CXXFLAGS`. Alice base packages are built using `-O3 -march=x86-64 -pipe`. You can use these settings or change them to your preference.
 
@@ -106,7 +100,7 @@ Alice provides four (4) `package repos` (at the time of this writing): `core`, `
 
 First, get the absolute path of the `package repos` where we cloned them. By the way, we are still inside the `/var/lib` directory where we cloned the repo.
 
->NOTE: USE TAB COMPLETION!
+> NOTE: USE TAB COMPLETION!
 
 ```sh
 # realpath alicelinux/repos/core
@@ -121,7 +115,7 @@ After we have the path of our `package repos`, add it to the `APKG_REPO` variabl
 # echo 'APKG_REPO="/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra"' >> /etc/apkg.conf
 ```
 
->NOTE: All repo paths must be declared in the APKG_REPO variable, separated by a single space.
+> NOTE: All repo paths must be declared in the `APKG_REPO` variable, separated by a single space.
 
 After setting up our `package repos`, make sure `apkg` can find the packages. We can use `apkg -s <pattern>` to search for packages.
 
@@ -154,9 +148,9 @@ Then add these paths to `/etc/apkg.conf`.
 ```
 
 ## Full system upgrade/rebuild
----------------------------
 
 On the first install, we should upgrade the system first.
+
 > NOTE: Use uppercase `U` for a system upgrade, and lowercase `u` to upgrade a specific package of your choice.
 
 ```sh
@@ -173,7 +167,6 @@ If you changed `CFLAGS` and `CXXFLAGS` to something other than the default, it's
 ```
 
 ## Install development packages
-----------------------------
 
 Before installing any additional packages, we need to install development packages.
 
@@ -182,9 +175,9 @@ Before installing any additional packages, we need to install development packag
 ```
 
 ## Install kernel
---------------
 
 You can configure your own kernel from [kernel.org](https://kernel.org/) or use the one provided by Alice.
+
 > NOTE: The provided kernel will take a lot of time to compile because many options are enabled.
 
 If you want to use Alice's kernel, just run:
@@ -194,7 +187,6 @@ If you want to use Alice's kernel, just run:
 ```
 
 ## Install firmware
-----------------
 
 If your hardware requires firmware, install it using:
 
@@ -203,7 +195,6 @@ If your hardware requires firmware, install it using:
 ```
 
 ## Install bootloader
-------------------
 
 In this guide, I'm going to use `grub` as the bootloader. Install `grub`:
 
@@ -219,7 +210,6 @@ Then generate grub config:
 ```
 
 ## Hostname
---------
 
 Change `alice` to the hostname of your choice.
 
@@ -228,7 +218,6 @@ Change `alice` to the hostname of your choice.
 ```
 
 ## Fstab
------
 
 Change the partition and filesystem of your choice below:
 
@@ -238,7 +227,6 @@ Change the partition and filesystem of your choice below:
 ```
 
 ## Enable runit services
----------------------
 
 Alice uses busybox's `runit` as its main service manager. Enable the required services:
 
@@ -249,11 +237,11 @@ Alice uses busybox's `runit` as its main service manager. Enable the required se
 ```
 
 I'm enabling 3 `tty` services. `tty` is required; without it, you won't be able to log in (or run any commands).
+
 > The runit service directory is `/etc/sv`.
 > Create a symlink from `/etc/sv/<service>` to `/var/service` to enable it; remove the symlink to disable it.
 
 ## Setup user and password
------------------------
 
 Add your user:
 
@@ -276,7 +264,6 @@ You might need to add your user to the `input` and `video` groups to start the W
 ```
 
 ## Root password
--------------
 
 Set the password for the `root` user:
 
@@ -285,7 +272,6 @@ Set the password for the `root` user:
 ```
 
 ## Networking
-----------
 
 You might want to set up networking before rebooting. Use `wpa_supplicant` and `dhcpcd`.
 
@@ -307,7 +293,6 @@ Enable the service:
 ```
 
 ## Timezone
---------
 
 Install `tzdata`:
 
@@ -329,7 +314,6 @@ Alternatively, you can copy it and then uninstall `tzdata` to keep your installe
 ```
 
 ## Reboot and enjoy!
------------------
 
 Exit the chroot environment and unmount the Alice partition, then reboot:
 
@@ -340,7 +324,6 @@ Exit the chroot environment and unmount the Alice partition, then reboot:
 ```
 
 ## Some important notes
-====================
 
 - `Alice` uses `spm` and `apkg` as its package manager and package build system. Run with the `-h` flag to see available options.
 - Additional scripts are provided with the name `apkg-<script>` which will be added (or removed) from time to time.
