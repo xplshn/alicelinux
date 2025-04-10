@@ -1,5 +1,5 @@
 name=mesa
-version=25.0.2
+version=25.0.3
 release=1
 source="https://archive.mesa3d.org/$name-$version.tar.xz"
 keep_static=1

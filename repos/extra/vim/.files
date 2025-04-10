@@ -494,6 +494,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/cuda.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/cvsrc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/dart.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/dax.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/deb822sources.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/debchangelog.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/debcontrol.vim
@@ -693,6 +694,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/poefilter.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/poke.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/postscr.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/pq.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/prisma.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/procmail.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/prolog.vim
@@ -1339,6 +1341,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/d.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/dart.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/datascript.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/dax.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/dcd.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/dcl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/deb822sources.vim
@@ -1694,6 +1697,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/modula2/opt/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/povini.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ppd.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/ppwiz.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/pq.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/prescribe.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/privoxy.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/procmail.vim

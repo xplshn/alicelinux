@@ -4,13 +4,13 @@ drwxr-xr-x root/root    usr/bin/
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/python3.13/
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
-drwxr-xr-x root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/
--rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/PKG-INFO
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/SOURCES.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/dependency_links.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/entry_points.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/requires.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.0-py3.13.egg-info/top_level.txt
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/entry_points.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/meson-1.7.2-py3.13.egg-info/top_level.txt
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/__pycache__/
@@ -185,7 +185,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/__pycache__/__init__.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/__pycache__/__init__.cpython-313.pyc
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/preload.cmake
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/data/preload.cmake
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/executor.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/fileapi.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/cmake/generator.py
@@ -358,9 +358,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/configtool.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/cuda.py
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakeLists.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakeListsLLVM.txt
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakePathInfo.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakeLists.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakeListsLLVM.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/CMakePathInfo.txt
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/__init__.py
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/dependencies/data/__pycache__/__init__.cpython-313.opt-1.pyc
@@ -645,7 +645,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/__py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/cleantrees.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/clippy.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/cmake_run_ctgt.py
--rw-rw-r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/cmd_or_ps.ps1
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/cmd_or_ps.ps1
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/copy.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/coverage.py
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/mesonbuild/scripts/delwithsuffix.py
@@ -759,4 +759,4 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/meson.1.gz
 drwxr-xr-x root/root    usr/share/polkit-1/
 drwxr-xr-x root/root    usr/share/polkit-1/actions/
--rw-rw-r-- root/root    usr/share/polkit-1/actions/com.mesonbuild.install.policy
+-rw-r--r-- root/root    usr/share/polkit-1/actions/com.mesonbuild.install.policy
