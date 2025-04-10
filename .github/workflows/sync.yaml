@@ -1,50 +1,53 @@
 name: Sync with Codeberg
+
 on:
   schedule:
     - cron: '0 0 */3 * *'  # Run every 3 days at midnight
   workflow_dispatch:
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout GitHub repo
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         ref: 'master'
-    
-    - name: Setup Git config
-      run: |
-        git config user.name '󰬭 [CI] '
-        git config user.email 'action@github.com'
-    
+
     - name: Add Codeberg remote
       run: |
         git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
-    
+
     - name: Fetch changes from Codeberg
       run: |
         git fetch codeberg
-    
-    - name: Merge with clang branch
+
+    #- name: Checkout Codeberg pages branch
+    #  run: |
+    #    git checkout -b codeberg-pages codeberg/pages
+
+    #- name: Copy docs folder from pages branch
+    #  run: |
+    #    rm -f ./docs/*.html
+    #    cp -r docs ../docs-temp
+    #    git checkout master
+    #    rm -rf docs
+    #    mv ../docs-temp docs
+
+    - name: Fetch changes in submodules
       run: |
-        # Option 1: Use merge with strategy to preserve history
-        #git merge codeberg/clang --allow-unrelated-histories -m "Sync: Merged changes from Codeberg clang branch" || true
-        
-        # Alternative Option 2: Rebase approach if merge doesn't work well
-        git checkout -b temp-merge
-        git reset --hard codeberg/clang
-        git checkout master
-        git rebase temp-merge || true
-    
-    # Fetch and update submodules
-    - name: Update submodules
-      run: |
-        git submodule update --init --recursive
         git submodule update --recursive --remote
-        git add .
-        git commit -m "Sync: Updated submodules" || true
-    
-    - name: Push changes to GitHub
+
+    - name: Merge changes
       run: |
+        git config user.name '󰬭 [CI] '
+        git config user.email 'action@github.com'
+        git merge --allow-unrelated-histories codeberg/main
+
+    - name: Commit and push changes to GitHub
+      run: |
+        git add .
+        git commit -m "Sync" || true
         git push origin master || true
