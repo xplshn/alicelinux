@@ -29,9 +29,6 @@ jobs:
         mkdir /tmp/alicerootfs
         wget -qO- https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz | tar xJf - -C /tmp/alicerootfs
         wget -qO- https://raw.githubusercontent.com/xplshn/dbin/master/stubdl | sh -s -- --install "/tmp/alicerootfs/usr/local/bin/dbin" -v
-        # TODO: REMOVE when MERGED
-        wget -qO /tmp/alicerootfs/usr/bin/apkg https://codeberg.org/xplshn/autils/raw/branch/main/apkg
-        chmod +x /tmp/alicerootfs/usr/bin/apkg
         
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
