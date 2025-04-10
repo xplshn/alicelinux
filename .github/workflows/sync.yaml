@@ -12,69 +12,25 @@ jobs:
       with:
         fetch-depth: 0
         ref: 'master'
-    
-    - name: Setup Git config
-      run: |
-        git config user.name '󰬭 [CI] '
-        git config user.email 'action@github.com'
-    
     - name: Add Codeberg remote
       run: |
         git remote add codeberg https://codeberg.org/emmett1/alicelinux.git
-    
     - name: Fetch changes from Codeberg
       run: |
         git fetch codeberg
-    
-    # First handle the docs from pages branch
-    - name: Copy docs from pages branch
+    - name: Checkout master
       run: |
-        # Create temporary directory to store docs
-        mkdir -p ../docs-temp
-        
-        # Checkout Codeberg pages branch to a temporary branch
-        git checkout -b temp-pages codeberg/pages
-        
-        # Copy docs folder to the temporary location
-        cp -r docs/*.md ../docs-temp/ || true
-        
-        # Go back to master branch
         git checkout master
-    
-    # Now handle the merge with clang branch
-    - name: Merge with clang branch
+    - name: Fetch changes in submodules
       run: |
-        # Create a temporary branch for merging clang changes
-        git checkout -b temp-clang
-        
-        # Cherry-pick or apply changes from clang branch, excluding docs directory
-        git checkout codeberg/clang -- .
-        
-        # Remove any docs from clang branch to avoid conflicts
-        rm -rf docs
-        
-        # Create the docs directory and copy the docs from pages branch
-        mkdir -p docs
-        cp -r ../docs-temp/* docs/ || true
-        
-        # Stage all changes
-        git add .
-        
-        # Commit the merged changes
-        git commit -m "Sync: Merged changes from Codeberg clang branch with docs from pages branch" || true
-        
-        # Push the changes back to master
-        git checkout master
-        git merge temp-clang --no-ff -m "Sync: Combined update from Codeberg" || true
-    
-    # Fetch and update submodules
-    - name: Update submodules
-      run: |
-        git submodule update --init --recursive
         git submodule update --recursive --remote
-        git add .
-        git commit -m "Sync: Updated submodules" || true
-    
-    - name: Push changes to GitHub
+    - name: Merge changes
       run: |
+        git config user.name '󰬭 [CI] '
+        git config user.email 'action@github.com'
+        git merge --allow-unrelated-histories codeberg/clang
+    - name: Commit and push changes to GitHub
+      run: |
+        git add .
+        git commit -m "Sync" || true
         git push origin master || true
