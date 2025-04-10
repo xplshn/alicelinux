@@ -59,7 +59,12 @@ jobs:
         APKG_CONF
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1 PATH="/usr/local/bin:$PATH"
         apkg -s sway && echo "Repos are working"
-        DBIN_INSTALL_DIR="/usr/local/bin" DBIN_NOCONFIG=1 /usr/local/bin/dbin add coreutils/fold#github.com.uutils.coreutils.standalone
+        #DBIN_INSTALL_DIR="/usr/local/bin" DBIN_NOCONFIG=1 /usr/local/bin/dbin add coreutils/fold#github.com.uutils.coreutils.standalone
+        
+        # TODO: REMOVE when MERGED
+        wget -qO /usr/bin/apkg https://codeberg.org/xplshn/autils/raw/branch/main/apkg
+        chmod +x /usr/bin/apkg
+        
         apkg -u busybox
         apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -U
