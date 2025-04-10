@@ -1,0 +1,10 @@
+--- wireless_tools.30-orig/ifrename.c
++++ wireless_tools.30/ifrename.c
+@@ -45,6 +45,7 @@
+ #define _GNU_SOURCE
+ #endif
+ 
++#include <libgen.h>             /* basename */
+ #include <getopt.h>		/* getopt_long() */
+ #include <linux/sockios.h>	/* SIOCSIFNAME */
+ #include <fnmatch.h>		/* fnmatch() */

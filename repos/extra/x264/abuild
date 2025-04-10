@@ -1,0 +1,6 @@
+name=x264
+version=20240216
+release=1
+source="https://anduin.linuxfromscratch.org/BLFS/$name/$name-$version.tar.xz
+	portability.patch"
+build_opt="--enable-shared"

@@ -1,0 +1,6 @@
+name=dropbear
+version=2025.87
+release=1
+source="https://matt.ucc.asn.au/${name}/releases/${name}-${version}.tar.bz2
+	run"
+sv="run"

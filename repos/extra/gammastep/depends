@@ -1,0 +1,8 @@
+glib
+libdrm
+libxdmcp
+libxext
+libxxf86vm
+wayland
+intltool
+gettext-tiny

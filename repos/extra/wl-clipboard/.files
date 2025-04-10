@@ -1,0 +1,10 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/wl-copy
+-rwxr-xr-x root/root    usr/bin/wl-paste
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/wl-clipboard.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/wl-copy.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/wl-paste.1.gz

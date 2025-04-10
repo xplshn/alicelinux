@@ -1,0 +1,55 @@
+name=gcc
+version=14.2.0
+release=1
+source="https://ftp.gnu.org/gnu/gcc/gcc-$version/gcc-$version.tar.xz
+	c89
+	c99"
+keep_static=1
+
+build() {
+	# /lib is 64bit libraries directory
+	sed -e '/m64=/s/lib64/lib/' \
+	    -i.orig gcc/config/i386/t-linux64
+	
+	mkdir -v build
+	cd       build
+	
+	SED=sed \
+	../configure \
+		--prefix=/usr \
+		--libexecdir=/usr/lib \
+		--with-system-zlib \
+		--with-pkgversion="Alice Linux" \
+		--with-zstd=no \
+		--enable-languages=c,c++ \
+		--enable-lto \
+		--enable-threads=posix \
+		--enable-__cxa_atexit \
+		--enable-default-pie \
+		--enable-default-ssp \
+		--disable-symvers \
+		--disable-libmudflap \
+		--disable-fixed-point \
+		--disable-libstdcxx-pch \
+		--disable-fixincludes \
+		--disable-bootstrap \
+		--disable-libmpx \
+		--disable-multilib \
+		--disable-libsanitizer
+	make
+	make DESTDIR=$PKG -j1 install
+	
+	ln -sv gcc $PKG/usr/bin/cc
+	
+	install -v -dm755 $PKG/usr/lib/bfd-plugins
+	ln -sfv ../../lib/gcc/$(gcc -dumpmachine)/$version/liblto_plugin.so \
+	        $PKG/usr/lib/bfd-plugins/
+	
+	mkdir -pv $PKG/usr/share/gdb/auto-load/usr/lib
+	mv -v $PKG/usr/lib/*gdb.py $PKG/usr/share/gdb/auto-load/usr/lib
+	
+	install -Dm755 $SRC/c89 $PKG/usr/bin/c89
+	install -Dm755 $SRC/c99 $PKG/usr/bin/c99
+	
+	rm -r $PKG/usr/share/$name-$version
+}

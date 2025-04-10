@@ -1,0 +1,15 @@
+name=foot
+version=1.21.0
+release=1
+source="$name-$version.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
+build_opt="-Dtests=false"
+
+postbuild() {
+	rm $PKG/usr/share/terminfo/f/foot
+	rm $PKG/usr/share/terminfo/f/foot-direct
+	rm -r \
+		$PKG/usr/share/zsh \
+		$PKG/usr/share/fish \
+		$PKG/usr/share/bash-completion
+		
+}

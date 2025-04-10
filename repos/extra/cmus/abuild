@@ -1,0 +1,10 @@
+name=cmus
+version=2.12.0
+release=1
+source="https://github.com/${name}/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+
+build() {
+	./configure prefix=/usr
+	make
+	make install install-man
+}

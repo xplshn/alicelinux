@@ -1,0 +1,32 @@
+name=llvm
+version=19.1.7
+release=1
+source="https://github.com/${name}/${name}-project/releases/download/${name}org-${version}/${name}-${version}.src.tar.xz
+	https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/cmake-${version}.src.tar.xz
+	musl-stack-size.patch"
+build_dir="${name}-${version}.src"
+patch_opt="-Np2"
+build_opt="
+	-DLLVM_BUILD_LLVM_DYLIB=ON
+	-DLLVM_LINK_LLVM_DYLIB=ON
+	-DLLVM_TARGETS_TO_BUILD='host;AMDGPU'
+	-DLLVM_ENABLE_RTTI=ON
+	-DLLVM_HOST_TRIPLE=$(cc -dumpmachine)
+	-DLLVM_INCLUDE_BENCHMARKS=OFF
+	-DLLVM_INCLUDE_EXAMPLES=OFF
+	-DLLVM_INCLUDE_DOCS=OFF
+	-DLLVM_INCLUDE_TESTS=OFF
+	-DLLVM_ENABLE_TERMINFO=OFF
+	-DLLVM_ENABLE_LIBXML2=OFF
+"
+keep_static=1
+build_type="cmake_build"
+
+prebuild() {
+	mv ../cmake-${version}.src .
+	sed "/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-${version}.src@" -i CMakeLists.txt
+}
+
+postbuild() {
+	cp */*/bin/FileCheck $PKG/usr/bin
+}

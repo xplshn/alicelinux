@@ -1,0 +1,4 @@
+name=nbwmon
+version=0.5.2
+release=1
+source="https://github.com/causes-/${name}/archive/${version}/${name}-${version}.tar.gz"

@@ -1,0 +1,5 @@
+name=swayidle
+version=1.8.0
+release=2
+source="https://github.com/swaywm/${name}/releases/download/${version}/${name}-${version}.tar.gz"
+build_opt="-Dzsh-completions=false -Dbash-completions=false -Dfish-completions=false"

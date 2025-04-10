@@ -1,0 +1,26 @@
+name=sqlite
+version=3.49.1
+_v=${version%%.*}
+_vv=${version#*.}; _vv=${_vv%.*}
+_vvv=${version##*.}
+case $_vvv in
+        ?) _vvv=0${_vvv};;
+esac
+_version=${_v}${_vv}${_vvv}00
+release=1
+source="https://sqlite.org/2025/$name-autoconf-$_version.tar.gz"
+
+build() {
+	./configure \
+	        --prefix=/usr     \
+	        --disable-static  \
+	        --enable-fts4 \
+	        --enable-fts5 \
+	        CPPFLAGS="-DSQLITE_ENABLE_COLUMN_METADATA=1 \
+	        -DSQLITE_ENABLE_UNLOCK_NOTIFY=1   \
+	        -DSQLITE_ENABLE_DBSTAT_VTAB=1     \
+	        -DSQLITE_SECURE_DELETE=1          \
+	        -DSQLITE_ENABLE_FTS3_TOKENIZER=1"
+	make
+	make install
+}
