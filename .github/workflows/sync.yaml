@@ -29,13 +29,13 @@ jobs:
     - name: Merge with clang branch
       run: |
         # Option 1: Use merge with strategy to preserve history
-        git merge codeberg/clang --allow-unrelated-histories -m "Sync: Merged changes from Codeberg clang branch" || true
+        #git merge codeberg/clang --allow-unrelated-histories -m "Sync: Merged changes from Codeberg clang branch" || true
         
         # Alternative Option 2: Rebase approach if merge doesn't work well
-        # git checkout -b temp-merge
-        # git reset --hard codeberg/clang
-        # git checkout master
-        # git rebase temp-merge || true
+        git checkout -b temp-merge
+        git reset --hard codeberg/clang
+        git checkout master
+        git rebase temp-merge || true
     
     # Fetch and update submodules
     - name: Update submodules
