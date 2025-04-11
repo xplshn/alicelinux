@@ -21,12 +21,22 @@
   
   <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/style.css">
   
-  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/theme_default.css">
-  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/mermaid.css">
+  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/theme_purple.css">
+
   
-  
+
   
   <link href='https://xplshn.github.io/css/SerenityOS-Emoji.css' rel="stylesheet" type="text/css">
+  <link href='https://xplshn.github.io/css/highlightjs_style.css' rel="stylesheet" type="text/css">
+  
+  
+  
+  <script src="https://xplshn.github.io/js/tex-mml-svg.js"></script>
+  <script src="https://xplshn.github.io/js/highlight.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-basic.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-bash.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-go.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-c.min.js"></script>
   
   <script>
   (function() {
@@ -184,8 +194,7 @@
 <p>Alice provides four (4) <code>package repos</code> (at the time of this writing): <code>core</code>, <code>extra</code>, <code>xorg</code> and <code>wayland</code>. <code>core</code> contains all base packages, and <code>extra</code> includes other packages beyond the base. <code>xorg</code> and <code>wayland</code> contain packages for gui and their dependencies.</p>
 <p>First, get the absolute path of the <code>package repos</code> where we cloned them. By the way, we are still inside the <code>/var/lib</code> directory where we cloned the repo.</p>
 <blockquote>
-<p>NOTE: USE TAB COMPLETION!</p>
-</blockquote>
+<p>NOTE: USE TAB COMPLETION!</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># realpath alicelinux/repos/core</span>
 </span></span><span style="display:flex;"><span>/var/lib/alicelinux/repos/core
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># realpath alicelinux/repos/extra</span>
@@ -193,8 +202,7 @@
 </span></span></code></pre></div><p>After we have the path of our <code>package repos</code>, add it to the <code>APKG_REPO</code> variable in <code>/etc/apkg.conf</code>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># echo &#39;APKG_REPO=&#34;/var/lib/alicelinux/repos/core /var/lib/alicelinux/repos/extra&#34;&#39; &gt;&gt; /etc/apkg.conf</span>
 </span></span></code></pre></div><blockquote>
-<p>NOTE: All repo paths must be declared in the <code>APKG_REPO</code> variable, separated by a single space.</p>
-</blockquote>
+<p>NOTE: All repo paths must be declared in the <code>APKG_REPO</code> variable, separated by a single space.</p></blockquote>
 <p>After setting up our <code>package repos</code>, make sure <code>apkg</code> can find the packages. We can use <code>apkg -s &lt;pattern&gt;</code> to search for packages.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># apkg -s sway</span>
 </span></span><span style="display:flex;"><span>swayidle
@@ -214,14 +222,12 @@
 </span></span></code></pre></div><h2 id="full-system-upgraderebuild">Full system upgrade/rebuild</h2>
 <p>On the first install, we should upgrade the system first.</p>
 <blockquote>
-<p>NOTE: Use uppercase <code>U</code> for a system upgrade, and lowercase <code>u</code> to upgrade a specific package of your choice.</p>
-</blockquote>
+<p>NOTE: Use uppercase <code>U</code> for a system upgrade, and lowercase <code>u</code> to upgrade a specific package of your choice.</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># apkg -U</span>
 </span></span></code></pre></div><p>If you changed <code>CFLAGS</code> and <code>CXXFLAGS</code> to something other than the default, it&rsquo;s a good time to perform a full rebuild first. In this case, you can skip upgrading the system because performing a full rebuild will already use the latest version in <code>package repos</code>.</p>
 <blockquote>
 <p>NOTE: Add the <code>-f</code> flag to force rebuild of existing prebuilt package.
-NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
-</blockquote>
+NOTE: <code>apkg -a</code> prints all installed packages on the system.</p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># apkg -u $(apkg -a)</span>
 </span></span></code></pre></div><h2 id="install-development-packages">Install development packages</h2>
 <p>Before installing any additional packages, we need to install development packages.</p>
@@ -229,8 +235,7 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 </span></span></code></pre></div><h2 id="install-kernel">Install kernel</h2>
 <p>You can configure your own kernel from <a href="https://kernel.org/">kernel.org</a> or use the one provided by Alice.</p>
 <blockquote>
-<p>NOTE: The provided kernel will take a lot of time to compile because many options are enabled.</p>
-</blockquote>
+<p>NOTE: The provided kernel will take a lot of time to compile because many options are enabled.</p></blockquote>
 <p>If you want to use Alice&rsquo;s kernel, just run:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># apkg -I linux</span>
 </span></span></code></pre></div><h2 id="install-firmware">Install firmware</h2>
@@ -257,8 +262,7 @@ NOTE: <code>apkg -a</code> prints all installed packages on the system.</p>
 </span></span></code></pre></div><p>I&rsquo;m enabling 3 <code>tty</code> services. <code>tty</code> is required; without it, you won&rsquo;t be able to log in (or run any commands).</p>
 <blockquote>
 <p>The runit service directory is <code>/etc/sv</code>.
-Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service</code> to enable it; remove the symlink to disable it.</p>
-</blockquote>
+Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service</code> to enable it; remove the symlink to disable it.</p></blockquote>
 <h2 id="setup-user-and-password">Setup user and password</h2>
 <p>Add your user:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># adduser &lt;user&gt;</span>
@@ -311,7 +315,5 @@ Create a symlink from <code>/etc/sv/&lt;service&gt;</code> to <code>/var/service
     </div>
 </footer>
 
-
-  
 </body>
 </html>

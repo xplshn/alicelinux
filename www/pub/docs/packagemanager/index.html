@@ -21,12 +21,22 @@
   
   <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/style.css">
   
-  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/theme_default.css">
-  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/mermaid.css">
+  <link rel="stylesheet" href="https://xplshn.github.io/alicelinux/css/theme_purple.css">
+
   
-  
+
   
   <link href='https://xplshn.github.io/css/SerenityOS-Emoji.css' rel="stylesheet" type="text/css">
+  <link href='https://xplshn.github.io/css/highlightjs_style.css' rel="stylesheet" type="text/css">
+  
+  
+  
+  <script src="https://xplshn.github.io/js/tex-mml-svg.js"></script>
+  <script src="https://xplshn.github.io/js/highlight.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-basic.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-bash.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-go.min.js"></script>
+  <script src="https://xplshn.github.io/js/highlight-c.min.js"></script>
   
   <script>
   (function() {
@@ -419,8 +429,7 @@
 </span></span></code></pre></div><p>You can combine it with <code>apkg</code> to rebuild broken packages, for example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># apkg -f -u $(revdep)</span>
 </span></span></code></pre></div><blockquote>
-<p>NOTE: <code>revdep</code> does not solve dependencies, so you might need to manually rebuild broken packages instead of combining it with <code>apkg</code>.</p>
-</blockquote>
+<p>NOTE: <code>revdep</code> does not solve dependencies, so you might need to manually rebuild broken packages instead of combining it with <code>apkg</code>.</p></blockquote>
 <h3 id="updateconf">updateconf</h3>
 <p><code>updateconf</code> is a script to update configuration files inside the <code>/etc</code> directory. It is recommended to run it after package upgrades.</p>
 <h3 id="apkg-chroot">apkg-chroot</h3>
@@ -477,7 +486,5 @@
     </div>
 </footer>
 
-
-  
 </body>
 </html>

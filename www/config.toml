@@ -84,7 +84,7 @@ footnotereturnlinkcontents = "↩"
     brandIconFile = "assets/images/icon.svg"
     abbrDateFmt = "Jan 2"
     dateFmt = "02.01.2006 15:04"
-    #themeVariant = "theme_blue.css"
+    themeVariant = "theme_purple.css"
     printSidebar = true
 
 [[social]]
