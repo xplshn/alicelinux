@@ -1,0 +1,4 @@
+ee03a3ec306d0131df30ed59ae0fa77987bb05bfe0a8169b59b4316c016cfdde  syslinux-6.03.tar.xz
+439a621543142a74e1ed620eaa9c48a09de30a9b9ddc2dc57f05adc44879aedc  syslinux-Makefile.patch
+69c7bd85fb1f283d0cd3110748b3226bd1b04277c38a78532c9432a4c906d4f7  syslinux-fix-missing-stdio.patch
+45ad5431a86e1efd8133d629dee907f68e5abf7c71429d28b1754ce5651d0bd7  syslinux-sysmacros.patch

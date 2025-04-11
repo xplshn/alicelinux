@@ -1,0 +1,21 @@
+Alice Linux \r (\l)
+
+Project page : https://codeberg.org/emmett1/alicelinux
+
+user login   : live
+user password: live
+
+root login   : root
+root password: root
+
+run 'sway' after login to start gui
+
+Some default sway keybindsym reminder:
+
+   Super + Enter       : foot terminal
+   Super + d           : menu launcher
+   Super + Shift + q   : quit program
+   Super + Shift + e   : exit sway
+   
+run 'doas poweroff' to poweroff live system
+

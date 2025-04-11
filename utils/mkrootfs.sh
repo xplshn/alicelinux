@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/sh -e
 
 [ "$(id -u)" = 0 ] || {
 	echo "making rootfs required root access"
@@ -11,10 +11,10 @@ TARBALL=$HERE/$OUTNAME.tar.xz
 PKGLIST=$TARBALL.pkglist
 SHASUM=$TARBALL.sha256sum
 ROOTFS=/tmp/alicerootfs
-basepkg="baselayout autils binutils bison busybox
-	bzip2 ca-certificates curl file flex gcc
-	git gmp initscripts linux-headers m4 make
-	mpc mpfr musl libressl patch spm xz zlib"
+basepkg="baselayout autils b3sum bison busybox bzip2
+	ca-certificates curl file git initscripts
+	libressl linux-headers llvm m4 make musl
+	patch spm xz zlib-ng zstd"
 
 rm -rf $ROOTFS
 mkdir -p $ROOTFS/var/lib/spm/db
