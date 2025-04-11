@@ -44,7 +44,7 @@ jobs:
       run: |
         git config user.name '󰬭 [CI] '
         git config user.email 'action@github.com'
-        git merge --allow-unrelated-histories codeberg/main
+        git merge --allow-unrelated-histories codeberg/clang
 
     - name: Commit and push changes to GitHub
       run: |
