@@ -1,0 +1,14 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/limine
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/limine.h
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/limine/
+-rw-r--r-- root/root    usr/share/limine/BOOTX64.EFI
+-rw-r--r-- root/root    usr/share/limine/limine-bios-cd.bin
+-rw-r--r-- root/root    usr/share/limine/limine-bios.sys
+-rw-r--r-- root/root    usr/share/limine/limine-uefi-cd.bin
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/limine.1.gz
