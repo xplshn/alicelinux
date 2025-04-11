@@ -1,6 +1,12 @@
 name=mimalloc
 version=2.1.9
-release=1
-source="https://github.com/microsoft/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+release=2
+source="https://github.com/microsoft/${name}/archive/v${version}/${name}-v${version}.tar.gz
+		patch_libc.sh"
 keep_static=1
 build_opt="-DMI_OVERRIDE=true -DMI_LIBC_MUSL=true -DMI_BUILD_STATIC=true -DMI_BUILD_OBJECT=true -DMI_BUILD_SHARED=true"
+
+postbuild() {
+	mkdir -p $PKG/usr/local/bin
+       mv $SRC/patch_libc $PKG/usr/local/bin
+}
