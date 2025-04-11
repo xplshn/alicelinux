@@ -29,7 +29,7 @@ jobs:
         mkdir /tmp/alicerootfs
         wget -qO- https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz | tar xJf - -C /tmp/alicerootfs
         wget -qO- https://raw.githubusercontent.com/xplshn/dbin/master/stubdl | sh -s -- --install "/tmp/alicerootfs/usr/local/bin/dbin" -v
-        
+
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
         #!/bin/sh -x
         mkdir -p /var/cache/src /var/cache/work /var/cache/pkg
@@ -44,14 +44,12 @@ jobs:
         APKG_SOURCE_DIR="/var/cache/src"
         APKG_WORK_DIR="/var/cache/work"
         APKG_ALIAS="openssl:libressl clang:llvm gcc:llvm binutils:llvm zlib:zlib-ng"
-        APKG_MASK="busybox" # FIXME: Remove when the busybox pkg gets fixed
         export keep_doc=1
         export keep_static=1
         if [ -z "$STANDARD_BUILD_OPTS" ]; then
             set -x
-            #export LD="mold" CC="clang" CXX="clang++"
             export CC="clang" CXX="clang++"
-            export CFLAGS="-O2 -pipe" # -static"
+            export CFLAGS="-O2 -pipe"
             set +x
         fi
         export CXXFLAGS="$CFLAGS"
