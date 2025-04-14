@@ -18,7 +18,6 @@ drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/openssl/
 -rw-r--r-- root/root    usr/include/openssl/aes.h
 -rw-r--r-- root/root    usr/include/openssl/asn1.h
--rw-r--r-- root/root    usr/include/openssl/asn1_mac.h
 -rw-r--r-- root/root    usr/include/openssl/asn1err.h
 -rw-r--r-- root/root    usr/include/openssl/asn1t.h
 -rw-r--r-- root/root    usr/include/openssl/async.h
@@ -30,6 +29,7 @@ drwxr-xr-x root/root    usr/include/openssl/
 -rw-r--r-- root/root    usr/include/openssl/bnerr.h
 -rw-r--r-- root/root    usr/include/openssl/buffer.h
 -rw-r--r-- root/root    usr/include/openssl/buffererr.h
+-rw-r--r-- root/root    usr/include/openssl/byteorder.h
 -rw-r--r-- root/root    usr/include/openssl/camellia.h
 -rw-r--r-- root/root    usr/include/openssl/cast.h
 -rw-r--r-- root/root    usr/include/openssl/cmac.h
@@ -96,6 +96,7 @@ drwxr-xr-x root/root    usr/include/openssl/
 -rw-r--r-- root/root    usr/include/openssl/md4.h
 -rw-r--r-- root/root    usr/include/openssl/md5.h
 -rw-r--r-- root/root    usr/include/openssl/mdc2.h
+-rw-r--r-- root/root    usr/include/openssl/ml_kem.h
 -rw-r--r-- root/root    usr/include/openssl/modes.h
 -rw-r--r-- root/root    usr/include/openssl/obj_mac.h
 -rw-r--r-- root/root    usr/include/openssl/objects.h
@@ -228,6 +229,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/openssl-s_server.1ossl.gz
 -rw-r--r-- root/root    usr/share/man/man1/openssl-s_time.1ossl.gz
 -rw-r--r-- root/root    usr/share/man/man1/openssl-sess_id.1ossl.gz
+-rw-r--r-- root/root    usr/share/man/man1/openssl-skeyutl.1ossl.gz
 -rw-r--r-- root/root    usr/share/man/man1/openssl-smime.1ossl.gz
 -rw-r--r-- root/root    usr/share/man/man1/openssl-speed.1ossl.gz
 -rw-r--r-- root/root    usr/share/man/man1/openssl-spkac.1ossl.gz
@@ -465,6 +467,8 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/EVP_PKEY_verify_recover.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/EVP_RAND.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/EVP_SIGNATURE.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/EVP_SKEY.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/EVP_SKEYMGMT.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/EVP_SealInit.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/EVP_SignInit.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/EVP_VerifyInit.3ossl.gz
@@ -519,6 +523,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_init_ssl.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_instrument_bus.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_load_builtin_modules.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/OPENSSL_load_u16_le.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_malloc.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_riscvcap.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OPENSSL_s390xcap.3ossl.gz
@@ -571,6 +576,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_PARAM_allocate_from_text.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_PARAM_dup.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_PARAM_int.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/OSSL_PARAM_print_to_bio.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_PROVIDER.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_QUIC_client_method.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/OSSL_SELF_TEST_new.3ossl.gz
@@ -706,6 +712,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_ct_validation_callback.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_ctlog_list_file.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_default_passwd_cb.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_domain_flags.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_generate_session_id.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_info_callback.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_keylog_callback.3ossl.gz
@@ -713,6 +720,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_min_proto_version.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_mode.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_msg_callback.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_new_pending_conn_cb.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_num_tickets.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_options.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_CTX_set_psk_client_callback.3ossl.gz
@@ -801,6 +809,8 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/SSL_library_init.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_load_client_CA_file.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_new.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_new_domain.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_new_listener.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_new_stream.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_pending.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_poll.3ossl.gz
@@ -818,6 +828,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_default_stream_mode.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_fd.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_incoming_stream_policy.3ossl.gz
+-rw-r--r-- root/root    usr/share/man/man3/SSL_set_quic_tls_cbs.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_retry_verify.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_session.3ossl.gz
 -rw-r--r-- root/root    usr/share/man/man3/SSL_set_session_secret_cb.3ossl.gz
@@ -943,6 +954,7 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KDF-X942-CONCAT.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KDF-X963.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KEM-EC.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_KEM-ML-KEM.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KEM-RSA.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KEM-X25519.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_KEYEXCH-DH.7ossl.gz
@@ -976,7 +988,10 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-EC.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-FFC.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-HMAC.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-ML-DSA.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-ML-KEM.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-RSA.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-SLH-DSA.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-SM2.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_PKEY-X25519.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_RAND-CRNG-TEST.7ossl.gz
@@ -991,7 +1006,9 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-ECDSA.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-ED25519.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-HMAC.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-ML-DSA.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-RSA.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/EVP_SIGNATURE-SLH-DSA.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-FIPS.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-base.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/OSSL_PROVIDER-default.7ossl.gz
@@ -1018,6 +1035,7 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/openssl-env.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/openssl-glossary.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/openssl-qlog.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/openssl-quic-concurrency.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/openssl-quic.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/openssl-threads.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/openssl_user_macros.7ossl.gz
@@ -1030,6 +1048,8 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-quic-client-non-block.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-quic-introduction.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-quic-multi-stream.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/ossl-guide-quic-server-block.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/ossl-guide-quic-server-non-block.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-tls-client-block.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-tls-client-non-block.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/ossl-guide-tls-introduction.7ossl.gz
@@ -1052,6 +1072,7 @@ drwxr-xr-x root/root    usr/share/man/man7/
 -rw-r--r-- root/root    usr/share/man/man7/provider-object.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/provider-rand.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/provider-signature.7ossl.gz
+-rw-r--r-- root/root    usr/share/man/man7/provider-skeymgmt.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/provider-storemgmt.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/provider.7ossl.gz
 -rw-r--r-- root/root    usr/share/man/man7/proxy-certificates.7ossl.gz
