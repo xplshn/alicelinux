@@ -1,5 +1,9 @@
 name=boost
+<<<<<<< HEAD
 version=1.87.0
+=======
+version=1.88.0
+>>>>>>> codeberg/main
 v=$(echo $version | sed 's/\./_/g')
 release=1
 source="https://archives.boost.io/release/${version}/source/boost_${v}.tar.gz"

@@ -1,0 +1,22 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/theora/
+-rw-r--r-- root/root    usr/include/theora/codec.h
+-rw-r--r-- root/root    usr/include/theora/theora.h
+-rw-r--r-- root/root    usr/include/theora/theoradec.h
+-rw-r--r-- root/root    usr/include/theora/theoraenc.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libtheora.so -> libtheora.so.1.4.1
+lrwxrwxrwx root/root    usr/lib/libtheora.so.1 -> libtheora.so.1.4.1
+-rwxr-xr-x root/root    usr/lib/libtheora.so.1.4.1
+lrwxrwxrwx root/root    usr/lib/libtheoradec.so -> libtheoradec.so.2.1.1
+lrwxrwxrwx root/root    usr/lib/libtheoradec.so.2 -> libtheoradec.so.2.1.1
+-rwxr-xr-x root/root    usr/lib/libtheoradec.so.2.1.1
+lrwxrwxrwx root/root    usr/lib/libtheoraenc.so -> libtheoraenc.so.2.2.1
+lrwxrwxrwx root/root    usr/lib/libtheoraenc.so.2 -> libtheoraenc.so.2.2.1
+-rwxr-xr-x root/root    usr/lib/libtheoraenc.so.2.2.1
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/theora.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/theoradec.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/theoraenc.pc
+drwxr-xr-x root/root    usr/share/

@@ -1,5 +1,9 @@
 name=mpd
+<<<<<<< HEAD
 version=0.24.2
+=======
+version=0.24.3
+>>>>>>> codeberg/main
 release=1
 source="https://www.musicpd.org/download/${name}/${version%.*}/${name}-${version}.tar.xz
 	run"

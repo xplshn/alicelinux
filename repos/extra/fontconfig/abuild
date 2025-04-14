@@ -1,4 +1,8 @@
 name=fontconfig
+<<<<<<< HEAD
 version=2.16.1
+=======
+version=2.16.2
+>>>>>>> codeberg/main
 release=1
 source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
