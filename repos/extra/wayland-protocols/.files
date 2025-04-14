@@ -52,6 +52,7 @@ drwxr-xr-x root/root    usr/include/wayland-protocols/
 -rw-r--r-- root/root    usr/include/wayland-protocols/xdg-system-bell-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/xdg-toplevel-drag-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/xdg-toplevel-icon-v1-enum.h
+-rw-r--r-- root/root    usr/include/wayland-protocols/xdg-toplevel-tag-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/xwayland-keyboard-grab-unstable-v1-enum.h
 -rw-r--r-- root/root    usr/include/wayland-protocols/xwayland-shell-v1-enum.h
 drwxr-xr-x root/root    usr/share/
@@ -120,6 +121,8 @@ drwxr-xr-x root/root    usr/share/wayland-protocols/staging/xdg-toplevel-drag/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/xdg-toplevel-drag/xdg-toplevel-drag-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/xdg-toplevel-icon/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml
+drwxr-xr-x root/root    usr/share/wayland-protocols/staging/xdg-toplevel-tag/
+-rw-r--r-- root/root    usr/share/wayland-protocols/staging/xdg-toplevel-tag/xdg-toplevel-tag-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/staging/xwayland-shell/
 -rw-r--r-- root/root    usr/share/wayland-protocols/staging/xwayland-shell/xwayland-shell-v1.xml
 drwxr-xr-x root/root    usr/share/wayland-protocols/unstable/
