@@ -33,7 +33,6 @@ drwxr-xr-x root/root    usr/lib/librewolf/gmp-clearkey/0.1/
 -rwxr-xr-x root/root    usr/lib/librewolf/gmp-clearkey/0.1/libclearkey.so
 -rw-r--r-- root/root    usr/lib/librewolf/gmp-clearkey/0.1/manifest.json
 -rwxr-xr-x root/root    usr/lib/librewolf/libgkcodecs.so
--rwxr-xr-x root/root    usr/lib/librewolf/libipcclientcerts.so
 -rwxr-xr-x root/root    usr/lib/librewolf/liblgpllibs.so
 -rwxr-xr-x root/root    usr/lib/librewolf/libmozavcodec.so
 -rwxr-xr-x root/root    usr/lib/librewolf/libmozavutil.so

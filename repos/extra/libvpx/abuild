@@ -1,5 +1,5 @@
 name=libvpx
-version=1.15.0
+version=1.15.1
 release=1
 source="https://github.com/webmproject/$name/archive/v$version/$name-$version.tar.gz"
 

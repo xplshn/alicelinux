@@ -1,0 +1,4 @@
+name=libatomic
+version=0.90.0
+release=1
+source="https://github.com/chimera-linux/${name}-chimera/archive/v${version}/${name}-chimera-v${version}.tar.gz"

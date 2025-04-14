@@ -16,9 +16,9 @@ drwxr-xr-x root/root    usr/include/vpx/
 -rw-rw-r-- root/root    usr/include/vpx/vpx_integer.h
 -rw-rw-r-- root/root    usr/include/vpx/vpx_tpl.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libvpx.so -> libvpx.so.9.1.0
-lrwxrwxrwx root/root    usr/lib/libvpx.so.9 -> libvpx.so.9.1.0
-lrwxrwxrwx root/root    usr/lib/libvpx.so.9.1 -> libvpx.so.9.1.0
--rwxr-xr-x root/root    usr/lib/libvpx.so.9.1.0
+lrwxrwxrwx root/root    usr/lib/libvpx.so -> libvpx.so.11.0.0
+lrwxrwxrwx root/root    usr/lib/libvpx.so.11 -> libvpx.so.11.0.0
+lrwxrwxrwx root/root    usr/lib/libvpx.so.11.0 -> libvpx.so.11.0.0
+-rwxr-xr-x root/root    usr/lib/libvpx.so.11.0.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/vpx.pc

@@ -1,10 +1,11 @@
 name=librewolf
-version=136.0.2.1
+version=137.0.3
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
 release=1
 source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
+	visibility.patch
 	fix-rust-target.patch"
 
 build() {
@@ -66,6 +67,7 @@ EOF
 	export CFLAGS="$CFLAGS -w"
 	export CXXFLAGS="$CXXFLAGS -w"
 	export LDFLAGS="$LDFLAGS -Wl,-rpath=/usr/lib/$name,--enable-new-dtags"
+	export CXXSTDLIB=c++
 	
 	./mach build
 	./mach install

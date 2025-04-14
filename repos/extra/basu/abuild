@@ -2,3 +2,10 @@ name=basu
 version=0.2.1
 release=1
 source="$name-$version.tar.gz::https://git.sr.ht/~emersion/${name}/archive/v${version}.tar.gz"
+build_opt="-Daudit=disabled"
+
+prebuild() {
+	sed '/sd_bus_attach_event;/d' -i src/libsystemd/libsystemd.sym
+	sed '/sd_bus_detach_event;/d' -i src/libsystemd/libsystemd.sym
+	sed '/sd_bus_get_event;/d' -i src/libsystemd/libsystemd.sym
+}

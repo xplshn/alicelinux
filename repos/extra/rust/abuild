@@ -1,9 +1,9 @@
 name=rust
-version=1.85.1
+version=1.86.0
 
 ##cat src/stage0.txt
-export _date=2025-01-09
-export _rustc=1.84.0
+export _date=2025-02-20
+export _rustc=1.85.0
 export _cargo=$_rustc
 ##
 
@@ -29,13 +29,16 @@ build() {
 	
 	sed -i 's/\(crt_static_default = \)true/\1false/' compiler/rustc_target/src/spec/base/linux_musl.rs
 	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.52+curl-7.81.0/.cargo-checksum.json
-	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.74+curl-8.9.0/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.78+curl-8.11.0/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.79+curl-8.12.0/.cargo-checksum.json
 	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.92/.cargo-checksum.json
 	
 	cat > config.toml <<EOF
 [llvm]
 link-shared      = true
 download-ci-llvm = false
+static-libstdcpp = false
+use-libcxx       = true
 
 [build]
 build     = "$_tuplet"
@@ -78,7 +81,14 @@ incremental       = false
 jemalloc          = false
 rpath             = false
 dist-src          = false
+llvm-libunwind    = "system"
 EOF
+
+	mkdir -p libgcc
+	printf 'INPUT(-lunwind)\n' > libgcc/libgcc_s.so
+	ln -sf $(cc -print-file-name=libunwind.so) libgcc/libgcc_s.so.1
+	export LD_LIBRARY_PATH="$PWD/libgcc:$LD_LIBRARY_PATH"
+	export LIBRARY_PATH="$PWD/libgcc:$LIBRARY_PATH"
 	
 	mkdir "$SRC/rust"
 	export RUST_BACKTRACE=1
@@ -88,6 +98,5 @@ EOF
 	
 	rm -rf $PKG/usr/lib/rustlib/src/ \
 		$PKG/usr/share/zsh \
-		$PKG/etc/bash_completion.d \
 		$PKG/usr/lib/rustlib/uninstall.sh
 }

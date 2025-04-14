@@ -2,6 +2,7 @@ name=firefox
 version=137.0
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
+	visibility.patch
 	fix-target-detection.patch"
 
 build() {
@@ -64,6 +65,7 @@ EOF
 	export RUSTFLAGS="$RUSTFLAGS -Cdebuginfo=0"
 	export MOZ_DEBUG_FLAGS=-g0
 	export MOZ_NOSPAM=1
+	export CXXSTDLIB=c++
 	
 	./mach build
 	./mach install

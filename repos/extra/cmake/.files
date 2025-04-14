@@ -1982,6 +1982,7 @@ drwxr-xr-x root/root    usr/share/cmake-4.0/Help/variable/
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_TWEAK_VERSION.rst
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_UNITY_BUILD.rst
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_UNITY_BUILD_BATCH_SIZE.rst
+-rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_UNITY_BUILD_RELOCATABLE.rst
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_UNITY_BUILD_UNIQUE_ID.rst
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE.rst
 -rw-r--r-- root/root    usr/share/cmake-4.0/Help/variable/CMAKE_USER_MAKE_RULES_OVERRIDE_LANG.rst
