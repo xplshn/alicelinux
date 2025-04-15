@@ -1,9 +1,5 @@
 name=cmake
-<<<<<<< HEAD
-version=4.0.0
-=======
 version=4.0.1
->>>>>>> codeberg/main
 release=1
 source="https://$name.org/files/v${version%.*}/$name-$version.tar.gz"
 

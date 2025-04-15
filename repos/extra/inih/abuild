@@ -1,8 +1,4 @@
 name=inih
-<<<<<<< HEAD
-version=59
-=======
 version=60
->>>>>>> codeberg/main
 release=1
 source="https://github.com/benhoyt/$name/archive/r$version/$name-$version.tar.gz"
