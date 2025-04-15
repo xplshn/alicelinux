@@ -27,8 +27,8 @@ jobs:
     - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh
       run: |
         mkdir /tmp/alicerootfs
-        #URL="https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz"
-        URL="https://files.emmett1.net/alice/alicelinux-rootfs-20250414.tar.xz"
+        URL="https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz"
+        #URL="https://files.emmett1.net/alice/alicelinux-rootfs-20250414.tar.xz"
         wget -qO- "$URL" | tar xJf - -C /tmp/alicerootfs
         wget -qO- https://raw.githubusercontent.com/xplshn/dbin/master/stubdl | sh -s -- --install "/tmp/alicerootfs/usr/local/bin/dbin" -v
 
