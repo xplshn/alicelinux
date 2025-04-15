@@ -2,3 +2,4 @@ name=cairo
 version=1.18.4
 release=1
 source="https://www.cairographics.org/releases/cairo-$version.tar.xz"
+build_opt="-Dtests=disabled"
