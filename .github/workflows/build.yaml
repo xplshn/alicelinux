@@ -27,7 +27,9 @@ jobs:
     - name: Download stage rootfs -> update -> rebuild -> mkrootfs.sh
       run: |
         mkdir /tmp/alicerootfs
-        wget -qO- https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz | tar xJf - -C /tmp/alicerootfs
+        #URL="https://github.com/xplshn/alicelinux/releases/latest/download/rootfs.tar.xz"
+        URL="https://files.emmett1.net/alice/alicelinux-rootfs-20250414.tar.xz"
+        wget -qO- "$URL" | tar xJf - -C /tmp/alicerootfs
         wget -qO- https://raw.githubusercontent.com/xplshn/dbin/master/stubdl | sh -s -- --install "/tmp/alicerootfs/usr/local/bin/dbin" -v
 
         cat <<'EOF' > /tmp/alicerootfs/usr/bin/__reconfigure
@@ -46,12 +48,7 @@ jobs:
         APKG_ALIAS="openssl:libressl clang:llvm gcc:llvm binutils:llvm zlib:zlib-ng"
         export keep_doc=1
         export keep_static=1
-        if [ -z "$STANDARD_BUILD_OPTS" ]; then
-            set -x
-            export CC="clang" CXX="clang++"
-            export CFLAGS="-O2 -pipe"
-            set +x
-        fi
+        export CFLAGS="-O2 -pipe"
         export CXXFLAGS="$CFLAGS"
         export MAKEFLAGS="-j$(nproc)"
         export NINJAJOBS="$(nproc)"
