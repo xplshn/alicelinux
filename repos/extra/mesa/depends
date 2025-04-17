@@ -11,3 +11,4 @@ python-pyyaml
 python-ply
 libxfixes
 libxxf86vm
+flex
