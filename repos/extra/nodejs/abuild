@@ -1,7 +1,8 @@
 name=nodejs
-version=23.10.0
+version=23.11.0
 release=1
-source="https://$name.org/dist/v$version/node-v$version.tar.xz"
+source="https://$name.org/dist/v$version/node-v$version.tar.xz
+	atomic.patch"
 
 build() {
 	# use system openssl when openssl installed
