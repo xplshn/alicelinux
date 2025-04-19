@@ -5,11 +5,11 @@ drwxr-xr-x root/root    usr/include/sys/
 -rw-r--r-- root/root    usr/include/sys/psx_syscall.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libcap.so -> libcap.so.2
-lrwxrwxrwx root/root    usr/lib/libcap.so.2 -> libcap.so.2.75
--rwxr-xr-x root/root    usr/lib/libcap.so.2.75
+lrwxrwxrwx root/root    usr/lib/libcap.so.2 -> libcap.so.2.76
+-rwxr-xr-x root/root    usr/lib/libcap.so.2.76
 lrwxrwxrwx root/root    usr/lib/libpsx.so -> libpsx.so.2
-lrwxrwxrwx root/root    usr/lib/libpsx.so.2 -> libpsx.so.2.75
--rwxr-xr-x root/root    usr/lib/libpsx.so.2.75
+lrwxrwxrwx root/root    usr/lib/libpsx.so.2 -> libpsx.so.2.76
+-rwxr-xr-x root/root    usr/lib/libpsx.so.2.76
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libcap.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libpsx.pc
@@ -98,6 +98,8 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/psx_syscall6.3.gz
 drwxr-xr-x root/root    usr/share/man/man5/
 -rw-r--r-- root/root    usr/share/man/man5/capability.conf.5.gz
+drwxr-xr-x root/root    usr/share/man/man7/
+-rw-r--r-- root/root    usr/share/man/man7/cap_text_formats.7.gz
 drwxr-xr-x root/root    usr/share/man/man8/
 -rw-r--r-- root/root    usr/share/man/man8/captree.8.gz
 -rw-r--r-- root/root    usr/share/man/man8/getcap.8.gz
