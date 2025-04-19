@@ -643,6 +643,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/markdown.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/masm.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/matlab.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/mbsync.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/mediawiki.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/mermaid.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/meson.vim
@@ -1592,6 +1593,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/master.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/matlab.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/maxima.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/mbsync.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/mediawiki.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/mel.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/mermaid.vim
