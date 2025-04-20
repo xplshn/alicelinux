@@ -36,9 +36,11 @@ drwxr-xr-x root/root    usr/share/foot/themes/
 -rw-r--r-- root/root    usr/share/foot/themes/material-design
 -rw-r--r-- root/root    usr/share/foot/themes/modus-operandi
 -rw-r--r-- root/root    usr/share/foot/themes/modus-vivendi
+-rw-r--r-- root/root    usr/share/foot/themes/molokai
 -rw-r--r-- root/root    usr/share/foot/themes/monokai-pro
 -rw-r--r-- root/root    usr/share/foot/themes/moonfly
 -rw-r--r-- root/root    usr/share/foot/themes/neon
+-rw-r--r-- root/root    usr/share/foot/themes/night-owl
 -rw-r--r-- root/root    usr/share/foot/themes/nightfly
 -rw-r--r-- root/root    usr/share/foot/themes/noirblaze
 -rw-r--r-- root/root    usr/share/foot/themes/nord
