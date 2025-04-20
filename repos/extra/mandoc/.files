@@ -1,0 +1,30 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/apropos -> mandoc
+-r-xr-xr-x root/root    usr/bin/demandoc
+lrwxrwxrwx root/root    usr/bin/makewhatis -> ../bin/mandoc
+lrwxrwxrwx root/root    usr/bin/man -> mandoc
+-r-xr-xr-x root/root    usr/bin/mandoc
+-r-xr-xr-x root/root    usr/bin/soelim
+lrwxrwxrwx root/root    usr/bin/whatis -> mandoc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-r--r--r-- root/root    usr/share/man/man1/apropos.1.gz
+-r--r--r-- root/root    usr/share/man/man1/demandoc.1.gz
+-r--r--r-- root/root    usr/share/man/man1/man.1.gz
+-r--r--r-- root/root    usr/share/man/man1/mandoc.1.gz
+-r--r--r-- root/root    usr/share/man/man1/soelim.1.gz
+lrwxrwxrwx root/root    usr/share/man/man1/whatis.1.gz -> apropos.1.gz
+drwxr-xr-x root/root    usr/share/man/man5/
+-r--r--r-- root/root    usr/share/man/man5/man.conf.5.gz
+-r--r--r-- root/root    usr/share/man/man5/mandoc.db.5.gz
+drwxr-xr-x root/root    usr/share/man/man7/
+-r--r--r-- root/root    usr/share/man/man7/eqn.7.gz
+-r--r--r-- root/root    usr/share/man/man7/man.7.gz
+-r--r--r-- root/root    usr/share/man/man7/mandoc_char.7.gz
+-r--r--r-- root/root    usr/share/man/man7/mdoc.7.gz
+-r--r--r-- root/root    usr/share/man/man7/roff.7.gz
+-r--r--r-- root/root    usr/share/man/man7/tbl.7.gz
+drwxr-xr-x root/root    usr/share/man/man8/
+-r--r--r-- root/root    usr/share/man/man8/makewhatis.8.gz
