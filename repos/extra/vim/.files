@@ -177,6 +177,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/compiler/
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/gfortran.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/ghc.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/gjs.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/compiler/gleam_build.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/gm2.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/gnat.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/compiler/go.vim
@@ -554,6 +555,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/ftplugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gpg.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/gprof.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/graphql.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/groff.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/groovy.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/group.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/ftplugin/grub.vim
@@ -1441,6 +1443,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gitrebase.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gitsendemail.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gkrellmrc.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/gleam.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/glsl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gnash.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/gnuplot.vim
