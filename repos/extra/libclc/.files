@@ -66,9 +66,7 @@ drwxr-xr-x root/root    usr/include/clc/cl_khr_local_int32_extended_atomics/
 -rw-r--r-- root/root    usr/include/clc/cl_khr_local_int32_extended_atomics/atom_or.h
 -rw-r--r-- root/root    usr/include/clc/cl_khr_local_int32_extended_atomics/atom_xor.h
 -rw-r--r-- root/root    usr/include/clc/clc.h
--rw-r--r-- root/root    usr/include/clc/clcfunc.h
 -rw-r--r-- root/root    usr/include/clc/clcmacros.h
--rw-r--r-- root/root    usr/include/clc/clctypes.h
 drwxr-xr-x root/root    usr/include/clc/common/
 -rw-r--r-- root/root    usr/include/clc/common/degrees.h
 -rw-r--r-- root/root    usr/include/clc/common/degrees.inc
@@ -98,7 +96,6 @@ drwxr-xr-x root/root    usr/include/clc/geometric/
 -rw-r--r-- root/root    usr/include/clc/geometric/fast_length.inc
 -rw-r--r-- root/root    usr/include/clc/geometric/fast_normalize.h
 -rw-r--r-- root/root    usr/include/clc/geometric/fast_normalize.inc
--rw-r--r-- root/root    usr/include/clc/geometric/floatn.inc
 -rw-r--r-- root/root    usr/include/clc/geometric/length.h
 -rw-r--r-- root/root    usr/include/clc/geometric/length.inc
 -rw-r--r-- root/root    usr/include/clc/geometric/normalize.h
@@ -116,7 +113,6 @@ drwxr-xr-x root/root    usr/include/clc/integer/
 -rw-r--r-- root/root    usr/include/clc/integer/clz.h
 -rw-r--r-- root/root    usr/include/clc/integer/clz.inc
 -rw-r--r-- root/root    usr/include/clc/integer/definitions.h
--rw-r--r-- root/root    usr/include/clc/integer/gentype.inc
 -rw-r--r-- root/root    usr/include/clc/integer/hadd.h
 -rw-r--r-- root/root    usr/include/clc/integer/hadd.inc
 -rw-r--r-- root/root    usr/include/clc/integer/integer-gentype.inc
@@ -150,7 +146,6 @@ drwxr-xr-x root/root    usr/include/clc/math/
 -rw-r--r-- root/root    usr/include/clc/math/atan2pi.h
 -rw-r--r-- root/root    usr/include/clc/math/atanh.h
 -rw-r--r-- root/root    usr/include/clc/math/atanpi.h
--rw-r--r-- root/root    usr/include/clc/math/binary_decl.inc
 -rw-r--r-- root/root    usr/include/clc/math/binary_decl_tt.inc
 -rw-r--r-- root/root    usr/include/clc/math/cbrt.h
 -rw-r--r-- root/root    usr/include/clc/math/ceil.h
@@ -175,7 +170,6 @@ drwxr-xr-x root/root    usr/include/clc/math/
 -rw-r--r-- root/root    usr/include/clc/math/fract.inc
 -rw-r--r-- root/root    usr/include/clc/math/frexp.h
 -rw-r--r-- root/root    usr/include/clc/math/frexp.inc
--rw-r--r-- root/root    usr/include/clc/math/gentype.inc
 -rw-r--r-- root/root    usr/include/clc/math/half_cos.h
 -rw-r--r-- root/root    usr/include/clc/math/half_divide.h
 -rw-r--r-- root/root    usr/include/clc/math/half_exp.h
@@ -246,20 +240,16 @@ drwxr-xr-x root/root    usr/include/clc/math/
 -rw-r--r-- root/root    usr/include/clc/math/tan.h
 -rw-r--r-- root/root    usr/include/clc/math/tanh.h
 -rw-r--r-- root/root    usr/include/clc/math/tanpi.h
--rw-r--r-- root/root    usr/include/clc/math/ternary_decl.inc
 -rw-r--r-- root/root    usr/include/clc/math/tgamma.h
 -rw-r--r-- root/root    usr/include/clc/math/trunc.h
--rw-r--r-- root/root    usr/include/clc/math/unary_decl.inc
 drwxr-xr-x root/root    usr/include/clc/misc/
 -rw-r--r-- root/root    usr/include/clc/misc/shuffle.h
 -rw-r--r-- root/root    usr/include/clc/misc/shuffle2.h
 drwxr-xr-x root/root    usr/include/clc/relational/
 -rw-r--r-- root/root    usr/include/clc/relational/all.h
 -rw-r--r-- root/root    usr/include/clc/relational/any.h
--rw-r--r-- root/root    usr/include/clc/relational/binary_decl.inc
 -rw-r--r-- root/root    usr/include/clc/relational/bitselect.h
 -rw-r--r-- root/root    usr/include/clc/relational/bitselect.inc
--rw-r--r-- root/root    usr/include/clc/relational/floatn.inc
 -rw-r--r-- root/root    usr/include/clc/relational/isequal.h
 -rw-r--r-- root/root    usr/include/clc/relational/isfinite.h
 -rw-r--r-- root/root    usr/include/clc/relational/isgreater.h
@@ -274,9 +264,7 @@ drwxr-xr-x root/root    usr/include/clc/relational/
 -rw-r--r-- root/root    usr/include/clc/relational/isordered.h
 -rw-r--r-- root/root    usr/include/clc/relational/isunordered.h
 -rw-r--r-- root/root    usr/include/clc/relational/select.h
--rw-r--r-- root/root    usr/include/clc/relational/select.inc
 -rw-r--r-- root/root    usr/include/clc/relational/signbit.h
--rw-r--r-- root/root    usr/include/clc/relational/unary_decl.inc
 drwxr-xr-x root/root    usr/include/clc/shared/
 -rw-r--r-- root/root    usr/include/clc/shared/clamp.h
 -rw-r--r-- root/root    usr/include/clc/shared/clamp.inc
@@ -351,6 +339,8 @@ lrwxrwxrwx root/root    usr/share/clc/gfx1151-amdgcn--.bc -> tahiti-amdgcn--.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1151-amdgcn-mesa-mesa3d.bc -> tahiti-amdgcn-mesa-mesa3d.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1152-amdgcn--.bc -> tahiti-amdgcn--.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1152-amdgcn-mesa-mesa3d.bc -> tahiti-amdgcn-mesa-mesa3d.bc
+lrwxrwxrwx root/root    usr/share/clc/gfx1153-amdgcn--.bc -> tahiti-amdgcn--.bc
+lrwxrwxrwx root/root    usr/share/clc/gfx1153-amdgcn-mesa-mesa3d.bc -> tahiti-amdgcn-mesa-mesa3d.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1200-amdgcn--.bc -> tahiti-amdgcn--.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1200-amdgcn-mesa-mesa3d.bc -> tahiti-amdgcn-mesa-mesa3d.bc
 lrwxrwxrwx root/root    usr/share/clc/gfx1201-amdgcn--.bc -> tahiti-amdgcn--.bc
