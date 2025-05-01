@@ -6,6 +6,7 @@ _version=${_ver}-${_sion}
 release=1
 source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
 	visibility.patch
+	clang-fix.patch
 	fix-rust-target.patch"
 
 build() {
