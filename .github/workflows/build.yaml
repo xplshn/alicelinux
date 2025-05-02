@@ -55,8 +55,6 @@ jobs:
         APKG_CONF
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1 PATH="/usr/local/bin:$PATH"
         apkg -s sway && echo "Repos are working"
-        #DBIN_INSTALL_DIR="/usr/local/bin" DBIN_NOCONFIG=1 /usr/local/bin/dbin add coreutils/fold#github.com.uutils.coreutils.standalone
-        curl -Lo /var/cache/pkg/harfbuzz#11.1.0-1.spm https://files.emmett1.net/alice/packages-clang/harfbuzz%2311.1.0-1.spm
         apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -I mimalloc && patch_libc.sh
         apkg -I ccache
