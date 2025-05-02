@@ -10,5 +10,11 @@ drwxrwxr-x root/root    usr/lib/python3.13/site-packages/gpep517/
 drwxr-xr-x root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/__init__.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/__main__.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/build.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/install.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/qa.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/gpep517/__pycache__/utils.cpython-313.pyc
+-rw-rw-r-- root/root    usr/lib/python3.13/site-packages/gpep517/build.py
+-rw-rw-r-- root/root    usr/lib/python3.13/site-packages/gpep517/install.py
 -rw-rw-r-- root/root    usr/lib/python3.13/site-packages/gpep517/qa.py
+-rw-rw-r-- root/root    usr/lib/python3.13/site-packages/gpep517/utils.py

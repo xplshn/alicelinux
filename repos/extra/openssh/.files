@@ -20,6 +20,7 @@ drwxr-xr-x root/root    usr/libexec/
 -rws--x--x root/root    usr/libexec/ssh-keysign
 -rwxr-xr-x root/root    usr/libexec/ssh-pkcs11-helper
 -rwxr-xr-x root/root    usr/libexec/ssh-sk-helper
+-rwxr-xr-x root/root    usr/libexec/sshd-auth
 -rwxr-xr-x root/root    usr/libexec/sshd-session
 drwxr-xr-x root/root    usr/sbin/
 -rwxr-xr-x root/root    usr/sbin/sshd
