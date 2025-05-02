@@ -13,12 +13,6 @@ drwxr-xr-x root/root    usr/lib/firefox/browser/chrome/icons/default/
 -rw-r--r-- root/root    usr/lib/firefox/browser/chrome/icons/default/default32.png
 -rw-r--r-- root/root    usr/lib/firefox/browser/chrome/icons/default/default48.png
 -rw-r--r-- root/root    usr/lib/firefox/browser/chrome/icons/default/default64.png
-drwxr-xr-x root/root    usr/lib/firefox/browser/features/
--rw-r--r-- root/root    usr/lib/firefox/browser/features/formautofill@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/firefox/browser/features/pictureinpicture@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/firefox/browser/features/screenshots@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/firefox/browser/features/webcompat-reporter@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
 -rw-r--r-- root/root    usr/lib/firefox/browser/omni.ja
 drwxr-xr-x root/root    usr/lib/firefox/defaults/
 drwxr-xr-x root/root    usr/lib/firefox/defaults/pref/
