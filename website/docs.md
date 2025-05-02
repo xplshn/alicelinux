@@ -1,0 +1,2 @@
+- [Install Alice](./docs/install.html)
+- [Package Manager](./docs/packagemanager.html)

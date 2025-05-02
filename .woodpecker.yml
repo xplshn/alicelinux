@@ -1,19 +1,25 @@
-# .woodpecker.yml
-pipeline:
-  generate-html:
-    image: alpine:latest
-    when:
-      branch: main
-      event: [push, pull_request]
+steps:
+  publish:
+    image: alpine:edge
+    environment:
+      CBMAIL:
+        from_secret: "mail"
+      CBTOKEN:
+        from_secret: "codeberg_token"
     commands:
-      - apk add --no-cache pandoc git
-      - git config --global user.email "ci@alicelinux.emmett1.net"
-      - git config --global user.name "󰬭 [AliceLinux CI] "
-      - git fetch origin pages
-      - git checkout pages
-      - git merge main --allow-unrelated-histories -X theirs
-      - chmod +x genhtml.sh
+      - apk add --no-cache git build-base
+      - cd website
+      - chmod +x ./genhtml.sh
       - ./genhtml.sh
-      - git add .
-      - git commit -m "󰬭 [CI]  - Update pages" || echo "No changes to commit"
-      - git push origin pages
+      - git config --global user.email "$${CBMAIL}"
+      - git config --global user.name "Woodpecker CI"
+      - git clone -b pages https://$${CBTOKEN}@codeberg.org/$CI_REPO.git $CI_REPO_NAME
+      - cd $CI_REPO_NAME
+      - git rm -r "*" || true
+      - cp -ar ../public/. ../.domains . || true
+      - git add --all
+      - git commit -m "Woodpecker CI ${CI_COMMIT_SHA} [SKIP CI]" --allow-empty
+      - git push
+    when:
+      event: [push]
+
