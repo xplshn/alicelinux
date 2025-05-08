@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-    See <a href="https://codeberg.org/emmett1/alicelinux/src/branch/main/docs">docs</a> directory for installation guide and other informations.
+    See <a href="https://codeberg.org/emmett1/alicelinux/src/branch/main/docs">docs</a> directory for installation guide and other information.
 </p>
 
 <p align="center">
