@@ -139,7 +139,7 @@
 
 </span>
         
-            &ndash; <span class="date">2025/04/10</span>
+            &ndash; <span class="date">2025/05/08</span>
         
     
     <p class="terms">
@@ -155,7 +155,7 @@
     <h1 id="install-alice">Install Alice</h1>
 <p>Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.</p>
 <h2 id="get-alice-rootfs-tarball">Get Alice rootfs tarball</h2>
-<p>Download the Alice rootfs tarball from the <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page, along with its <code>sha256sum</code> file.</p>
+<p>Download the Alice rootfs tarball from the <a href="https://github.com/xplshn/alicelinux/releases">release</a> page, along with its <code>sha256sum</code> file.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ curl -O &lt;url&gt;
 </span></span><span style="display:flex;"><span>$ curl -O &lt;url&gt;.sha256sum
 </span></span></code></pre></div><p>Verify the checksum of the Alice rootfs tarball:</p>
@@ -179,7 +179,7 @@
 <h2 id="clone-alice-repos">Clone Alice repos</h2>
 <p>Fetch the Alice packages repositories somewhere. I&rsquo;ll fetch them inside the <code>/var/lib</code> directory to keep the system clean.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># cd /var/lib</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># git clone --depth=1 https://codeberg.org/emmett1/alicelinux</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># git clone --depth=1 https://github.com/xplshn/alicelinux</span>
 </span></span></code></pre></div><p>Once we have the repositories cloned, we need to configure <code>apkg</code>. <code>apkg</code> is Alice&rsquo;s package build system (or package manager). By default, Alice does not provide an <code>apkg</code> config file (yes, <code>apkg</code> can work without a config file), but we need to create one. The <code>apkg</code> config file should be located at <code>/etc/apkg.conf</code> by default. Let&rsquo;s create one.</p>
 <h2 id="configure-apkgconf">Configure apkg.conf</h2>
 <p>First, we set <code>CFLAGS</code> and <code>CXXFLAGS</code>. Alice base packages are built using <code>-O3 -march=x86-64 -pipe</code>. You can use these settings or change them to your preference.</p>
