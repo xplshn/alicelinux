@@ -1,5 +1,5 @@
 name=elfutils
-version=0.192
+version=0.193
 release=1
 source="https://sourceware.org/ftp/$name/$version/$name-$version.tar.bz2
 	musl.patch"
