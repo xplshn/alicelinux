@@ -9,20 +9,21 @@ drwxr-xr-x root/root    usr/include/elfutils/
 -rw-r--r-- root/root    usr/include/elfutils/libdw.h
 -rw-r--r-- root/root    usr/include/elfutils/libdwelf.h
 -rw-r--r-- root/root    usr/include/elfutils/libdwfl.h
+-rw-r--r-- root/root    usr/include/elfutils/libdwfl_stacktrace.h
 -rw-r--r-- root/root    usr/include/elfutils/version.h
 -rw-r--r-- root/root    usr/include/gelf.h
 -rw-r--r-- root/root    usr/include/libelf.h
 -rw-r--r-- root/root    usr/include/nlist.h
 drwxr-xr-x root/root    usr/lib/
--rwxr-xr-x root/root    usr/lib/libasm-0.192.so
+-rwxr-xr-x root/root    usr/lib/libasm-0.193.so
 lrwxrwxrwx root/root    usr/lib/libasm.so -> libasm.so.1
-lrwxrwxrwx root/root    usr/lib/libasm.so.1 -> libasm-0.192.so
--rwxr-xr-x root/root    usr/lib/libdw-0.192.so
+lrwxrwxrwx root/root    usr/lib/libasm.so.1 -> libasm-0.193.so
+-rwxr-xr-x root/root    usr/lib/libdw-0.193.so
 lrwxrwxrwx root/root    usr/lib/libdw.so -> libdw.so.1
-lrwxrwxrwx root/root    usr/lib/libdw.so.1 -> libdw-0.192.so
--rwxr-xr-x root/root    usr/lib/libelf-0.192.so
+lrwxrwxrwx root/root    usr/lib/libdw.so.1 -> libdw-0.193.so
+-rwxr-xr-x root/root    usr/lib/libelf-0.193.so
 lrwxrwxrwx root/root    usr/lib/libelf.so -> libelf.so.1
-lrwxrwxrwx root/root    usr/lib/libelf.so.1 -> libelf-0.192.so
+lrwxrwxrwx root/root    usr/lib/libelf.so.1 -> libelf-0.193.so
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libdw.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libelf.pc

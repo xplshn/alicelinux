@@ -89,8 +89,8 @@ drwxr-xr-x root/root    usr/include/skalibs/
 drwxr-xr-x root/root    usr/lib/
 -rw-r--r-- root/root    usr/lib/libskarnet.a
 lrwxrwxrwx root/root    usr/lib/libskarnet.so -> libskarnet.so.2.14
-lrwxrwxrwx root/root    usr/lib/libskarnet.so.2.14 -> libskarnet.so.2.14.3.0
--rwxr-xr-x root/root    usr/lib/libskarnet.so.2.14.3.0
+lrwxrwxrwx root/root    usr/lib/libskarnet.so.2.14 -> libskarnet.so.2.14.4.0
+-rwxr-xr-x root/root    usr/lib/libskarnet.so.2.14.4.0
 drwxr-xr-x root/root    usr/lib/skalibs/
 drwxr-xr-x root/root    usr/lib/skalibs/sysdeps/
 -rw-r--r-- root/root    usr/lib/skalibs/sysdeps/pthread.lib
