@@ -14,7 +14,7 @@ title: 'Home'
 </p>
 
 <p align="center"><b>Main keypoint:</b></br>
-- No GNU compiler collection, we use LLVM in all stages and do not depend on GCC and its subprojects</br>
+- LLVM instead of GCC and its components</br>
 - no systemd</br>
 - no PAM</br>
 - no polkit</br>
