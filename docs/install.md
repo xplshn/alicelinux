@@ -4,7 +4,7 @@ Here is a guide to installing Alice Linux on your computer using the chroot meth
 
 ## Get Alice rootfs tarball
 
-Download the Alice rootfs tarball from the [release](https://codeberg.org/emmett1/alicelinux/releases) page, along with its `sha256sum` file.
+Download the Alice rootfs tarball from the [release](https://github.com/xplshn/alicelinux/releases) page, along with its `sha256sum` file.
 
 ```sh
 $ curl -O <url>
@@ -63,7 +63,7 @@ Fetch the Alice packages repositories somewhere. I'll fetch them inside the `/va
 
 ```sh
 # cd /var/lib
-# git clone --depth=1 https://codeberg.org/emmett1/alicelinux
+# git clone --depth=1 https://github.com/xplshn/alicelinux
 ```
 
 Once we have the repositories cloned, we need to configure `apkg`. `apkg` is Alice's package build system (or package manager). By default, Alice does not provide an `apkg` config file (yes, `apkg` can work without a config file), but we need to create one. The `apkg` config file should be located at `/etc/apkg.conf` by default. Let's create one.
