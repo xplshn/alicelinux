@@ -1,15 +1,19 @@
 PACKAGE MANAGER
 ===============
 
-In Alice, theres two package manager used, [spm](https://codeberg.org/emmett1/spm) and [autils](https://codeberg.org/emmett1/autils). Why two package manager? `spm` was written for generic package manager for linux distribution. And `autils` is written specifically for `Alice` and required `spm`.
+In Alice, there are two package managers: [spm](https://codeberg.org/emmett1/spm) and [autils](https://codeberg.org/emmett1/autils):
+ * `spm` was written for generic package manager for linux distribution.
+ * `autils` is written specifically for `Alice` and required `spm`.
 
 spm
 ---
 
-`spm` stands for `simple package manager`. It does simple and minimal written in POSIX compliance shell script. It only depends on core utils and tar (or busybox's utils and tar). `spm` only intended for compressing some directory into package, then extract package into system with files being tracked into database. Theres is no build script, recipe or ports in `spm`. You can write your own tools to use with `spm` either like Arch Linux's `makepkg`, CRUX's `pkgmk` or Slackware's `slackbuild` script.
+`spm` stands for `simple package manager` and is a simple and minimal POSIX compliant shell script. It only depends on core utils and tar (or busybox's utils and tar). `spm` is only intended for compressing some directory into package, then extract package into the system with files being tracked into the database. There is is no build script, recipe or ports in `spm`. You can write your own tools to use with `spm` either like Arch Linux's `makepkg`, CRUX's `pkgmk` or Slackware's `slackbuild` script.
 
 spm - usage
 -----------
+
+The following optiosn are available to `spm`:
 
 ```
   -a         print all installed packages
@@ -22,7 +26,7 @@ spm - usage
   -u <pkg>   re-install/upgrade <pkg>
 ```
 
-- list all install package with version
+- list all installed packages with their version:
 ```
 $ spm -a
 ...
@@ -37,7 +41,7 @@ nsxiv 32-1
 ...
 ```
 
-- build package from directory
+- build a package from directory:
 ```
 (build package)
 $ ./configure --prefix=/usr
@@ -56,7 +60,7 @@ $ make DESTDIR=$PWD/fakeroot install
 # spm -i pkgname#pkgversion-pkgrelease.spm
 ```
 
-- install package into system
+- install a package into system:
 ```
 # spm -i pkgname#pkgversion-pkgrelease.spm
 [pkgname] Verify package...
@@ -65,7 +69,7 @@ $ make DESTDIR=$PWD/fakeroot install
 [pkgname] Package 'pkgname#pkgversion-pkgrelease' installed.
 ```
 
-- list files installed by 'packagename'
+- list files installed by 'packagename':
 ```
 $ spm -l test
 usr/
@@ -75,7 +79,7 @@ usr/bin/
 usr/bin/aaa
 ```
 
-- list package owner of a file (can use regex)
+- list package owner of a file (can use regex):
 ```
 $ spm -o gcc$
 ccache usr/lib/ccache/gcc
@@ -84,7 +88,7 @@ gcc usr/bin/x86_64-pc-linux-musl-gcc
 linux lib/modules/6.6.41-Alice/build/scripts/dummy-tools/gcc
 ```
 
-- upgrade/reinstall installed package
+- upgrade/reinstall installed package:
 ```
 # spm -u pkgname#pkgversion-pkgrelease.spm
 [pkgname] Verify package...
@@ -101,7 +105,7 @@ spm - environment
 |SPM_ROOT|use custom root location for package installation|
 |SPM_FORCEINSTALL|set any value to ignore conflicted files|
 
-You can pass these environment to `spm` command, example:
+You can pass these environment to the `spm` command:
 ```
 # SPM_ROOT=/mnt/rootfs spm -i pkgname#pkgversion-pkgrelease.spm
 # SPM_FORCEINSTALL=1 SPM_ROOT=/mnt/rootfs spm -i pkgname#pkgversion-pkgrelease.spm
@@ -115,9 +119,9 @@ autils
 apkg
 ----
 
-`apkg` is a main package manager that can solve dependencies, batch install/upgrade/remove packages, system upgrades, trigger necessary caches, and etc. `apkg` can be run inside or outside package template.
+`apkg` is a main package manager that can solve dependencies, batch install/upgrade/remove packages, perform system upgrades, trigger necessary caches, etc. `apkg` can be run inside or outside the package template.
 
-When running outside package template, `apkg` will need 'package names' as arguments, and those 'package names' will search through `APKG_REPO` environment. Example:
+When running outside the package template, `apkg` will need 'package names' as arguments, and those 'package names' will search through the `APKG_REPO` environment:
 
 ```
 # apkg testpkg testpkg2 (build testpkg and testpkg2)
@@ -126,7 +130,7 @@ When running outside package template, `apkg` will need 'package names' as argum
 # apkg -f -u testpkg testpkg2 (force rebuild then upgrade/reinstall testpkg and testpkg2)
 ```
 
-When running inside package template, `apkg` will do operation for current directory package. Example:
+When running inside package template, `apkg` will perform the operation within the current directory package. Example:
 
 ```
 # cd /path/to/local/testpkg
@@ -156,7 +160,7 @@ apkg - usage
   -h           print this help message
 ```
 
-I won't explain details on every each options here, but I will give quick tips/tricks to use `apkg`
+Here are some quick tips/tricks to using `apkg`:
 
 - installing package and its dependencies (mind the uppercase `i`)
 ```
@@ -192,7 +196,7 @@ swayfx
 [...] Press Ctrl + C to abort.
 ```
 
-- install package without solving dependencies (mind the lowercase `i` and theres no prompt for this option)
+- install package without solving dependencies (note the lowercase `i` and theres no prompt for this option)
 ```
 # apkg -i wlroots mesa
 [...] Package 'wlroots' already installed.
@@ -213,7 +217,7 @@ rust
 ...
 ```
 
-- list all installed packages with filter (will only print installed package contains word filter)
+- list all installed packages with filter (will only print installed package containing the word filter)
 ```
 $ apkg -a sway
 swaybg
@@ -260,7 +264,7 @@ util-macros
 [pango] Package 'pango#1.54.0-1' upgraded.
 ```
 
-- full system upgrades (mind uppercase `u` and will prompt first if theres package updates)
+- full system upgrades (note the uppercase `u` and will prompt first if there is a package update available)
 ```
 # apkg -U
 [...] Checking for outdated packages...
@@ -314,7 +318,7 @@ You can add these environment into `apkg` config file.
 apkg - config file
 ------------------
 
-`apkg` can work without its config file by using all default value. Default config path for `apkg` is `/etc/apkg.conf`. You can change config path by append `APKG_CONF` to `apkg`, example:
+`apkg` can work without its config file by using all default values. Default config path for `apkg` is `/etc/apkg.conf`. You can change config path by appending `APKG_CONF` to `apkg`:
 ```
 # APKG_CONF=/etc/apkg-local.conf apkg <args>
 ```
@@ -333,7 +337,7 @@ $ revdep
 $ revdep -v
 ```
 
-You can combine with `apkg` to rebuild broken packages, example;
+You can combine with `apkg` to rebuild broken packages:
 ```
 # apkg -f -u $(revdep)
 ```
@@ -378,7 +382,7 @@ Usage:
 apkg-deps
 ---------
 
-Script to find runtime linked dependencies of installed package. Its good to use when writing package template.
+Script to find runtime linked dependencies of installed package. It is recommended to use this when writing a package template.
 
 Usage:
 ```
@@ -412,9 +416,9 @@ $ apkg-orphan
 apkg-redundantdeps
 ------------------
 
-Script to print package's redundant dependencies. Its good to use when writing package template for minimizing dependencies and speed up `apkg` dependencies solving.
+Script to print package's redundant dependencies. It is recommended to use this when writing package template for minimizing dependencies and speed up `apkg` dependencies solving.
 
-usage:
+Usage:
 ```
 (print package contains redundant dependencies)
 $ apkg-redundantdeps
