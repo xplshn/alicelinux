@@ -10,7 +10,7 @@ title: 'Home'
 </p>
 
 <p align="center">
-	<b>Alice Linux</b> is my personal daily driver minimal distro that used <a href="https://musl.libc.org/">musl</a> libc, <a href="https://www.busybox.net/">busybox</a> as main core utilities, package manager written in POSIX shell script, <a href="https://wayland.freedesktop.org/">Wayland</a> as the only gui server and trying to be minimal, lightweight and usable as possible.
+	<b>Alice Linux</b> is my personal daily driver minimal distro that uses <a href="https://musl.libc.org/">musl</a> libc, <a href="https://www.busybox.net/">busybox</a> as main core utilities, package manager written in POSIX shell, <a href="https://wayland.freedesktop.org/">Wayland</a> as the only GUI server and trying to be as minimal, lightweight and usable as possible.
 </p>
 
 <p align="center"><b>Main keypoint:</b></br>
@@ -25,7 +25,7 @@ title: 'Home'
 - gettext-tiny instead of gettext</br>
 - mandoc instead of man-db</br>
 - doas instead of sudo</br>
-- ... (more will come)</p>
+- ... (more to come)</p>
 
 <p align="center">
     See <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page for released rootfs.
@@ -36,7 +36,7 @@ title: 'Home'
 </p>
 
 <p align="center">
-    See <a href="https://codeberg.org/emmett1/alicelinux/src/branch/main/docs">docs</a> directory for installation guide and other informations.
+    See <a href="https://codeberg.org/emmett1/alicelinux/src/branch/main/docs">docs</a> directory for installation guide and other information.
 </p>
 
 <p align="center">
