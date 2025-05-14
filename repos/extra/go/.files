@@ -4003,6 +4003,7 @@ drwxr-xr-x root/root    usr/lib/go/src/cmd/link/testdata/linkname/coro_asm/
 drwxr-xr-x root/root    usr/lib/go/src/cmd/link/testdata/linkname/p/
 -rw-r--r-- root/root    usr/lib/go/src/cmd/link/testdata/linkname/p/p.go
 -rw-r--r-- root/root    usr/lib/go/src/cmd/link/testdata/linkname/push.go
+-rw-r--r-- root/root    usr/lib/go/src/cmd/link/testdata/linkname/sched.go
 drwxr-xr-x root/root    usr/lib/go/src/cmd/link/testdata/pe-binutils/
 -rw-r--r-- root/root    usr/lib/go/src/cmd/link/testdata/pe-binutils/main.go
 -rw-r--r-- root/root    usr/lib/go/src/cmd/link/testdata/pe-binutils/rsrc_386.syso
