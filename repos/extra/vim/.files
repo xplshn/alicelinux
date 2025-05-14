@@ -62,6 +62,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/autoload/dist/
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/haskellcomplete.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/hcl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/htmlcomplete.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/autoload/htmlfold.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/javaformat.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/javascriptcomplete.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/autoload/modula2.vim
@@ -1107,6 +1108,9 @@ drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/editorconfig/plugin/
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/autoload/
 -rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/autoload/helptoc.vim
+drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/doc/
+-rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/doc/helptoc.txt
+-rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/doc/tags
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/plugin/
 -rw-r--r-- root/root    usr/share/vim/vim91/pack/dist/opt/helptoc/plugin/helptoc.vim
 drwxr-xr-x root/root    usr/share/vim/vim91/pack/dist/opt/hlyank/
