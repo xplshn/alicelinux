@@ -13,11 +13,6 @@ drwxr-xr-x root/root    usr/lib/librewolf/browser/chrome/icons/default/
 -rw-r--r-- root/root    usr/lib/librewolf/browser/chrome/icons/default/default32.png
 -rw-r--r-- root/root    usr/lib/librewolf/browser/chrome/icons/default/default48.png
 -rw-r--r-- root/root    usr/lib/librewolf/browser/chrome/icons/default/default64.png
-drwxr-xr-x root/root    usr/lib/librewolf/browser/features/
--rw-r--r-- root/root    usr/lib/librewolf/browser/features/formautofill@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/librewolf/browser/features/pictureinpicture@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/librewolf/browser/features/screenshots@mozilla.org.xpi
--rw-r--r-- root/root    usr/lib/librewolf/browser/features/webcompat@mozilla.org.xpi
 -rw-r--r-- root/root    usr/lib/librewolf/browser/omni.ja
 drwxr-xr-x root/root    usr/lib/librewolf/defaults/
 drwxr-xr-x root/root    usr/lib/librewolf/defaults/pref/

@@ -1,4 +1,3 @@
-b4e38dd9cb18f3c64d920beddb628e281c1edbb0e7f0c8315fae6e87d9d551ce  clang-fix.patch
 504da8aa33992b09a74d8ec262ec6c99752e64fb1d03441f86a49a21a874f95e  fix-rust-target.patch
-239cd03f380266533042187e4209e2b60aebf30259d5500cefff4bbdcd0bf454  librewolf-137.0-3.source.tar.gz
+6bc9d0efb4ba21b14de1dcf30fbacc67eabdad99adae1397b65cf1a770e8ae13  librewolf-138.0.1-2.source.tar.gz
 30889a96df16927cca69826f3ca94b9f751819c2fcae07001a7108847ff25cb6  visibility.patch

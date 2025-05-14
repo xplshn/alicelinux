@@ -1,12 +1,11 @@
 name=librewolf
-version=137.0.3
+version=138.0.1.2
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
 release=1
 source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
 	visibility.patch
-	clang-fix.patch
 	fix-rust-target.patch"
 
 build() {
@@ -48,6 +47,9 @@ ac_add_options --disable-debug
 ac_add_options --disable-debug-symbols
 ac_add_options --disable-parental-controls
 ac_add_options --disable-system-extension-dirs
+ac_add_options --disable-default-browser-agent
+ac_add_options --disable-backgroundtasks
+ac_add_options --disable-webspeech
 EOF
 	
 	if [ -f $SPM_PKGDB/libx11 ] && [ ! -f $SPM_PKGDB/wayland ]; then
