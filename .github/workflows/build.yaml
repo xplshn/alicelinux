@@ -55,7 +55,7 @@ jobs:
         APKG_CONF
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1 PATH="/usr/local/bin:$PATH"
         apkg -s sway && echo "Repos are working"
-        apkg -f -u glib
+        ln -sfT /usr/lib/libssl.so /usr/lib/libssl.so.58
         apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -I mimalloc && patch_libc.sh
         apkg -I ccache
