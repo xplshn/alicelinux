@@ -55,8 +55,8 @@ jobs:
         APKG_CONF
         export SPM_FORCEINSTALL=1 APKG_NOPROMPT=1 PATH="/usr/local/bin:$PATH"
         apkg -s sway && echo "Repos are working"
-        apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -f -u gib
+        apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -I mimalloc && patch_libc.sh
         apkg -I ccache
         apkg -U
