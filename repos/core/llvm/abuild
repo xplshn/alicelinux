@@ -1,5 +1,5 @@
 name=llvm
-version=20.1.3
+version=20.1.4
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
 	c89 c99
@@ -89,6 +89,7 @@ postbuild() {
 	ln -s lld $PKG/usr/bin/ld
 	ln -s clang $PKG/usr/bin/cc
 	ln -s clang $PKG/usr/bin/gcc
+	ln -s clang $PKG/usr/bin/cpp
 	ln -s clang++ $PKG/usr/bin/c++
 	ln -s clang++ $PKG/usr/bin/g++
 	install -m755 $SRC/c89 $PKG/usr/bin/c89
