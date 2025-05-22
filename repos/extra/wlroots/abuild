@@ -1,5 +1,5 @@
 name=wlroots
-version=0.18.2
+version=0.19.0
 release=1
 source="https://gitlab.freedesktop.org/${name}/${name}/-/releases/${version}/downloads/${name}-${version}.tar.gz"
 [ -f $SPM_PKGDB/libx11 ] && xbackends=",x11"
