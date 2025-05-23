@@ -1,0 +1,24 @@
+name=glib-gi
+version=2.84.2
+release=1
+source="https://download.gnome.org/sources/glib/${version%.*}/glib-$version.tar.xz
+	0001-glib-compile-schemas-Remove-noisy-deprecation-warnin.patch"
+build_opt="
+	-Dselinux=disabled
+	-Dtests=false
+	-Dintrospection=enabled
+"
+
+postbuild() {
+	mkdir -p $SRC/tmp
+	mv $PKG/usr/lib/girepository-1.0 $SRC/tmp
+	mv $PKG/usr/share/gir-1.0 $SRC/tmp
+	rm -rf $PKG/*
+
+	mkdir -p \
+		$PKG/usr/lib \
+		$PKG/usr/share
+
+	mv $SRC/tmp/girepository-1.0 $PKG/usr/lib
+	mv $SRC/tmp/gir-1.0 $PKG/usr/share
+}
