@@ -1,4 +1,4 @@
 dbus
-gobject-introspection
+glib-gi
 libxml2
 libxtst
