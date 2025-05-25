@@ -1,0 +1,3 @@
+#!/bin/sh
+printf '\n' 2>/dev/null > /proc/sys/kernel/hotplug
+exec mdev -df 2>&1
