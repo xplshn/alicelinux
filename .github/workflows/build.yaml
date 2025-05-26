@@ -58,7 +58,7 @@ jobs:
         apkg -I meson cmake pkgconf libtool automake perl sway
         apkg -I mimalloc && patch_libc.sh
         apkg -I ccache
-        apkg -I linux
+        apkg -I patch linux
         apkg -U
         apkg -r glib
         apkg -I glib-gi
