@@ -41,7 +41,7 @@ sv="acpid.run
     tty4.run
     tty5.run
     ttyS0.run"
-    
+
 _disable() {
 	while [ "$1" ]; do
 		sed "s/^CONFIG_${1}=y/# CONFIG_${1} is not set/" -i .config
@@ -59,27 +59,27 @@ _enable() {
 build() {
 	make defconfig
 
-	_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
-	_disable STRINGS                                     # provided by llvm
-	_disable CLEAR RESET                                 # provided by ncurses
-	_disable PATCH                                       # provided by patch (GNU patch works better)
-	_disable BZCAT BUNZIP2 BZIP2                         # provided by bzip2
-	_disable CHATTR LSATTR MKE2FS FINDFS MKFS_EXT2 BLKID # provided by e2fsprogs
-	_disable MKDOSFS MKFS_VFAT                           # provided by dosfstools
-	
-	_disable FSCK_MINIX MKFS_MINIX DPKG DPKG_DEB MAN  #
-	_disable MODPROBE_SMALL HUSH SHELL_HUSH RPM2CPIO  # JUNKS
-	_disable RX CHAT LINUXRC RPM RUN_PARTS            #
-	
+	#_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
+	#_disable STRINGS                                     # provided by llvm
+	#_disable CLEAR RESET                                 # provided by ncurses
+	_disable PATCH                                        # provided by patch
+	_disable BZCAT BUNZIP2 BZIP2                          # provided by bzip2
+	#_disable CHATTR LSATTR MKE2FS FINDFS MKFS_EXT2 BLKID # provided by e2fsprogs
+	#_disable MKDOSFS MKFS_VFAT                           # provided by dosfstools
+
+	_disable FSCK_MINIX MKFS_MINIX DPKG DPKG_DEB
+	_disable HUSH SHELL_HUSH RPM2CPIO  # JUNK
+	_disable RX CHAT LINUXRC RPM RUN_PARTS
+
 	_enable STATIC                                          # enable static build
 	_enable FEATURE_MODUTILS_ALIAS FEATURE_MODUTILS_SYMBOLS # enable some kmod features
-	
+
 	# install nologin to /sbin
 	sed 's/BB_DIR_USR_SBIN/BB_DIR_SBIN/' -i util-linux/nologin.c
-	
+
 	# install diff to /bin
 	sed 's/BB_DIR_USR_BIN/BB_DIR_BIN/' -i editors/diff.c
-	
+
 	make
 	make CONFIG_PREFIX=$PKG install
 	mkdir -p $PKG/usr/share/busybox
@@ -92,11 +92,11 @@ build() {
 		[ -e /bin/$i ] && ln -svf busybox-suidwrapper $PKG/bin/$i
 		[ -e /usr/bin/$i ] && ln -svf ../../bin/busybox-suidwrapper $PKG/usr/bin/$i
 	done
-	
+
 	mkdir -p $PKG/etc
 	install -m644 $SRC/mdev.conf $PKG/etc/mdev.conf
-	
+
 	${CC:-gcc} ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
 	install -d $PKG/usr/share/man/man1
-	install -m644 $SRC/pause.1 $PKG/usr/share/man/man1/pause.1	
+	install -m644 $SRC/pause.1 $PKG/usr/share/man/man1/pause.1
 }
