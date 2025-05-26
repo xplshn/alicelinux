@@ -59,6 +59,8 @@ jobs:
         apkg -I mimalloc && patch_libc.sh
         apkg -I ccache
         apkg -U
+        apkg -r glib
+        apkg -I glib-gi
         apkg -f -u $(revdep)
         apkg -t
         revdep -v
