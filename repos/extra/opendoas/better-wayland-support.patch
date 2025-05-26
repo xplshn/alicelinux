@@ -1,0 +1,42 @@
+From b861d070092ee71ac4208f79b699cf7dadd5c154 Mon Sep 17 00:00:00 2001
+From: Simon Ser <contact@emersion.fr>
+Date: Mon, 3 May 2021 15:42:19 +0200
+Subject: [PATCH] Copy XDG_RUNTIME_DIR and WAYLAND_DISPLAY
+
+This allows to run Wayland clients under doas.
+---
+ doas.1 | 6 +++++-
+ env.c  | 2 +-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/doas.1 b/doas.1
+index a91705e..bd1f543 100644
+--- a/doas.1
++++ b/doas.1
+@@ -58,8 +58,12 @@ is set to the name of the user executing
+ .Nm .
+ The variables
+ .Ev DISPLAY
+-and
++,
+ .Ev TERM
++,
++.Ev XDG_RUNTIME_DIR
++and
++.Ev WAYLAND_DISPLAY
+ are inherited from the current environment.
+ This behavior may be modified by the config file.
+ The working directory is not changed.
+diff --git a/env.c b/env.c
+index e2286fc..b7955d7 100644
+--- a/env.c
++++ b/env.c
+@@ -91,7 +91,7 @@ createenv(const struct rule *rule, const struct passwd *mypw,
+     const struct passwd *targpw)
+ {
+ 	static const char *copyset[] = {
+-		"DISPLAY", "TERM",
++		"DISPLAY", "TERM", "XDG_RUNTIME_DIR", "WAYLAND_DISPLAY",
+ 		NULL
+ 	};
+ 	struct env *env;

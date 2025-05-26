@@ -1,23 +1,24 @@
 name=busybox
-version=1.36.1
-release=4
+version=1.37.0
+release=1
 source="https://${name}.net/downloads/${name}-${version}.tar.bz2
-	busybox-suidwrapper.c
-	config
-	mdev.conf
-	fsck-resolve-uuid.patch
+	0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch
 	0016-ping-make-ping-work-without-root-privileges.patch
-	install-fix-chown.patch
+	kernel-6.8-tca.patch
+	fsck-resolve-uuid.patch
 	adduser-no-setgid.patch
-	lineedit-Handle-SIGWINCH-gracefully.patch
-	lsusb-vendor-product.patch
 	print-unicode.patch
 	modprobe-kernel-version.patch
-	0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch
+	busybox-suidwrapper.c
+	mdev.conf
 	acpid.run
 	crond.run
 	ntpd.run
 	syslogd.run
+    klogd.run
+    inetd.run
+    httpd.run
+    mdev.run
 	tty1.run
 	tty2.run
 	tty3.run
@@ -30,40 +31,59 @@ sv="acpid.run
     crond.run
     ntpd.run
     syslogd.run
+    klogd.run
+    inetd.run
+    httpd.run
+    mdev.run
     tty1.run
     tty2.run
     tty3.run
     tty4.run
     tty5.run
     ttyS0.run"
+    
+_disable() {
+	while [ "$1" ]; do
+		sed "s/^CONFIG_${1}=y/# CONFIG_${1} is not set/" -i .config
+		shift
+	done
+}
+
+_enable() {
+	while [ "$1" ]; do
+		sed "s/^# CONFIG_${1}.*/CONFIG_${1}=y/" -i .config
+		shift
+	done
+}
 
 build() {
-	if [ "$BOOTSTRAP" ]; then
-		_opt="ARCH=$CARCH CROSS_COMPILE=$CTARGET-"
-	fi
+	make defconfig
 
-	cp $SRC/config .config
-	#make menuconfig
-	make $_opt
-	make $_opt CONFIG_PREFIX=$PKG install
+	_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
+	_disable STRINGS                                     # provided by llvm
+	_disable CLEAR RESET                                 # provided by ncurses
+	_disable PATCH                                       # provided by patch (GNU patch works better)
+	_disable BZCAT BUNZIP2 BZIP2                         # provided by bzip2
+	_disable CHATTR LSATTR MKE2FS FINDFS MKFS_EXT2 BLKID # provided by e2fsprogs
+	_disable MKDOSFS MKFS_VFAT                           # provided by dosfstools
+	
+	_disable FSCK_MINIX MKFS_MINIX DPKG DPKG_DEB MAN  #
+	_disable MODPROBE_SMALL HUSH SHELL_HUSH RPM2CPIO  # JUNKS
+	_disable RX CHAT LINUXRC RPM RUN_PARTS            #
+	
+	_enable STATIC                                          # enable static build
+	_enable FEATURE_MODUTILS_ALIAS FEATURE_MODUTILS_SYMBOLS # enable some kmod features
+	
+	# install nologin to /sbin
+	sed 's/BB_DIR_USR_SBIN/BB_DIR_SBIN/' -i util-linux/nologin.c
+	
+	# install diff to /bin
+	sed 's/BB_DIR_USR_BIN/BB_DIR_BIN/' -i editors/diff.c
+	
+	make
+	make CONFIG_PREFIX=$PKG install
 	mkdir -p $PKG/usr/share/busybox
 	cat .config > $PKG/usr/share/busybox/config
-	
-	BIN="$BIN xzcat xz unxz unlzma lzcat lzma" #xz
-	#BIN="$BIN zcat gunzip gzip" #gzip
-	BIN="$BIN strings" #binutils
-	BIN="$BIN clear reset" #ncurses
-	BIN="$BIN patch" #patch
-	BIN="$BIN bzcat bunzip2 bzip2" #bzip2
-	BIN="$BIN setfattr" #attr
-	BIN="$BIN chattr lsattr mke2fs findfs mkfs.ext2 blkid" #e2fsprogs
-	BIN="$BIN mkdosfs mkfs.vfat " #dosfstools
-	
-	# XXX
-	for i in $BIN; do
-		rm $PKG/*/$i || true
-		rm $PKG/*/*/$i || true
-	done
 
 	${CC:-cc} -o $PKG/bin/busybox-suidwrapper $SRC/busybox-suidwrapper.c
 	chmod u+s $PKG/bin/busybox-suidwrapper
@@ -75,9 +95,6 @@ build() {
 	
 	mkdir -p $PKG/etc
 	install -m644 $SRC/mdev.conf $PKG/etc/mdev.conf
-	
-	rm $PKG/usr/bin/diff
-	ln -s busybox $PKG/bin/diff
 	
 	${CC:-gcc} ${CFLAGS} $SRC/pause.c -o $PKG/usr/bin/pause
 	install -d $PKG/usr/share/man/man1

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec klogd -n 2>&1
