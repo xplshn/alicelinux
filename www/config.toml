@@ -1,5 +1,5 @@
 title = "AliceLinux"
-baseURL = "https://xplshn.github.io/alicelinux"
+baseURL = "https://alicelinux.xplshn.com.ar/"
 languageCode = "en-us"
 theme = "werx"
 publishDir = "pub"
