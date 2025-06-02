@@ -59,7 +59,7 @@ _enable() {
 build() {
 	make defconfig
 
-	#_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
+	_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
 	#_disable STRINGS                                     # provided by llvm
 	#_disable CLEAR RESET                                 # provided by ncurses
 	_disable PATCH                                        # provided by patch
