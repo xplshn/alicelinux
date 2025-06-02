@@ -49,14 +49,14 @@ jobs:
           ./gen.sh
           cd "${GITHUB_WORKSPACE}"
 
-          # Prepare git to commit changes
-          git config user.name '[CI]'
-          git config user.email 'action@github.com'
+          ## Prepare git to commit changes
+          #git config user.name '[CI]'
+          #git config user.email 'action@github.com'
 
-          # Commit changes dynamically
-          git add "${GITHUB_WORKSPACE}/www"
-          git commit -m "[www]" || echo "Nothing to commit"
-          git push origin HEAD || echo "Push failed; check repository settings"
+          ## Commit changes dynamically
+          #git add "${GITHUB_WORKSPACE}/www"
+          #git commit -m "[www]" || echo "Nothing to commit"
+          #git push origin HEAD || echo "Push failed; check repository settings"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
