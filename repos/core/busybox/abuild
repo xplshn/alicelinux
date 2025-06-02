@@ -59,12 +59,13 @@ _enable() {
 build() {
 	make defconfig
 
-	_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA             # provided by xz
+        _disable man
+	_disable XZCAT XZ UNXZ UNLZMA LZCAT LZMA              # provided by xz
 	#_disable STRINGS                                     # provided by llvm
 	#_disable CLEAR RESET                                 # provided by ncurses
 	_disable PATCH                                        # provided by patch
 	_disable BZCAT BUNZIP2 BZIP2                          # provided by bzip2
-	#_disable CHATTR LSATTR MKE2FS FINDFS MKFS_EXT2 BLKID # provided by e2fsprogs
+	_disable CHATTR LSATTR MKE2FS FINDFS MKFS_EXT2 BLKID  # provided by e2fsprogs
 	#_disable MKDOSFS MKFS_VFAT                           # provided by dosfstools
 
 	_disable FSCK_MINIX MKFS_MINIX DPKG DPKG_DEB
