@@ -21,6 +21,7 @@ steps:
       - git commit -m "Woodpecker CI ${CI_COMMIT_SHA} [SKIP CI]" --allow-empty
       - git push
       - cd ..
+      - rm -rf $CI_REPO_NAME
       - git clone -b core https://$${CBTOKEN}@codeberg.org/$CI_REPO.git $CI_REPO_NAME
       - cd $CI_REPO_NAME
       - git rm -r "*" || true
