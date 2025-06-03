@@ -15,7 +15,7 @@ build() {
 	sed '/^CONFIG_LOGO_LINUX_CLUT224=/d' -i .config
 	echo 'CONFIG_LOGO_LINUX_CLUT224=y' >> .config
 	sed '/^CONFIG_LOCALVERSION=/d' -i .config
-	echo 'CONFIG_LOCALVERSION="-Xplshn"' >> .config
+	echo 'CONFIG_LOCALVERSION="-Alice"' >> .config
 	sed '/^CONFIG_IKHEADERS=/d' -i .config
 	echo '# CONFIG_IKHEADERS is not set' >> .config
 	sed '/^CONFIG_DEFAULT_HOSTNAME=/d' -i .config
