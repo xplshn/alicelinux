@@ -25,15 +25,15 @@
 - ... (more to come)</p>
 
 <p align="center">
-    See <a href="https://github.com/xplshn/alicelinux/releases">release</a> page for released rootfs.
+    See <a href="https://github.com/xplshn/alicelinux/releases">releases</a> page for rootfs tarballs.
 </p>
 
 <p align="center">
-    See <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page for official released rootfs.
+    See <a href="https://codeberg.org/emmett1/alicelinux/releases">releases</a> page for official Alice rootfs tarballs.
 </p>
 
 <p align="center">
-    See <a href="https://sourceforge.net/projects/alice-linux/files/iso/">here</a> for official AliceLinux live iso.
+    See <a href="https://sourceforge.net/projects/alice-linux/files/iso/">here</a> for official Alice live ISOs.
 </p>
 
 <p align="center">
