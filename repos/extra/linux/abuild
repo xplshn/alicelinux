@@ -2,7 +2,8 @@ name=linux
 version=6.12.11
 release=1
 source="https://cdn.kernel.org/pub/$name/kernel/v6.x/$name-$version.tar.xz
-	dotconfig"
+	dotconfig
+	andes_export_filldir_readdir.patch"
 
 build() {
 	make mrproper

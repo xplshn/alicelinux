@@ -1,0 +1,87 @@
+--- linux-6.10.6/fs/readdir.c
++++ ./readdir.c
+@@ -180,7 +180,7 @@
+ 	int result;
+ };
+ 
+-static bool fillonedir(struct dir_context *ctx, const char *name, int namlen,
++bool fillonedir(struct dir_context *ctx, const char *name, int namlen,
+ 		      loff_t offset, u64 ino, unsigned int d_type)
+ {
+ 	struct readdir_callback *buf =
+@@ -216,6 +216,7 @@
+ 	buf->result = -EFAULT;
+ 	return false;
+ }
++EXPORT_SYMBOL(fillonedir);
+ 
+ SYSCALL_DEFINE3(old_readdir, unsigned int, fd,
+ 		struct old_linux_dirent __user *, dirent, unsigned int, count)
+@@ -259,7 +260,7 @@
+ 	int error;
+ };
+ 
+-static bool filldir(struct dir_context *ctx, const char *name, int namlen,
++bool filldir(struct dir_context *ctx, const char *name, int namlen,
+ 		   loff_t offset, u64 ino, unsigned int d_type)
+ {
+ 	struct linux_dirent __user *dirent, *prev;
+@@ -307,6 +308,7 @@
+ 	buf->error = -EFAULT;
+ 	return false;
+ }
++EXPORT_SYMBOL(filldir);
+ 
+ SYSCALL_DEFINE3(getdents, unsigned int, fd,
+ 		struct linux_dirent __user *, dirent, unsigned int, count)
+@@ -347,7 +349,7 @@
+ 	int error;
+ };
+ 
+-static bool filldir64(struct dir_context *ctx, const char *name, int namlen,
++bool filldir64(struct dir_context *ctx, const char *name, int namlen,
+ 		     loff_t offset, u64 ino, unsigned int d_type)
+ {
+ 	struct linux_dirent64 __user *dirent, *prev;
+@@ -390,6 +392,7 @@
+ 	buf->error = -EFAULT;
+ 	return false;
+ }
++EXPORT_SYMBOL(filldir64);
+ 
+ SYSCALL_DEFINE3(getdents64, unsigned int, fd,
+ 		struct linux_dirent64 __user *, dirent, unsigned int, count)
+@@ -437,7 +440,7 @@
+ 	int result;
+ };
+ 
+-static bool compat_fillonedir(struct dir_context *ctx, const char *name,
++bool compat_fillonedir(struct dir_context *ctx, const char *name,
+ 			     int namlen, loff_t offset, u64 ino,
+ 			     unsigned int d_type)
+ {
+@@ -474,6 +477,7 @@
+ 	buf->result = -EFAULT;
+ 	return false;
+ }
++EXPORT_SYMBOL(compat_fillonedir);
+ 
+ COMPAT_SYSCALL_DEFINE3(old_readdir, unsigned int, fd,
+ 		struct compat_old_linux_dirent __user *, dirent, unsigned int, count)
+@@ -511,7 +515,7 @@
+ 	int error;
+ };
+ 
+-static bool compat_filldir(struct dir_context *ctx, const char *name, int namlen,
++bool compat_filldir(struct dir_context *ctx, const char *name, int namlen,
+ 		loff_t offset, u64 ino, unsigned int d_type)
+ {
+ 	struct compat_linux_dirent __user *dirent, *prev;
+@@ -558,6 +562,7 @@
+ 	buf->error = -EFAULT;
+ 	return false;
+ }
++EXPORT_SYMBOL(compat_filldir);
+ 
+ COMPAT_SYSCALL_DEFINE3(getdents, unsigned int, fd,
+ 		struct compat_linux_dirent __user *, dirent, unsigned int, count)
