@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-	<b>Alice Linux</b> is my personal daily driver minimal distro that uses <a href="https://musl.libc.org/">musl</a> libc, <a href="https://www.busybox.net/">busybox</a> as main core utilities, package manager written in POSIX shell, <a href="https://wayland.freedesktop.org/">Wayland</a> as the only GUI server and trying to be as minimal, lightweight and usable as possible.
+	<b>Alice Linux</b> is a minimal distro created and maintained by <a href="https://codeberg.org/emmett1">Emmett1</a> that uses <a href="https://musl.libc.org/">musl</a> libc, <a href="https://www.busybox.net/">busybox</a> as main core utilities, a small package manager written in POSIX shell, <a href="https://wayland.freedesktop.org/">Wayland</a> as the only GUI server and trying to be as minimal, lightweight and usable as possible.
 </p>
 
-<p align="center"><b>Main keypoint:</b></br>
+<p align="center"><b>Main features:</b></br>
 - LLVM instead of GCC and its components</br>
 - no systemd</br>
 - no PAM</br>
@@ -25,15 +25,19 @@
 - ... (more to come)</p>
 
 <p align="center">
-    See <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page for released rootfs.
+    See <a href="https://github.com/xplshn/alicelinux/releases">release</a> page for released rootfs.
 </p>
 
 <p align="center">
-    See <a href="https://sourceforge.net/projects/alice-linux/files/iso/">here</a> for Alice live iso.
+    See <a href="https://codeberg.org/emmett1/alicelinux/releases">release</a> page for official released rootfs.
 </p>
 
 <p align="center">
-    See <a href="https://codeberg.org/emmett1/alicelinux/src/branch/main/docs">docs</a> directory for installation guide and other information.
+    See <a href="https://sourceforge.net/projects/alice-linux/files/iso/">here</a> for official AliceLinux live iso.
+</p>
+
+<p align="center">
+    See <a href="/docs">docs</a> directory for installation guide and other information.
 </p>
 
 <p align="center">
@@ -42,6 +46,6 @@
 </p>
 
 <p align="center">
-	Your cups of coffee very helpful for this project :D</br>
+	Links to <a href="https://codeberg.org/emmett1">Emmett1's</a> donation pages:
     <a href="https://paypal.me/syazwanemmett">paypal</a> | <a href="https://ko-fi.com/emmett1">ko-fi</a> | <a href="https://buymeacoffee.com/emmett1">buymeacoffee</a>
 </p>
