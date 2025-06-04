@@ -1,7 +1,7 @@
 name=linux-firmware
-version=20250509
+version=20240909
 release=1
-source="https://gitlab.com/kernel-firmware/linux-firmware/-/archive/$version/linux-firmware-$version.tar.gz"
+source="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/$name.git/snapshot/$name-$version.tar.gz"
 
 build() {
 	make install
