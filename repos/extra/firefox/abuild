@@ -1,9 +1,10 @@
 name=firefox
-version=138.0.4
+version=139.0.1
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
 	visibility.patch
-	fix-target-detection.patch"
+	fix-target-detection.patch
+	fix-sqlite-vec-uint.patch"
 
 build() {
 	cat > .mozconfig << EOF
@@ -28,7 +29,6 @@ ac_add_options --with-system-webp
 ac_add_options --with-system-zlib
 ac_add_options --without-wasm-sandboxed-libraries
 ac_add_options --disable-eme
-#ac_add_options --disable-dbus
 ac_add_options --disable-tests
 ac_add_options --disable-vtune
 ac_add_options --disable-updater
