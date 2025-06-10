@@ -1,9 +1,9 @@
 name=rust
-version=1.86.0
+version=1.87.0
 
 ##cat src/stage0.txt
-export _date=2025-02-20
-export _rustc=1.85.0
+export _date=2025-04-03
+export _rustc=1.86.0
 export _cargo=$_rustc
 ##
 
@@ -30,8 +30,14 @@ build() {
 	sed -i 's/\(crt_static_default = \)true/\1false/' compiler/rustc_target/src/spec/base/linux_musl.rs
 	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.52+curl-7.81.0/.cargo-checksum.json
 	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.78+curl-8.11.0/.cargo-checksum.json
-	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.79+curl-8.12.0/.cargo-checksum.json
-	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.92/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/curl-sys-0.4.80+curl-8.12.1/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-0.10.38/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-0.10.64/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-0.10.71/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.102/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.104/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.106/.cargo-checksum.json
+	sed -i 's/\("files":{\)[^}]*/\1/' vendor/openssl-sys-0.9.72/.cargo-checksum.json
 	
 	cat > config.toml <<EOF
 [llvm]
