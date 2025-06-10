@@ -1,0 +1,4 @@
+name=tinyramfs
+version=0.2.0
+release=1
+source="https://github.com/illiliti/${name}/archive/${version}/${name}-${version}.tar.gz"
