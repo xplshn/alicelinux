@@ -2,6 +2,7 @@ drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/curl
 -rwxr-xr-x root/root    usr/bin/curl-config
+-rwxr-xr-x root/root    usr/bin/wcurl
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/curl/
 -rw-r--r-- root/root    usr/include/curl/curl.h
@@ -29,6 +30,7 @@ drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/curl-config.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/curl.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/wcurl.1.gz
 drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/CURLINFO_ACTIVESOCKET.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLINFO_APPCONNECT_TIME.3.gz
@@ -382,6 +384,7 @@ drwxr-xr-x root/root    usr/share/man/man3/
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_FALSESTART.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_OPTIONS.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_SESSIONID_CACHE.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_SIGNATURE_ALGORITHMS.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_VERIFYHOST.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_VERIFYPEER.3.gz
 -rw-r--r-- root/root    usr/share/man/man3/CURLOPT_SSL_VERIFYSTATUS.3.gz
