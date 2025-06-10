@@ -1,5 +1,5 @@
 name=python-setuptools
-version=80.7.1
+version=80.9.0
 release=1
 source="https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-$version.tar.gz"
 export SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
