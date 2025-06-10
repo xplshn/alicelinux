@@ -38,7 +38,7 @@ drwxr-xr-x root/root    usr/include/libplacebo/utils/
 -rw-r--r-- root/root    usr/include/libplacebo/utils/upload.h
 -rw-r--r-- root/root    usr/include/libplacebo/vulkan.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libplacebo.so -> libplacebo.so.349
--rwxr-xr-x root/root    usr/lib/libplacebo.so.349
+lrwxrwxrwx root/root    usr/lib/libplacebo.so -> libplacebo.so.351
+-rwxr-xr-x root/root    usr/lib/libplacebo.so.351
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libplacebo.pc
