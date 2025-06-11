@@ -1,5 +1,5 @@
 name=gtk-layer-shell
-version=0.9.1
+version=0.9.2
 release=1
 source="https://github.com/wmww/${name}/archive/v${version}/${name}-v${version}.tar.gz"
 build_opt="-Dvapi=false"

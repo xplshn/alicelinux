@@ -1,5 +1,5 @@
 name=sway
-version=1.10.1
-release=2
+version=1.11
+release=1
 source="https://github.com/${name}wm/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 build_opt="-Dwerror=false -Dzsh-completions=false -Dbash-completions=false -Dfish-completions=false"

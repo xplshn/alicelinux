@@ -1,4 +1,4 @@
 name=meson
-version=1.8.0
+version=1.8.2
 release=1
 source="https://github.com/mesonbuild/$name/releases/download/$version/$name-$version.tar.gz"

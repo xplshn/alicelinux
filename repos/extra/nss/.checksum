@@ -1,5 +1,5 @@
 c18020d6abe44ba040323663614767fcacb9a3c9dd249877c1deea76deb8adca  clang-ias.patch
 eed65c57ec9da12513745bf6d039bf17459f75bd6fa1645aae7e9bcdcade0619  native-nsinstall-cflags.patch
-be3691c6dfcca770306d1de37af04a38958e5aa3fa42ff3c478417c547dde07e  nss-3.111.tar.gz
+bc38aa65ab642b8e580d5cc0716c3bb7fcd87e088048921878da0ee34db46a4e  nss-3.112.tar.gz
 08ab7f772b7f7d4ab1ead564b54398c19e74f62394d811a2c8df327176505de7  nss-3.92-standalone-1.patch
 19cf08686ecb10f8f51052c9168f7b3bb1bf3489465ccfe840b8d5b9837a86d5  respect-ldflags.patch

@@ -48,20 +48,20 @@ drwxr-xr-x root/root    usr/include/libdrm/nouveau/nvif/
 -rw-r--r-- root/root    usr/include/xf86drmMode.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libdrm.so -> libdrm.so.2
-lrwxrwxrwx root/root    usr/lib/libdrm.so.2 -> libdrm.so.2.124.0
--rwxr-xr-x root/root    usr/lib/libdrm.so.2.124.0
+lrwxrwxrwx root/root    usr/lib/libdrm.so.2 -> libdrm.so.2.125.0
+-rwxr-xr-x root/root    usr/lib/libdrm.so.2.125.0
 lrwxrwxrwx root/root    usr/lib/libdrm_amdgpu.so -> libdrm_amdgpu.so.1
-lrwxrwxrwx root/root    usr/lib/libdrm_amdgpu.so.1 -> libdrm_amdgpu.so.1.124.0
--rwxr-xr-x root/root    usr/lib/libdrm_amdgpu.so.1.124.0
+lrwxrwxrwx root/root    usr/lib/libdrm_amdgpu.so.1 -> libdrm_amdgpu.so.1.125.0
+-rwxr-xr-x root/root    usr/lib/libdrm_amdgpu.so.1.125.0
 lrwxrwxrwx root/root    usr/lib/libdrm_intel.so -> libdrm_intel.so.1
-lrwxrwxrwx root/root    usr/lib/libdrm_intel.so.1 -> libdrm_intel.so.1.124.0
--rwxr-xr-x root/root    usr/lib/libdrm_intel.so.1.124.0
+lrwxrwxrwx root/root    usr/lib/libdrm_intel.so.1 -> libdrm_intel.so.1.125.0
+-rwxr-xr-x root/root    usr/lib/libdrm_intel.so.1.125.0
 lrwxrwxrwx root/root    usr/lib/libdrm_nouveau.so -> libdrm_nouveau.so.2
-lrwxrwxrwx root/root    usr/lib/libdrm_nouveau.so.2 -> libdrm_nouveau.so.2.124.0
--rwxr-xr-x root/root    usr/lib/libdrm_nouveau.so.2.124.0
+lrwxrwxrwx root/root    usr/lib/libdrm_nouveau.so.2 -> libdrm_nouveau.so.2.125.0
+-rwxr-xr-x root/root    usr/lib/libdrm_nouveau.so.2.125.0
 lrwxrwxrwx root/root    usr/lib/libdrm_radeon.so -> libdrm_radeon.so.1
-lrwxrwxrwx root/root    usr/lib/libdrm_radeon.so.1 -> libdrm_radeon.so.1.124.0
--rwxr-xr-x root/root    usr/lib/libdrm_radeon.so.1.124.0
+lrwxrwxrwx root/root    usr/lib/libdrm_radeon.so.1 -> libdrm_radeon.so.1.125.0
+-rwxr-xr-x root/root    usr/lib/libdrm_radeon.so.1.125.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libdrm.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/libdrm_amdgpu.pc

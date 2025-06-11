@@ -1,18 +1,7 @@
 name=curl
-version=8.13.0
+version=8.14.1
 release=1
 source="https://$name.se/download/$name-$version.tar.xz"
-build_opt="
-	--with-openssl
-	--enable-threaded-resolver
-	--with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
-	--without-brotli
-	--without-libidn2
-	--without-libpsl
-	--without-librtmp
-	--without-nghttp2
-	--without-zstd
-	--disable-manual"
 
 build() {
 	mkdir bin
@@ -21,7 +10,7 @@ build() {
 	" > bin/perl
 	chmod +x bin/perl
 	export PATH=$PWD/bin:$PATH
-	
+
 	./configure \
 		--prefix=/usr \
 		--with-openssl \

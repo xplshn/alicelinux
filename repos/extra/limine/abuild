@@ -1,5 +1,5 @@
 name=limine
-version=9.3.2
+version=9.3.3
 release=1
 source="https://github.com/${name}-bootloader/${name}/releases/download/v${version}/${name}-${version}.tar.bz2"
 build_opt="--enable-bios --enable-bios-cd --enable-uefi-x86-64 --enable-uefi-cd"

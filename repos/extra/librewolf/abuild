@@ -1,12 +1,13 @@
 name=librewolf
-version=138.0.4.1
+version=139.0.1.1
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
 release=1
 source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
 	visibility.patch
-	fix-rust-target.patch"
+	fix-rust-target.patch
+	fix-sqlite-vec-uint.patch"
 
 build() {
 	cat > mozconfig << EOF
@@ -31,7 +32,6 @@ ac_add_options --with-system-webp
 ac_add_options --with-system-zlib
 ac_add_options --without-wasm-sandboxed-libraries
 ac_add_options --disable-eme
-#ac_add_options --disable-dbus
 ac_add_options --disable-bootstrap
 ac_add_options --disable-tests
 ac_add_options --disable-vtune

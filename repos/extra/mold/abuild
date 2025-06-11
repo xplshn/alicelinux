@@ -1,4 +1,5 @@
 name=mold
-version=2.39.1
+version=2.40.0
 release=1
-source="https://github.com/rui314/${name}/archive/v${version}/${name}-v${version}.tar.gz"
+source="https://github.com/rui314/${name}/archive/v${version}/${name}-v${version}.tar.gz
+	amd64_only.patch"
