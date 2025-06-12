@@ -6498,8 +6498,8 @@ lrwxrwxrwx root/root    usr/lib/libclang-cpp.so -> libclang-cpp.so.20.1
 -rwxr-xr-x root/root    usr/lib/libclang-cpp.so.20.1
 -rw-r--r-- root/root    usr/lib/libclang.a
 lrwxrwxrwx root/root    usr/lib/libclang.so -> libclang.so.20.1
-lrwxrwxrwx root/root    usr/lib/libclang.so.20.1 -> libclang.so.20.1.5
--rwxr-xr-x root/root    usr/lib/libclang.so.20.1.5
+lrwxrwxrwx root/root    usr/lib/libclang.so.20.1 -> libclang.so.20.1.6
+-rwxr-xr-x root/root    usr/lib/libclang.so.20.1.6
 -rw-r--r-- root/root    usr/lib/libclangAPINotes.a
 -rw-r--r-- root/root    usr/lib/libclangARCMigrate.a
 -rw-r--r-- root/root    usr/lib/libclangAST.a

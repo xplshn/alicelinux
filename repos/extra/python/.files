@@ -1,12 +1,9 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
-lrwxrwxrwx root/root    usr/bin/idle3 -> idle3.13
 -rwxr-xr-x root/root    usr/bin/idle3.13
-lrwxrwxrwx root/root    usr/bin/pydoc3 -> pydoc3.13
 -rwxr-xr-x root/root    usr/bin/pydoc3.13
-lrwxrwxrwx root/root    usr/bin/python -> python3
+lrwxrwxrwx root/root    usr/bin/python -> python3.13
 lrwxrwxrwx root/root    usr/bin/python3 -> python3.13
-lrwxrwxrwx root/root    usr/bin/python3-config -> python3.13-config
 -rwxr-xr-x root/root    usr/bin/python3.13
 -rwxr-xr-x root/root    usr/bin/python3.13-config
 drwxr-xr-x root/root    usr/include/
@@ -286,8 +283,6 @@ lrwxrwxrwx root/root    usr/lib/libpython3.13.so -> libpython3.13.so.1.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/python-3.13-embed.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/python-3.13.pc
-lrwxrwxrwx root/root    usr/lib/pkgconfig/python3-embed.pc -> python-3.13-embed.pc
-lrwxrwxrwx root/root    usr/lib/pkgconfig/python3.pc -> python-3.13.pc
 drwxr-xr-x root/root    usr/lib/python3.13/
 -rw-r--r-- root/root    usr/lib/python3.13/LICENSE.txt
 -rw-r--r-- root/root    usr/lib/python3.13/__future__.py
@@ -8227,5 +8222,4 @@ drwxr-xr-x root/root    usr/lib/python3.13/zoneinfo/__pycache__/
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/man/
 drwxr-xr-x root/root    usr/share/man/man1/
-lrwxrwxrwx root/root    usr/share/man/man1/python3.1.gz -> python3.13.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/python3.13.1.gz

@@ -1,5 +1,5 @@
 name=llvm
-version=20.1.5
+version=20.1.6
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-project-${version}.src.tar.xz
 	c89 c99

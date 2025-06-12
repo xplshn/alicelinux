@@ -1,19 +1,14 @@
 name=python
 version=3.13.3
-release=1
+release=2
 source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz
+	musl-pgo-tests.patch
 	libressl.diff"
-build_opt="--without-ensurepip
-	--enable-shared
-	--with-system-expat
-	--with-system-ffi
-	--enable-optimizations"
 
 build() {
-	# Reported 20-27% performance improvements.
-	# See: "PythonNoSemanticInterpositionSpeedup"
-	export CFLAGS="$CFLAGS -fno-semantic-interposition"
-	export LDFLAGS="$LDFLAGS -fno-semantic-interposition"
+	# musl workaround
+	export ac_cv_file__dev_ptmx=yes
+	export ac_cv_file__dev_ptc=no
 
 	./configure \
 		--prefix=/usr \
@@ -24,8 +19,10 @@ build() {
 		--mandir=/usr/share/man \
 		--without-ensurepip \
 		--enable-shared \
-		--with-system-expat
+		--with-system-expat \
+		--enable-optimization
 	make
-	make DESTDIR=$PKG install
-	ln -s python3 $PKG/usr/bin/python
+	make DESTDIR=$PKG altinstall
+	ln -s python${version%.*} $PKG/usr/bin/python
+	ln -s python${version%.*} $PKG/usr/bin/python3
 }

@@ -3,3 +3,7 @@ version=3.1.1
 release=1
 source="https://github.com/rolinh/$name/releases/download/v$version/$name-$version.tar.gz"
 build_opt="-DSYSCONFDIR=/etc"
+
+prebuild() {
+	sed 's/VERSION 2.8.4/VERSION 4.0/' -i CMakeLists.txt
+}

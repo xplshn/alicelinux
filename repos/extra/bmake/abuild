@@ -1,0 +1,9 @@
+name=bmake
+version=20250528
+release=1
+source="https://www.crufty.net/ftp/pub/sjg/${name}-${version}.tar.gz
+	separate-tests.patch"
+
+prebuild() {
+	sed -i unit-tests/Makefile -e "/deptgt-delete_on_error/d"
+}
