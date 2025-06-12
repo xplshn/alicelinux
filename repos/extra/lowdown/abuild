@@ -1,12 +1,12 @@
 name=lowdown
-version=1.4.0
+version=2.0.2
 _v=$(echo $version | sed 's/\./_/g')
 release=1
 source="https://github.com/kristapsdz/lowdown/archive/refs/tags/VERSION_${_v}.tar.gz"
 
 build(){
 	./configure PREFIX=/usr MANDIR=/usr/share/man
-	make
-	make regress
-	make install install_libs
+	bmake
+	bmake regress
+	bmake install install_libs
 }
