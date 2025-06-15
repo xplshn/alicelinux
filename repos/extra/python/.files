@@ -789,6 +789,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/_threading_handler.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/_threading_handler.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/_threading_handler.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/base_eventqueue.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/base_eventqueue.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/base_eventqueue.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/commands.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/commands.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/commands.cpython-313.pyc
@@ -846,8 +849,12 @@ drwxr-xr-x root/root    usr/lib/python3.13/_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_console.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_console.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_console.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_eventqueue.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_eventqueue.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/__pycache__/windows_eventqueue.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/_minimal_curses.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/_threading_handler.py
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/base_eventqueue.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/commands.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/completing_reader.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/console.py
@@ -868,6 +875,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/unix_eventqueue.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/utils.py
 -rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/windows_console.py
+-rw-r--r-- root/root    usr/lib/python3.13/_pyrepl/windows_eventqueue.py
 -rw-r--r-- root/root    usr/lib/python3.13/_sitebuiltins.py
 -rw-r--r-- root/root    usr/lib/python3.13/_strptime.py
 -rw-r--r-- root/root    usr/lib/python3.13/_sysconfigdata__linux_x86_64-linux-musl.py
@@ -1793,7 +1801,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/ensurepip/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/__pycache__/_uninstall.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/__pycache__/_uninstall.cpython-313.pyc
 drwxr-xr-x root/root    usr/lib/python3.13/ensurepip/_bundled/
--rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl
+-rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_bundled/pip-25.1.1-py3-none-any.whl
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_uninstall.py
 -rw-r--r-- root/root    usr/lib/python3.13/enum.py
 -rw-r--r-- root/root    usr/lib/python3.13/filecmp.py
@@ -5537,6 +5545,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_doctest/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_errors.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_errors.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_errors.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_no_docstrings.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_no_docstrings.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/__pycache__/sample_doctest_no_docstrings.cpython-313.pyc
@@ -5556,6 +5567,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_doctest/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/doctest_aliases.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/doctest_lineno.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/sample_doctest.py
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/sample_doctest_errors.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/sample_doctest_no_docstrings.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/sample_doctest_no_doctests.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/sample_doctest_skip.py
@@ -5565,7 +5577,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_doctest/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest2.txt
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest3.txt
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest4.txt
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest_errors.txt
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest_skip.txt
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_doctest/test_doctest_skip2.txt
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_docxmlrpc.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_dtrace.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_dynamic.py
@@ -6857,6 +6871,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/support.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/support.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/support.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_eventqueue.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_eventqueue.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_eventqueue.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_input.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_input.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_input.cpython-313.pyc
@@ -6875,9 +6892,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_console.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_console.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_console.cpython-313.pyc
--rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_eventqueue.cpython-313.opt-1.pyc
--rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_eventqueue.cpython-313.opt-2.pyc
--rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_unix_eventqueue.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_utils.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_utils.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_utils.cpython-313.pyc
@@ -6885,13 +6899,13 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_windows_console.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/__pycache__/test_windows_console.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/support.py
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_eventqueue.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_input.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_interact.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_keymap.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_pyrepl.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_reader.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_unix_console.py
--rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_unix_eventqueue.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_utils.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_pyrepl/test_windows_console.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_queue.py
@@ -7692,8 +7706,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/typinganndata/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/typinganndata/ann_module9.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/typinganndata/mod_generics_cache.py
 drwxr-xr-x root/root    usr/lib/python3.13/test/wheeldata/
--rw-r--r-- root/root    usr/lib/python3.13/test/wheeldata/setuptools-67.6.1-py3-none-any.whl
--rw-r--r-- root/root    usr/lib/python3.13/test/wheeldata/wheel-0.43.0-py3-none-any.whl
+-rw-r--r-- root/root    usr/lib/python3.13/test/wheeldata/setuptools-79.0.1-py3-none-any.whl
 -rw-r--r-- root/root    usr/lib/python3.13/test/win_console_handler.py
 drwxr-xr-x root/root    usr/lib/python3.13/test/xmltestdata/
 drwxr-xr-x root/root    usr/lib/python3.13/test/xmltestdata/c14n-20/
@@ -7841,6 +7854,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/tomllib/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/tomllib/_parser.py
 -rw-r--r-- root/root    usr/lib/python3.13/tomllib/_re.py
 -rw-r--r-- root/root    usr/lib/python3.13/tomllib/_types.py
+-rw-r--r-- root/root    usr/lib/python3.13/tomllib/mypy.ini
 -rwxr-xr-x root/root    usr/lib/python3.13/trace.py
 -rw-r--r-- root/root    usr/lib/python3.13/traceback.py
 -rw-r--r-- root/root    usr/lib/python3.13/tracemalloc.py

@@ -1,9 +1,8 @@
 name=python
-version=3.13.3
-release=2
+version=3.13.5
+release=1
 source="https://www.$name.org/ftp/$name/$version/Python-$version.tar.xz
-	musl-pgo-tests.patch
-	libressl.diff"
+	musl-pgo-tests.patch"
 
 build() {
 	# musl workaround
