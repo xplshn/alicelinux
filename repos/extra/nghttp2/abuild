@@ -1,5 +1,5 @@
 name=nghttp2
-version=1.65.0
+version=1.66.0
 release=1
 source="https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.xz"
 build_opt="--enable-lib-only"
