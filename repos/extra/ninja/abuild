@@ -1,5 +1,5 @@
 name=ninja
-version=1.12.1
+version=1.13.0
 release=1
 source="https://github.com/$name-build/$name/archive/v$version/$name-$version.tar.gz"
 
