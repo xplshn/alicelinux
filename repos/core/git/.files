@@ -53,6 +53,7 @@ lrwxrwxrwx root/root    usr/libexec/git-core/git-diagnose -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-diff -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-diff-files -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-diff-index -> git
+lrwxrwxrwx root/root    usr/libexec/git-core/git-diff-pairs -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-diff-tree -> git
 lrwxrwxrwx root/root    usr/libexec/git-core/git-difftool -> git
 -rwxr-xr-x root/root    usr/libexec/git-core/git-difftool--helper
@@ -207,6 +208,9 @@ drwxr-xr-x root/root    usr/libexec/git-core/mergetools/
 -rw-r--r-- root/root    usr/libexec/git-core/mergetools/xxdiff
 -rwxr-xr-x root/root    usr/libexec/git-core/scalar
 drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/bash-completion/
+drwxr-xr-x root/root    usr/share/bash-completion/completions/
+-rw-r--r-- root/root    usr/share/bash-completion/completions/git
 drwxr-xr-x root/root    usr/share/git-core/
 drwxr-xr-x root/root    usr/share/git-core/templates/
 -rw-r--r-- root/root    usr/share/git-core/templates/description
