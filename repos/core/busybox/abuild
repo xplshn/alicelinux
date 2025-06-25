@@ -1,9 +1,11 @@
 name=busybox
 version=1.37.0
-release=1
+release=2
 source="https://${name}.net/downloads/${name}-${version}.tar.bz2
 	0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch
 	0016-ping-make-ping-work-without-root-privileges.patch
+	0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch
+	0034-adduser-remove-preconfigured-GECOS-full-name-field.patch
 	kernel-6.8-tca.patch
 	fsck-resolve-uuid.patch
 	adduser-no-setgid.patch

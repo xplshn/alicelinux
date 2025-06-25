@@ -1,2 +1,3 @@
 #!/bin/sh
+mkdir -p /var/spool/cron/crontabs/
 exec crond -f -d8  2>&1
