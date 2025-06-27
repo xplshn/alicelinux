@@ -1,0 +1,6 @@
+name=fail2ban
+version=1.1.0
+release=1
+source="https://github.com/${name}/${name}/archive/${version}/${name}-${version}.tar.gz
+	run"
+sv="run"
