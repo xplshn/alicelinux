@@ -1,5 +1,5 @@
 name=bmake
-version=20250528
+version=20250618
 release=1
 source="https://www.crufty.net/ftp/pub/sjg/${name}-${version}.tar.gz
 	separate-tests.patch"
