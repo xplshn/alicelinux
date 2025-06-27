@@ -1,6 +1,11 @@
 name=dropbear
 version=2025.88
-release=1
+release=2
 source="https://matt.ucc.asn.au/${name}/releases/${name}-${version}.tar.bz2
-	run"
+	run
+	config"
 sv="run"
+
+postbuild() {
+	install -Dm644 $SRC/config $PKG/etc/$name/config
+}
