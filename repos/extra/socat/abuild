@@ -1,0 +1,4 @@
+name=socat
+version=1.8.0.3
+release=1
+source="http://www.dest-unreach.org/${name}/download/${name}-${version}.tar.gz"

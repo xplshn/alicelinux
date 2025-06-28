@@ -1,4 +1,6 @@
 drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/dropbear/
+-rw-r--r-- root/root    etc/dropbear/config.new
 drwxr-xr-x root/root    etc/sv/
 drwxr-xr-x root/root    etc/sv/dropbear/
 -rwxr-xr-x root/root    etc/sv/dropbear/run.new

@@ -1,2 +1,2 @@
 #!/bin/sh
-exec syslogd -s -m0 2>&1
+exec syslogd -L -n -O /var/log/messages 2>&1

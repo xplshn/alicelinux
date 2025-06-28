@@ -1,0 +1,12 @@
+name=lighttpd
+version=1.4.79
+release=1
+source="https://download.${name}.net/${name}/releases-${version%.*}.x/${name}-${version}.tar.xz
+	$name.conf
+	run"
+sv="run"
+build_opt="-Dwith_openssl=true"
+
+postbuild() {
+	install -Dm644 $SRC/$name.conf $PKG/etc/$name/$name.conf
+}

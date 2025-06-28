@@ -1,4 +1,3 @@
-4600deb006490ebd6f087158ac1294302f44abb4c19cbad0840cff1a89d28b6f  firefox-139.0.4.source.tar.xz
-c898b3e5e2547be1201842ac1bff5e9abf89e77ae5aa3f99c22f744e07b21981  fix-sqlite-vec-uint.patch
+bdc1280b35c98737d25c5ba403991812bf92201afbcbc7e86ef6d7f151092bff  firefox-140.0.1.source.tar.xz
 3e4e722acd2ab2e38a16ec23b29296318d77cc54f034d4b21d91bde085e26bc0  fix-target-detection.patch
 30889a96df16927cca69826f3ca94b9f751819c2fcae07001a7108847ff25cb6  visibility.patch

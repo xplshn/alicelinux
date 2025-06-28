@@ -1,2 +1,2 @@
 #!/bin/sh
-exec ntpd -n 2>&1
+exec ntpd -n -N -p pool.ntp.org 2>&1

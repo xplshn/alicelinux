@@ -1,10 +1,10 @@
 name=firefox
-version=139.0.4
+version=140.0.1
 release=1
 source="https://ftp.mozilla.org/pub/${name}/releases/${version}/source/${name}-${version}.source.tar.xz
 	visibility.patch
-	fix-target-detection.patch
-	fix-sqlite-vec-uint.patch"
+	fix-target-detection.patch"
+#	fix-sqlite-vec-uint.patch"
 
 build() {
 	cat > .mozconfig << EOF
