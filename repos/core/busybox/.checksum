@@ -1,4 +1,5 @@
 6499c4a3d5379e4e34e30a84f7ef9ae513b696694a07d1f4fbd9de9a998d0da1  0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch
+51952a0bbcad4d86d21319ca4ab89424665d66f242bc6eeda78d0180c22bdd5c  0006-modinfo-add-k-option-for-kernel-version.patch
 8c364768319aa2f68f480fe1fb4679af38cd692c5e7c66c8e0c2e0e0c7464e4c  0016-ping-make-ping-work-without-root-privileges.patch
 a7c6c992ca7bed0881b4be27af3d45e10b8f9560a3ee3db6a4e0ceda65f05e30  0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch
 7c40dc84a65c34364ef9de29247cb76f2c2db799ef091b4d980576dd11d7e16d  0034-adduser-remove-preconfigured-GECOS-full-name-field.patch
