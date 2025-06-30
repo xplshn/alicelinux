@@ -1,4 +1,4 @@
 name=openresolv
-version=3.16.5
+version=3.17.0
 release=1
 source="https://github.com/NetworkConfiguration/${name}/archive/v${version}/${name}-v${version}.tar.gz"
