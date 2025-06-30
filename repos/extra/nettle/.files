@@ -3,7 +3,6 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/nettle-hash
 -rwxr-xr-x root/root    usr/bin/nettle-lfib-stream
 -rwxr-xr-x root/root    usr/bin/nettle-pbkdf2
--rwxr-xr-x root/root    usr/bin/pkcs1-conv
 -rwxr-xr-x root/root    usr/bin/sexp-conv
 drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/nettle/
@@ -81,12 +80,8 @@ drwxr-xr-x root/root    usr/include/nettle/
 -rw-r--r-- root/root    usr/include/nettle/xts.h
 -rw-r--r-- root/root    usr/include/nettle/yarrow.h
 drwxr-xr-x root/root    usr/lib/
-lrwxrwxrwx root/root    usr/lib/libhogweed.so -> libhogweed.so.6.10
-lrwxrwxrwx root/root    usr/lib/libhogweed.so.6 -> libhogweed.so.6.10
--rw-r--r-- root/root    usr/lib/libhogweed.so.6.10
-lrwxrwxrwx root/root    usr/lib/libnettle.so -> libnettle.so.8.10
-lrwxrwxrwx root/root    usr/lib/libnettle.so.8 -> libnettle.so.8.10
--rw-r--r-- root/root    usr/lib/libnettle.so.8.10
+lrwxrwxrwx root/root    usr/lib/libnettle.so -> libnettle.so.8.11
+lrwxrwxrwx root/root    usr/lib/libnettle.so.8 -> libnettle.so.8.11
+-rw-r--r-- root/root    usr/lib/libnettle.so.8.11
 drwxr-xr-x root/root    usr/lib/pkgconfig/
--rw-r--r-- root/root    usr/lib/pkgconfig/hogweed.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/nettle.pc
