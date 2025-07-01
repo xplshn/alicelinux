@@ -86,8 +86,8 @@ drwxr-xr-x root/root    usr/lib/gnome-settings-daemon-3.0/
 drwxr-xr-x root/root    usr/lib/gnome-settings-daemon-3.0/gtk-modules/
 -rw-r--r-- root/root    usr/lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
 lrwxrwxrwx root/root    usr/lib/libatk-1.0.so -> libatk-1.0.so.0
-lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25611.1
--rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25611.1
+lrwxrwxrwx root/root    usr/lib/libatk-1.0.so.0 -> libatk-1.0.so.0.25612.1
+-rwxr-xr-x root/root    usr/lib/libatk-1.0.so.0.25612.1
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so -> libatk-bridge-2.0.so.0
 lrwxrwxrwx root/root    usr/lib/libatk-bridge-2.0.so.0 -> libatk-bridge-2.0.so.0.0.0
 -rwxr-xr-x root/root    usr/lib/libatk-bridge-2.0.so.0.0.0

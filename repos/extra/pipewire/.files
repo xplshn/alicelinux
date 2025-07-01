@@ -22,7 +22,6 @@ lrwxrwxrwx root/root    usr/bin/pipewire-pulse -> pipewire
 -rwxr-xr-x root/root    usr/bin/pw-profiler
 -rwxr-xr-x root/root    usr/bin/pw-reserve
 -rwxr-xr-x root/root    usr/bin/pw-top
--rwxr-xr-x root/root    usr/bin/spa-acp-tool
 -rwxr-xr-x root/root    usr/bin/spa-inspect
 -rwxr-xr-x root/root    usr/bin/spa-json-dump
 -rwxr-xr-x root/root    usr/bin/spa-monitor
@@ -260,23 +259,20 @@ drwxr-xr-x root/root    usr/include/spa-0.2/spa/utils/
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/type-info.h
 -rw-r--r-- root/root    usr/include/spa-0.2/spa/utils/type.h
 drwxr-xr-x root/root    usr/lib/
-drwxr-xr-x root/root    usr/lib/alsa-lib/
--rwxr-xr-x root/root    usr/lib/alsa-lib/libasound_module_ctl_pipewire.so
--rwxr-xr-x root/root    usr/lib/alsa-lib/libasound_module_pcm_pipewire.so
 lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so -> libpipewire-0.3.so.0
-lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so.0 -> libpipewire-0.3.so.0.1405.0
--rwxr-xr-x root/root    usr/lib/libpipewire-0.3.so.0.1405.0
+lrwxrwxrwx root/root    usr/lib/libpipewire-0.3.so.0 -> libpipewire-0.3.so.0.1406.0
+-rwxr-xr-x root/root    usr/lib/libpipewire-0.3.so.0.1406.0
 drwxr-xr-x root/root    usr/lib/pipewire-0.3/
 drwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so -> libjack.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so.0 -> libjack.so.0.3.1405
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjack.so.0.3.1405
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjack.so.0 -> libjack.so.0.3.1406
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjack.so.0.3.1406
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so -> libjacknet.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0 -> libjacknet.so.0.3.1405
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0.3.1405
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0 -> libjacknet.so.0.3.1406
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjacknet.so.0.3.1406
 lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so -> libjackserver.so.0
-lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjackserver.so.0.3.1405
--rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0.3.1405
+lrwxrwxrwx root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0 -> libjackserver.so.0.3.1406
+-rwxr-xr-x root/root    usr/lib/pipewire-0.3/jack/libjackserver.so.0.3.1406
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-access.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-adapter.so
 -rwxr-xr-x root/root    usr/lib/pipewire-0.3/libpipewire-module-avb.so
@@ -317,8 +313,6 @@ drwxr-xr-x root/root    usr/lib/pkgconfig/
 drwxr-xr-x root/root    usr/lib/spa-0.2/
 drwxr-xr-x root/root    usr/lib/spa-0.2/aec/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/aec/libspa-aec-null.so
-drwxr-xr-x root/root    usr/lib/spa-0.2/alsa/
--rwxr-xr-x root/root    usr/lib/spa-0.2/alsa/libspa-alsa.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/audioconvert/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/audioconvert/libspa-audioconvert.so
 drwxr-xr-x root/root    usr/lib/spa-0.2/audiomixer/
@@ -344,89 +338,6 @@ drwxr-xr-x root/root    usr/lib/spa-0.2/videoconvert/
 drwxr-xr-x root/root    usr/lib/spa-0.2/videotestsrc/
 -rwxr-xr-x root/root    usr/lib/spa-0.2/videotestsrc/libspa-videotestsrc.so
 drwxr-xr-x root/root    usr/share/
-drwxr-xr-x root/root    usr/share/alsa-card-profile/
-drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/
-drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/paths/
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-aux.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-dock-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-fm.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-front-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-headphone-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-headset-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-internal-mic-always.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-internal-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-linein.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-mic-line.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-mic.conf.common
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-rear-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-tvtuner.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input-video.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-input.conf.common
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-chat.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-headphones-2.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-headphones.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-lineout.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-mono.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-speaker-always.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output-speaker.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/analog-output.conf.common
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/audigy-analog-output-mirror.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/audigy-analog-output.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-0.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-1.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-10.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-2.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-3.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-4.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-5.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-6.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-7.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-8.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/hdmi-output-9.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/iec958-stereo-input.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/iec958-stereo-output.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/steelseries-arctis-output-chat-common.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/steelseries-arctis-output-game-common.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/usb-gaming-headset-input.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/usb-gaming-headset-output-mono.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/usb-gaming-headset-output-stereo.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/paths/virtual-surround-7.1.conf
-drwxr-xr-x root/root    usr/share/alsa-card-profile/mixer/profile-sets/
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/9999-custom.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/analog-only.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/asus-xonar-se.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/audigy.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/cmedia-high-speed-true-hdaudio.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/default.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/dell-dock-tb16-usb-audio.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/force-speaker-and-int-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/force-speaker.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/hdmi-ac3.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/hp-tbt-dock-120w-g2.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/hp-tbt-dock-audio-module.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/kinect-audio.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/maudio-fasttrack-pro.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-audio4dj.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-audio8dj.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-komplete-audio6.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-korecontroller.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-traktor-audio10.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-traktor-audio2.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-traktor-audio6.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/native-instruments-traktorkontrol-s4.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/sb-omni-surround-5.1.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/sennheiser-gsx.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/simple-headphones-mic.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/steelseries-arctis-common-usb-audio.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/texas-instruments-pcm2902.conf
--rw-r--r-- root/root    usr/share/alsa-card-profile/mixer/profile-sets/usb-gaming-headset.conf
-drwxr-xr-x root/root    usr/share/alsa/
-drwxr-xr-x root/root    usr/share/alsa/alsa.conf.d/
--rw-r--r-- root/root    usr/share/alsa/alsa.conf.d/50-pipewire.conf
--rw-r--r-- root/root    usr/share/alsa/alsa.conf.d/99-pipewire-default.conf
 drwxr-xr-x root/root    usr/share/pipewire/
 -rw-r--r-- root/root    usr/share/pipewire/client.conf
 drwxr-xr-x root/root    usr/share/pipewire/client.conf.avail/

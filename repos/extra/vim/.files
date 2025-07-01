@@ -424,6 +424,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/doc/
 -rw-r--r-- root/root    usr/share/vim/vim91/doc/vim9.txt
 -rw-r--r-- root/root    usr/share/vim/vim91/doc/vim9class.txt
 -rw-r--r-- root/root    usr/share/vim/vim91/doc/visual.txt
+-rw-r--r-- root/root    usr/share/vim/vim91/doc/wayland.txt
 -rw-r--r-- root/root    usr/share/vim/vim91/doc/windows.txt
 -rw-r--r-- root/root    usr/share/vim/vim91/doc/workshop.txt
 -rw-r--r-- root/root    usr/share/vim/vim91/evim.vim
@@ -2079,6 +2080,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/tutor/sr/
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor1.zh_cn
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor1.zh_tw
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2
+-rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.fr
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.gl
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.it
 -rw-r--r-- root/root    usr/share/vim/vim91/tutor/tutor2.ru

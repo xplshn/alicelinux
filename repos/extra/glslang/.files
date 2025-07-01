@@ -22,7 +22,7 @@ drwxr-xr-x root/root    usr/include/glslang/SPIRV/
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/SPVRemapper.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/SpvTools.h
 -rw-r--r-- root/root    usr/include/glslang/SPIRV/disassemble.h
--rw-r--r-- root/root    usr/include/glslang/SPIRV/spirv.hpp
+-rw-r--r-- root/root    usr/include/glslang/SPIRV/spirv.hpp11
 -rw-r--r-- root/root    usr/include/glslang/build_info.h
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/cmake/

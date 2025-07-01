@@ -1,5 +1,5 @@
 name=pipewire
-version=1.4.5
+version=1.4.6
 release=1
 source="https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 build_opt="-Ddocs=disabled -Dtests=disabled -Dpipewire-v4l2=disabled -Djack=disabled -Dsession-managers=[]"

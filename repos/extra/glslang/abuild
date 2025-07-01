@@ -1,5 +1,5 @@
 name=glslang
-version=15.3.0
+version=15.4.0
 release=1
 source="https://github.com/KhronosGroup/glslang/archive/$version/$name-sdk-$version.tar.gz"
 build_opt="-DENABLE_OPT=OFF"
