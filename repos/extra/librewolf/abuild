@@ -1,13 +1,12 @@
 name=librewolf
-version=139.0.4.1
+version=140.0.2.1
 _ver=${version%.*}
 _sion=${version##*.}
 _version=${_ver}-${_sion}
 release=1
 source="https://gitlab.com/api/v4/projects/32320088/packages/generic/librewolf-source/${_version}/librewolf-${_version}.source.tar.gz
 	visibility.patch
-	fix-rust-target.patch
-	fix-sqlite-vec-uint.patch"
+	fix-rust-target.patch"
 
 build() {
 	cat > mozconfig << EOF
