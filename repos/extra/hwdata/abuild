@@ -1,5 +1,5 @@
 name=hwdata
-version=0.396
+version=0.397
 release=1
 source="https://github.com/vcrhonek/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
