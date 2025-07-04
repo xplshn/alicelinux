@@ -20,6 +20,7 @@ lrwxrwxrwx root/root    etc/fonts/conf.d/60-latin.conf -> ../../../usr/share/fon
 lrwxrwxrwx root/root    etc/fonts/conf.d/65-fonts-persian.conf -> ../../../usr/share/fontconfig/conf.avail/65-fonts-persian.conf
 lrwxrwxrwx root/root    etc/fonts/conf.d/65-nonlatin.conf -> ../../../usr/share/fontconfig/conf.avail/65-nonlatin.conf
 lrwxrwxrwx root/root    etc/fonts/conf.d/69-unifont.conf -> ../../../usr/share/fontconfig/conf.avail/69-unifont.conf
+lrwxrwxrwx root/root    etc/fonts/conf.d/70-no-bitmaps-except-emoji.conf -> ../../../usr/share/fontconfig/conf.avail/70-no-bitmaps-except-emoji.conf
 lrwxrwxrwx root/root    etc/fonts/conf.d/80-delicious.conf -> ../../../usr/share/fontconfig/conf.avail/80-delicious.conf
 lrwxrwxrwx root/root    etc/fonts/conf.d/90-synthetic.conf -> ../../../usr/share/fontconfig/conf.avail/90-synthetic.conf
 -rw-r--r-- root/root    etc/fonts/conf.d/README.new
@@ -42,8 +43,8 @@ drwxr-xr-x root/root    usr/include/fontconfig/
 -rw-r--r-- root/root    usr/include/fontconfig/fontconfig.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libfontconfig.so -> libfontconfig.so.1
-lrwxrwxrwx root/root    usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.15.0
--rwxr-xr-x root/root    usr/lib/libfontconfig.so.1.15.0
+lrwxrwxrwx root/root    usr/lib/libfontconfig.so.1 -> libfontconfig.so.1.16.0
+-rwxr-xr-x root/root    usr/lib/libfontconfig.so.1.16.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/fontconfig.pc
 drwxr-xr-x root/root    usr/share/
@@ -76,6 +77,7 @@ drwxr-xr-x root/root    usr/share/fontconfig/conf.avail/
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/40-nonlatin.conf
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/45-generic.conf
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/45-latin.conf
+-rw-r--r-- root/root    usr/share/fontconfig/conf.avail/48-guessfamily.conf
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/48-spacing.conf
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/49-sansserif.conf
 -rw-r--r-- root/root    usr/share/fontconfig/conf.avail/50-user.conf
