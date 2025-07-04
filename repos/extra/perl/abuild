@@ -1,5 +1,5 @@
 name=perl
-version=5.40.2
+version=5.42.0
 release=1
 source="https://www.cpan.org/src/5.0/perl-$version.tar.xz"
 
