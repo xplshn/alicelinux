@@ -825,6 +825,12 @@ drwxr-xr-x root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/
 -rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global3_fail.go
 -rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global4_fail.go
 -rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global5.go
+drwxr-xr-x root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/
+-rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/asm.s
+-rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm/main.go
+drwxr-xr-x root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/
+-rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/asm.s
+-rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_global_asm2_fail/main.go
 drwxr-xr-x root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/
 -rw-r--r-- root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/main.go
 drwxr-xr-x root/root    usr/lib/go/src/cmd/cgo/internal/testsanitizers/testdata/asan_linkerx/p/
@@ -3228,6 +3234,7 @@ drwxr-xr-x root/root    usr/lib/go/src/cmd/go/testdata/script/
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_match_only_subtests_parallel.txt
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_match_only_tests.txt
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_minus_n.txt
+-rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_multivcs.txt
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_n_cover_std.txt
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_no_run_example.txt
 -rw-r--r-- root/root    usr/lib/go/src/cmd/go/testdata/script/test_no_tests.txt
@@ -14692,6 +14699,8 @@ drwxr-xr-x root/root    usr/lib/go/test/fixedbugs/issue7023.dir/
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7316.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7346.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7366.go
+-rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue73748a.go
+-rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue73748b.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7405.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7419.go
 -rw-r--r-- root/root    usr/lib/go/test/fixedbugs/issue7525.go
