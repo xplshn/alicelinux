@@ -6,24 +6,24 @@ drwxr-xr-x root/root    sbin/
 -rwxr-xr-x root/root    sbin/blkid
 -rwxr-xr-x root/root    sbin/debugfs
 -rwxr-xr-x root/root    sbin/dumpe2fs
--rwxr-xr-x root/root    sbin/e2fsck -> sbin/fsck.ext2
+-rwxr-xr-x root/root    sbin/e2fsck
 -rwxr-xr-x root/root    sbin/e2image
--rwxr-xr-x root/root    sbin/e2label -> sbin/findfs
--rwxr-xr-x root/root    sbin/e2mmpstatus -> sbin/dumpe2fs
+-rwxr-xr-x root/root    sbin/e2label
+-rwxr-xr-x root/root    sbin/e2mmpstatus
 -rwxr-xr-x root/root    sbin/e2scrub
 -rwxr-xr-x root/root    sbin/e2scrub_all
 -rwxr-xr-x root/root    sbin/e2undo
 -rwxr-xr-x root/root    sbin/findfs
 -rwxr-xr-x root/root    sbin/fsck.ext2
--rwxr-xr-x root/root    sbin/fsck.ext3 -> sbin/fsck.ext2
--rwxr-xr-x root/root    sbin/fsck.ext4 -> sbin/fsck.ext2
+-rwxr-xr-x root/root    sbin/fsck.ext3
+-rwxr-xr-x root/root    sbin/fsck.ext4
 -rwxr-xr-x root/root    sbin/logsave
 -rwxr-xr-x root/root    sbin/mke2fs
--rwxr-xr-x root/root    sbin/mkfs.ext2 -> sbin/mke2fs
--rwxr-xr-x root/root    sbin/mkfs.ext3 -> sbin/mke2fs
--rwxr-xr-x root/root    sbin/mkfs.ext4 -> sbin/mke2fs
+-rwxr-xr-x root/root    sbin/mkfs.ext2
+-rwxr-xr-x root/root    sbin/mkfs.ext3
+-rwxr-xr-x root/root    sbin/mkfs.ext4
 -rwxr-xr-x root/root    sbin/resize2fs
--rwxr-xr-x root/root    sbin/tune2fs -> sbin/findfs
+-rwxr-xr-x root/root    sbin/tune2fs
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/chattr
@@ -35,11 +35,11 @@ drwxr-xr-x root/root    usr/include/
 drwxr-xr-x root/root    usr/include/blkid/
 -rw-r--r-- root/root    usr/include/blkid/blkid.h
 -rw-r--r-- root/root    usr/include/blkid/blkid_types.h
--rw-r--r-- root/root    usr/include/com_err.h
+-rw-r--r-- root/root    usr/include/com_err.h -> usr/include/et/com_err.h
 drwxr-xr-x root/root    usr/include/e2p/
 -rw-r--r-- root/root    usr/include/e2p/e2p.h
 drwxr-xr-x root/root    usr/include/et/
--rw-r--r-- root/root    usr/include/et/com_err.h -> usr/include/com_err.h
+-rw-r--r-- root/root    usr/include/et/com_err.h
 drwxr-xr-x root/root    usr/include/ext2fs/
 -rw-r--r-- root/root    usr/include/ext2fs/bitops.h
 -rw-r--r-- root/root    usr/include/ext2fs/ext2_err.h
