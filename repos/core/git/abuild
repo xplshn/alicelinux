@@ -1,5 +1,5 @@
 name=git
-version=2.50.0
+version=2.50.1
 release=1
 source="https://www.kernel.org/pub/software/scm/$name/$name-$version.tar.xz"
 build_type=configure_build
