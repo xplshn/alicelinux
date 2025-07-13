@@ -1,4 +1,4 @@
 name=geany
-version=2.0
+version=2.1
 release=1
 source="http://download.$name.org/$name-$version.tar.bz2"
