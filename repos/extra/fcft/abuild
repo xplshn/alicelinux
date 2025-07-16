@@ -1,4 +1,4 @@
 name=fcft
-version=3.3.1
+version=3.3.2
 release=1
 source="$name-$version.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
