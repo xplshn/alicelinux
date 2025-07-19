@@ -1,5 +1,5 @@
 name=foot
-version=1.22.3
+version=1.23.0
 release=1
 source="$name-$version.tar.gz::https://codeberg.org/dnkl/${name}/archive/${version}.tar.gz"
 build_opt="-Dtests=false" # -Dwerror=false"

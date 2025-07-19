@@ -1,5 +1,6 @@
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/lab-sensible-terminal
 -rwxr-xr-x root/root    usr/bin/labwc
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/icons/
