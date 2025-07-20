@@ -1,7 +1,7 @@
 ![alicelinux](assets/AliceLinux.png)
 ![alicelinux](assets/grimshot-240524-234840.png)
 
-**Alice Linux** is my personal daily driver minimal distro that used [musl](https://musl.libc.org/) libc, [busybox](https://www.busybox.net/) as main core utilities, package manager written in POSIX shell script, [Wayland](https://wayland.freedesktop.org/) and/or [Xorg](https://www.x.org/wiki/) as the gui server and trying to be minimal, lightweight and usable as possible.
+**Alice Linux** is my personal daily driver minimal distro that used [musl](https://musl.libc.org/) libc, [busybox](https://www.busybox.net/) as main core utilities, package manager written in POSIX shell script, [Wayland](https://wayland.freedesktop.org/) as the gui server and trying to be minimal, lightweight and usable as possible.
 
 - no systemd
 - no PAM
