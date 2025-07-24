@@ -1,7 +1,8 @@
 name=mesa
-version=25.1.5
+version=25.1.6
 release=1
 source="https://archive.mesa3d.org/$name-$version.tar.xz"
+
 keep_static=1
 [ -f $SPM_PKGDB/wayland ] && platform="-Dplatforms=wayland -Dglx=disabled"
 [ -f $SPM_PKGDB/libx11 ] && platform="-Dplatforms=x11"
