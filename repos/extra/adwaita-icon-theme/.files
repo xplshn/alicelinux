@@ -61,6 +61,7 @@ drwxr-xr-x root/root    usr/share/icons/Adwaita/16x16/places/
 drwxr-xr-x root/root    usr/share/icons/Adwaita/cursors/
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/X_cursor
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/alias
+-rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/all-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/all-scroll
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/arrow -> default
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/bd_double_arrow -> nwse-resize
@@ -80,7 +81,7 @@ lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/dnd-move -> default
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/e-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/ew-resize
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/fd_double_arrow -> nesw-resize
-lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/fleur -> move
+lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/fleur -> all-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/grab
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/grabbing
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/hand1 -> grab
@@ -88,7 +89,7 @@ lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/hand2 -> pointer
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/help
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/left_ptr -> default
 lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/left_side -> w-resize
--rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/move
+lrwxrwxrwx root/root    usr/share/icons/Adwaita/cursors/move -> default
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/n-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/ne-resize
 -rw-r--r-- root/root    usr/share/icons/Adwaita/cursors/nesw-resize
