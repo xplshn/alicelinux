@@ -88,27 +88,34 @@ footnotereturnlinkcontents = "↩"
     printSidebar = true
 
 [[social]]
-    name = "Codeberg"
-    url = "https://codeberg.org/emmett1/alicelinux"
-[[social]]
-    name = "Github"
+    name = "Github (unofficial)"
     url = "https://github.com/xplshn/alicelinux"
 [[social]]
-    name = "Telegram"
+    name = "Codeberg (upstream)"
+    url = "https://codeberg.org/emmett1/alicelinux"
+[[social]]
+    name = "Telegram Community (emmett1's)"
     url = "https://t.me/alicelinux"
 [[social]]
-    name = "Paypal"
+    name = "Paypal (emmett1's)"
     url = "https://paypal.me/syazwanemmett"
 [[social]]
-    name = "ko-fi"
+    name = "ko-fi (emmett1's)"
     url = "https://ko-fi.com/emmett1"
 [[social]]
-    name = "buymeacoffee"
+    name = "buymeacoffee (emmett1's)"
     url = "https://buymeacoffee.com/emmett1"
 
 [markup.goldmark.renderer]
 hardWraps = false
 unsafe = true
+
+[markup.goldmark.extensions]
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)']]
 
 [markup.goldmark.renderHooks.image]
 enableDefault = true
