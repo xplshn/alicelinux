@@ -1,11 +1,3 @@
-+++
-date = '2025-05-08T08:20:36'
-draft = false
-title = 'install.md'
-[params.author]
-  name = 'emmett1'
-  email = 'emmett1.2miligrams@protonmail.com'
-+++
 # Install Alice
 
 Here is a guide to installing Alice Linux on your computer using the chroot method. You can do this from your existing Linux distribution or from a live environment, such as Alice Live or another Linux distribution. Make sure your chosen environment has the necessary partitioning tools, filesystem tools, and extraction tools.

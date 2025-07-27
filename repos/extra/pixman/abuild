@@ -1,4 +1,4 @@
 name=pixman
-version=0.46.2
+version=0.46.4
 release=1
-source="https://www.cairographics.org/releases/$name-$version.tar.gz"
+source="https://www.x.org/releases/individual/lib/pixman-$version.tar.xz"
