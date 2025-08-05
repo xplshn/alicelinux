@@ -20,6 +20,7 @@ drwxr-xr-x root/root    usr/libexec/libinput/
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-analyze-touch-down-state
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-debug-events
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-debug-tablet
+-rwxr-xr-x root/root    usr/libexec/libinput/libinput-debug-tablet-pad
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-list-devices
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-list-kernel-devices
 -rwxr-xr-x root/root    usr/libexec/libinput/libinput-measure
@@ -92,6 +93,7 @@ drwxr-xr-x root/root    usr/share/man/man1/
 -rw-r--r-- root/root    usr/share/man/man1/libinput-analyze-touch-down-state.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/libinput-analyze.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/libinput-debug-events.1.gz
+-rw-r--r-- root/root    usr/share/man/man1/libinput-debug-tablet-pad.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/libinput-debug-tablet.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/libinput-list-devices.1.gz
 -rw-r--r-- root/root    usr/share/man/man1/libinput-list-kernel-devices.1.gz
