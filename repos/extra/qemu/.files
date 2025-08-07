@@ -5,7 +5,6 @@ drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/qemu-ga
 -rwxr-xr-x root/root    usr/bin/qemu-img
 -rwxr-xr-x root/root    usr/bin/qemu-io
--rwxr-xr-x root/root    usr/bin/qemu-keymap
 -rwxr-xr-x root/root    usr/bin/qemu-nbd
 -rwxr-xr-x root/root    usr/bin/qemu-pr-helper
 -rwxr-xr-x root/root    usr/bin/qemu-storage-daemon
@@ -86,8 +85,8 @@ drwxr-xr-x root/root    usr/share/qemu/firmware/
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-loongarch64.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-riscv64.json
 -rw-r--r-- root/root    usr/share/qemu/firmware/60-edk2-x86_64.json
--rwxr-xr-x root/root    usr/share/qemu/hppa-firmware.img
--rwxr-xr-x root/root    usr/share/qemu/hppa-firmware64.img
+-rw-r--r-- root/root    usr/share/qemu/hppa-firmware.img
+-rw-r--r-- root/root    usr/share/qemu/hppa-firmware64.img
 drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/keymaps/ar
 -rw-r--r-- root/root    usr/share/qemu/keymaps/bepo

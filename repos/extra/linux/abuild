@@ -1,9 +1,11 @@
 name=linux
-version=6.12.31
+version=6.12.41
 release=1
 source="https://cdn.kernel.org/pub/$name/kernel/v6.x/$name-$version.tar.xz
 	dotconfig
-	andes_export_filldir_readdir.patch"
+	andes_export_filldir_readdir.patch
+	fix-musl-btf-ids.patch
+	fix-musl-objtool.patch fixdep-largefile.patch"
 
 build() {
 	make mrproper
