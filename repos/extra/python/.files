@@ -1801,7 +1801,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/ensurepip/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/__pycache__/_uninstall.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/__pycache__/_uninstall.cpython-313.pyc
 drwxr-xr-x root/root    usr/lib/python3.13/ensurepip/_bundled/
--rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_bundled/pip-25.1.1-py3-none-any.whl
+-rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_bundled/pip-25.2-py3-none-any.whl
 -rw-r--r-- root/root    usr/lib/python3.13/ensurepip/_uninstall.py
 -rw-r--r-- root/root    usr/lib/python3.13/enum.py
 -rw-r--r-- root/root    usr/lib/python3.13/filecmp.py
@@ -2581,7 +2581,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testlimitedcapi.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testmultiphase.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_testsinglephase.cpython-313-x86_64-linux-musl.so
--rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_uuid.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_xxtestfuzz.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/_zoneinfo.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/array.cpython-313-x86_64-linux-musl.so
@@ -2592,7 +2591,6 @@ drwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/math.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/mmap.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/pyexpat.cpython-313-x86_64-linux-musl.so
--rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/readline.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/resource.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/select.cpython-313-x86_64-linux-musl.so
 -rwxr-xr-x root/root    usr/lib/python3.13/lib-dynload/syslog.cpython-313-x86_64-linux-musl.so
@@ -2931,6 +2929,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload_flush.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload_flush.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/mp_preload_flush.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/multibytecodec_support.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/multibytecodec_support.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/__pycache__/multibytecodec_support.cpython-313.pyc
@@ -4609,6 +4610,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/mathdata/
 -rw-r--r-- root/root    usr/lib/python3.13/test/mock_socket.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/mp_fork_bomb.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/mp_preload.py
+-rw-r--r-- root/root    usr/lib/python3.13/test/mp_preload_flush.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/multibytecodec_support.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/pickletester.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/profilee.py
@@ -5757,6 +5759,9 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/__init__.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/__init__.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/__init__.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_bisect.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_bisect.cpython-313.opt-2.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_bisect.cpython-313.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_code.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_code.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_code.cpython-313.pyc
@@ -5790,6 +5795,7 @@ drwxr-xr-x root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_type.cpython-313.opt-1.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_type.cpython-313.opt-2.pyc
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/__pycache__/test_type.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/test_bisect.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/test_code.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/test_dict.py
 -rw-r--r-- root/root    usr/lib/python3.13/test/test_free_threading/test_func_annotations.py
