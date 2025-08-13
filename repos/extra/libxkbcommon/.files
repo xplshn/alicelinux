@@ -11,11 +11,11 @@ drwxr-xr-x root/root    usr/include/xkbcommon/
 -rw-r--r-- root/root    usr/include/xkbcommon/xkbregistry.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libxkbcommon.so -> libxkbcommon.so.0
-lrwxrwxrwx root/root    usr/lib/libxkbcommon.so.0 -> libxkbcommon.so.0.10.0
--rwxr-xr-x root/root    usr/lib/libxkbcommon.so.0.10.0
+lrwxrwxrwx root/root    usr/lib/libxkbcommon.so.0 -> libxkbcommon.so.0.11.0
+-rwxr-xr-x root/root    usr/lib/libxkbcommon.so.0.11.0
 lrwxrwxrwx root/root    usr/lib/libxkbregistry.so -> libxkbregistry.so.0
-lrwxrwxrwx root/root    usr/lib/libxkbregistry.so.0 -> libxkbregistry.so.0.10.0
--rwxr-xr-x root/root    usr/lib/libxkbregistry.so.0.10.0
+lrwxrwxrwx root/root    usr/lib/libxkbregistry.so.0 -> libxkbregistry.so.0.11.0
+-rwxr-xr-x root/root    usr/lib/libxkbregistry.so.0.11.0
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/xkbcommon.pc
 -rw-r--r-- root/root    usr/lib/pkgconfig/xkbregistry.pc
@@ -23,8 +23,10 @@ drwxr-xr-x root/root    usr/libexec/
 drwxr-xr-x root/root    usr/libexec/xkbcommon/
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-compile-compose
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-compile-keymap
+-rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-dump-keymap
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-dump-keymap-wayland
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-how-to-type
+-rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-interactive
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-interactive-evdev
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-interactive-wayland
 -rwxr-xr-x root/root    usr/libexec/xkbcommon/xkbcli-list
