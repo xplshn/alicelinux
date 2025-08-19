@@ -1,5 +1,5 @@
 name=boost
-version=1.88.0
+version=1.89.0
 v=$(echo $version | sed 's/\./_/g')
 release=1
 source="https://archives.boost.io/release/${version}/source/boost_${v}.tar.gz"
