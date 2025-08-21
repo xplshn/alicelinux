@@ -1,7 +1,8 @@
 name=squashfs-tools
-version=4.6.1
+version=4.7.2
 release=1
-source="https://github.com/plougher/$name/archive/$version/$name-$version.tar.gz"
+source="https://github.com/plougher/$name/archive/$version/$name-$version.tar.gz
+	0002-generate-manpages-Workaround-busybox-sed.patch"
 
 build() {
 	make ZSTD_SUPPORT=1 GZIP_SUPPORT=1 LZO_SUPPORT=1 XZ_SUPPORT=1 EXTRA_CFLAGS="-fcommon" -C $name
