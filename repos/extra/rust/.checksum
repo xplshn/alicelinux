@@ -1,7 +1,7 @@
-8bb58cb1f55e9f2ebf02823a37d02a93cfc960d149205c552b09dbfb19569b38  cargo-1.86.0-x86_64-unknown-linux-musl.tar.xz
-1f70d4c8f84bccf0883a21124fcd7b5f84d89934b93744e6db1ffe072e1684db  fix-curl.patch
-98cd52ea1add75f87899eda742c302404eea756a27d9a62b6bb318db0c6b34ac  fix-linux_musl_base.patch
-722dbc61a1129a3d161564b27fc711f330827e3cddfc46c4d1c6784ad41c37a3  libressl.patch
-f2d98445ce70ce29a16c953d8d0b6b24900981059f7781049d36f1a53d4ece52  rust-std-1.86.0-x86_64-unknown-linux-musl.tar.xz
-d11c4cdd01669b89cd92be0838d69253e075e172e59748518837c53f9c71c75f  rustc-1.86.0-x86_64-unknown-linux-musl.tar.xz
-818b58c6cd637dcc67bf889ab10d551e56de2940c8d4353320da8489f9d49546  rustc-1.87.0-src.tar.xz
+cbf3750aed42e86d34b291ba5884361140dfe0c716a6610aac35964265618dc9  cargo-1.88.0-x86_64-unknown-linux-musl.tar.xz
+c3e4bbb5ddd2268c19896a9411f471e0a2d835b2abea54d6f93c434af3d85c7d  fix-curl.patch
+ecefb8300fbbaaeae6ec275c3c5902ff80b78fcd953fa561f9cc27cfe0440264  fix-linux_musl_base.patch
+395ee1e263ea4c887fd038e164f1e94881ecdc39cb1c475b9b790740e8fd7988  libressl.patch
+dc5c9cb00481b39f902cbaad00df1f856d30fc91485ba987ba50a87957d20fee  rust-std-1.88.0-x86_64-unknown-linux-musl.tar.xz
+19874c904c8c6f1f06e55d5ec16414d150a4df750d2cbb1f7d1d160a89681738  rustc-1.88.0-x86_64-unknown-linux-musl.tar.xz
+5170cf6e21c61ff965be6298248c360c3c03ac59c7de9326862fba482f6089a5  rustc-1.89.0-src.tar.xz

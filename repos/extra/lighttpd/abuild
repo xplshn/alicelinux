@@ -1,5 +1,5 @@
 name=lighttpd
-version=1.4.79
+version=1.4.81
 release=1
 source="https://download.${name}.net/${name}/releases-${version%.*}.x/${name}-${version}.tar.xz
 	$name.conf

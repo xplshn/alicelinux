@@ -1,0 +1,10 @@
+name=lz4
+version=1.10.0
+release=1
+source="https://github.com/${name}/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
+
+build() {
+	make -C lib PREFIX=/usr
+	make -C programs PREFIX=/usr lz4 lz4c
+	make install PREFIX=/usr DESTDIR=$PKG
+}

@@ -3,3 +3,4 @@ sdl2
 pixman
 libslirp
 dtc
+python-distlib
