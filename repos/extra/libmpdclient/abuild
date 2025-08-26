@@ -1,4 +1,4 @@
 name=libmpdclient
-version=2.23
+version=2.24
 release=1
 source="https://github.com/MusicPlayerDaemon/${name}/archive/v${version}/${name}-v${version}.tar.gz"
