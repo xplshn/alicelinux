@@ -1303,6 +1303,7 @@ drwxr-xr-x root/root    usr/share/vim/vim91/syntax/
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cabalconfig.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cabalproject.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/calendar.vim
+-rw-r--r-- root/root    usr/share/vim/vim91/syntax/cangjie.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/catalog.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cdl.vim
 -rw-r--r-- root/root    usr/share/vim/vim91/syntax/cdrdaoconf.vim

@@ -43,12 +43,13 @@ drwxr-xr-x root/root    usr/include/mpd/
 -rw-r--r-- root/root    usr/include/mpd/stats.h
 -rw-r--r-- root/root    usr/include/mpd/status.h
 -rw-r--r-- root/root    usr/include/mpd/sticker.h
+-rw-r--r-- root/root    usr/include/mpd/stringnormalization.h
 -rw-r--r-- root/root    usr/include/mpd/tag.h
 -rw-r--r-- root/root    usr/include/mpd/version.h
 drwxr-xr-x root/root    usr/lib/
 lrwxrwxrwx root/root    usr/lib/libmpdclient.so -> libmpdclient.so.2
-lrwxrwxrwx root/root    usr/lib/libmpdclient.so.2 -> libmpdclient.so.2.23
--rwxr-xr-x root/root    usr/lib/libmpdclient.so.2.23
+lrwxrwxrwx root/root    usr/lib/libmpdclient.so.2 -> libmpdclient.so.2.24
+-rwxr-xr-x root/root    usr/lib/libmpdclient.so.2.24
 drwxr-xr-x root/root    usr/lib/pkgconfig/
 -rw-r--r-- root/root    usr/lib/pkgconfig/libmpdclient.pc
 drwxr-xr-x root/root    usr/share/
