@@ -1,5 +1,5 @@
 name=nodejs
-version=24.6.0
+version=24.7.0
 release=1
 source="https://$name.org/dist/v$version/node-v$version.tar.xz
 	0001-no-libatomic.patch"
