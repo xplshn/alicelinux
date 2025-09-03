@@ -1,4 +1,4 @@
 name=parallel
-version=20250722
+version=20250822
 release=1
 source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.bz2"
