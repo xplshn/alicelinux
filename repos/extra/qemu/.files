@@ -50,11 +50,15 @@ drwxr-xr-x root/root    usr/share/icons/hicolor/scalable/apps/
 drwxr-xr-x root/root    usr/share/qemu/
 -rw-r--r-- root/root    usr/share/qemu/QEMU,cgthree.bin
 -rw-r--r-- root/root    usr/share/qemu/QEMU,tcx.bin
--rw-r--r-- root/root    usr/share/qemu/bamboo.dtb
+-rw-r--r-- root/root    usr/share/qemu/ast27x0_bootrom.bin
 -rw-r--r-- root/root    usr/share/qemu/bios-256k.bin
 -rw-r--r-- root/root    usr/share/qemu/bios-microvm.bin
 -rw-r--r-- root/root    usr/share/qemu/bios.bin
--rw-r--r-- root/root    usr/share/qemu/canyonlands.dtb
+drwxr-xr-x root/root    usr/share/qemu/dtb/
+-rw-r--r-- root/root    usr/share/qemu/dtb/bamboo.dtb
+-rw-r--r-- root/root    usr/share/qemu/dtb/canyonlands.dtb
+-rw-r--r-- root/root    usr/share/qemu/dtb/petalogix-ml605.dtb
+-rw-r--r-- root/root    usr/share/qemu/dtb/petalogix-s3adsp1800.dtb
 -rw-r--r-- root/root    usr/share/qemu/edk2-aarch64-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-arm-code.fd
 -rw-r--r-- root/root    usr/share/qemu/edk2-arm-vars.fd
@@ -135,8 +139,6 @@ drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/opensbi-riscv32-generic-fw_dynamic.bin
 -rw-r--r-- root/root    usr/share/qemu/opensbi-riscv64-generic-fw_dynamic.bin
 -rw-r--r-- root/root    usr/share/qemu/palcode-clipper
--rw-r--r-- root/root    usr/share/qemu/petalogix-ml605.dtb
--rw-r--r-- root/root    usr/share/qemu/petalogix-s3adsp1800.dtb
 -rw-r--r-- root/root    usr/share/qemu/pnv-pnor.bin
 -rw-r--r-- root/root    usr/share/qemu/pvh.bin
 -rw-r--r-- root/root    usr/share/qemu/pxe-e1000.rom
@@ -145,7 +147,7 @@ drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/pxe-pcnet.rom
 -rw-r--r-- root/root    usr/share/qemu/pxe-rtl8139.rom
 -rw-r--r-- root/root    usr/share/qemu/pxe-virtio.rom
--rwxr-xr-x root/root    usr/share/qemu/qboot.rom
+-rw-r--r-- root/root    usr/share/qemu/qboot.rom
 -rw-r--r-- root/root    usr/share/qemu/qemu-nsis.bmp
 -rw-r--r-- root/root    usr/share/qemu/qemu_vga.ndrv
 -rw-r--r-- root/root    usr/share/qemu/s390-ccw.img
@@ -164,6 +166,6 @@ drwxr-xr-x root/root    usr/share/qemu/keymaps/
 -rw-r--r-- root/root    usr/share/qemu/vgabios-vmware.bin
 -rw-r--r-- root/root    usr/share/qemu/vgabios.bin
 -rw-r--r-- root/root    usr/share/qemu/vof-nvram.bin
--rwxr-xr-x root/root    usr/share/qemu/vof.bin
+-rw-r--r-- root/root    usr/share/qemu/vof.bin
 drwxr-xr-x root/root    var/
 drwxr-xr-x root/root    var/run/
